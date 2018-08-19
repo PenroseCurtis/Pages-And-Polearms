@@ -1,0 +1,35 @@
+[
+  {
+    "key": "Default Item",
+	"classKey":"Item",
+    "weight": 0.0,
+    "opacity": 0.0,
+    "description": "Just an ordinary object",
+    "spritePath": "",
+    "iconPath": "",
+    "enchantments": [""],
+	"actions":[]
+  },
+  {
+	"key": "Key",
+	"classKey":"Key",
+    "weight": 0.1,
+    "opacity": 0.1,
+    "description": "A rusty old key",
+    "spritePath": "",
+    "iconPath": "",
+    "enchantments": [""],
+	"actions":[]
+  },
+  {
+	"key": "Crystal Ball",
+	"classKey":"Item",
+    "weight": 1.0,
+    "opacity": 0.5,
+    "description": "A mystical artifact of great power",
+    "spritePath": "",
+    "iconPath": "",
+    "enchantments": ["Arcane"],
+	"actions":[]
+  }
+]
