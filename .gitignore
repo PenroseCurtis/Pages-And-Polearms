@@ -11,3 +11,5 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+*.pak
+Package/WindowsNoEditor/PNPV2/Content/Paks/PNPV2-WindowsNoEditor.pak

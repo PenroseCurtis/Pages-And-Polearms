@@ -1,0 +1,50 @@
+[
+  {
+    "Key": "Default Item",
+	"Class Key":"Default",
+    "Weight": 0.0,
+    "Opacity": 0.0,
+    "Description": "Just an ordinary object",
+    "SpritePath": "Default",
+    "IconPath": "Default",
+    "Enchantments": [""],
+	"Actions":["drop","examine"],
+	"equipableType":0
+  },
+  {
+    "Key": "Key",
+	"Class Key":"Key",
+    "Weight": 0.1,
+    "Opacity": 0.0,
+    "Description": "A Key",
+    "SpritePath": "Key_Sprite",
+    "IconPath": "Key",
+    "Enchantments": [""],
+	"Actions":["drop","examine"],
+	"equipableType":0
+  },
+  {
+    "Key": "Default Helmet",
+	"Class Key":"Default",
+    "Weight": 0.0,
+    "Opacity": 0.0,
+    "Description": "Just an ordinary Helmet",
+    "SpritePath": "Helmet",
+    "IconPath": "Helmet",
+    "Enchantments": [""],
+	"Actions":["drop","examine","equip"],
+	"equipableType":1
+  },
+  {
+    "Key": "Default Cloak",
+	"Class Key":"Default",
+    "Weight": 0.0,
+    "Opacity": 0.0,
+    "Description": "Just an ordinary Cloak",
+    "SpritePath": "Cloak",
+    "IconPath": "Cloak",
+    "Enchantments": [""],
+	"Actions":["drop","examine","equip"],
+	"equipableType":2
+  },
+]
