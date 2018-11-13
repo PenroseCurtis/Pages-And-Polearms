@@ -3,6 +3,7 @@
 #include "DataLoader.h"
 #include "JsonObjectConverter.h"
 #include "PaperSprite.h"
+#include "PaperFlipBook.h"
 
 
 FString UDataLoader::GetMessage() {
@@ -12,11 +13,11 @@ FString UDataLoader::GetMessage() {
 
 FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/StatBlocks.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StatBlocks.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -33,14 +34,14 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
 			if (jsonObject->GetStringField("key") == key)
 			{
-				GLog->Log("You have found the correct thingy!");
+				GLog->Log("You have found what you were looking for");
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatBlockStruct>(jsonObject, statBlockPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
+					GLog->Log("Conversion Succeeded");
 					return statBlockOut;
 				}
 				else {
-					GLog->Log("Converting To Struct Failed");
+					GLog->Log("Converting to struct failed");
 					return FOStatBlockStruct();
 				}
 				/*statBlockOut.strength = jsonObject->GetNumberField("Strength");
@@ -73,11 +74,11 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 
 FOItemStruct UDataLoader::GetItemStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/ItemStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ItemStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues; 
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -127,11 +128,11 @@ FOItemStruct UDataLoader::GetItemStruct(FString key)
 
 FOWeaponStruct UDataLoader::GetWeaponStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/WeaponStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/WeaponStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -189,11 +190,11 @@ FOWeaponStruct UDataLoader::GetWeaponStruct(FString key)
 
 FOArmorStruct UDataLoader::GetArmorStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/ArmorStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ArmorStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -233,11 +234,10 @@ FOArmorStruct UDataLoader::GetArmorStruct(FString key)
 
 FOStanceStruct UDataLoader::GetStanceStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/StanceStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StanceStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+
 
 	TSharedPtr<FJsonValue> jsonValues;  
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -276,11 +276,11 @@ FOStanceStruct UDataLoader::GetStanceStruct(FString key)
 
 FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/AttackStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/AttackStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -320,11 +320,11 @@ FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 
 FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/PageStatStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/PageStatStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -363,11 +363,11 @@ FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 
 FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/Dojo/JSON/EnchantmentStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/EnchantmentStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	GLog->Log("Json String:");
-	GLog->Log(jsonString);
+	//GLog->Log("Json String:");
+	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -410,7 +410,7 @@ UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 	if (Path.IsEmpty()) return NULL;
 
 	//FString PathToLoad = FPaths::ProjectContentDir() + "Dojo/Textures/" + Path;
-	FString PathToLoad = "/Game/Dojo/Textures/"+Path;
+	FString PathToLoad = "/Game/Textures/"+Path;
 	//UTexture2D* tmpTexture = StaticLoadObject(UTexture2D::StaticClass(), NULL, PathToLoad)
 	//LoadObjFromPath<UTexture2D>(PathToLoad);
 	GLog->Log(PathToLoad);
@@ -421,17 +421,73 @@ UPaperSprite* UDataLoader::MyLoadSpriteFromPath(const FString& Path)
 {
 	if (Path.IsEmpty()) return NULL;
 
-	FString PathToLoad =  "/Game/Dojo/Textures/" + Path;
+	FString PathToLoad =  "/Game/Sprites/" + Path;
 	//UTexture2D* tmpTexture = StaticLoadObject(UTexture2D::StaticClass(), NULL, PathToLoad)
 	//LoadObjFromPath<UTexture2D>(PathToLoad);
 
 	return Cast<UPaperSprite>(StaticLoadObject(UPaperSprite::StaticClass(), NULL, *(PathToLoad)));
 } 	
+
+UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
+{
+	const TCHAR* Empty = TEXT("");
+	const TCHAR* Low = TEXT("Low");
+	const TCHAR* Mid = TEXT("Mid");
+	const TCHAR* High = TEXT("High");
+	const TCHAR* OneH = TEXT("OneH");
+	const TCHAR* TwoH = TEXT("TwoH");
+	const TCHAR* Idle = TEXT("Idle");
+	const TCHAR* Walk = TEXT("Walk");
+
+	if (Path.IsEmpty()) return NULL;
+	FString PathToLoad = "/Game/FlipBooks/" + Path;
+	const FString LeftPath = PathToLoad.Left(PathToLoad.Find("|")); //Left half of the path is unique to the asset
+	//Ex: Helmet/Default_Helmet/Helmet
+	FString RightPath = PathToLoad.RightChop(PathToLoad.Find("|")+1); //Right half of the path is the naming convention
+	//Ex: FrontLowOneHIdle
+	PathToLoad = LeftPath + RightPath; //This seems redundant, but its just there to remove the "|" delimeter
+	UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	if (flipBook) return flipBook;
+
+	//If the base path doesn't exist, try removing left and right from the right part of the path
+	RightPath = RightPath.Replace(TEXT("Right"), Empty, ESearchCase::IgnoreCase);
+	RightPath = RightPath.Replace(TEXT("Left"), Empty, ESearchCase::IgnoreCase);
+	PathToLoad = LeftPath + RightPath;
+	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+
+	if (flipBook) return flipBook;
+
+	//If that path doesn't exist, try removing Low, Mid and High From the right part of the path
+	RightPath = RightPath.Replace(Low, Empty, ESearchCase::IgnoreCase);
+	RightPath = RightPath.Replace(Mid, Empty, ESearchCase::IgnoreCase);
+	RightPath = RightPath.Replace(High, Empty, ESearchCase::IgnoreCase);
+	PathToLoad = LeftPath + RightPath;
+	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	if (flipBook) return flipBook;
+
+	//If that still doesn't work, try removing one handed and two handed part of the path
+	RightPath = RightPath.Replace(OneH, Empty, ESearchCase::IgnoreCase);
+	RightPath = RightPath.Replace(TwoH, Empty, ESearchCase::IgnoreCase);
+	PathToLoad = LeftPath + RightPath;
+	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	if (flipBook) return flipBook;
+
+	//Still? Okay, try removing Walk and Idle. This will be for assets that don't change when you move
+	RightPath = RightPath.Replace(Idle, Empty, ESearchCase::IgnoreCase);
+	RightPath = RightPath.Replace(Walk, Empty, ESearchCase::IgnoreCase);
+	PathToLoad = LeftPath + RightPath;
+	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	GLog->Log(PathToLoad+"is what you are finally laoding lmao");
+	return flipBook;
+	//Give up after this point and just return whatever shows up. 
+
+
+}
 void UDataLoader::LoadAssetsForCooking()
 {
 	UClass* Ut2D = TSubclassOf<class UTexture2D>();
 	UObjectLibrary* ObjectLibrary = UObjectLibrary::CreateLibrary(Ut2D, false, GIsEditor);
 	ObjectLibrary->AddToRoot();
-	ObjectLibrary->LoadAssetDataFromPath(TEXT("/Game/Dojo/Textures"));
+	ObjectLibrary->LoadAssetDataFromPath(TEXT("/Game/Textures"));
 	ObjectLibrary->LoadAssetsFromAssetData();
 }

@@ -7,7 +7,9 @@
 #include "json.h"
 #include "Engine.h"
 #include "PaperSprite.h"
+#include "PaperFlipbook.h"
 #include "DataLoader.generated.h"
+
 /**
  * 
  */
@@ -66,6 +68,7 @@ struct FOStatBlockStruct
 		staminaTotal = 10;
 		staminaRegeneration = 1;
 		mana = 10;
+		manaTotal = 10;
 		manaRegeneration = 1;
 	}
 };
@@ -79,7 +82,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString name;
 	UPROPERTY(BlueprintReadWrite)
-		FString statBlockKey;
+		FString defaultStatBlockKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> stances;
 	UPROPERTY(BlueprintReadWrite)
@@ -94,6 +97,90 @@ public:
 		FString defaultWeaponKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actions;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> spells;
+	UPROPERTY(BlueprintReadWrite)
+		FString mainHandWeapon;
+	UPROPERTY(BlueprintReadWrite)
+		FString offHandWeapon;
+	UPROPERTY(BlueprintReadWrite)
+		FString mainHandRing;
+	UPROPERTY(BlueprintReadWrite)
+		FString offHandRing;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> equippedItems;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> inventory;
+	UPROPERTY(BlueprintReadWrite)
+		FOStatBlockStruct statBlock;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString front1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString front2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString back1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString back2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString side1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString side2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideWalkFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh2HAttackFlipBookKey;
+
 	FOPageStatStruct()
 	{
 		name = "Clem";
@@ -117,6 +204,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 range;
 	UPROPERTY(BlueprintReadWrite)
+		int32 initiativeCost;
+	UPROPERTY(BlueprintReadWrite)
 		float staminaCost;
 	UPROPERTY(BlueprintReadWrite)
 		float vitalityCost;
@@ -135,11 +224,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		float bludgeon;
 	UPROPERTY(BlueprintReadWrite)
-		int32 mainHandRequirements;
+		TArray<int32> mainHandRequirements;
 	UPROPERTY(BlueprintReadWrite)
-		int32 offHandRequirements;
+		TArray<int32> offHandRequirements;
 	UPROPERTY(BlueprintReadWrite)
-		int32 targetTypes;
+		TArray<int32> targetTypes;
 	UPROPERTY(BlueprintReadWrite)
 		FString widgetKey;
 	FOAttackStruct()
@@ -151,9 +240,9 @@ public:
 		damage = 1;
 		contact = 1;
 		bludgeon = 1;
-		mainHandRequirements = 0;
-		offHandRequirements = 0;
-		targetTypes = 0;
+		mainHandRequirements = { 0 };
+		offHandRequirements = { 0 };
+		targetTypes = { 0 };
 		widgetKey = "null";
 		vitalityCost = 0;
 		staminaCost = 0;
@@ -173,9 +262,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
-		int32 mainHandWeaponTypes;
+		TArray<int32> mainHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
-		int32 offHandWeaponTypes;
+		TArray<int32> offHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
 		float highGuard;
 	UPROPERTY(BlueprintReadWrite)
@@ -192,7 +281,8 @@ public:
 		float bludgeonModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float contactModifier;
-
+	UPROPERTY(BlueprintReadWrite)
+		int32 guardType;
 };
 
 USTRUCT(BlueprintType)
@@ -217,7 +307,130 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> specialAttacks;
 	UPROPERTY(BlueprintReadWrite)
-		FString baseItemKey;
+		float weight;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		FString spritePath;
+	UPROPERTY(BlueprintReadWrite)
+		FString iconPath;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> enchantments;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> actions;
+	UPROPERTY(BlueprintReadWrite)
+		int32 equipableType;
+	UPROPERTY(BlueprintReadWrite)
+		float layer;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> weaponTypes;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideWalkFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh2HAttackFlipBookKey;
+	FOWeaponStruct()
+	{
+		key = "Default";
+		weight = 0.0;
+		description = "Default object, perhaps something has run amok...";
+		spritePath = "Default";
+		iconPath = "Default";
+		equipableType = 0;
+		actions = { "drop","examine" };
+	}
 };
 
 USTRUCT(BlueprintType)
@@ -228,8 +441,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
-		FString baseItemKey;
-	UPROPERTY(BlueprintReadWrite)
 		float coverage;
 	UPROPERTY(BlueprintReadWrite)
 		float hardness;
@@ -237,6 +448,130 @@ public:
 		float padding;
 	UPROPERTY(BlueprintReadWrite)
 		float deflection;
+	UPROPERTY(BlueprintReadWrite)
+		float weight;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		FString spritePath;
+	UPROPERTY(BlueprintReadWrite)
+		FString iconPath;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> enchantments;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> actions;
+	UPROPERTY(BlueprintReadWrite)
+		int32 equipableType;
+	UPROPERTY(BlueprintReadWrite)
+		float layer;
+	UPROPERTY(BlueprintReadWrite)
+		bool wrapsAround;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh1HIdleFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh2HIdleFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backWalkFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideWalkFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString frontHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString backHigh2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideLow2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideMid2HAttackFlipBookKey;
+
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh1HAttackFlipBookKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString sideHigh2HAttackFlipBookKey;
+	FOArmorStruct()
+	{
+		key = "Default";
+		weight = 0.0;
+		description = "Default object, perhaps something has run amok...";
+		spritePath = "Default";
+		iconPath = "Default";
+		equipableType = 0;
+		actions = { "drop","examine" };
+	}
 };
 
 USTRUCT(BlueprintType)
@@ -262,6 +597,20 @@ public:
 		TArray<FString> enchantments;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actions;
+	UPROPERTY(BlueprintReadWrite)
+		int32 equipableType;
+	FOItemStruct()
+	{
+		key = "Default";
+		classKey = "Default";
+		weight = 0.0;
+		opacity = 0.0;
+		description = "Default object, perhaps something has run amok...";
+		spritePath = "Default";
+		iconPath = "Default";
+		equipableType = 0;
+		actions = { "drop","examine" };
+	}
 };
 
 USTRUCT(BlueprintType)
@@ -308,6 +657,8 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 			static UTexture2D* MyLoadTextureFromPath(const FString& Path);
 		UFUNCTION(BlueprintCallable)
 			static UPaperSprite* MyLoadSpriteFromPath(const FString& Path);
+		UFUNCTION(BlueprintCallable)
+			static UPaperFlipbook* LoadFlipbookFromPath(const FString& Path);
 		UFUNCTION(BlueprintCallable)
 			static void LoadAssetsForCooking();
 };
