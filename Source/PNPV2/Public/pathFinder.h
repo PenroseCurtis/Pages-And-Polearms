@@ -10,8 +10,5 @@
 class PNPV2_API pathFinder
 {
 public:
-	pathFinder();
-	~pathFinder();
-	UFunction(BluePrintCallable, Category = "test");
-	void test();
+	
 };

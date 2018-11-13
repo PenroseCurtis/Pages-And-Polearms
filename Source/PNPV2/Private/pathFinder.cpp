@@ -2,14 +2,4 @@
 
 #include "pathFinder.h"
 
-pathFinder::pathFinder()
-{
-}
 
-void test()
-{
-
-}
-pathFinder::~pathFinder()
-{
-}
