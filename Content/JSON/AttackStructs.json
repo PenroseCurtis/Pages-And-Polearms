@@ -17,14 +17,16 @@
   "mainHandRequirement":[],
   "offHandRequirement":[],
   "targetTypes":[],
-  "widgetKey":""
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1
 },
 {
   "key":"Punch",
   "classKey":"Punch",
   "minTargets":1,
   "maxTargets":1,
-  "range":1,
+  "range":3,
   "initiativeCost":2,
   "staminaCost":0.0,
   "vitalityCost": 0.0,
@@ -38,7 +40,9 @@
   "mainHandRequirement":[4],
   "offHandRequirement":[4],
   "targetTypes":[0,1],
-  "widgetKey":""
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1
 },
 {
   "key":"Stab",
@@ -59,7 +63,9 @@
   "mainHandRequirement":[],
   "offHandRequirement":[],
   "targetTypes":[0,1],
-  "widgetKey":""
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1
 },
 {"key":"Scratch",
   "classKey":"Punch",
@@ -79,5 +85,7 @@
   "mainHandRequirement":[],
   "offHandRequirement":[],
   "targetTypes":[0,1],
-  "widgetKey":""
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1
 }]
