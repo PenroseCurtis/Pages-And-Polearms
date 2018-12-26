@@ -8,7 +8,9 @@
 #include "Engine.h"
 #include "PaperSprite.h"
 #include "PaperFlipbook.h"
+#include <unordered_map>
 #include "DataLoader.generated.h"
+
 
 /**
  * 
@@ -51,8 +53,6 @@ struct FOStatBlockStruct
 	float manaTotal;
 	UPROPERTY(BlueprintReadWrite)
 	float manaRegeneration;
-	
-	
 	FOStatBlockStruct()
 	{
 		strength = 10;
@@ -113,79 +113,10 @@ public:
 		TArray<FString> inventory;
 	UPROPERTY(BlueprintReadWrite)
 		FOStatBlockStruct statBlock;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString front1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString front2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString back1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString back2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString side1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString side2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideWalkFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh2HAttackFlipBookKey;
-
 	FOPageStatStruct()
 	{
 		name = "Clem";
 	}
-	
 };
 
 USTRUCT(BlueprintType)
@@ -235,6 +166,8 @@ public:
 		int32 attackHeight;
 	UPROPERTY(BlueprintReadWrite)
 		int32 wieldType;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
 	FOAttackStruct()
 	{
 		minTargets = 1;
@@ -287,6 +220,8 @@ public:
 		float contactModifier;
 	UPROPERTY(BlueprintReadWrite)
 		int32 guardType;
+	UPROPERTY(BludprintReadWrite)
+		FString description;
 };
 
 USTRUCT(BlueprintType)
@@ -296,6 +231,8 @@ struct FOWeaponStruct
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		FString flipBookKey;
 	UPROPERTY(BlueprintReadWrite)
 		float damage;
 	UPROPERTY(BlueprintReadWrite)
@@ -328,103 +265,6 @@ public:
 		float layer;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> weaponTypes;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideWalkFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh2HAttackFlipBookKey;
 	FOWeaponStruct()
 	{
 		key = "Default";
@@ -470,102 +310,6 @@ public:
 		float layer;
 	UPROPERTY(BlueprintReadWrite)
 		bool wrapsAround;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh1HIdleFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh2HIdleFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backWalkFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideWalkFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString frontHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString backHigh2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideLow2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideMid2HAttackFlipBookKey;
-
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh1HAttackFlipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString sideHigh2HAttackFlipBookKey;
 	FOArmorStruct()
 	{
 		key = "Default";
@@ -632,6 +376,8 @@ public:
 		int32 duration;
 	UPROPERTY(BlueprintReadWrite)
 		FString onNewRoundEffect;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
 };
 
 UCLASS()
@@ -667,7 +413,9 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 			static void LoadAssetsForCooking();
 		UFUNCTION(BlueprintCallable)
 			static APlayerController* GetMainController(const UObject* WorldContextObject);
-
+	private:
+		static std::unordered_map<FString, UPaperFlipbook*> flipBookCache;
+		const static int cacheSizeLimit = 20;
 };
 
 
