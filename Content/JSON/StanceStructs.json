@@ -12,7 +12,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":0
+	  "guardType":0,
+	  "description":"Default Stance"
 	},
 	{
 	  "key":"Unarmed",
@@ -28,7 +29,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":0
+	  "guardType":0,
+	  "description":"Hand to hand stance"
 	},
 	{
 	  "key":"2H Mid Sword",
@@ -44,7 +46,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":3
+	  "guardType":3,
+	  "description":"Blade pointed forward with both hands."
 	},
 	{
 	  "key":"1H Mid Sword",
@@ -60,7 +63,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":2
+	  "guardType":2,
+	  "description":"Blade pointed forward with one hand."
 	},
 	{
 	  "key":"Sword and Board",
@@ -76,7 +80,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":2
+	  "guardType":2,
+	  "description":"High guard with a sword and shield."
 	},
 	{
 	  "key":"High Guard",
@@ -92,7 +97,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":4
+	  "guardType":4,
+	  "description":"Sword held high with both hands."
 	},
 	{
 	  "key":"Shield Basher",
@@ -108,7 +114,8 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":2
+	  "guardType":2,
+	  "description":"Hold your shield in both hands."
 	},
 	{
 	  "key":"Rat Aggro",
@@ -124,6 +131,7 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":1
+	  "guardType":1,
+	  "description":"Ready to pounce!"
 	}
 	]

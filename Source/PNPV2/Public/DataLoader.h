@@ -22,37 +22,37 @@ struct FOStatBlockStruct
 	//GENERATED_USTRUCT_BODY()
 	public:
 	UPROPERTY(BlueprintReadWrite)
-			FString key;
+		FString key;
 	UPROPERTY(BlueprintReadWrite)
-	float strength;
+		float strength;
 	UPROPERTY(BlueprintReadWrite)
-	float dexterity;
+		float dexterity;
 	UPROPERTY(BlueprintReadWrite)
-	float constitution;
+		float constitution;
 	UPROPERTY(BlueprintReadWrite)
-	float intelligence;
+		float intelligence;
 	UPROPERTY(BlueprintReadWrite)
-	float wisdom;
+		float wisdom;
 	UPROPERTY(BlueprintReadWrite)
-	float spirit;
+		float spirit;
 	UPROPERTY(BlueprintReadWrite)
-	float vitality;
+		float vitality;
 	UPROPERTY(BlueprintReadWrite)
-	float vitalityTotal;
+		float vitalityTotal;
 	UPROPERTY(BlueprintReadWrite)
-	float vitalityRegeneration;
+		float vitalityRegeneration;
 	UPROPERTY(BlueprintReadWrite)
-	float stamina;
+		float stamina;
 	UPROPERTY(BlueprintReadWrite)
-	float staminaTotal;
+		float staminaTotal;
 	UPROPERTY(BlueprintReadWrite)
-	float staminaRegeneration;
+		float staminaRegeneration;
 	UPROPERTY(BlueprintReadWrite)
-	float mana;
+		float mana;
 	UPROPERTY(BlueprintReadWrite)
-	float manaTotal;
+		float manaTotal;
 	UPROPERTY(BlueprintReadWrite)
-	float manaRegeneration;
+		float manaRegeneration;
 	FOStatBlockStruct()
 	{
 		strength = 10;
@@ -220,7 +220,7 @@ public:
 		float contactModifier;
 	UPROPERTY(BlueprintReadWrite)
 		int32 guardType;
-	UPROPERTY(BludprintReadWrite)
+	UPROPERTY(BlueprintReadWrite)
 		FString description;
 };
 
