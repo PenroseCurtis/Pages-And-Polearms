@@ -19,7 +19,8 @@
   "targetTypes":[],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "Default Attack"
 },
 {
   "key":"Punch",
@@ -42,7 +43,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A smack with a curled fist"
 },
 {
   "key":"Stab",
@@ -57,7 +59,7 @@
   "selfTargettable": false,
   "accuracy":5.0,
   "piercing":5.0,
-  "damage":10.0,
+  "damage":-1.0,
   "contact":5.0,
   "bludgeon":1.0,
   "mainHandRequirement":[],
@@ -65,7 +67,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A quick forward thrust"
 },
 {"key":"Scratch",
   "classKey":"Punch",
@@ -79,7 +82,7 @@
   "selfTargettable": false,
   "accuracy":1.0,
   "piercing":1.0,
-  "damage":1.0,
+  "damage":-3.0,
   "contact":1.0,
   "bludgeon":1.0,
   "mainHandRequirement":[],
@@ -87,7 +90,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A weak attack with a claw"
 },
 {"key":"Arcane Blast",
   "classKey":"Punch",
@@ -109,7 +113,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A weak burst of arcane energy"
 },
 {"key":"Basic Heal",
   "classKey":"Punch",
@@ -131,7 +136,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "Channel a small amount of positive energy to heal wounds"
 },
 {
   "key":"Quick Attack",
@@ -154,7 +160,8 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A quick but weaker attack"
 },
 {
   "key":"Power Attack",
@@ -177,5 +184,54 @@
   "targetTypes":[0,1],
   "widgetKey":"",
   "attackHeight":1,
-  "wieldType":1
+  "wieldType":1,
+  "description": "A slow but powerful attack"
+},
+{
+  "key":"Bash",
+  "classKey":"Punch",
+  "minTargets":1,
+  "maxTargets":1,
+  "range":1,
+  "initiativeCost":3,
+  "staminaCost":0.0,
+  "vitalityCost": 0.0,
+  "manaCost":1.0,
+  "selfTargettable": false,
+  "accuracy":1.0,
+  "piercing":1.0,
+  "damage":2.0,
+  "contact":1.0,
+  "bludgeon":3.0,
+  "mainHandRequirement":[],
+  "offHandRequirement":[],
+  "targetTypes":[0,1],
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1,
+  "description": "A smack with a heavy shield"
+},
+{
+  "key":"Chop",
+  "classKey":"Punch",
+  "minTargets":1,
+  "maxTargets":1,
+  "range":1,
+  "initiativeCost":3,
+  "staminaCost":0.0,
+  "vitalityCost": 0.0,
+  "manaCost":1.0,
+  "selfTargettable": false,
+  "accuracy":1.0,
+  "piercing":1.0,
+  "damage":2.0,
+  "contact":1.0,
+  "bludgeon":1.0,
+  "mainHandRequirement":[],
+  "offHandRequirement":[],
+  "targetTypes":[0,1],
+  "widgetKey":"",
+  "attackHeight":1,
+  "wieldType":1,
+  "description": "A powerful downward chop"
 }]
