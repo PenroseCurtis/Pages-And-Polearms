@@ -82,7 +82,7 @@
   "selfTargettable": false,
   "accuracy":1.0,
   "piercing":1.0,
-  "damage":-3.0,
+  "damage": 23.0,
   "contact":1.0,
   "bludgeon":1.0,
   "mainHandRequirement":[],
@@ -117,7 +117,7 @@
   "description": "A weak burst of arcane energy"
 },
 {"key":"Basic Heal",
-  "classKey":"Punch",
+  "classKey":"Heal",
   "minTargets":1,
   "maxTargets":1,
   "range":1,

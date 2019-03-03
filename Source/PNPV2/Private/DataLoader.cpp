@@ -313,9 +313,9 @@ FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 	return FOPageStatStruct();
 }
 
-FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
+FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/EnchantmentStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StatusStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
 	//GLog->Log("Json String:");
@@ -326,8 +326,8 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 
 	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
 	{
-		FOEnchantmentStruct enchantmentStructOut = FOEnchantmentStruct();
-		FOEnchantmentStruct * enchantmentStructPtr= &enchantmentStructOut;
+		FOStatusStruct statusStructOut = FOStatusStruct();
+		FOStatusStruct * statusStructPtr= &statusStructOut;
 		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
 		//Getting various properties
 		for (int32 i = 0; i < jsonArray.Num(); i++)
@@ -336,14 +336,14 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 			if (jsonObject->GetStringField("key") == key)
 			{
 				int64 flags = 0;
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOEnchantmentStruct>(jsonObject, enchantmentStructPtr, flags, flags))
+				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatusStruct>(jsonObject, statusStructPtr, flags, flags))
 				{
 					GLog->Log("Converstion succeded");
-					return enchantmentStructOut;
+					return statusStructOut;
 				}
 				else {
 					GLog->Log("Converting To Struct Failed");
-					return FOEnchantmentStruct();
+					return FOStatusStruct();
 				}
 			}
 			
@@ -352,9 +352,9 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 	else
 	{
 		GLog->Log("Serialization Failed");
-		return FOEnchantmentStruct();
+		return FOStatusStruct();
 	}
-	return FOEnchantmentStruct();
+	return FOStatusStruct();
 }
 
 UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)

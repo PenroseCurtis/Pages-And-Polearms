@@ -72,6 +72,46 @@ struct FOStatBlockStruct
 		manaRegeneration = 1;
 	}
 };
+
+USTRUCT(BlueprintType)
+struct FOItemStruct
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		FString classKey;
+	UPROPERTY(BlueprintReadWrite)
+		float weight;
+	UPROPERTY(BlueprintReadWrite)
+		float opacity;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		FString spritePath;
+	UPROPERTY(BlueprintReadWrite)
+		FString iconPath;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> statuses;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> actions;
+	UPROPERTY(BlueprintReadWrite)
+		int32 equipableType;
+	FOItemStruct()
+	{
+		key = "Default";
+		classKey = "Default";
+		weight = 0.0;
+		opacity = 0.0;
+		description = "Default object, perhaps something has run amok...";
+		spritePath = "Default";
+		iconPath = "Default";
+		equipableType = 0;
+		actions = { "drop","examine" };
+	}
+};
+
 USTRUCT(BlueprintType)
 struct FOPageStatStruct
 {
@@ -88,7 +128,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> enchantments;
+		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
 		int level;
 	UPROPERTY(BlueprintReadWrite)
@@ -100,17 +140,17 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
 	UPROPERTY(BlueprintReadWrite)
-		FString mainHandWeapon;
+		FOItemStruct mainHandWeapon;
 	UPROPERTY(BlueprintReadWrite)
-		FString offHandWeapon;
+		FOItemStruct offHandWeapon;
 	UPROPERTY(BlueprintReadWrite)
-		FString mainHandRing;
+		FOItemStruct mainHandRing;
 	UPROPERTY(BlueprintReadWrite)
-		FString offHandRing;
+		FOItemStruct offHandRing;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> equippedItems;
+		TArray<FOItemStruct> equippedItems;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> inventory;
+		TArray<FOItemStruct> inventory;
 	UPROPERTY(BlueprintReadWrite)
 		FOStatBlockStruct statBlock;
 	FOPageStatStruct()
@@ -256,7 +296,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString iconPath;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> enchantments;
+		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actions;
 	UPROPERTY(BlueprintReadWrite)
@@ -301,7 +341,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString iconPath;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> enchantments;
+		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actions;
 	UPROPERTY(BlueprintReadWrite)
@@ -322,8 +362,10 @@ public:
 	}
 };
 
+
+
 USTRUCT(BlueprintType)
-struct FOItemStruct
+struct FOStatusStruct
 {
 	GENERATED_BODY()
 public:
@@ -332,41 +374,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString classKey;
 	UPROPERTY(BlueprintReadWrite)
-		float weight;
-	UPROPERTY(BlueprintReadWrite)
-		float opacity;
-	UPROPERTY(BlueprintReadWrite)
-		FString description;
-	UPROPERTY(BlueprintReadWrite)
-		FString spritePath;
-	UPROPERTY(BlueprintReadWrite)
-		FString iconPath;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> enchantments;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actions;
-	UPROPERTY(BlueprintReadWrite)
-		int32 equipableType;
-	FOItemStruct()
-	{
-		key = "Default";
-		classKey = "Default";
-		weight = 0.0;
-		opacity = 0.0;
-		description = "Default object, perhaps something has run amok...";
-		spritePath = "Default";
-		iconPath = "Default";
-		equipableType = 0;
-		actions = { "drop","examine" };
-	}
-};
-
-USTRUCT(BlueprintType)
-struct FOEnchantmentStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
 		FString statKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
@@ -374,8 +381,6 @@ public:
 		bool isTemporary;
 	UPROPERTY(BlueprintReadWrite)
 		int32 duration;
-	UPROPERTY(BlueprintReadWrite)
-		FString onNewRoundEffect;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
 };
@@ -402,7 +407,7 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintCallable)
 			static FOPageStatStruct GetPageStatStruct(FString key);
 		UFUNCTION(BlueprintCallable)
-			static FOEnchantmentStruct GetEnchantmentStruct(FString key);
+			static FOStatusStruct GetStatusStruct(FString key);
 		UFUNCTION(BlueprintCallable)
 			static UTexture2D* MyLoadTextureFromPath(const FString& Path);
 		UFUNCTION(BlueprintCallable)
