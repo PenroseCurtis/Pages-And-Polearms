@@ -2,7 +2,9 @@
   "key":"Page",
   "name":"Norman",
   "defaultStatBlockKey":"Default Stats",
-  "stances":["Unarmed"],
+  "stances":[{"stanceName":"Unarmed", "level":1},
+			 {"stanceName": "2H Mid Sword", "level": 1},
+			 {"stanceName": "High Guard", "level": 1}],
   "attacks":[],
   "enchantments":[],
   "level":1,
@@ -21,7 +23,10 @@
   "key":"Rat",
   "name":"atat",
   "defaultStatBlockKey":"Default Stats",
-  "stances":["Rat aggro"],
+  "stances":[{
+				"stanceName":"Rat aggro",
+				"stanceLevel": 1
+				}],
   "attacks":[],
   "enchantments":[],
   "level":1,

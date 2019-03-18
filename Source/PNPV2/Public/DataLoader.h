@@ -16,6 +16,29 @@
  * 
  */
 USTRUCT(BlueprintType)
+struct FStanceLevel
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString stanceName;
+	UPROPERTY(BlueprintReadWrite)
+		int32 level;
+};
+
+USTRUCT(BlueprintType)
+struct FStanceTransition
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString stanceName;
+	UPROPERTY(BlueprintReadWrite)
+		int32 transitionCost;
+
+};
+
+USTRUCT(BlueprintType)
 struct FOStatBlockStruct
 {
 	GENERATED_BODY()
@@ -120,11 +143,13 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
+		FString movementCompKey;
+	UPROPERTY(BlueprintReadWrite)
 		FString name;
 	UPROPERTY(BlueprintReadWrite)
 		FString defaultStatBlockKey;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> stances;
+		TArray<FStanceLevel> stances;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
@@ -237,6 +262,10 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString classKey;
 	UPROPERTY(BlueprintReadWrite)
+		FString name;
+	UPROPERTY(BlueprintReadWrite)
+		int32 level;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> mainHandWeaponTypes;
@@ -262,6 +291,8 @@ public:
 		int32 guardType;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FStanceTransition> transitions;
 };
 
 USTRUCT(BlueprintType)
@@ -284,7 +315,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		float bludgeon;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> stances;
+		TArray<FStanceLevel> stances;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> specialAttacks;
 	UPROPERTY(BlueprintReadWrite)
@@ -384,6 +415,47 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
 };
+
+USTRUCT(BlueprintType)
+struct FCombatStateStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString Key;
+	UPROPERTY(BlueprintReadWrite)
+		FString ClassKey;
+};
+
+USTRUCT(BlueprintType)
+struct FRoundStateStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString Key;
+	UPROPERTY(BlueprintReadWrite)
+		FString ClassKey;
+	UPROPERTY(BlueprintReadWrite)
+		bool allowRespawn;
+};
+
+USTRUCT(BlueprintType)
+struct FMatchStateStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString Key;
+	UPROPERTY(BlueprintReadWrite)
+		FString ClassKey;
+	UPROPERTY(BlueprintReadWrite)
+		int32 numberOfRounds;
+};
+
+
+
+
 
 UCLASS()
 class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
