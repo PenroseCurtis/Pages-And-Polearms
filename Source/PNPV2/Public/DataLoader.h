@@ -27,15 +27,25 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FStanceTransition
+struct FActionCost
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString action;
+	UPROPERTY(BlueprintReadWrite)
+		int32 Cost;
+};
+
+USTRUCT(BlueprintType)
+struct FTransitionCost
 {
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FString stanceName;
 	UPROPERTY(BlueprintReadWrite)
-		int32 transitionCost;
-
+		int32 Cost;
 };
 
 USTRUCT(BlueprintType)
@@ -118,9 +128,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actions;
+		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		int32 equipableType;
+	UPROPERTY(BlueprintReadWrite)
+		bool inDominantHand;
 	FOItemStruct()
 	{
 		key = "Default";
@@ -131,7 +143,6 @@ public:
 		spritePath = "Default";
 		iconPath = "Default";
 		equipableType = 0;
-		actions = { "drop","examine" };
 	}
 };
 
@@ -161,7 +172,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString defaultWeaponKey;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actions;
+		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
 	UPROPERTY(BlueprintReadWrite)
@@ -292,7 +303,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FStanceTransition> transitions;
+		TArray<FTransitionCost> transitions;
 };
 
 USTRUCT(BlueprintType)
@@ -329,13 +340,15 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actions;
+		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		int32 equipableType;
 	UPROPERTY(BlueprintReadWrite)
 		float layer;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> weaponTypes;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> actionCosts;
 	FOWeaponStruct()
 	{
 		key = "Default";
@@ -344,7 +357,6 @@ public:
 		spritePath = "Default";
 		iconPath = "Default";
 		equipableType = 0;
-		actions = { "drop","examine" };
 	}
 };
 
@@ -374,13 +386,15 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> statuses;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actions;
+		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		int32 equipableType;
 	UPROPERTY(BlueprintReadWrite)
 		float layer;
 	UPROPERTY(BlueprintReadWrite)
 		bool wrapsAround;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> actionCosts;
 	FOArmorStruct()
 	{
 		key = "Default";
@@ -389,7 +403,6 @@ public:
 		spritePath = "Default";
 		iconPath = "Default";
 		equipableType = 0;
-		actions = { "drop","examine" };
 	}
 };
 
