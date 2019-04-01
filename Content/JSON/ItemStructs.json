@@ -8,7 +8,7 @@
     "SpritePath": "Default",
     "IconPath": "Default",
     "Enchantments": [""],
-	"Actions":["drop","examine"],
+	"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0],
 	"equipableType":0
   },
   {
@@ -20,7 +20,7 @@
     "SpritePath": "Key_Sprite",
     "IconPath": "Key",
     "Enchantments": [""],
-	"Actions":["drop","examine"],
+	"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0],
 	"equipableType":0
   },
   {
@@ -32,7 +32,7 @@
     "SpritePath": "Helmet",
     "IconPath": "Helmet",
     "Enchantments": [""],
-	"Actions":["drop","examine","equip"],
+	"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0],
 	"equipableType":1
   },
   {
@@ -44,7 +44,7 @@
     "SpritePath": "Cloak",
     "IconPath": "Cloak",
     "Enchantments": [""],
-	"Actions":["drop","examine","equip"],
+	"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0],
 	"equipableType":2
   },
 ]

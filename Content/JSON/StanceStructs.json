@@ -1,6 +1,8 @@
 	[{
-	  "key":"Default Stance",
+	  "key":"Default Stance 1",
 	  "classKey":"Stance",
+	  "name": "Default Stance",
+	  "level":1,
 	  "attacks":["Default Attack"],
 	  "mainHandWeaponTypes":[],
 	  "offHandWeaponTypes":[],
@@ -12,11 +14,14 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":0
+	  "guardType":0,
+	  "description":"Default Stance"
 	},
 	{
-	  "key":"Unarmed",
+	  "key":"Unarmed 1",
 	  "classKey":"Unarmed",
+	  "name":"Unarmed",
+	  "level":1,
 	  "attacks":["Punch"],
 	  "mainHandWeaponTypes":[4],
 	  "offHandWeaponTypes":[4],
@@ -28,11 +33,34 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":0
+	  "guardType":0,
+	  "description":"Hand to hand stance"
 	},
 	{
-	  "key":"2H Mid Sword",
+	  "key":"2H Mid Sword 1",
 	  "classKey":"2H Mid Sword",
+	  "name":"2H Mid Sword",
+	  "level":1,
+	  "attacks":["Thrust"],
+	  "mainHandWeaponTypes":[3],
+	  "offHandWeaponTypes":[4],
+	  "highGuard":1.0,
+	  "midGuard": 1.0,
+	  "lowGuard": 1.0,
+	  "accuracyModifier":0.0,
+	  "damageModifier":0.0,
+	  "piercingModifier":0.0,
+	  "bludgeonModifer":0.0,
+	  "contactModifer":0.0,
+	  "guardType":3,
+	  "description":"Blade pointed forward with both hands.",
+	  "transitions":[{"stanceName":"High Guard","Cost":2},{"stanceName":"1H Mid Sword","Cost":1}]
+	},
+	{
+	  "key":"1H Mid Sword 1",
+	  "classKey":"2H Mid Sword",
+	  "name":"2H Mid Sword",
+	  "level":1,
 	  "attacks":["Stab"],
 	  "mainHandWeaponTypes":[3],
 	  "offHandWeaponTypes":[4],
@@ -44,28 +72,16 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":3
+	  "guardType":2,
+	  "description":"Blade pointed forward with one hand.",
+	  "transitions":[{"stanceName":"High Guard","Cost":2},{"stanceName":"2H Mid Sword","Cost":1}]
 	},
 	{
-	  "key":"1H Mid Sword",
+	  "key":"Sword and Board 1",
 	  "classKey":"2H Mid Sword",
-	  "attacks":["Stab"],
-	  "mainHandWeaponTypes":[3],
-	  "offHandWeaponTypes":[4],
-	  "highGuard":1.0,
-	  "midGuard": 1.0,
-	  "lowGuard": 1.0,
-	  "accuracyModifier":0.0,
-	  "damageModifier":0.0,
-	  "piercingModifier":0.0,
-	  "bludgeonModifer":0.0,
-	  "contactModifer":0.0,
-	  "guardType":2
-	},
-	{
-	  "key":"Sword and Board",
-	  "classKey":"2H Mid Sword",
-	  "attacks":["Stab"],
+	  "name": "Sword and Board",
+	  "level":1,
+	  "attacks":["Stab","Bash"],
 	  "mainHandWeaponTypes":[3],
 	  "offHandWeaponTypes":[5],
 	  "highGuard":1.0,
@@ -76,11 +92,14 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":2
+	  "guardType":2,
+	  "description":"High guard with a sword and shield."
 	},
 	{
-	  "key":"High Guard",
+	  "key":"High Guard 1",
 	  "classKey":"2H Mid Sword",
+	  "name":"High Guard",
+	  "level":1,
 	  "attacks":["Chop"],
 	  "mainHandWeaponTypes":[3],
 	  "offHandWeaponTypes":[4],
@@ -92,11 +111,15 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":4
+	  "guardType":4,
+	  "description":"Sword held high with both hands.",
+	  "transitions":[{"stanceName":"2H Mid Sword","Cost":2},{"stanceName":"1H Mid Sword","Cost":2}]
 	},
 	{
-	  "key":"Shield Basher",
+	  "key":"Shield Basher 1",
 	  "classKey":"2H Mid Sword",
+	  "name":"Shield Basher",
+	  "level":1,
 	  "attacks":["Bash"],
 	  "mainHandWeaponTypes":[5],
 	  "offHandWeaponTypes":[4],
@@ -108,11 +131,15 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":2
+	  "guardType":2,
+	  "description":"Hold your shield in both hands.",
+	  "transitions":[]
 	},
 	{
-	  "key":"Rat Aggro",
+	  "key":"Rat Aggro 1",
 	  "classKey":"Unarmed",
+	  "name":"Rat Aggro",
+	  "level":1,
 	  "attacks":["Scratch"],
 	  "mainHandWeaponTypes":[4],
 	  "offHandWeaponTypes":[4],
@@ -124,6 +151,7 @@
 	  "piercingModifier":0.0,
 	  "bludgeonModifer":0.0,
 	  "contactModifer":0.0,
-	  "guardType":1
+	  "guardType":1,
+	  "description":"Ready to pounce!"
 	}
 	]

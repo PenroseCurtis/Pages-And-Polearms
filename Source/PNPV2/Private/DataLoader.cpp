@@ -5,7 +5,6 @@
 #include "PaperSprite.h"
 #include "PaperFlipBook.h"
 
-
 FString UDataLoader::GetMessage() {
 	FJsonObject JSON;
 	return "Henlo";
@@ -44,21 +43,6 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 					GLog->Log("Converting to struct failed");
 					return FOStatBlockStruct();
 				}
-				/*statBlockOut.strength = jsonObject->GetNumberField("Strength");
-				statBlockOut.dexterity = jsonObject->GetNumberField("Dexterity");
-				statBlockOut.constitution= jsonObject->GetNumberField("Constitution");
-				statBlockOut.intelligence = jsonObject->GetNumberField("Intelligence");
-				statBlockOut.wisdom = jsonObject->GetNumberField("Wisdom");
-				statBlockOut.spirit = jsonObject->GetNumberField("Spirit");
-				statBlockOut.vitality = jsonObject->GetNumberField("Vitatlity");
-				statBlockOut.vitalityTotal= jsonObject->GetNumberField("VitatlityTotal");
-				statBlockOut.vitalityRegeneration= jsonObject->GetNumberField("VitatlityRegeneration");
-				statBlockOut.stamina = jsonObject->GetNumberField("Stamina");
-				statBlockOut.staminaTotal= jsonObject->GetNumberField("StaminaTotal");
-				statBlockOut.staminaRegeneration= jsonObject->GetNumberField("StaminaRegeneration");
-				statBlockOut.mana= jsonObject->GetNumberField("Mana");
-				statBlockOut.manaTotal = jsonObject->GetNumberField("ManaTotal");
-				statBlockOut.manaRegeneration = jsonObject->GetNumberField("ManaRegeneration"); */
 			}
 
 		}
@@ -104,17 +88,7 @@ FOItemStruct UDataLoader::GetItemStruct(FString key)
 					GLog->Log("Converting To Struct Failed");
 					return FOItemStruct();
 				}
-				/*itemStructOut.description = jsonObject->GetStringField("Description");
-				itemStructOut.weight = jsonObject->GetNumberField("Weight");
-				itemStructOut.opacity = jsonObject->GetNumberField("Opacity");
-				itemStructOut.iconPath = jsonObject->GetStringField("IconPath");
-				itemStructOut.spritePath = jsonObject->GetStringField("SpritePath");
-				itemStructOut.key = key;
-				TArray<TSharedPtr<FJsonValue>> enchantmentKeys = jsonObject->GetArrayField("Enchantments");
-				for (int32 i = 0; i < enchantmentKeys.Num(); i++)
-				{
-					itemStructOut.enchantments.Add(*enchantmentKeys[i]->AsString());
-				}*/
+			
 				return itemStructOut;
 			}
 		}
@@ -161,22 +135,6 @@ FOWeaponStruct UDataLoader::GetWeaponStruct(FString key)
 					GLog->Log("Converting To Struct Failed");
 					return FOWeaponStruct();
 				}
-				//weaponStructOut.accuracy = jsonObject->GetNumberField("Accuracy");
-				//weaponStructOut.baseItemKey = jsonObject->GetStringField("BaseItemKey");
-				//weaponStructOut.bludgeon = jsonObject->GetNumberField("Bludgeon");
-				//weaponStructOut.contact = jsonObject->GetNumberField("Contact");
-				//weaponStructOut.damage = jsonObject->GetNumberField("Damage");
-				//weaponStructOut.piercing = jsonObject->GetNumberField("Piercing");
-				//TArray<TSharedPtr<FJsonValue>> stanceKeys = jsonObject->GetArrayField("Stances");
-				//for (int32 i = 0; i < stanceKeys.Num(); i++)
-				//{
-				//	weaponStructOut.stances.Add(*stanceKeys[i]->AsString());
-				//}
-				//TArray<TSharedPtr<FJsonValue>> attackKeys = jsonObject->GetArrayField("SpecialAttacks");
-				//for (int32 i = 0; i < attackKeys.Num(); i++)
-				//{
-				//	weaponStructOut.specialAttacks.Add(*attackKeys[i]->AsString());
-				//}
 			}
 		}
 	}
@@ -193,9 +151,6 @@ FOArmorStruct UDataLoader::GetArmorStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ArmorStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
-
 	TSharedPtr<FJsonValue> jsonValues;  
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
 
@@ -279,9 +234,6 @@ FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/AttackStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
-
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
 
@@ -361,9 +313,9 @@ FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 	return FOPageStatStruct();
 }
 
-FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
+FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 {
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/EnchantmentStructs.json";
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StatusStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
 	//GLog->Log("Json String:");
@@ -374,8 +326,8 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 
 	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
 	{
-		FOEnchantmentStruct enchantmentStructOut = FOEnchantmentStruct();
-		FOEnchantmentStruct * enchantmentStructPtr= &enchantmentStructOut;
+		FOStatusStruct statusStructOut = FOStatusStruct();
+		FOStatusStruct * statusStructPtr= &statusStructOut;
 		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
 		//Getting various properties
 		for (int32 i = 0; i < jsonArray.Num(); i++)
@@ -384,14 +336,14 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 			if (jsonObject->GetStringField("key") == key)
 			{
 				int64 flags = 0;
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOEnchantmentStruct>(jsonObject, enchantmentStructPtr, flags, flags))
+				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatusStruct>(jsonObject, statusStructPtr, flags, flags))
 				{
 					GLog->Log("Converstion succeded");
-					return enchantmentStructOut;
+					return statusStructOut;
 				}
 				else {
 					GLog->Log("Converting To Struct Failed");
-					return FOEnchantmentStruct();
+					return FOStatusStruct();
 				}
 			}
 			
@@ -400,9 +352,9 @@ FOEnchantmentStruct UDataLoader::GetEnchantmentStruct(FString key)
 	else
 	{
 		GLog->Log("Serialization Failed");
-		return FOEnchantmentStruct();
+		return FOStatusStruct();
 	}
-	return FOEnchantmentStruct();
+	return FOStatusStruct();
 }
 
 UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
@@ -411,8 +363,6 @@ UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 
 	//FString PathToLoad = FPaths::ProjectContentDir() + "Dojo/Textures/" + Path;
 	FString PathToLoad = "/Game/Textures/"+Path;
-	//UTexture2D* tmpTexture = StaticLoadObject(UTexture2D::StaticClass(), NULL, PathToLoad)
-	//LoadObjFromPath<UTexture2D>(PathToLoad);
 	GLog->Log(PathToLoad);
 	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), NULL, *(PathToLoad)));
 }
@@ -422,8 +372,7 @@ UPaperSprite* UDataLoader::MyLoadSpriteFromPath(const FString& Path)
 	if (Path.IsEmpty()) return NULL;
 
 	FString PathToLoad =  "/Game/Sprites/" + Path;
-	//UTexture2D* tmpTexture = StaticLoadObject(UTexture2D::StaticClass(), NULL, PathToLoad)
-	//LoadObjFromPath<UTexture2D>(PathToLoad);
+	
 
 	return Cast<UPaperSprite>(StaticLoadObject(UPaperSprite::StaticClass(), NULL, *(PathToLoad)));
 } 	
@@ -443,16 +392,44 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	FString PathToLoad = "/Game/FlipBooks/" + Path;
 	const FString LeftPath = PathToLoad.Left(PathToLoad.Find("|")); //Left half of the path is unique to the asset
 	//Ex: Helmet/Default_Helmet/Helmet
+
 	FString RightPath = PathToLoad.RightChop(PathToLoad.Find("|")+1); //Right half of the path is the naming convention
 	//Ex: FrontLowOneHIdle
-	PathToLoad = LeftPath + RightPath; //This seems redundant, but its just there to remove the "|" delimeter
-	UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	if (flipBook) return flipBook;
+	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 
+
+
+	PathToLoad = LeftPath + RightPath; //This seems redundant, but its just there to remove the "|" delimeter
+	//FString filePath = FString("/Game/FlipBooks/Character/Page/PageSideWalk.uasset");
+	//FString filePath2 = FString("C:/User/Curtis/Documents/Hoi.txt");
+	/*if (PlatformFile.FileExists(*filePath2))
+	{
+		GLog->Log("Henlo my dude");
+	}
+	if (PlatformFile.FileExists(*filePath))
+	{
+		GLog->Log("Ya turkey");
+	}
+	if (FPaths::FileExists(*filePath2))
+	{
+		GLog->Log("Ya goober");
+	}*/
+	UPaperFlipbook* flipBook = NULL;
+		//flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	//if (PlatformFile.FileExists(*PathToLoad))
+	//{
+		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+		if (flipBook) return flipBook;
+	//}
 	//If the base path doesn't exist, try removing left and right from the right part of the path
 	RightPath = RightPath.Replace(TEXT("Right"), Empty, ESearchCase::IgnoreCase);
 	RightPath = RightPath.Replace(TEXT("Left"), Empty, ESearchCase::IgnoreCase);
 	PathToLoad = LeftPath + RightPath;
+	/*if (PlatformFile.FileExists(*PathToLoad))
+	{
+		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+		if (flipBook) return flipBook;
+	}*/
 	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 
 	if (flipBook) return flipBook;
@@ -462,6 +439,12 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	RightPath = RightPath.Replace(Mid, Empty, ESearchCase::IgnoreCase);
 	RightPath = RightPath.Replace(High, Empty, ESearchCase::IgnoreCase);
 	PathToLoad = LeftPath + RightPath;
+
+	/*if (PlatformFile.FileExists(*PathToLoad))
+	{
+		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+		if (flipBook) return flipBook;
+	}*/
 	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 	if (flipBook) return flipBook;
 
@@ -469,6 +452,12 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	RightPath = RightPath.Replace(OneH, Empty, ESearchCase::IgnoreCase);
 	RightPath = RightPath.Replace(TwoH, Empty, ESearchCase::IgnoreCase);
 	PathToLoad = LeftPath + RightPath;
+	
+	/*if (PlatformFile.FileExists(*PathToLoad))
+	{
+		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+		if (flipBook) return flipBook;
+	}*/
 	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 	if (flipBook) return flipBook;
 
@@ -476,8 +465,14 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	RightPath = RightPath.Replace(Idle, Empty, ESearchCase::IgnoreCase);
 	RightPath = RightPath.Replace(Walk, Empty, ESearchCase::IgnoreCase);
 	PathToLoad = LeftPath + RightPath;
+
+	/*if (PlatformFile.FileExists(*PathToLoad))
+	{
+		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+		if (flipBook) return flipBook;
+	}*/
 	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	GLog->Log(PathToLoad+"is what you are finally laoding lmao");
+	//GLog->Log(PathToLoad+" is what you are finally laoding lmao");
 	return flipBook;
 	//Give up after this point and just return whatever shows up. 
 
@@ -490,4 +485,30 @@ void UDataLoader::LoadAssetsForCooking()
 	ObjectLibrary->AddToRoot();
 	ObjectLibrary->LoadAssetDataFromPath(TEXT("/Game/Textures"));
 	ObjectLibrary->LoadAssetsFromAssetData();
+}
+
+APlayerController* UDataLoader::GetMainController(const UObject* WorldContextObject)
+{
+	// Get world context (containing player controllers)
+	if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
+	{
+		// Loop on player controllers
+		for (FConstPlayerControllerIterator Iterator = World->GetPlayerControllerIterator(); Iterator; ++Iterator)
+		{
+			// Get player controller from iterator
+			APlayerController* PlayerController = Iterator->Get();
+
+			// Get local player if exist
+			ULocalPlayer* LocalPlayer = PlayerController->GetLocalPlayer();
+
+			// If it's local and id is 0, it's the main controller
+			if (LocalPlayer != nullptr && LocalPlayer->GetControllerId() == 0)
+			{
+				return PlayerController;
+			}
+		}
+	}
+
+	// Not found
+	return nullptr;
 }
