@@ -20,7 +20,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "Default Attack"
+  "description": "Default Attack",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Punch",
@@ -44,7 +51,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A smack with a curled fist"
+  "description": "A smack with a curled fist",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Stab",
@@ -68,7 +82,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A quick forward thrust"
+  "description": "A quick forward thrust",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Thrust",
@@ -92,7 +113,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A quick forward thrust"
+  "description": "A quick forward thrust",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {"key":"Scratch",
   "classKey":"Punch",
@@ -115,7 +143,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A weak attack with a claw"
+  "description": "A weak attack with a claw",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {"key":"Arcane Blast",
   "classKey":"Punch",
@@ -138,7 +173,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A weak burst of arcane energy"
+  "description": "A weak burst of arcane energy",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {"key":"Basic Heal",
   "classKey":"Heal",
@@ -161,7 +203,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "Channel a small amount of positive energy to heal wounds"
+  "description": "Channel a small amount of positive energy to heal wounds",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Quick Attack",
@@ -185,7 +234,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A quick but weaker attack"
+  "description": "A quick but weaker attack",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Power Attack",
@@ -209,7 +265,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A slow but powerful attack"
+  "description": "A slow but powerful attack",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Bash",
@@ -233,7 +296,14 @@
   "widgetKey":"",
   "attackHeight":1,
   "wieldType":1,
-  "description": "A smack with a heavy shield"
+  "description": "A smack with a heavy shield",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 },
 {
   "key":"Chop",
@@ -257,5 +327,12 @@
   "widgetKey":"",
   "attackHeight":2,
   "wieldType":1,
-  "description": "A powerful downward chop"
+  "description": "A powerful downward chop",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": "",
+  "heightDisadvantage":"",
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":""
 }]

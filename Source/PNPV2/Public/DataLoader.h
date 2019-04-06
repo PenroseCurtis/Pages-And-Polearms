@@ -244,6 +244,20 @@ public:
 		int32 wieldType;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> advantageTags;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> disadvantageTags;
+	UPROPERTY(BlueprintReadWrite)
+		int32 heightAdvantage;
+	UPROPERTY(BlueprintReadWrite)
+		int32 heightDisadvantage;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> weaponTypeAdvantage;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> weaponTypeDisadvantage;
+	UPROPERTY(BlueprintReadWrite)
+		FString stanceChange;
 	FOAttackStruct()
 	{
 		minTargets = 1;
@@ -304,6 +318,8 @@ public:
 		FString description;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FTransitionCost> transitions;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> tags;
 };
 
 USTRUCT(BlueprintType)
