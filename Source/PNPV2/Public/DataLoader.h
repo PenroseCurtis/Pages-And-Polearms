@@ -249,9 +249,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> disadvantageTags;
 	UPROPERTY(BlueprintReadWrite)
-		int32 heightAdvantage;
+		TArray<int32> heightAdvantage;
 	UPROPERTY(BlueprintReadWrite)
-		int32 heightDisadvantage;
+		TArray<int32> heightDisadvantage;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> weaponTypeAdvantage;
 	UPROPERTY(BlueprintReadWrite)
