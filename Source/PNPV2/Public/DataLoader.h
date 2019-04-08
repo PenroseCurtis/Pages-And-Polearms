@@ -49,6 +49,29 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FCombatStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		float accuracy;
+	UPROPERTY(BlueprintReadWrite)
+		float avoidance;
+	UPROPERTY(BlueprintReadWrite)
+		float bludgeon;
+	UPROPERTY(BlueprintReadWrite)
+		float contact;
+	UPROPERTY(BlueprintReadWrite)
+		float damage;
+	UPROPERTY(BlueprintReadWrite)
+		float guard;
+	UPROPERTY(BlueprintReadWrite)
+		float piercing;
+};
+
+USTRUCT(BlueprintType)
 struct FOStatBlockStruct
 {
 	GENERATED_BODY()
@@ -436,6 +459,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString statKey;
 	UPROPERTY(BlueprintReadWrite)
+		FString combatStatKey;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
 		bool isTemporary;
@@ -493,6 +518,8 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 	public:
 		UFUNCTION(BlueprintCallable)
 		static FString GetMessage();
+		UFUNCTION(BlueprintCallable)
+			static FCombatStats GetCombatStats(FString key);
 		UFUNCTION(BlueprintCallable)
 			static FOStatBlockStruct GetStatBlock(FString key);
 		UFUNCTION(BlueprintCallable)
