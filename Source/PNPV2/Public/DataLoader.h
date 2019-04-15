@@ -258,6 +258,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandRequirements;
 	UPROPERTY(BlueprintReadWrite)
+		bool bothRequirementsNeeded;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> targetTypes;
 	UPROPERTY(BlueprintReadWrite)
 		FString widgetKey;
@@ -320,17 +322,15 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
-		float highGuard;
+		float guardModifier;
 	UPROPERTY(BlueprintReadWrite)
-		float midGuard;	
-	UPROPERTY(BlueprintReadWrite)
-		float lowGuard;
+		float piercingModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float accuracyModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float damageModifier;
 	UPROPERTY(BlueprintReadWrite)
-		float piercingModifier;
+		float avoidanceModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float bludgeonModifier;
 	UPROPERTY(BlueprintReadWrite)
