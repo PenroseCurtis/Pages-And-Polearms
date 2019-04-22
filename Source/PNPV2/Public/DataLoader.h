@@ -361,6 +361,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		float contact;
 	UPROPERTY(BlueprintReadWrite)
+		float guard;
+	UPROPERTY(BlueprintReadWrite)
 		float piercing;
 	UPROPERTY(BlueprintReadWrite)
 		float bludgeon;
@@ -408,6 +410,8 @@ public:
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
 		float coverage;
+	UPROPERTY(BlueprintReadWrite)
+		float maxCoverage;
 	UPROPERTY(BlueprintReadWrite)
 		float hardness;
 	UPROPERTY(BlueprintReadWrite)

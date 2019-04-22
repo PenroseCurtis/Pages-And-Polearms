@@ -23,7 +23,7 @@
 	  "classKey":"Unarmed",
 	  "name":"Unarmed",
 	  "level":1,
-	  "attacks":["Punch"],
+	  "attacks":["Punch","Left Jab","Ultimate Punch!"],
 	  "mainHandWeaponTypes":[4],
 	  "offHandWeaponTypes":[4], 
 	  "bothRequirementsNeeded":false,
