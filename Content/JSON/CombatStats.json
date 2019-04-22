@@ -1,0 +1,122 @@
+[
+	{
+		"key":"Powerful",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":3.0,
+		"contact":0.0,
+		"damage":1.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Weakened",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":-1.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Guarded",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":1.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Vulnerable",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":-1.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Steady",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":1.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Unsteady",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":-1.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Agile",
+		"accuracy":0.0,
+		"avoidance":1.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Clumsy",
+		"accuracy":0.0,
+		"avoidance":-1.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Precise",
+		"accuracy":1.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Wild",
+		"accuracy":-1.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 0.0
+	},
+	{
+		"key":"Piercing",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": 1.0
+	},
+	{
+		"key":"Unpiercing",
+		"accuracy":0.0,
+		"avoidance":0.0,
+		"bludgeon":0.0,
+		"contact":0.0,
+		"damage":0.0,
+		"guard":0.0,
+		"piercing": -1.0
+	}
+]

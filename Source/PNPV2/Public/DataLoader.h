@@ -49,6 +49,29 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FCombatStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		float accuracy;
+	UPROPERTY(BlueprintReadWrite)
+		float avoidance;
+	UPROPERTY(BlueprintReadWrite)
+		float bludgeon;
+	UPROPERTY(BlueprintReadWrite)
+		float contact;
+	UPROPERTY(BlueprintReadWrite)
+		float damage;
+	UPROPERTY(BlueprintReadWrite)
+		float guard;
+	UPROPERTY(BlueprintReadWrite)
+		float piercing;
+};
+
+USTRUCT(BlueprintType)
 struct FOStatBlockStruct
 {
 	GENERATED_BODY()
@@ -235,6 +258,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandRequirements;
 	UPROPERTY(BlueprintReadWrite)
+		bool bothRequirementsNeeded;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> targetTypes;
 	UPROPERTY(BlueprintReadWrite)
 		FString widgetKey;
@@ -244,6 +269,20 @@ public:
 		int32 wieldType;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> advantageTags;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> disadvantageTags;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> heightAdvantage;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> heightDisadvantage;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> weaponTypeAdvantage;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> weaponTypeDisadvantage;
+	UPROPERTY(BlueprintReadWrite)
+		FString stanceChange;
 	FOAttackStruct()
 	{
 		minTargets = 1;
@@ -283,17 +322,15 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
-		float highGuard;
+		float guardModifier;
 	UPROPERTY(BlueprintReadWrite)
-		float midGuard;	
-	UPROPERTY(BlueprintReadWrite)
-		float lowGuard;
+		float piercingModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float accuracyModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float damageModifier;
 	UPROPERTY(BlueprintReadWrite)
-		float piercingModifier;
+		float avoidanceModifier;
 	UPROPERTY(BlueprintReadWrite)
 		float bludgeonModifier;
 	UPROPERTY(BlueprintReadWrite)
@@ -304,6 +341,8 @@ public:
 		FString description;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FTransitionCost> transitions;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> tags;
 };
 
 USTRUCT(BlueprintType)
@@ -321,6 +360,8 @@ public:
 		float accuracy;
 	UPROPERTY(BlueprintReadWrite)
 		float contact;
+	UPROPERTY(BlueprintReadWrite)
+		float guard;
 	UPROPERTY(BlueprintReadWrite)
 		float piercing;
 	UPROPERTY(BlueprintReadWrite)
@@ -369,6 +410,8 @@ public:
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
 		float coverage;
+	UPROPERTY(BlueprintReadWrite)
+		float maxCoverage;
 	UPROPERTY(BlueprintReadWrite)
 		float hardness;
 	UPROPERTY(BlueprintReadWrite)
@@ -419,6 +462,8 @@ public:
 		FString classKey;
 	UPROPERTY(BlueprintReadWrite)
 		FString statKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString combatStatKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
@@ -477,6 +522,8 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 	public:
 		UFUNCTION(BlueprintCallable)
 		static FString GetMessage();
+		UFUNCTION(BlueprintCallable)
+			static FCombatStats GetCombatStats(FString key);
 		UFUNCTION(BlueprintCallable)
 			static FOStatBlockStruct GetStatBlock(FString key);
 		UFUNCTION(BlueprintCallable)
