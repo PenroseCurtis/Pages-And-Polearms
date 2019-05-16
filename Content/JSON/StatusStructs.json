@@ -2,6 +2,7 @@
   "key":"Default",
   "classKey":"Default",
   "statKey":"",
+  "combatStatKey":"",
   "attacks":[""],
   "isTemporary":false,
   "duration": 0,

@@ -357,6 +357,46 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 	return FOStatusStruct();
 }
 
+FCombatStats UDataLoader::GetCombatStats(FString key) {
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/CombatStats.json";
+	FString jsonString;
+	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
+
+	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
+	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
+
+	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
+	{
+		FCombatStats combatStatsOut = FCombatStats();
+		FCombatStats * combatStatsPtr = &combatStatsOut;
+		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
+		//Getting various properties
+		for (int32 i = 0; i < jsonArray.Num(); i++)
+		{
+			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
+			if (jsonObject->GetStringField("key") == key)
+			{
+				int64 flags = 0;
+				if (FJsonObjectConverter::JsonObjectToUStruct<FCombatStats>(jsonObject, combatStatsPtr, flags, flags))
+				{
+					GLog->Log("Converstion succeded");
+					return combatStatsOut;
+				}
+				else {
+					GLog->Log("Converting To Struct Failed");
+					return FCombatStats();
+				}
+			}
+
+		}
+	}
+	else
+	{
+		GLog->Log("Serialization Failed");
+		return FCombatStats();
+	}
+	return FCombatStats();
+}
 UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 {
 	if (Path.IsEmpty()) return NULL;
