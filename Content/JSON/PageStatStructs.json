@@ -28,7 +28,7 @@
   "defaultStatBlockKey":"Default Stats",
   "stances":[{
 				"stanceName":"Rat aggro",
-				"stanceLevel": 1
+				"level": 1
 				}],
   "attacks":[],
   "enchantments":[],
