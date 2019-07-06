@@ -1,15 +1,15 @@
 [{
   "key":"Page",
   "name":"Norman",
-  "defaultStatBlockKey":"Default Stats",
   "stances":[{"stanceName":"Unarmed", "level":1},
 			 {"stanceName": "2H Mid Sword", "level": 1},
 			 {"stanceName": "High Guard", "level": 1},
 			 {"stanceName": "Shield Basher", "level": 1},
 			 {"stanceName": "Sword and Board", "level":1},
-			 {"stanceName": "1H Mid Sword", "level": 1}],
+			 {"stanceName": "1H Mid Sword", "level": 1},
+			 {"stanceName": "Unarmed High Guard", "level": 1}],
   "attacks":[],
-  "enchantments":[],
+  "statuses":["Poisoned"],
   "level":1,
   "experience":0, 
   "defaultWeaponKey":"Fist",
@@ -20,7 +20,12 @@
   "mainHandRing":"",
   "offHandRing":"",
   "equippedItems":[],
-  "inventory":[]
+  "inventory":[],
+  "statBlock":{
+				"dexterity": 11,
+				"vitality": 9,
+				"vitalityTotal": 10
+				}
 },
 {
   "key":"Rat",
@@ -31,7 +36,7 @@
 				"level": 1
 				}],
   "attacks":[],
-  "enchantments":[],
+  "statuses":[],
   "level":1,
   "experience":0,
   "defaultWeaponKey":"Claw",
@@ -42,5 +47,10 @@
   "mainHandRing":"",
   "offHandRing":"",
   "equippedItems":[],
-  "inventory":[]
+  "inventory":[],
+  "statBlock":{
+				"dexterity":10,
+				"vitality":10,
+				"vitalityTotal":10
+				}
 }]

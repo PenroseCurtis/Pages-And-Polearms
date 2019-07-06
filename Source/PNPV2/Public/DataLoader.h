@@ -69,6 +69,15 @@ public:
 		float guard;
 	UPROPERTY(BlueprintReadWrite)
 		float piercing;
+	FCombatStats() {
+		accuracy = 0;
+		avoidance = 0;
+		bludgeon = 0;
+		contact = 0;
+		damage = 0;
+		guard = 0;
+		piercing = 0;
+	}
 };
 
 USTRUCT(BlueprintType)
@@ -111,21 +120,21 @@ struct FOStatBlockStruct
 		float manaRegeneration;
 	FOStatBlockStruct()
 	{
-		strength = 10;
-		dexterity = 10;
-		constitution = 10;
-		intelligence = 10;
-		wisdom = 10;
-		spirit = 10;
-		vitality = 10;
-		vitalityTotal = 10;
-		vitalityRegeneration = 1;
-		stamina = 10;
-		staminaTotal = 10;
-		staminaRegeneration = 1;
-		mana = 10;
-		manaTotal = 10;
-		manaRegeneration = 1;
+		strength = 0;
+		dexterity = 0;
+		constitution = 0;
+		intelligence = 0;
+		wisdom = 0;
+		spirit = 0;
+		vitality = 0;
+		vitalityTotal = 0;
+		vitalityRegeneration = 0;
+		stamina = 0;
+		staminaTotal = 0;
+		staminaRegeneration = 0;
+		mana = 0;
+		manaTotal = 0;
+		manaRegeneration = 0;
 	}
 };
 
@@ -180,8 +189,6 @@ public:
 		FString movementCompKey;
 	UPROPERTY(BlueprintReadWrite)
 		FString name;
-	UPROPERTY(BlueprintReadWrite)
-		FString defaultStatBlockKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FStanceLevel> stances;
 	UPROPERTY(BlueprintReadWrite)
@@ -283,6 +290,8 @@ public:
 		TArray<int32> weaponTypeDisadvantage;
 	UPROPERTY(BlueprintReadWrite)
 		FString stanceChange;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<int32> possibleTriggerConditions;
 	FOAttackStruct()
 	{
 		minTargets = 1;
@@ -322,21 +331,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
-		float guardModifier;
+		FCombatStats combatStats;
 	UPROPERTY(BlueprintReadWrite)
-		float piercingModifier;
+		int32 guardHeight;
 	UPROPERTY(BlueprintReadWrite)
-		float accuracyModifier;
-	UPROPERTY(BlueprintReadWrite)
-		float damageModifier;
-	UPROPERTY(BlueprintReadWrite)
-		float avoidanceModifier;
-	UPROPERTY(BlueprintReadWrite)
-		float bludgeonModifier;
-	UPROPERTY(BlueprintReadWrite)
-		float contactModifier;
-	UPROPERTY(BlueprintReadWrite)
-		int32 guardType;
+		int32 gripType;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
 	UPROPERTY(BlueprintReadWrite)
@@ -449,8 +448,6 @@ public:
 	}
 };
 
-
-
 USTRUCT(BlueprintType)
 struct FOStatusStruct
 {
@@ -461,9 +458,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString classKey;
 	UPROPERTY(BlueprintReadWrite)
-		FString statKey;
+		FString iconKey;
 	UPROPERTY(BlueprintReadWrite)
-		FString combatStatKey;
+		FOStatBlockStruct statChange;
+	UPROPERTY(BlueprintReadWrite)
+		FCombatStats combatStatChange;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> attacks;
 	UPROPERTY(BlueprintReadWrite)
@@ -533,7 +532,7 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintCallable)
 			static FOArmorStruct GetArmorStruct(FString key);
 		UFUNCTION(BlueprintCallable)
-			static FOStanceStruct GetStanceStruct(FString key);
+			static FOStanceStruct GetStanceStruct(FString key, int32 level);
 		UFUNCTION(BlueprintCallable)
 			static FOAttackStruct GetAttackStruct(FString key);
 		UFUNCTION(BlueprintCallable)

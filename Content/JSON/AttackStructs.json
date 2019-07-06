@@ -14,8 +14,8 @@
   "damage":1.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[],
   "widgetKey":"",
@@ -28,7 +28,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Punch",
@@ -40,14 +41,14 @@
   "staminaCost":0.0,
   "vitalityCost": 0.0,
   "manaCost":0.0,
-  "selfTargettable": true,
+  "selfTargettable": false,
   "accuracy":1.0,
   "piercing":1.0,
   "damage":100.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[4],
-  "offHandRequirement":[4],
+  "mainHandRequirements":[4],
+  "offHandRequirements":[4],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -60,7 +61,8 @@
   "heightDisadvantage":[0],
   "weaponTypeAdvantage":[0],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"Unarmed High Guard",
+  "possibleTriggerConditions":[0,1,2]
 },
 {
   "key":"Left Jab",
@@ -78,8 +80,8 @@
   "damage":0.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[4],
-  "offHandRequirement":[4],
+  "mainHandRequirements":[4],
+  "offHandRequirements":[4],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -92,7 +94,8 @@
   "heightDisadvantage":[0],
   "weaponTypeAdvantage":[0],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[0]
 },
 {
   "key":"Ultimate Punch!",
@@ -110,8 +113,8 @@
   "damage":0.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[4],
-  "offHandRequirement":[4],
+  "mainHandRequirements":[4],
+  "offHandRequirements":[4],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -124,7 +127,8 @@
   "heightDisadvantage":[0],
   "weaponTypeAdvantage":[0],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[1]
 },
 {
   "key":"Stab",
@@ -132,18 +136,18 @@
   "minTargets":1,
   "maxTargets":1,
   "range":1,
-  "initiativeCost":0,
+  "initiativeCost":1,
   "staminaCost":0.0,
   "vitalityCost": 0.0,
   "manaCost":0.0,
   "selfTargettable": false,
   "accuracy":5.0,
   "piercing":5.0,
-  "damage":-1.0,
+  "damage":10.0,
   "contact":5.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -156,7 +160,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Thrust",
@@ -174,8 +179,8 @@
   "damage":0.0,
   "contact":5.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -188,7 +193,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {"key":"Scratch",
   "classKey":"Punch",
@@ -205,8 +211,8 @@
   "damage": 0.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -219,7 +225,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {"key":"Arcane Blast",
   "classKey":"Punch",
@@ -236,8 +243,8 @@
   "damage":1.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -250,7 +257,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {"key":"Basic Heal",
   "classKey":"Heal",
@@ -267,8 +275,8 @@
   "damage":-2.0,
   "contact":10.0,
   "bludgeon":0.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -281,7 +289,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Quick Attack",
@@ -299,8 +308,8 @@
   "damage":1.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[3],
-  "offHandRequirement":[],
+  "mainHandRequirements":[3],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -313,7 +322,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Power Attack",
@@ -331,8 +341,8 @@
   "damage":5.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -345,7 +355,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Bash",
@@ -363,8 +374,8 @@
   "damage":2.0,
   "contact":1.0,
   "bludgeon":3.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -377,7 +388,8 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 },
 {
   "key":"Chop",
@@ -395,8 +407,8 @@
   "damage":20.0,
   "contact":1.0,
   "bludgeon":1.0,
-  "mainHandRequirement":[],
-  "offHandRequirement":[],
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
   "bothRequirementsNeeded":false,
   "targetTypes":[0,1],
   "widgetKey":"",
@@ -409,5 +421,6 @@
   "heightDisadvantage":[],
   "weaponTypeAdvantage":[],
   "weaponTypeDisadvantage":[],
-  "stanceChange":""
+  "stanceChange":"2H Mid Sword",
+  "possibleTriggerConditions":[]
 }]
