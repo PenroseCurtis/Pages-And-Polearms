@@ -187,7 +187,7 @@ FOArmorStruct UDataLoader::GetArmorStruct(FString key)
 	return FOArmorStruct();
 }
 
-FOStanceStruct UDataLoader::GetStanceStruct(FString key)
+FOStanceStruct UDataLoader::GetStanceStruct(FString key, int32 level)
 {
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StanceStructs.json";
 	FString jsonString;
@@ -206,7 +206,7 @@ FOStanceStruct UDataLoader::GetStanceStruct(FString key)
 		for (int32 i = 0; i < jsonArray.Num(); i++)
 		{
 			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
-			if (jsonObject->GetStringField("key") == key)
+			if (jsonObject->GetStringField("key") == key && jsonObject->GetIntegerField("level") == level)
 			{
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStanceStruct>(jsonObject, stanceStructPtr, flags, flags))
@@ -319,7 +319,7 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
 	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
+	GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -338,7 +338,7 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatusStruct>(jsonObject, statusStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
+					GLog->Log("Converstion to status succeded");
 					return statusStructOut;
 				}
 				else {

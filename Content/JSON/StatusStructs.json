@@ -1,10 +1,33 @@
 [{
   "key":"Default",
   "classKey":"Default",
-  "statKey":"",
-  "combatStatKey":"",
+  "iconKey":"Buff",
+  "statChange":{"strength": 1.0},
+  "combatStatChange":{"accuracy":2.0},
   "attacks":[""],
   "isTemporary":false,
-  "duration": 0,
-  "description":""
+  "duration": 2,
+  "description":"Default Status"
+},
+{
+  "key":"Poisoned",
+  "classKey":"Poisoned",
+  "iconKey":"Poisoned",
+  "statChange":{"vitalityRegeneration":-1},
+  "combatStatChange":{},
+  "attacks":[""],
+  "isTemporary":true,
+  "duration": 5,
+  "description":"Deals damage every turn"
+},
+{
+  "key":"Buffed",
+  "classKey":"Default",
+  "iconKey":"Buff",
+  "statChange":{"strength":2.0},
+  "combatStatChange":{},
+  "attacks":[""],
+  "isTemporary":true,
+  "duration": 10,
+  "description":"Gives a stat increase"
 }]
