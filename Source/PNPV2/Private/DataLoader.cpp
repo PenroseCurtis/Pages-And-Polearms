@@ -429,17 +429,22 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	const TCHAR* Walk = TEXT("Walk");
 
 	if (Path.IsEmpty()) return NULL;
+
 	FString PathToLoad = "/Game/FlipBooks/" + Path;
+
+	UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	
+	if (flipBook) return flipBook;
+	
 	const FString LeftPath = PathToLoad.Left(PathToLoad.Find("|")); //Left half of the path is unique to the asset
 	//Ex: Helmet/Default_Helmet/Helmet
 
 	FString RightPath = PathToLoad.RightChop(PathToLoad.Find("|")+1); //Right half of the path is the naming convention
 	//Ex: FrontLowOneHIdle
+
 	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 
-
-
-	PathToLoad = LeftPath + RightPath; //This seems redundant, but its just there to remove the "|" delimeter
+	PathToLoad = LeftPath + RightPath; 
 	//FString filePath = FString("/Game/FlipBooks/Character/Page/PageSideWalk.uasset");
 	//FString filePath2 = FString("C:/User/Curtis/Documents/Hoi.txt");
 	/*if (PlatformFile.FileExists(*filePath2))
@@ -454,7 +459,6 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	{
 		GLog->Log("Ya goober");
 	}*/
-	UPaperFlipbook* flipBook = NULL;
 		//flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 	//if (PlatformFile.FileExists(*PathToLoad))
 	//{
@@ -515,8 +519,6 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	//GLog->Log(PathToLoad+" is what you are finally laoding lmao");
 	return flipBook;
 	//Give up after this point and just return whatever shows up. 
-
-
 }
 void UDataLoader::LoadAssetsForCooking()
 {
