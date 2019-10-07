@@ -462,8 +462,8 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 		//flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 	//if (PlatformFile.FileExists(*PathToLoad))
 	//{
-		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-		if (flipBook) return flipBook;
+	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	if (flipBook) return flipBook;
 	//}
 	//If the base path doesn't exist, try removing left and right from the right part of the path
 	RightPath = RightPath.Replace(TEXT("Right"), Empty, ESearchCase::IgnoreCase);

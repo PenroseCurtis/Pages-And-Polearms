@@ -423,4 +423,28 @@
   "weaponTypeDisadvantage":[],
   "stanceChange":"2H Mid Sword",
   "possibleTriggerConditions":[]
+},
+{
+  "key":"Unlock",
+  "classKey":"Use",
+  "minTargets":1,
+  "maxTargets":1,
+  "range":1,
+  "selfTargettable": false,
+  "mainHandRequirements":[],
+  "offHandRequirements":[],
+  "bothRequirementsNeeded":false,
+  "targetTypes":[0],
+  "widgetKey":"",
+  "attackHeight":0,
+  "wieldType":1,
+  "description": "Unlock something",
+  "advantageTags": [],
+  "disadvantageTags": [],
+  "heightAdvantage": [],
+  "heightDisadvantage":[],
+  "weaponTypeAdvantage":[],
+  "weaponTypeDisadvantage":[],
+  "stanceChange":"",
+  "possibleTriggerConditions":[]
 }]
