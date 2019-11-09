@@ -186,6 +186,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
+		FString flipBookKey;
+	UPROPERTY(BlueprintReadWrite)
 		FString movementCompKey;
 	UPROPERTY(BlueprintReadWrite)
 		FString name;
@@ -205,14 +207,6 @@ public:
 		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
-	UPROPERTY(BlueprintReadWrite)
-		FOItemStruct mainHandWeapon;
-	UPROPERTY(BlueprintReadWrite)
-		FOItemStruct offHandWeapon;
-	UPROPERTY(BlueprintReadWrite)
-		FOItemStruct mainHandRing;
-	UPROPERTY(BlueprintReadWrite)
-		FOItemStruct offHandRing;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FOItemStruct> equippedItems;
 	UPROPERTY(BlueprintReadWrite)
@@ -509,10 +503,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 numberOfRounds;
 };
-
-
-
-
 
 UCLASS()
 class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
