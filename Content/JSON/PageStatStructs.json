@@ -1,5 +1,6 @@
 [{
   "key":"Page",
+  "flipBookKey":"Page",
   "name":"Norman",
   "stances":[{"stanceName":"Unarmed", "level":1},
 			 {"stanceName": "2H Mid Sword", "level": 1},
@@ -15,10 +16,6 @@
   "defaultWeaponKey":"Fist",
   "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
   "spells":[],
-  "mainHandWeapon":"Fist",
-  "offHandWeapon":"Fist",
-  "mainHandRing":"",
-  "offHandRing":"",
   "equippedItems":[],
   "inventory":[],
   "statBlock":{
@@ -29,6 +26,7 @@
 },
 {
   "key":"Rat",
+  "flipBookKey":"Rat",
   "name":"atat",
   "defaultStatBlockKey":"Default Stats",
   "stances":[{
@@ -42,10 +40,6 @@
   "defaultWeaponKey":"Claw",
   "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
   "spells":[],
-  "mainHandWeapon":"Claw",
-  "offHandWeapon":"Claw",
-  "mainHandRing":"",
-  "offHandRing":"",
   "equippedItems":[],
   "inventory":[],
   "statBlock":{

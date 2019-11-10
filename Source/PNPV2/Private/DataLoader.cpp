@@ -15,8 +15,6 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StatBlocks.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -33,10 +31,8 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
 			if (jsonObject->GetStringField("key") == key)
 			{
-				GLog->Log("You have found what you were looking for");
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatBlockStruct>(jsonObject, statBlockPtr, flags, flags))
 				{
-					GLog->Log("Conversion Succeeded");
 					return statBlockOut;
 				}
 				else {
@@ -81,7 +77,6 @@ FOItemStruct UDataLoader::GetItemStruct(FString key)
 			{
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOItemStruct>(jsonObject, itemStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return itemStructOut;
 				}
 				else {
@@ -128,7 +123,6 @@ FOWeaponStruct UDataLoader::GetWeaponStruct(FString key)
 				//weaponStructOut.statKey = key;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOWeaponStruct>(jsonObject, weaponStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return weaponStructOut;
 				}
 				else {
@@ -168,7 +162,6 @@ FOArmorStruct UDataLoader::GetArmorStruct(FString key)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOArmorStruct>(jsonObject, armorStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return armorStructOut;
 				}
 				else {
@@ -211,7 +204,6 @@ FOStanceStruct UDataLoader::GetStanceStruct(FString key, int32 level)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStanceStruct>(jsonObject, stanceStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return stanceStructOut;
 				}
 				else {
@@ -251,7 +243,6 @@ FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOAttackStruct>(jsonObject, attackStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return attackStructOut;
 				}
 				else {
@@ -259,7 +250,6 @@ FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 					return FOAttackStruct();
 				}
 			}
-
 		}
 	}
 	else
@@ -275,8 +265,6 @@ FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/PageStatStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -295,7 +283,6 @@ FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOPageStatStruct>(jsonObject, pageStatStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return pageStatStructOut;
 				}
 				else {
@@ -318,8 +305,6 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StatusStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -338,7 +323,6 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FOStatusStruct>(jsonObject, statusStructPtr, flags, flags))
 				{
-					GLog->Log("Converstion to status succeded");
 					return statusStructOut;
 				}
 				else {
@@ -346,7 +330,6 @@ FOStatusStruct UDataLoader::GetStatusStruct(FString key)
 					return FOStatusStruct();
 				}
 			}
-			
 		}
 	}
 	else
@@ -379,7 +362,6 @@ FCombatStats UDataLoader::GetCombatStats(FString key) {
 				int64 flags = 0;
 				if (FJsonObjectConverter::JsonObjectToUStruct<FCombatStats>(jsonObject, combatStatsPtr, flags, flags))
 				{
-					GLog->Log("Converstion succeded");
 					return combatStatsOut;
 				}
 				else {
@@ -429,17 +411,22 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	const TCHAR* Walk = TEXT("Walk");
 
 	if (Path.IsEmpty()) return NULL;
+
 	FString PathToLoad = "/Game/FlipBooks/" + Path;
+
+	//UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	
+	//if (flipBook) return flipBook;
+	
 	const FString LeftPath = PathToLoad.Left(PathToLoad.Find("|")); //Left half of the path is unique to the asset
 	//Ex: Helmet/Default_Helmet/Helmet
 
 	FString RightPath = PathToLoad.RightChop(PathToLoad.Find("|")+1); //Right half of the path is the naming convention
 	//Ex: FrontLowOneHIdle
+
 	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 
-
-
-	PathToLoad = LeftPath + RightPath; //This seems redundant, but its just there to remove the "|" delimeter
+	PathToLoad = LeftPath + RightPath; 
 	//FString filePath = FString("/Game/FlipBooks/Character/Page/PageSideWalk.uasset");
 	//FString filePath2 = FString("C:/User/Curtis/Documents/Hoi.txt");
 	/*if (PlatformFile.FileExists(*filePath2))
@@ -454,12 +441,11 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	{
 		GLog->Log("Ya goober");
 	}*/
-	UPaperFlipbook* flipBook = NULL;
 		//flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 	//if (PlatformFile.FileExists(*PathToLoad))
 	//{
-		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-		if (flipBook) return flipBook;
+	UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+	if (flipBook) return flipBook;
 	//}
 	//If the base path doesn't exist, try removing left and right from the right part of the path
 	RightPath = RightPath.Replace(TEXT("Right"), Empty, ESearchCase::IgnoreCase);
@@ -515,8 +501,6 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	//GLog->Log(PathToLoad+" is what you are finally laoding lmao");
 	return flipBook;
 	//Give up after this point and just return whatever shows up. 
-
-
 }
 void UDataLoader::LoadAssetsForCooking()
 {
