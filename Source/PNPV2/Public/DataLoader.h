@@ -165,6 +165,8 @@ public:
 		int32 equipableType;
 	UPROPERTY(BlueprintReadWrite)
 		bool inDominantHand;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> actionsObjectCanTake;
 	FOItemStruct()
 	{
 		key = "Default";
@@ -213,9 +215,15 @@ public:
 		TArray<FOItemStruct> inventory;
 	UPROPERTY(BlueprintReadWrite)
 		FOStatBlockStruct statBlock;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> actionsObjectCanTake;
 	FOPageStatStruct()
 	{
 		name = "Clem";
+		actionsObjectCanTake = { "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
+								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
+								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
+			                    "Use", "Unlock"};
 	}
 };
 
