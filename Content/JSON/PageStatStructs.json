@@ -17,7 +17,7 @@
 			 {"stanceName": "Fools Guard", "level": 1},
 			 {"stanceName": "Vulnerable", "level":1}],
   "attacks":[],
-  "statuses":["Poisoned"],
+  "statuses":[],
   "level":1,
   "experience":0, 
   "defaultWeaponKey":"Fist",
