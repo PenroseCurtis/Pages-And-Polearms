@@ -30,4 +30,15 @@
   "isTemporary":true,
   "duration": 10,
   "description":"Gives a stat increase"
+},
+{
+  "key":"Arcane",
+  "classKey":"Default",
+  "iconKey":"Buff",
+  "statChange":{},
+  "combatStatChange":{},
+  "attacks":["Arcane Blast"],
+  "isTemporary":false,
+  "duration": 10,
+  "description":"Allows casting arcane blast"
 }]
