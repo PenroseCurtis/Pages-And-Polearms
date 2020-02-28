@@ -29,6 +29,23 @@
 			"actionsObjectCanTake":["Unlock"]
 		  },
 		  {
+			"Key": "Dank Key",
+			"classKey":"Key",
+			"Weight": 0.1,
+			"Opacity": 0.0,
+			"Description": "A dank key",
+			"SpritePath": "Key_Sprite",
+			"IconPath": "Key",
+			"Enchantments": [""],
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0},
+					   {"action":"use", "cost":0}
+			],
+			"equipableType":0,
+			"actionsObjectCanTake":["Unlock"]
+		  },
+		  {
 			"Key": "Default Helmet",
 			"classKey":"Default",
 			"Weight": 0.0,
@@ -51,5 +68,21 @@
 			"Enchantments": [""],
 			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
 			"equipableType":2
+		  },
+		  {
+			"Key": "Weight",
+			"classKey":"Default",
+			"Weight": 10,
+			"Opacity": 0.0,
+			"Description": "A ten pound weight",
+			"SpritePath": "Items/Misc/Weight_Sprite",
+			"IconPath": "Items/Misc/Weight",
+			"Enchantments": [""],
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0},
+					   {"action":"use", "cost":0}
+			],
+			"equipableType":0
 		  }
 		]

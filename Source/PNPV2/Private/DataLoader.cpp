@@ -385,7 +385,6 @@ UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 
 	//FString PathToLoad = FPaths::ProjectContentDir() + "Dojo/Textures/" + Path;
 	FString PathToLoad = "/Game/Textures/"+Path;
-	GLog->Log(PathToLoad);
 	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), NULL, *(PathToLoad)));
 }
 
