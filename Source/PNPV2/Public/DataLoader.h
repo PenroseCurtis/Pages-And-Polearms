@@ -181,6 +181,30 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FOGenericItemStruct
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString itemKey;
+	UPROPERTY(BlueprintReadWrite)
+		FString classKey;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> enchantmentKeys;
+};
+
+USTRUCT(BlueprintType)
+struct FOGenericEquippedItemStruct
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FOGenericItemStruct itemStruct;
+	UPROPERTY(BlueprintReadWrite)
+		bool isEquippedToDominantHand;
+};
+
+USTRUCT(BlueprintType)
 struct FOPageStatStruct
 {
 	GENERATED_BODY()
