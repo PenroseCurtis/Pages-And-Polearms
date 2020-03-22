@@ -160,6 +160,14 @@
 				"YCoordinate": 8
 			},
 			"enemyStateKey": "Rat"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 2,
+				"YCoordinate": 9
+			},
+			"enemyStateKey": "Rat"
 		}
 	],
 	"initialItemStates": [
@@ -193,6 +201,22 @@
 			"coordinates": {
 				"XCoordinate": 9,
 				"YCoordinate": 9
+			},
+			"itemState": {
+				"itemKey": "Weight",
+				"classKey": "Item"
+			}
+		}
+	]
+},
+{
+	"key": "LocalTest",
+	"initialEnemyStates": [],
+	"initialItemStates": [
+		{
+			"coordinates": {
+				"XCoordinate": 3,
+				"YCoordinate": 2
 			},
 			"itemState": {
 				"itemKey": "Weight",

@@ -234,9 +234,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FOItemStruct> equippedItems;
+		TArray<FOGenericEquippedItemStruct> equippedItems;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FOItemStruct> inventory;
+		TArray<FOGenericItemStruct> inventory;
 	UPROPERTY(BlueprintReadWrite)
 		FOStatBlockStruct statBlock;
 	UPROPERTY(BlueprintReadWrite)
