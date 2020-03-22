@@ -9,7 +9,7 @@
 		"SpritePath": "Armor/Default_Armor/Default_Armor",
 		"IconPath": "Armor/Default_Armor/Default_Armor",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true
@@ -25,7 +25,7 @@
 		"SpritePath": "Cloak/Default_Cloak/Default_Cloak",
 		"IconPath": "Cloak/Default_Cloak/Default_Cloak",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 2,
 		"layer":-0.75,
 		"wrapsAround": false
@@ -41,7 +41,7 @@
 		"SpritePath": "Helmet/Default_Helmet/Helmet",
 		"IconPath": "Helmet/Default_Helmet/Helmet",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 1,
 		"layer":0.5,
 		"wrapsAround": true
@@ -57,7 +57,7 @@
 		"SpritePath": "Helmet/Full_Helm/Full_Helm_Sprite",
 		"IconPath": "Helmet/Full_Helm/Full_Helm",
 		"Enchantments": [],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 1,
 		"layer":0.5,
 		"wrapsAround": true
@@ -73,7 +73,7 @@
 		"SpritePath": "Armor/ChainMail/ChainMail_Sprite",
 		"IconPath": "Armor/ChainMail/ChainMail",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true
@@ -89,7 +89,7 @@
 		"SpritePath": "Leggings/Mail_Leggings/Mail_Leggings_Sprite",
 		"IconPath": "Leggings/Mail_Leggings/Mail_Leggings",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 6,
 		"layer":0.25,
 		"wrapsAround": true
@@ -105,7 +105,7 @@
 		"SpritePath": "Leggings/Leather_Leggings/Leather_Leggings_Sprite",
 		"IconPath": "Leggings/Leather_Leggings/Leather_Leggings",
 		"Enchantments": [""],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 6,
 		"layer":0.25,
 		"wrapsAround": true
@@ -121,7 +121,7 @@
 		"SpritePath": "Bracers/Leather_Bracers/Leather_Bracers_Sprite",
 		"IconPath": "Bracers/Leather_Bracers/Leather_Bracers",
 		"Enchantments": [],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 5,
 		"layer":0.25,
 		"wrapsAround": true
@@ -137,7 +137,7 @@
 		"SpritePath": "Bracers/Mail_Bracers/Mail_Bracers_Sprite",
 		"IconPath": "Bracers/Mail_Bracers/Mail_Bracers",
 		"Enchantments": [],
-		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1}],
+		"Actions": [{"action":"drop","cost":0},{"action":"examine", "cost":0},{"action":"equip", "cost":2},{"action":"unequip","cost":2},{"action":"pickup","cost":1},{"action":"use","cost":1}],
 		"equipableType": 5,
 		"layer":0.25,
 		"wrapsAround": true

@@ -23,7 +23,7 @@
 {
  "Key":"Default_Sword",
  "flipBookKey":"Default_Sword",
- "Damage":1.0,
+ "Damage":5.0,
  "Accuracy":1.0,
  "Contact":1.0,
  "Guard":2.0,
