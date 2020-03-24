@@ -222,6 +222,16 @@
 				"itemKey": "Weight",
 				"classKey": "Item"
 			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 4,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Default_Sword",
+				"classKey": "Weapon"
+			}
 		}
 	]
 }
