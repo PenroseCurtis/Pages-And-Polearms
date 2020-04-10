@@ -156,16 +156,16 @@
 		{
 			"coordinates": 
 			{
-				"XCoordinate": 2,
-				"YCoordinate": 8
+				"XCoordinate": 6,
+				"YCoordinate": 6
 			},
 			"enemyStateKey": "Rat"
 		},
 		{
 			"coordinates": 
 			{
-				"XCoordinate": 2,
-				"YCoordinate": 9
+				"XCoordinate": 1,
+				"YCoordinate": 6
 			},
 			"enemyStateKey": "Rat"
 		}
@@ -221,6 +221,16 @@
 			"itemState": {
 				"itemKey": "Weight",
 				"classKey": "Item"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 4,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Default_Sword",
+				"classKey": "Weapon"
 			}
 		}
 	]

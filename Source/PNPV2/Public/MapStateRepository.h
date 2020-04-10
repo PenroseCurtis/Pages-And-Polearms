@@ -99,6 +99,8 @@ public:
 		TArray<FDoorState> doorStates;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FEnchanterState> enchanterStates;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FSceneryState> tileStates;
 };
 
 UCLASS()
