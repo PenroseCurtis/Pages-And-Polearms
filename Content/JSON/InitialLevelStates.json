@@ -211,7 +211,16 @@
 },
 {
 	"key": "LocalTest",
-	"initialEnemyStates": [],
+	"initialEnemyStates": [
+	{
+			"coordinates": 
+			{
+				"XCoordinate": 8,
+				"YCoordinate": 1
+			},
+			"enemyStateKey": "Rat"
+		}
+	],
 	"initialItemStates": [
 		{
 			"coordinates": {
@@ -229,7 +238,7 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Default_Sword",
+				"itemKey": "Spear",
 				"classKey": "Weapon"
 			}
 		}
