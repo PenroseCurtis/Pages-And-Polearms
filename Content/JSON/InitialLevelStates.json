@@ -211,16 +211,7 @@
 },
 {
 	"key": "LocalTest",
-	"initialEnemyStates": [
-	{
-			"coordinates": 
-			{
-				"XCoordinate": 8,
-				"YCoordinate": 1
-			},
-			"enemyStateKey": "Rat"
-		}
-	],
+	"initialEnemyStates": [],
 	"initialItemStates": [
 		{
 			"coordinates": {
