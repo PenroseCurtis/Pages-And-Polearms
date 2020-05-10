@@ -4,5 +4,5 @@ Re-design of the game I developed for my capstone project, hoping to significant
 
 Currently the game is still in the prototype stage.
 
-Currently in version 0.4.5
-Link to Build: https://drive.google.com/open?id=1g1E7oWFkyF1N-io9lY60L_YlOPhdITid
+Currently in version 0.5.0
+Link to Build: https://drive.google.com/file/d/1Y7wPupTWJC-ZbV_qwYKfP6KPtzL_pKk9/view?usp=sharing
