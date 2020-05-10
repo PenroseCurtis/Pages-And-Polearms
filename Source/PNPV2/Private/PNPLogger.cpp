@@ -67,5 +67,47 @@ void UPNPLogger::LogMultiplayerMessage(ELogLevels logLevel, FString message)
 	}
 }
 
+void UPNPLogger::LogTestMessage(ELogLevels logLevel, FString message)
+{
+	switch (logLevel) {
+	case ELogLevels::Warning:
+		UE_LOG(TestLog, Warning, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Log:
+		UE_LOG(TestLog, Log, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Error:
+		UE_LOG(TestLog, Error, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Fatal:
+		UE_LOG(TestLog, Fatal, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Display:
+		UE_LOG(TestLog, Display, TEXT("%s"), *message);
+		break;
+	}
+}
+
+void UPNPLogger::LogVisualUpdateMessage(ELogLevels logLevel, FString message)
+{
+	switch (logLevel) {
+	case ELogLevels::Warning:
+		UE_LOG(VisualUpdateLog, Warning, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Log:
+		UE_LOG(VisualUpdateLog, Log, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Error:
+		UE_LOG(VisualUpdateLog, Error, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Fatal:
+		UE_LOG(VisualUpdateLog, Fatal, TEXT("%s"), *message);
+		break;
+	case ELogLevels::Display:
+		UE_LOG(VisualUpdateLog, Display, TEXT("%s"), *message);
+		break;
+	}
+}
+
 
 
