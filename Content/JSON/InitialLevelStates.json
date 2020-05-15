@@ -1,10 +1,12 @@
 [{
 	"key": "Hub",
+	"backgroundSpritePath": "Backgrounds/Hub",
 	"initialItemStates": [],
 	"initialEnemyStates": []
 },
 {
 	"key": "Armory",
+	"backgroundSpritePath": "Default",
 	"initialEnemyStates": [],
 	"initialItemStates": [
 	{
@@ -152,6 +154,7 @@
 },
 {
 	"key": "Combat Tutorial",
+	"backgroundSpritePath": "Default",
 	"initialEnemyStates": [
 		{
 			"coordinates": 
@@ -195,6 +198,7 @@
 },
 {
 	"key": "Tutorial",
+	"backgroundSpritePath": "Default",
 	"initialEnemyStates": [],
 	"initialItemStates": [
 		{
@@ -211,6 +215,7 @@
 },
 {
 	"key": "LocalTest",
+	"backgroundSpritePath": "Default",
 	"initialEnemyStates": [],
 	"initialItemStates": [
 		{

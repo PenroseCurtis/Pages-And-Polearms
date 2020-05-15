@@ -75,6 +75,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
+		FString backgroundSpritePath;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<FItemState> initialItemStates;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FInitialEnemyState> initialEnemyStates;
@@ -87,6 +89,8 @@ struct FLevelState
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		FString backgroundSpritePath;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FItemState> itemStates;
 	UPROPERTY(BlueprintReadWrite)

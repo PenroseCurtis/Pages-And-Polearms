@@ -379,6 +379,7 @@ FCombatStats UDataLoader::GetCombatStats(FString key) {
 	}
 	return FCombatStats();
 }
+
 UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 {
 	if (Path.IsEmpty()) return NULL;
@@ -501,6 +502,7 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	return flipBook;
 	//Give up after this point and just return whatever shows up. 
 }
+
 void UDataLoader::LoadAssetsForCooking()
 {
 	UClass* Ut2D = TSubclassOf<class UTexture2D>();
