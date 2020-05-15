@@ -20,8 +20,6 @@ FInitialLevelState UMapStateRepository::getInitialLevelState(FString key)
 		FInitialLevelState* initialLevelStateOutPtr = &initialLevelStateOut;
 		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
 
-		GLog->Log(jsonString);
-
 		//Getting various properties
 		for (int32 i = 0; i < jsonArray.Num(); i++)
 		{
