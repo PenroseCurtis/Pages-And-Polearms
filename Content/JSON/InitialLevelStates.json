@@ -234,8 +234,18 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Spear",
-				"classKey": "Weapon"
+				"itemKey": "Key",
+				"classKey": "Item"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 0,
+				"YCoordinate": 3
+			},
+			"itemState": {
+				"itemKey": "Buff Potion",
+				"classKey": "Consumable"
 			}
 		}
 	]

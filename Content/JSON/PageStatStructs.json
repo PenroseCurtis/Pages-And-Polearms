@@ -27,13 +27,13 @@
   "inventory":[],
   "statBlock":{
 				"dexterity": 11,
-				"vitality": 9,
+				"vitality": 10,
 				"vitalityTotal": 10
 				},
   "actionsObjectCanTake": [ "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			                    "Use", "Unlock", "Open", "Close", "Read"]
+			                    "Use", "Unlock", "Open", "Close", "Read", "Drink"]
 },
 {
   "key":"Rat",

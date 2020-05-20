@@ -6,6 +6,8 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "json.h"
 #include "DataLoader.h"
+#include "ItemRepository.h"
+#include "CharacterRepository.h"
 #include "SceneryStateRepository.h"
 #include "MapStateRepository.generated.h"
 

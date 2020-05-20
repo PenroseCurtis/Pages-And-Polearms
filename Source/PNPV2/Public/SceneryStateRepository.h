@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "ItemRepository.h"
 #include "DataLoader.h"
 #include "SceneryStateRepository.generated.h"
 
