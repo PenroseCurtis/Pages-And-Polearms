@@ -172,3 +172,44 @@ FOConsumableStruct UItemRepository::GetConsumableStruct(FString key)
 	}
 	return FOConsumableStruct();
 }
+
+FOScrollStruct UItemRepository::GetScrollStruct(FString key)
+{
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ScrollStructs.json";
+	FString jsonString;
+	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
+
+	TSharedPtr<FJsonValue> jsonValues;
+	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
+
+	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
+	{
+		FOScrollStruct scrollStructOut = FOScrollStruct();
+		FOScrollStruct  * scrollStructPtr = &scrollStructOut;
+		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
+		int64 flags = 0;
+		//Getting various properties
+		for (int32 i = 0; i < jsonArray.Num(); i++)
+		{
+			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
+			if (jsonObject->GetStringField("key") == key)
+			{
+				if (FJsonObjectConverter::JsonObjectToUStruct<FOScrollStruct>(jsonObject, scrollStructPtr, flags, flags))
+				{
+					return scrollStructOut;
+				}
+				else {
+					GLog->Log("Converting To Struct Failed");
+					return FOScrollStruct();
+				}
+
+				return scrollStructOut;
+			}
+		}
+	}
+	else {
+		GLog->Log("couldn't deserialize");
+		return FOScrollStruct();
+	}
+	return FOScrollStruct();
+}

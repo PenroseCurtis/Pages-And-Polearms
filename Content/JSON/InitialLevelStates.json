@@ -149,6 +149,36 @@
 			"itemKey": "Leather Bracers",
 			"classKey": "Armor"
 		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 6,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Health Potion",
+			"classKey": "Consumable"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 0,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "Buff Potion",
+			"classKey": "Consumable"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 2,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "Inflict Poison Scroll",
+			"classKey": "Scroll"
+		}
 	}
 	]
 },
@@ -246,6 +276,16 @@
 			"itemState": {
 				"itemKey": "Buff Potion",
 				"classKey": "Consumable"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 1,
+				"YCoordinate": 3
+			},
+			"itemState": {
+				"itemKey": "Inflict Poison Scroll",
+				"classKey": "Scroll"
 			}
 		}
 	]

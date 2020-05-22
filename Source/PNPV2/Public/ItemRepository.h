@@ -208,6 +208,31 @@ public:
 		FOGenericItemStruct replacementItem;
 };
 
+USTRUCT(BlueprintType)
+struct FOScrollStruct
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		FString description;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FActionCost> actions;
+	UPROPERTY(BlueprintReadWrite)
+		FString spritePath;
+	UPROPERTY(BlueprintReadWrite)
+		FString iconPath;
+	UPROPERTY(BlueprintReadWrite)
+		float weight;
+	UPROPERTY(BlueprintReadWrite)
+		float value;
+	UPROPERTY(BlueprintReadWrite)
+		int32 type;
+	UPROPERTY(BlueprintReadWrite)
+		FString lessonKey;
+};
+
 UCLASS()
 class PNPV2_API UItemRepository : public UBlueprintFunctionLibrary
 {
@@ -221,4 +246,6 @@ class PNPV2_API UItemRepository : public UBlueprintFunctionLibrary
 			static FOArmorStruct GetArmorStruct(FString key);
 		UFUNCTION(BlueprintCallable)
 			static FOConsumableStruct GetConsumableStruct(FString key);
+		UFUNCTION(BlueprintCallable)
+			static FOScrollStruct GetScrollStruct(FString key);
 };
