@@ -13,7 +13,7 @@
 		  },
 		  {
 			"Key": "Key",
-			"classKey":"Key",
+			"classKey":"",
 			"Weight": 0.1,
 			"Opacity": 0.0,
 			"Description": "A Key",
@@ -30,7 +30,7 @@
 		  },
 		  {
 			"Key": "Dank Key",
-			"classKey":"Key",
+			"classKey":"",
 			"Weight": 0.1,
 			"Opacity": 0.0,
 			"Description": "A dank key",
@@ -46,30 +46,6 @@
 			"actionsObjectCanTake":["Unlock"]
 		  },
 		  {
-			"Key": "Default Helmet",
-			"classKey":"Default",
-			"Weight": 0.0,
-			"Opacity": 0.0,
-			"Description": "Just an ordinary Helmet",
-			"SpritePath": "Helmet",
-			"IconPath": "Helmet",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
-			"equipableType":1
-		  },
-		  {
-			"Key": "Default Cloak",
-			"classKey":"Default",
-			"Weight": 0.0,
-			"Opacity": 0.0,
-			"Description": "Just an ordinary Cloak",
-			"SpritePath": "Cloak",
-			"IconPath": "Cloak",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
-			"equipableType":2
-		  },
-		  {
 			"Key": "Weight",
 			"classKey":"Default",
 			"Weight": 10,
@@ -82,6 +58,21 @@
 					   {"action":"examine","cost":0},
 					   {"action":"pickup","cost":0},
 					   {"action":"use", "cost":0}
+			],
+			"equipableType":0
+		  },
+		  {
+			"Key": "Empty Bottle",
+			"classKey":"Default",
+			"Weight": 2,
+			"Opacity": 0.0,
+			"Description": "An empty bottle",
+			"SpritePath": "Potions/Empty_Bottle_Sprite",
+			"IconPath": "Potions/Empty_Bottle",
+			"Enchantments": [""],
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0}
 			],
 			"equipableType":0
 		  }

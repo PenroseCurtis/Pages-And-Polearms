@@ -139,119 +139,6 @@ struct FOStatBlockStruct
 };
 
 USTRUCT(BlueprintType)
-struct FOItemStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		FString classKey;
-	UPROPERTY(BlueprintReadWrite)
-		float weight;
-	UPROPERTY(BlueprintReadWrite)
-		float opacity;
-	UPROPERTY(BlueprintReadWrite)
-		FString description;
-	UPROPERTY(BlueprintReadWrite)
-		FString spritePath;
-	UPROPERTY(BlueprintReadWrite)
-		FString iconPath;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> statuses;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FActionCost> actions;
-	UPROPERTY(BlueprintReadWrite)
-		int32 equipableType;
-	UPROPERTY(BlueprintReadWrite)
-		bool inDominantHand;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actionsObjectCanTake;
-	FOItemStruct()
-	{
-		key = "Default";
-		classKey = "Default";
-		weight = 0.0;
-		opacity = 0.0;
-		description = "Default object, perhaps something has run amok...";
-		spritePath = "Default";
-		iconPath = "Default";
-		equipableType = 0;
-	}
-};
-
-USTRUCT(BlueprintType)
-struct FOGenericItemStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString itemKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString classKey;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> enchantmentKeys;
-};
-
-USTRUCT(BlueprintType)
-struct FOGenericEquippedItemStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FOGenericItemStruct itemStruct;
-	UPROPERTY(BlueprintReadWrite)
-		bool isEquippedToDominantHand;
-};
-
-USTRUCT(BlueprintType)
-struct FOPageStatStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		FString flipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString movementCompKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString name;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FStanceLevel> stances;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> attacks;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> statuses;
-	UPROPERTY(BlueprintReadWrite)
-		int level;
-	UPROPERTY(BlueprintReadWrite)
-		int experience;
-	UPROPERTY(BlueprintReadWrite)
-		FString defaultWeaponKey;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FActionCost> actions;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> spells;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FOGenericEquippedItemStruct> equippedItems;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FOGenericItemStruct> inventory;
-	UPROPERTY(BlueprintReadWrite)
-		FOStatBlockStruct statBlock;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> actionsObjectCanTake;
-	FOPageStatStruct()
-	{
-		name = "Clem";
-		actionsObjectCanTake = { "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
-								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
-								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			                    "Use", "Unlock"};
-	}
-};
-
-USTRUCT(BlueprintType)
 struct FOAttackStruct
 {
 	GENERATED_BODY()
@@ -371,110 +258,6 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FOWeaponStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		FString flipBookKey;
-	UPROPERTY(BlueprintReadWrite)
-		float damage;
-	UPROPERTY(BlueprintReadWrite)
-		float accuracy;
-	UPROPERTY(BlueprintReadWrite)
-		float contact;
-	UPROPERTY(BlueprintReadWrite)
-		float guard;
-	UPROPERTY(BlueprintReadWrite)
-		float piercing;
-	UPROPERTY(BlueprintReadWrite)
-		float bludgeon;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FStanceLevel> stances;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> specialAttacks;
-	UPROPERTY(BlueprintReadWrite)
-		float weight;
-	UPROPERTY(BlueprintReadWrite)
-		FString description;
-	UPROPERTY(BlueprintReadWrite)
-		FString spritePath;
-	UPROPERTY(BlueprintReadWrite)
-		FString iconPath;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> statuses;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FActionCost> actions;
-	UPROPERTY(BlueprintReadWrite)
-		int32 equipableType;
-	UPROPERTY(BlueprintReadWrite)
-		float layer;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<int32> weaponTypes;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<int32> actionCosts;
-	FOWeaponStruct()
-	{
-		key = "Default";
-		weight = 0.0;
-		description = "Default object, perhaps something has run amok...";
-		spritePath = "Default";
-		iconPath = "Default";
-		equipableType = 0;
-	}
-};
-
-USTRUCT(BlueprintType)
-struct FOArmorStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		float coverage;
-	UPROPERTY(BlueprintReadWrite)
-		float maxCoverage;
-	UPROPERTY(BlueprintReadWrite)
-		float hardness;
-	UPROPERTY(BlueprintReadWrite)
-		float padding;
-	UPROPERTY(BlueprintReadWrite)
-		float deflection;
-	UPROPERTY(BlueprintReadWrite)
-		float weight;
-	UPROPERTY(BlueprintReadWrite)
-		FString description;
-	UPROPERTY(BlueprintReadWrite)
-		FString spritePath;
-	UPROPERTY(BlueprintReadWrite)
-		FString iconPath;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> statuses;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FActionCost> actions;
-	UPROPERTY(BlueprintReadWrite)
-		int32 equipableType;
-	UPROPERTY(BlueprintReadWrite)
-		float layer;
-	UPROPERTY(BlueprintReadWrite)
-		bool wrapsAround;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<int32> actionCosts;
-	FOArmorStruct()
-	{
-		key = "Default";
-		weight = 0.0;
-		description = "Default object, perhaps something has run amok...";
-		spritePath = "Default";
-		iconPath = "Default";
-		equipableType = 0;
-	}
-};
-
-USTRUCT(BlueprintType)
 struct FOStatusStruct
 {
 	GENERATED_BODY()
@@ -542,23 +325,15 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 	public:
 		UFUNCTION(BlueprintCallable)
-		static FString GetMessage();
+			static FString GetMessage();
 		UFUNCTION(BlueprintCallable)
 			static FCombatStats GetCombatStats(FString key);
 		UFUNCTION(BlueprintCallable)
 			static FOStatBlockStruct GetStatBlock(FString key);
 		UFUNCTION(BlueprintCallable)
-			static FOItemStruct GetItemStruct(FString key);
-		UFUNCTION(BlueprintCallable)
-			static FOWeaponStruct GetWeaponStruct(FString key);
-		UFUNCTION(BlueprintCallable)
-			static FOArmorStruct GetArmorStruct(FString key);
-		UFUNCTION(BlueprintCallable)
 			static FOStanceStruct GetStanceStruct(FString key, int32 level);
 		UFUNCTION(BlueprintCallable)
 			static FOAttackStruct GetAttackStruct(FString key);
-		UFUNCTION(BlueprintCallable)
-			static FOPageStatStruct GetPageStatStruct(FString key);
 		UFUNCTION(BlueprintCallable)
 			static FOStatusStruct GetStatusStruct(FString key);
 		UFUNCTION(BlueprintCallable)
