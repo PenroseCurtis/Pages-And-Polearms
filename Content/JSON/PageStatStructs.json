@@ -33,7 +33,8 @@
   "actionsObjectCanTake": [ "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast"]
+			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+								"Release"]
 },
 {
   "key":"Rat",

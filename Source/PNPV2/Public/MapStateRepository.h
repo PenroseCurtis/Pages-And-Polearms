@@ -70,6 +70,17 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FMovableBlockState
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
+	UPROPERTY(BlueprintReadWrite)
+		FCoordinates coordinates;
+};
+
+USTRUCT(BlueprintType)
 struct FInitialLevelState
 {
 	GENERATED_BODY()
@@ -107,6 +118,8 @@ public:
 		TArray<FEnchanterState> enchanterStates;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FSceneryState> tileStates;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FMovableBlockState> blockStates;
 };
 
 UCLASS()
