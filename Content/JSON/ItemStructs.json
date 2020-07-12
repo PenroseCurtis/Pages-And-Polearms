@@ -23,7 +23,10 @@
 			"Actions":[{"action":"drop","cost":0},
 					   {"action":"examine","cost":0},
 					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0}
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
+					   
 			],
 			"equipableType":0,
 			"actionsObjectCanTake":["Unlock"]
@@ -40,7 +43,9 @@
 			"Actions":[{"action":"drop","cost":0},
 					   {"action":"examine","cost":0},
 					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0}
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
 			],
 			"equipableType":0,
 			"actionsObjectCanTake":["Unlock"]
@@ -57,7 +62,9 @@
 			"Actions":[{"action":"drop","cost":0},
 					   {"action":"examine","cost":0},
 					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0}
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
 			],
 			"equipableType":0
 		  },
@@ -72,7 +79,9 @@
 			"Enchantments": [""],
 			"Actions":[{"action":"drop","cost":0},
 					   {"action":"examine","cost":0},
-					   {"action":"pickup","cost":0}
+					   {"action":"pickup","cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
 			],
 			"equipableType":0
 		  }

@@ -40,6 +40,8 @@ public:
 		bool inDominantHand;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actionsObjectCanTake;
+	UPROPERTY(BlueprintReadWrite)
+		float value;
 	FOItemStruct()
 	{
 		key = "Default";
@@ -75,6 +77,23 @@ public:
 		FOGenericItemStruct itemStruct;
 	UPROPERTY(BlueprintReadWrite)
 		bool isEquippedToDominantHand;
+};
+
+USTRUCT(BlueprintType)
+struct FInventoryStruct
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FOGenericItemStruct> items;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FOGenericEquippedItemStruct> equippedItems;
+	UPROPERTY(BlueprintReadWrite)
+		int32 gold;
+	UPROPERTY(BlueprintReadWrite)
+		int32 maxInventorySize;
+	UPROPERTY(BlueprintReadWrite)
+		FString defaultWeaponKey;
 };
 
 USTRUCT(BlueprintType)
@@ -122,6 +141,8 @@ public:
 		TArray<int32> weaponTypes;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> actionCosts;
+	UPROPERTY(BlueprintReadWrite)
+		float value;
 	FOWeaponStruct()
 	{
 		key = "Default";
@@ -170,6 +191,8 @@ public:
 		bool wrapsAround;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> actionCosts;
+	UPROPERTY(BlueprintReadWrite)
+		float value;
 	FOArmorStruct()
 	{
 		key = "Default";

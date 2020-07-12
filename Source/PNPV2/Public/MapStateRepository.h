@@ -45,6 +45,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString enemyStateKey;
 	UPROPERTY(BlueprintReadWrite)
+		FString controllerKey;
+	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
 
@@ -55,6 +57,8 @@ struct FEnemyState
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FOPageStatStruct enemyStats;
+	UPROPERTY(BlueprintReadWrite)
+		FString controllerKey;
 	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };

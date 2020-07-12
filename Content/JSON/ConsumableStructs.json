@@ -1,7 +1,9 @@
 [{
 	"key":"Health Potion",
 	"description": "A potion that heals you",
-	"Actions":[{"action":"drop","cost":0},
+	"Actions":[{"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1},
+			   {"action":"drop","cost":0},
 			   {"action":"examine","cost":0},
 			   {"action":"pickup","cost":1},
 			   {"action":"drink", "cost":1}
@@ -21,7 +23,9 @@
 {
 	"key":"Buff Potion",
 	"description": "A potion that makes you tougher",
-	"Actions":[{"action":"drop","cost":0},
+	"Actions":[{"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1},
+			   {"action":"drop","cost":0},
 			   {"action":"examine","cost":0},
 			   {"action":"pickup","cost":1},
 			   {"action":"drink", "cost":1}
