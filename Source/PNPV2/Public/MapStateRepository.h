@@ -45,6 +45,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString enemyStateKey;
 	UPROPERTY(BlueprintReadWrite)
+		FString controllerKey;
+	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
 
@@ -56,6 +58,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FOPageStatStruct enemyStats;
 	UPROPERTY(BlueprintReadWrite)
+		FString controllerKey;
+	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
 USTRUCT(BlueprintType)
@@ -65,6 +69,17 @@ struct FItemState
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FOGenericItemStruct itemState;
+	UPROPERTY(BlueprintReadWrite)
+		FCoordinates coordinates;
+};
+
+USTRUCT(BlueprintType)
+struct FMovableBlockState
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString key;
 	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
@@ -107,6 +122,8 @@ public:
 		TArray<FEnchanterState> enchanterStates;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FSceneryState> tileStates;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FMovableBlockState> blockStates;
 };
 
 UCLASS()

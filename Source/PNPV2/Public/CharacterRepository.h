@@ -15,7 +15,7 @@
 USTRUCT(BlueprintType)
 struct FOPageStatStruct
 {
-	GENERATED_BODY()
+	GENERATED_BODY()		
 public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
@@ -25,6 +25,8 @@ public:
 		FString movementCompKey;
 	UPROPERTY(BlueprintReadWrite)
 		FString name;
+	UPROPERTY(BlueprintReadWrite)
+		FString dialogKey;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FStanceLevel> stances;
 	UPROPERTY(BlueprintReadWrite)
@@ -36,17 +38,13 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int experience;
 	UPROPERTY(BlueprintReadWrite)
-		FString defaultWeaponKey;
-	UPROPERTY(BlueprintReadWrite)
 		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FOGenericEquippedItemStruct> equippedItems;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FOGenericItemStruct> inventory;
-	UPROPERTY(BlueprintReadWrite)
 		FOStatBlockStruct statBlock;
+	UPROPERTY(BlueprintReadWrite)
+		FInventoryStruct inventoryStruct;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actionsObjectCanTake;
 	FOPageStatStruct()

@@ -2,7 +2,15 @@
 	"key": "Hub",
 	"backgroundSpritePath": "Backgrounds/Hub",
 	"initialItemStates": [],
-	"initialEnemyStates": []
+	"initialEnemyStates": [{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 1
+			},
+			"enemyStateKey": "Merchant",
+			"controllerKey": ""
+		}]
 },
 {
 	"key": "Armory",
@@ -192,7 +200,8 @@
 				"XCoordinate": 6,
 				"YCoordinate": 6
 			},
-			"enemyStateKey": "Rat"
+			"enemyStateKey": "Rat",
+			"controllerKey": "Patroller"
 		},
 		{
 			"coordinates": 
@@ -200,7 +209,8 @@
 				"XCoordinate": 1,
 				"YCoordinate": 6
 			},
-			"enemyStateKey": "Rat"
+			"enemyStateKey": "Rat",
+			"controllerKey": "Patroller"
 		}
 	],
 	"initialItemStates": [
@@ -246,7 +256,15 @@
 {
 	"key": "LocalTest",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [],
+	"initialEnemyStates": [{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 1
+			},
+			"enemyStateKey": "Merchant",
+			"controllerKey": ""
+		}],
 	"initialItemStates": [
 		{
 			"coordinates": {
@@ -256,6 +274,16 @@
 			"itemState": {
 				"itemKey": "Weight",
 				"classKey": "Item"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 2,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Full Helm",
+				"classKey": "Armor"
 			}
 		},
 		{

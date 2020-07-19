@@ -20,11 +20,14 @@
   "statuses":[],
   "level":1,
   "experience":0, 
-  "defaultWeaponKey":"Fist",
   "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
   "spells":[],
-  "equippedItems":[],
-  "inventory":[],
+  "inventoryStruct": {
+	"items":[{"itemKey":"Health Potion","classKey":"Consumable"}],
+	"gold": 99,
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 16
+  },
   "statBlock":{
 				"dexterity": 11,
 				"vitality": 10,
@@ -33,7 +36,8 @@
   "actionsObjectCanTake": [ "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast"]
+			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+								"Release", "Talk", "Trade", "Buy", "Sell"]
 },
 {
   "key":"Rat",
@@ -48,14 +52,42 @@
   "statuses":[],
   "level":1,
   "experience":0,
-  "defaultWeaponKey":"Claw",
   "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
   "spells":[],
-  "equippedItems":[],
-  "inventory":[],
+  "inventoryStruct": {
+	"defaultWeaponKey": "Claw"
+  },
   "statBlock":{
 				"dexterity":10,
 				"vitality":10,
 				"vitalityTotal":10
+				}
+},
+{
+  "key":"Merchant",
+  "flipBookKey":"Merchant",
+  "name":"The Merchant",
+  "dialogKey":"Merchant",
+  "stances":[{
+				"stanceName":"Unarmed",
+				"level": 1
+				}],
+  "attacks":[],
+  "statuses":[],
+  "level":1,
+  "experience":0,
+  "actions":[{"action":"Talk","cost":0},{"action":"Trade", "cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
+  "actionsObjectCanTake": ["Buy", "Sell", "Examine"],
+  "spells":[],
+  "inventoryStruct": {
+	"items":[{"itemKey":"Health Potion","classKey":"Consumable"}],
+	"gold": 100,
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12
+  },
+  "statBlock":{
+				"dexterity":10,
+				"vitality":100,
+				"vitalityTotal":100
 				}
 }]
