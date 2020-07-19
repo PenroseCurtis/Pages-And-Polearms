@@ -1,0 +1,44 @@
+[{
+	"key":"Health Potion",
+	"description": "A potion that heals you",
+	"Actions":[{"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1},
+			   {"action":"drop","cost":0},
+			   {"action":"examine","cost":0},
+			   {"action":"pickup","cost":1},
+			   {"action":"drink", "cost":1}
+	],
+	"spritePath": "Potions/Health_Potion_Sprite",
+	"iconPath":"Potions/Health_Potion",
+	"weight": 2.0,
+	"value": 2.0,
+	"healthChange": 5.0,
+	"statusKey":"",
+	"replacementItem": {
+		"itemKey": "Empty Bottle",
+		"classKey": "",
+		"enchantmentKeys": []
+	}
+},
+{
+	"key":"Buff Potion",
+	"description": "A potion that makes you tougher",
+	"Actions":[{"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1},
+			   {"action":"drop","cost":0},
+			   {"action":"examine","cost":0},
+			   {"action":"pickup","cost":1},
+			   {"action":"drink", "cost":1}
+	],
+	"spritePath": "Potions/Buff_Potion_Sprite",
+	"iconPath":"Potions/Buff_Potion",
+	"weight": 2.0,
+	"value": 2.0,
+	"healthChange": 0.0,
+	"statusKey":"Buffed",
+	"replacementItem": {
+		"itemKey": "Empty Bottle",
+		"classKey": "",
+		"enchantmentKeys": []
+	}
+}]

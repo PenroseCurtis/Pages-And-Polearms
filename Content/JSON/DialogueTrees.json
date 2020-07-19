@@ -1,0 +1,42 @@
+[{
+	"key": "Merchant",
+	"startLinkId":"LA",
+	"nodes": [{
+		"ID": "NA",
+		"linkIDs": ["LB", "Trade"]
+	}],
+	"links": [{
+		"ID": "LA",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"Knights are uncool as heck"
+		},
+		{
+			"speaker": "false",
+			"text":"No u"
+		}],
+		"nextNodeId": "NA",
+		"action": ""
+	},
+	{
+		"ID": "LB",
+		"label" : "Continue Thrashing him?",
+		"script": [{
+			"speaker": "false",
+			"text":"You are a butt"
+		},
+		{
+			"speaker": "true",
+			"text":"Noooooo"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},{
+		"ID": "Trade",
+		"label" : "Let's see what you have for sale",
+		"script": [],
+		"nextNodeId": "",
+		"action": "Trade"
+	}]
+}]

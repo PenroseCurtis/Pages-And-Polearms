@@ -13,7 +13,7 @@
 		  },
 		  {
 			"Key": "Key",
-			"classKey":"Key",
+			"classKey":"",
 			"Weight": 0.1,
 			"Opacity": 0.0,
 			"Description": "A Key",
@@ -23,33 +23,66 @@
 			"Actions":[{"action":"drop","cost":0},
 					   {"action":"examine","cost":0},
 					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0}
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
+					   
 			],
 			"equipableType":0,
 			"actionsObjectCanTake":["Unlock"]
 		  },
 		  {
-			"Key": "Default Helmet",
-			"classKey":"Default",
-			"Weight": 0.0,
+			"Key": "Dank Key",
+			"classKey":"",
+			"Weight": 0.1,
 			"Opacity": 0.0,
-			"Description": "Just an ordinary Helmet",
-			"SpritePath": "Helmet",
-			"IconPath": "Helmet",
+			"Description": "A dank key",
+			"SpritePath": "Key_Sprite",
+			"IconPath": "Key",
 			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
-			"equipableType":1
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0},
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
+			],
+			"equipableType":0,
+			"actionsObjectCanTake":["Unlock"]
 		  },
 		  {
-			"Key": "Default Cloak",
+			"Key": "Weight",
 			"classKey":"Default",
-			"Weight": 0.0,
+			"Weight": 10,
 			"Opacity": 0.0,
-			"Description": "Just an ordinary Cloak",
-			"SpritePath": "Cloak",
-			"IconPath": "Cloak",
+			"Description": "A ten pound weight",
+			"SpritePath": "Items/Misc/Weight_Sprite",
+			"IconPath": "Items/Misc/Weight",
 			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
-			"equipableType":2
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0},
+					   {"action":"use", "cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
+			],
+			"equipableType":0
+		  },
+		  {
+			"Key": "Empty Bottle",
+			"classKey":"Default",
+			"Weight": 2,
+			"Opacity": 0.0,
+			"Description": "An empty bottle",
+			"SpritePath": "Potions/Empty_Bottle_Sprite",
+			"IconPath": "Potions/Empty_Bottle",
+			"Enchantments": [""],
+			"Actions":[{"action":"drop","cost":0},
+					   {"action":"examine","cost":0},
+					   {"action":"pickup","cost":0},
+					   {"action":"buy", "cost":1},
+					   {"action":"sell", "cost":1}
+			],
+			"equipableType":0
 		  }
 		]

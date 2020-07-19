@@ -1,0 +1,18 @@
+[{
+	"key":"Inflict Poison Scroll",
+	"description": "A scroll that contains the spell inflict poison",
+	"Actions":[{"action":"drop","cost":0},
+			   {"action":"examine","cost":0},
+			   {"action":"pickup","cost":1},
+			   {"action":"read", "cost":3},
+			   {"action":"cast", "cost":5},
+			   {"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1}
+	],
+	"spritePath": "Scrolls/Inflict_Poison_Scroll_Sprite",
+	"iconPath":"Scrolls/Scroll_Icon",
+	"weight": 2.0,
+	"value": 20,
+	"type": 2,
+	"lessonKey": "Inflict Poison"
+}]

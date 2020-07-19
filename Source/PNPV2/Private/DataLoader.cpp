@@ -52,134 +52,6 @@ FOStatBlockStruct UDataLoader::GetStatBlock(FString key)
 	
 }
 
-FOItemStruct UDataLoader::GetItemStruct(FString key)
-{
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ItemStructs.json";
-	FString jsonString;
-	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
-
-	TSharedPtr<FJsonValue> jsonValues; 
-	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
-
-	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
-	{
-		FOItemStruct itemStructOut = FOItemStruct();
-		FOItemStruct  * itemStructPtr = &itemStructOut;
-		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
-		int64 flags = 0;
-		//Getting various properties
-		for (int32 i = 0; i < jsonArray.Num(); i++)
-		{
-			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
-			if (jsonObject->GetStringField("key") == key)
-			{
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOItemStruct>(jsonObject, itemStructPtr, flags, flags))
-				{
-					return itemStructOut;
-				}
-				else {
-					GLog->Log("Converting To Struct Failed");
-					return FOItemStruct();
-				}
-			
-				return itemStructOut;
-			}
-		}
-	}
-	else {
-		GLog->Log("couldn't deserialize");
-		return FOItemStruct();
-	}
-	return FOItemStruct();
-}
-
-FOWeaponStruct UDataLoader::GetWeaponStruct(FString key)
-{
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/WeaponStructs.json";
-	FString jsonString;
-	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
-
-	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
-	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
-
-	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
-	{
-		
-		FOWeaponStruct weaponStructOut = FOWeaponStruct();
-		FOWeaponStruct* weaponStructPtr = &weaponStructOut;
-		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
-		
-		//Getting various properties
-		for (int32 i = 0; i < jsonArray.Num(); i++)
-		{
-			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
-			if (jsonObject->GetStringField("key") == key)
-			{
-				int64 flags = 0;
-				//weaponStructOut.statKey = key;
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOWeaponStruct>(jsonObject, weaponStructPtr, flags, flags))
-				{
-					return weaponStructOut;
-				}
-				else {
-					GLog->Log("Converting To Struct Failed");
-					return FOWeaponStruct();
-				}
-			}
-		}
-	}
-	else
-	{
-		GLog->Log("Serialization Failed");
-		return FOWeaponStruct();
-	}
-	return FOWeaponStruct();
-}
-
-FOArmorStruct UDataLoader::GetArmorStruct(FString key)
-{
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ArmorStructs.json";
-	FString jsonString;
-	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	TSharedPtr<FJsonValue> jsonValues;  
-	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
-
-	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
-	{
-		FOArmorStruct armorStructOut = FOArmorStruct();
-		FOArmorStruct * armorStructPtr = &armorStructOut;
-		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
-		//Getting various properties
-		for (int32 i = 0; i < jsonArray.Num(); i++)
-		{
-			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
-			if (jsonObject->GetStringField("key") == key)
-			{
-				int64 flags = 0;
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOArmorStruct>(jsonObject, armorStructPtr, flags, flags))
-				{
-					return armorStructOut;
-				}
-				else {
-					GLog->Log("Converting To Struct Failed");
-					return FOArmorStruct();
-				}
-			}
-
-		}
-	}
-	else
-	{
-		GLog->Log("Serialization Failed");
-		return FOArmorStruct();
-	}
-	return FOArmorStruct();
-}
-
 FOStanceStruct UDataLoader::GetStanceStruct(FString key, int32 level)
 {
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/StanceStructs.json";
@@ -258,46 +130,6 @@ FOAttackStruct UDataLoader::GetAttackStruct(FString key)
 		return FOAttackStruct();
 	}
 	return FOAttackStruct();
-}
-
-FOPageStatStruct UDataLoader::GetPageStatStruct(FString key)
-{
-	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/PageStatStructs.json";
-	FString jsonString;
-	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-
-	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
-	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
-
-	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
-	{
-		FOPageStatStruct pageStatStructOut = FOPageStatStruct();
-		FOPageStatStruct * pageStatStructPtr = &pageStatStructOut;
-		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
-		//Getting various properties
-		for (int32 i = 0; i < jsonArray.Num(); i++)
-		{
-			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
-			if (jsonObject->GetStringField("key") == key)
-			{
-				int64 flags = 0;
-				if (FJsonObjectConverter::JsonObjectToUStruct<FOPageStatStruct>(jsonObject, pageStatStructPtr, flags, flags))
-				{
-					return pageStatStructOut;
-				}
-				else {
-					GLog->Log("Converting To Struct Failed");
-					return FOPageStatStruct();
-				}
-			}
-		}
-	}
-	else
-	{
-		GLog->Log("Serialization Failed");
-		return FOPageStatStruct();
-	}
-	return FOPageStatStruct();
 }
 
 FOStatusStruct UDataLoader::GetStatusStruct(FString key)
@@ -379,13 +211,13 @@ FCombatStats UDataLoader::GetCombatStats(FString key) {
 	}
 	return FCombatStats();
 }
+
 UTexture2D* UDataLoader::MyLoadTextureFromPath(const FString& Path)
 {
 	if (Path.IsEmpty()) return NULL;
 
 	//FString PathToLoad = FPaths::ProjectContentDir() + "Dojo/Textures/" + Path;
 	FString PathToLoad = "/Game/Textures/"+Path;
-	GLog->Log(PathToLoad);
 	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), NULL, *(PathToLoad)));
 }
 
@@ -502,6 +334,7 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	return flipBook;
 	//Give up after this point and just return whatever shows up. 
 }
+
 void UDataLoader::LoadAssetsForCooking()
 {
 	UClass* Ut2D = TSubclassOf<class UTexture2D>();

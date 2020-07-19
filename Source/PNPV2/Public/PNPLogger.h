@@ -33,4 +33,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		static void LogMultiplayerMessage(ELogLevels logLevel, FString message);
+
+	UFUNCTION(BlueprintCallable)
+		static void LogTestMessage(ELogLevels logLevel, FString message);
+
+	UFUNCTION(BlueprintCallable)
+		static void LogVisualUpdateMessage(ELogLevels logLevel, FString message);
 };

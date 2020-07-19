@@ -1,0 +1,321 @@
+[{
+	"key": "Hub",
+	"backgroundSpritePath": "Backgrounds/Hub",
+	"initialItemStates": [],
+	"initialEnemyStates": [{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 1
+			},
+			"enemyStateKey": "Merchant",
+			"controllerKey": ""
+		}]
+},
+{
+	"key": "Armory",
+	"backgroundSpritePath": "Default",
+	"initialEnemyStates": [],
+	"initialItemStates": [
+	{
+		"coordinates": {
+			"XCoordinate": 0,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Default_Sword",
+			"classKey": "Weapon",
+			"enchantmentKeys":["Arcane"]
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 1,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Shield",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 2,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Spear",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 3,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Dagger",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 4,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Handaxe",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 5,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Light Mace",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 0,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Default_Helmet",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 1,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Default_Cloak",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 2,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Full Helm",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 3,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "ChainMail",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 4,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Leather Chaps",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 5,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Mail Leggings",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 6,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Mail Bracers",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 6,
+			"YCoordinate": 5
+		},
+		"itemState": {
+			"itemKey": "Leather Bracers",
+			"classKey": "Armor"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 6,
+			"YCoordinate": 6
+		},
+		"itemState": {
+			"itemKey": "Health Potion",
+			"classKey": "Consumable"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 0,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "Buff Potion",
+			"classKey": "Consumable"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 2,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "Inflict Poison Scroll",
+			"classKey": "Scroll"
+		}
+	}
+	]
+},
+{
+	"key": "Combat Tutorial",
+	"backgroundSpritePath": "Default",
+	"initialEnemyStates": [
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 6,
+				"YCoordinate": 6
+			},
+			"enemyStateKey": "Rat",
+			"controllerKey": "Patroller"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 6
+			},
+			"enemyStateKey": "Rat",
+			"controllerKey": "Patroller"
+		}
+	],
+	"initialItemStates": [
+		{
+			"coordinates": {
+				"XCoordinate": 1,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Default_Sword",
+				"classKey": "Weapon"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 2,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Full Helm",
+				"classKey": "Armor"
+			}
+		}
+	]
+},
+{
+	"key": "Tutorial",
+	"backgroundSpritePath": "Default",
+	"initialEnemyStates": [],
+	"initialItemStates": [
+		{
+			"coordinates": {
+				"XCoordinate": 9,
+				"YCoordinate": 9
+			},
+			"itemState": {
+				"itemKey": "Weight",
+				"classKey": "Item"
+			}
+		}
+	]
+},
+{
+	"key": "LocalTest",
+	"backgroundSpritePath": "Default",
+	"initialEnemyStates": [{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 1
+			},
+			"enemyStateKey": "Merchant",
+			"controllerKey": ""
+		}],
+	"initialItemStates": [
+		{
+			"coordinates": {
+				"XCoordinate": 3,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Weight",
+				"classKey": "Item"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 2,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Full Helm",
+				"classKey": "Armor"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 4,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Key",
+				"classKey": "Item"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 0,
+				"YCoordinate": 3
+			},
+			"itemState": {
+				"itemKey": "Buff Potion",
+				"classKey": "Consumable"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 1,
+				"YCoordinate": 3
+			},
+			"itemState": {
+				"itemKey": "Inflict Poison Scroll",
+				"classKey": "Scroll"
+			}
+		}
+	]
+}
+]
