@@ -17,7 +17,7 @@
 			 {"stanceName": "Fools Guard", "level": 1},
 			 {"stanceName": "Vulnerable", "level":1}],
   "attacks":[],
-  "statuses":[],
+  "statuses":["Poisoned"],
   "level":1,
   "experience":0, 
   "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
@@ -29,11 +29,13 @@
 	"maxInventorySize": 16
   },
   "statBlock":{
-				"dexterity": 11,
-				"vitality": 10,
-				"vitalityTotal": 10
+				"reach": 1,
+				"woundLimit": 5,
+				"stamina": 5,
+				"staminaTotal": 10,
+				"staminRegeneration": 1
 				},
-  "actionsObjectCanTake": [ "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
+  "actionsObjectCanTake": [ "Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
 			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
@@ -58,9 +60,10 @@
 	"defaultWeaponKey": "Claw"
   },
   "statBlock":{
-				"dexterity":10,
-				"vitality":10,
-				"vitalityTotal":10
+				"reach": 1,
+				"woundLimit": 3,
+				"stamina": 10,
+				"staminaTotal": 10
 				}
 },
 {
@@ -86,8 +89,9 @@
 	"maxInventorySize": 12
   },
   "statBlock":{
-				"dexterity":10,
-				"vitality":100,
-				"vitalityTotal":100
+				"reach": 1,
+				"woundLimit": 3,
+				"stamina": 10,
+				"staminaTotal": 10
 				}
 }]

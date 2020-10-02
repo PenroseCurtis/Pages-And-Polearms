@@ -256,15 +256,7 @@
 {
 	"key": "LocalTest",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [{
-			"coordinates": 
-			{
-				"XCoordinate": 1,
-				"YCoordinate": 1
-			},
-			"enemyStateKey": "Merchant",
-			"controllerKey": ""
-		}],
+	"initialEnemyStates": [],
 	"initialItemStates": [
 		{
 			"coordinates": {
@@ -282,8 +274,8 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Full Helm",
-				"classKey": "Armor"
+				"itemKey": "Default_Sword",
+				"classKey": "Weapon"
 			}
 		},
 		{
