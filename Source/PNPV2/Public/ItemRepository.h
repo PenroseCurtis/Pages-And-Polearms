@@ -52,6 +52,14 @@ public:
 		spritePath = "Default";
 		iconPath = "Default";
 		equipableType = 0;
+		actions = {
+			FActionCost("Drop", 0),
+			FActionCost("Examine", 0),
+			FActionCost("Pickup", 1),
+			FActionCost("Use", 1),
+			FActionCost("Buy", 1),
+			FActionCost("Sell", 1)
+		};
 	}
 };
 
@@ -106,19 +114,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString flipBookKey;
 	UPROPERTY(BlueprintReadWrite)
-		float damage;
-	UPROPERTY(BlueprintReadWrite)
-		float accuracy;
-	UPROPERTY(BlueprintReadWrite)
-		float contact;
-	UPROPERTY(BlueprintReadWrite)
-		float guard;
-	UPROPERTY(BlueprintReadWrite)
-		float piercing;
-	UPROPERTY(BlueprintReadWrite)
-		float bludgeon;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FStanceLevel> stances;
+		FWeaponStatBlock weaponStats;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> specialAttacks;
 	UPROPERTY(BlueprintReadWrite)
@@ -134,13 +130,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
-		int32 equipableType;
-	UPROPERTY(BlueprintReadWrite)
 		float layer;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> weaponTypes;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<int32> actionCosts;
 	UPROPERTY(BlueprintReadWrite)
 		float value;
 	FOWeaponStruct()
@@ -150,8 +142,20 @@ public:
 		description = "Default object, perhaps something has run amok...";
 		spritePath = "Default";
 		iconPath = "Default";
-		equipableType = 0;
-	}
+		layer = 0.6;
+		value = 0.0;
+		actions = {
+			FActionCost("Drop", 0),
+			FActionCost("Examine", 0),
+			FActionCost("Equip to dominant", 2),
+			FActionCost("Equip to off", 2),
+			FActionCost("Unequip", 1),
+			FActionCost("Pickup", 1),
+			FActionCost("Use", 1),
+			FActionCost("Buy", 1),
+			FActionCost("Sell", 1)
+		};
+	};
 };
 
 USTRUCT(BlueprintType)
@@ -162,15 +166,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
-		float coverage;
-	UPROPERTY(BlueprintReadWrite)
-		float maxCoverage;
-	UPROPERTY(BlueprintReadWrite)
-		float hardness;
-	UPROPERTY(BlueprintReadWrite)
-		float padding;
-	UPROPERTY(BlueprintReadWrite)
-		float deflection;
+		FArmorStatBlock armorStats;
 	UPROPERTY(BlueprintReadWrite)
 		float weight;
 	UPROPERTY(BlueprintReadWrite)
@@ -190,8 +186,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		bool wrapsAround;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<int32> actionCosts;
-	UPROPERTY(BlueprintReadWrite)
 		float value;
 	FOArmorStruct()
 	{
@@ -201,6 +195,16 @@ public:
 		spritePath = "Default";
 		iconPath = "Default";
 		equipableType = 0;
+		actions = {
+			FActionCost("Drop", 0),
+			FActionCost("Examine", 0),
+			FActionCost("Equip", 2),
+			FActionCost("Unequip", 1),
+			FActionCost("Pickup", 1),
+			FActionCost("Use", 1),
+			FActionCost("Buy", 1),
+			FActionCost("Sell", 1)
+		};
 	}
 };
 

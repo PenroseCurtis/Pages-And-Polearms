@@ -7,9 +7,7 @@
 			"Description": "Just an ordinary object",
 			"SpritePath": "Default",
 			"IconPath": "Default",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},{"action":"examine","cost":0}],
-			"equipableType":0
+			"value": 0
 		  },
 		  {
 			"Key": "Key",
@@ -19,17 +17,8 @@
 			"Description": "A Key",
 			"SpritePath": "Key_Sprite",
 			"IconPath": "Key",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},
-					   {"action":"examine","cost":0},
-					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0},
-					   {"action":"buy", "cost":1},
-					   {"action":"sell", "cost":1}
-					   
-			],
-			"equipableType":0,
-			"actionsObjectCanTake":["Unlock"]
+			"actionsObjectCanTake":["Unlock"],
+			"value": 0
 		  },
 		  {
 			"Key": "Dank Key",
@@ -39,16 +28,8 @@
 			"Description": "A dank key",
 			"SpritePath": "Key_Sprite",
 			"IconPath": "Key",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},
-					   {"action":"examine","cost":0},
-					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0},
-					   {"action":"buy", "cost":1},
-					   {"action":"sell", "cost":1}
-			],
-			"equipableType":0,
-			"actionsObjectCanTake":["Unlock"]
+			"actionsObjectCanTake":["Unlock"],
+			"value": 0
 		  },
 		  {
 			"Key": "Weight",
@@ -58,15 +39,7 @@
 			"Description": "A ten pound weight",
 			"SpritePath": "Items/Misc/Weight_Sprite",
 			"IconPath": "Items/Misc/Weight",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},
-					   {"action":"examine","cost":0},
-					   {"action":"pickup","cost":0},
-					   {"action":"use", "cost":0},
-					   {"action":"buy", "cost":1},
-					   {"action":"sell", "cost":1}
-			],
-			"equipableType":0
+			"value": 0
 		  },
 		  {
 			"Key": "Empty Bottle",
@@ -76,13 +49,6 @@
 			"Description": "An empty bottle",
 			"SpritePath": "Potions/Empty_Bottle_Sprite",
 			"IconPath": "Potions/Empty_Bottle",
-			"Enchantments": [""],
-			"Actions":[{"action":"drop","cost":0},
-					   {"action":"examine","cost":0},
-					   {"action":"pickup","cost":0},
-					   {"action":"buy", "cost":1},
-					   {"action":"sell", "cost":1}
-			],
-			"equipableType":0
+			"value": 0
 		  }
 		]
