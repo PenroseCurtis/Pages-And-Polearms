@@ -23,7 +23,7 @@
 			"YCoordinate": 6
 		},
 		"itemState": {
-			"itemKey": "Default_Sword",
+			"itemKey": "LongSword",
 			"classKey": "Weapon",
 			"enchantmentKeys":["Arcane"]
 		}
@@ -180,12 +180,32 @@
 	},
 	{
 		"coordinates": {
+			"XCoordinate": 1,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "LongBow",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
 			"XCoordinate": 2,
 			"YCoordinate": 4
 		},
 		"itemState": {
 			"itemKey": "Inflict Poison Scroll",
 			"classKey": "Scroll"
+		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 3,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "CrossBow",
+			"classKey": "Weapon"
 		}
 	}
 	]
@@ -220,7 +240,7 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Default_Sword",
+				"itemKey": "LongSword",
 				"classKey": "Weapon"
 			}
 		},
@@ -274,7 +294,7 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Default_Sword",
+				"itemKey": "LongSword",
 				"classKey": "Weapon"
 			}
 		},

@@ -24,6 +24,18 @@ public:
 		FString stanceName;
 	UPROPERTY(BlueprintReadWrite)
 		int32 level;
+
+	FStanceLevel()
+	{
+		stanceName = "";
+		level = 1;
+	};
+
+	FStanceLevel(FString aStanceName, int32 aLevel)
+	{
+		stanceName = aStanceName;
+		level = aLevel;
+	};
 };
 
 USTRUCT(BlueprintType)
@@ -124,6 +136,37 @@ struct FOStatBlockStruct
 		mana = 0;
 		manaTotal = 0;
 		manaRegeneration = 0;
+		opacity = 0;
+		reach = 0;
+		armorPenetrationBonus = 0;
+		woundingPotentialBonus = 0;
+		paddingBonus = 0;
+		excellentHitProtectionBonus = 0;
+	}
+	FOStatBlockStruct(
+		int32 aWoundLimit, 
+		int32 aStamina, 
+		int32 aStaminaTotal,
+		int32 aStaminaRegeneration,
+		int32 aReach
+		)
+	{
+		woundLimit = aWoundLimit;
+		stamina = aStamina;
+		staminaTotal = aStaminaTotal;
+		staminaRegeneration = aStaminaRegeneration;
+		reach = aReach;
+		power = 0;
+		speed = 0;
+		guard = 0;
+		intelligence = 0;
+		wisdom = 0;
+		spirit = 0;
+		woundRegeneration = 0;
+		mana = 0;
+		manaTotal = 0;
+		manaRegeneration = 0;
+		opacity = 0;
 		armorPenetrationBonus = 0;
 		woundingPotentialBonus = 0;
 		paddingBonus = 0;
@@ -237,6 +280,15 @@ public:
 		targetTypes = { 0 };
 		staminaCost = 0;
 		manaCost = 0;
+		stanceChange = "";
+		initiativeCost = 0;
+		speed = 0;
+		armorPenetration = 0;
+		woundingPotential = 0;
+		power = 0;	
+		bothRequirementsNeeded = false;
+		attackHeight = 0;
+		wieldType = 0;
 	}
 };
 
@@ -337,7 +389,3 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 		static std::unordered_map<FString, UPaperFlipbook*> flipBookCache;
 		const static int cacheSizeLimit = 20;
 };
-
-
-
-

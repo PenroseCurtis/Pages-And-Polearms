@@ -31,7 +31,7 @@
 		"Key":"Default_Helmet",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"woundProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "Just an ordinary Helmet",
@@ -46,7 +46,7 @@
 		"Key":"Full Helm",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 4
+			"woundProtection": 3
 			},
 		"Weight": 2.0,
 		"Description": "A helmet that covers your whole head",
@@ -58,15 +58,75 @@
 		"value": 35.0
 	},
 	{
+		"Key":"Med Helm",
+		"armorStats": {
+			"padding": 1,
+			"woundProtection": 2
+			},
+		"Weight": 2.0,
+		"Description": "A helmet that covers your head but leaves your face exposed",
+		"SpritePath": "Helmet/Full_Helm/Full_Helm_Sprite",
+		"IconPath": "Helmet/Full_Helm/Full_Helm",
+		"equipableType": 1,
+		"layer":0.5,
+		"wrapsAround": true,
+		"value": 35.0
+	},
+	{
+		"Key":"Leather Cap",
+		"armorStats": {
+			"padding": 2,
+			"woundProtection": 0
+			},
+		"Weight": 2.0,
+		"Description": "Better than nothing...",
+		"SpritePath": "Helmet/Default_Helmet/Helmet",
+		"IconPath": "Helmet/Default_Helmet/Helmet",
+		"equipableType": 1,
+		"layer":0.5,
+		"wrapsAround": true,
+		"value": 35.0
+	},
+	{
+		"Key": "Mail Armor",
+		"armorStats": {
+			"padding": 1,
+			"woundProtection": 2
+			},
+		"Weight": 5.0,
+		"Description": "A fine piece of armour made of interlinked metal rings",
+		"SpritePath": "Armor/Default_Armor/Default_Armor",
+		"IconPath": "Armor/Default_Armor/Default_Armor",
+		"equipableType": 7,
+		"layer":0.25,
+		"wrapsAround": true,
+		"value": 45.0
+	},
+	{
 		"Key": "ChainMail",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 4
+			"woundProtection": 1
 			},
 		"Weight": 5.0,
 		"Description": "A fine piece of armour made of interlinked metal rings",
 		"SpritePath": "Armor/ChainMail/ChainMail_Sprite",
 		"IconPath": "Armor/ChainMail/ChainMail",
+		"equipableType": 7,
+		"layer":0.25,
+		"wrapsAround": true,
+		"value": 45.0
+	},
+	{
+		"Key": "Boiled Leather Armor",
+		"armorStats": {
+			"padding": 2,
+			"woundProtection": 1
+			},
+		"Weight": 5.0,
+		"Description": "A chestpiece made out of specially treated leather",
+		"SpritePath": "Armor/Default_Armor/Default_Armor",
+		"IconPath": "Armor/Default_Armor/Default_Armor",
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -121,7 +181,7 @@
 		"Key": "Mail Bracers",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"woundProtection": 0
 			},
 		"Weight": 3.0,
 		"Description": "Mail arm protectors",

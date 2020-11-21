@@ -49,11 +49,29 @@ public:
 		TArray<FString> actionsObjectCanTake;
 	FOPageStatStruct()
 	{
-		name = "Clem";
-		actionsObjectCanTake = { "Target", "Attack", "Set Stance", "View Inventory", "Ready Attack",
+		key = "Default";
+		flipBookKey = "Page";
+		name = "Default_Page";
+		stances = {
+			FStanceLevel("Unarmed", 1),
+			FStanceLevel("Basic 1H", 1),
+			FStanceLevel("Basic 2H", 1),
+			FStanceLevel("Two Weapon Fighting", 1),
+			FStanceLevel("Vulnerable", 1)
+		},
+		level = 1,
+		experience = 0,
+		actionsObjectCanTake = { "Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-								"Use", "Unlock" };
+								"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+								"Release", "Talk", "Trade", "Buy", "Sell" };
+		actions = {
+			FActionCost("Target", 0),
+			FActionCost("Examine", 0),
+			FActionCost("Move To", 1)
+		};
+		statBlock = FOStatBlockStruct(3, 10, 10, 1, 1);
 	}
 };
 UCLASS()

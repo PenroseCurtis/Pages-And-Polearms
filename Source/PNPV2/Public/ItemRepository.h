@@ -60,6 +60,8 @@ public:
 			FActionCost("Buy", 1),
 			FActionCost("Sell", 1)
 		};
+		inDominantHand = false;
+		value = 0;
 	}
 };
 
@@ -102,6 +104,11 @@ public:
 		int32 maxInventorySize;
 	UPROPERTY(BlueprintReadWrite)
 		FString defaultWeaponKey;
+	FInventoryStruct() {
+		maxInventorySize = 12;
+		defaultWeaponKey = "Fist";
+		gold = 0;
+	}
 };
 
 USTRUCT(BlueprintType)
@@ -205,6 +212,9 @@ public:
 			FActionCost("Buy", 1),
 			FActionCost("Sell", 1)
 		};
+		wrapsAround = false;
+		value = 0;
+		layer = 0;
 	}
 };
 

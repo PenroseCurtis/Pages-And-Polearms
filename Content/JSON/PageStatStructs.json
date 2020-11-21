@@ -2,96 +2,245 @@
   "key":"Page",
   "flipBookKey":"Page",
   "name":"Norman",
-  "stances":[{"stanceName": "Unarmed", "level":1},
-			 {"stanceName": "Basic 2H", "level": 1},
-			 {"stanceName": "Basic 1H", "level": 1},
-			 {"stanceName": "Two Weapon Fighting", "level": 1},
-			 {"stanceName": "Sword and Board", "level":1},
-			 {"stanceName": "High Guard", "level": 1},
-			 {"stanceName": "Berserker", "level":1},
-			 {"stanceName": "Dual Blade", "level":1},
-			 {"stanceName": "Shield Wall", "level": 1},
-			 {"stanceName": "Hafting", "level": 1},
-			 {"stanceName": "Repelling", "level": 1},
-			 {"stanceName": "Dueling", "level": 1},
-			 {"stanceName": "Fools Guard", "level": 1},
-			 {"stanceName": "Vulnerable", "level":1}],
-  "attacks":[],
-  "statuses":["Poisoned"],
-  "level":1,
-  "experience":0, 
-  "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
-  "spells":[],
   "inventoryStruct": {
 	"items":[{"itemKey":"Health Potion","classKey":"Consumable"}],
 	"gold": 99,
-	"defaultWeaponKey": "Fist",
-	"maxInventorySize": 16
-  },
-  "statBlock":{
-				"reach": 1,
-				"woundLimit": 5,
-				"stamina": 5,
-				"staminaTotal": 10,
-				"staminRegeneration": 1
-				},
-  "actionsObjectCanTake": [ "Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
-								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
-								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			                    "Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-								"Release", "Talk", "Trade", "Buy", "Sell"]
+	"equippedItems" : [{
+						"itemStruct": {
+										"itemKey": "LongSword",
+										"classKey": "Weapon"
+							},
+						"isEquippedToDominantHand": true
+						}]
+  }
 },
 {
   "key":"Rat",
   "flipBookKey":"Rat",
   "name":"atat",
-  "defaultStatBlockKey":"Default Stats",
-  "stances":[{
-				"stanceName":"Rat aggro",
-				"level": 1
-				}],
-  "attacks":[],
-  "statuses":[],
-  "level":1,
-  "experience":0,
-  "actions":[{"action":"Target","cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
-  "spells":[],
+  "stances":[{"stanceName":"Rat aggro", "level": 1}],
   "inventoryStruct": {
 	"defaultWeaponKey": "Claw"
-  },
-  "statBlock":{
-				"reach": 1,
-				"woundLimit": 3,
-				"stamina": 10,
-				"staminaTotal": 10
-				}
+  }
 },
 {
   "key":"Merchant",
   "flipBookKey":"Merchant",
   "name":"The Merchant",
   "dialogKey":"Merchant",
-  "stances":[{
-				"stanceName":"Unarmed",
-				"level": 1
-				}],
-  "attacks":[],
-  "statuses":[],
-  "level":1,
-  "experience":0,
+  "stances":[{"stanceName":"Unarmed", "level": 1}],
   "actions":[{"action":"Talk","cost":0},{"action":"Trade", "cost":0},{"action":"Examine","cost":0},{"action":"Move To","cost":0}],
   "actionsObjectCanTake": ["Buy", "Sell", "Examine"],
-  "spells":[],
   "inventoryStruct": {
 	"items":[{"itemKey":"Health Potion","classKey":"Consumable"}],
-	"gold": 100,
-	"defaultWeaponKey": "Fist",
-	"maxInventorySize": 12
+	"gold": 100
   },
-  "statBlock":{
-				"reach": 1,
-				"woundLimit": 3,
-				"stamina": 10,
-				"staminaTotal": 10
-				}
+  "statBlock":{"woundLimit": 15}
+},
+{
+  "key":"Knight",
+  "flipBookKey":"Page",
+  "name":"Knight",
+  "stances":[{"stanceName": "Unarmed", "level": 1},
+			 {"stanceName": "Basic 2H", "level": 1},
+			 {"stanceName": "Basic 1H", "level": 1},
+			 {"stanceName": "Sword and Board", "level":1},
+			 {"stanceName": "Two Weapon Fighting", "level":1},
+			 {"stanceName": "Vulnerable", "level":1}],
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"Light Mace","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "LongSword", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Shield", "classKey": "Weapon"},
+							"isEquippedToDominantHand": false
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Armor","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Full Helm", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Leggings", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"Foot Soldier",
+  "flipBookKey":"Page",
+  "name":"Foot Soldier",
+  "stances":[{"stanceName":"Unarmed", "level": 1},
+			 {"stanceName": "Basic 2H", "level": 1},
+			 {"stanceName": "Basic 1H", "level": 1},
+			 {"stanceName": "Repelling", "level":1},
+			 {"stanceName": "Shield Wall", "level":1},
+			 {"stanceName": "Vulnerable", "level":1}],
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"Arming Sword","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "Spear", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Shield", "classKey": "Weapon"},
+							"isEquippedToDominantHand": false
+						},
+						{
+							"itemStruct": {"itemKey": "ChainMail","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Med Helm", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Leggings", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"Skirmisher",
+  "flipBookKey":"Page",
+  "name":"Skirmisher",
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"HandAxe","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "Arming Sword", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Shield", "classKey": "Weapon"},
+							"isEquippedToDominantHand": false
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Armor","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Full Helm", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Leggings", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"Cleric",
+  "flipBookKey":"Page",
+  "name":"Cleric",
+  "attacks": ["Refresh"],
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"Healing Staff","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "Light Mace", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Armor","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Full Helm", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Leggings", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"Archer",
+  "flipBookKey":"Page",
+  "name":"Archer",
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"Arming Sword","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "LongBow", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Boiled Leather Armor","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Cap", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Chaps", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"Hunter",
+  "flipBookKey":"Page",
+  "name":"Hunter",
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"LongBow","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "Long Axe", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "Boiled Leather Armor","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Cap", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Chaps", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Leather Bracers", "classKey": "Armor"}
+						}]
+  }
+},
+{
+  "key":"CrossBowMan",
+  "flipBookKey":"Page",
+  "name":"Crossbowman",
+  "inventoryStruct": {
+	"defaultWeaponKey": "Fist",
+	"maxInventorySize": 12,
+	"items":[{"itemKey":"LongSword","classKey":"Weapon"}],
+	"equippedItems" : [{
+							"itemStruct": {"itemKey": "CrossBow", "classKey": "Weapon"},
+							"isEquippedToDominantHand": true
+						},
+						{
+							"itemStruct": {"itemKey": "ChainMail","classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Med Helm", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Leggings", "classKey": "Armor"}
+						},
+						{
+							"itemStruct": {"itemKey": "Mail Bracers", "classKey": "Armor"}
+						}]
+  }
 }]
