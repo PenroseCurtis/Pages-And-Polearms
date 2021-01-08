@@ -290,11 +290,31 @@
 		},
 		{
 			"coordinates": {
-				"XCoordinate": 2,
+				"XCoordinate": 4,
+				"YCoordinate": 4
+			},
+			"itemState": {
+				"itemKey": "Spear",
+				"classKey": "Weapon"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 3,
 				"YCoordinate": 2
 			},
 			"itemState": {
 				"itemKey": "LongSword",
+				"classKey": "Weapon"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 3,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Dagger",
 				"classKey": "Weapon"
 			}
 		},

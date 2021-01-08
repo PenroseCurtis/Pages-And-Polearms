@@ -280,7 +280,11 @@ class PNPV2_API UItemRepository : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintCallable)
 			static FOWeaponStruct GetWeaponStruct(FString key);
 		UFUNCTION(BlueprintCallable)
+			static TArray<FString> GetAllWeaponKeys();
+		UFUNCTION(BlueprintCallable)
 			static FOArmorStruct GetArmorStruct(FString key);
+		UFUNCTION(BlueprintCallable)
+			static TArray<FString> GetAllArmorKeys();
 		UFUNCTION(BlueprintCallable)
 			static FOConsumableStruct GetConsumableStruct(FString key);
 		UFUNCTION(BlueprintCallable)
