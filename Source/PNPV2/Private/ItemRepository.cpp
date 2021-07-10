@@ -8,8 +8,6 @@ FOItemStruct UItemRepository::GetItemStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ItemStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
 
 	TSharedPtr<FJsonValue> jsonValues;
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
@@ -51,10 +49,8 @@ FOWeaponStruct UItemRepository::GetWeaponStruct(FString key)
 	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/WeaponStructs.json";
 	FString jsonString;
 	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
-	//GLog->Log("Json String:");
-	//GLog->Log(jsonString);
 
-	TSharedPtr<FJsonValue> jsonValues;  //= MakeShareable(new FJsonValue());
+	TSharedPtr<FJsonValue> jsonValues;
 	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
 
 	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
@@ -90,6 +86,28 @@ FOWeaponStruct UItemRepository::GetWeaponStruct(FString key)
 		return FOWeaponStruct();
 	}
 	return FOWeaponStruct();
+}
+
+
+TArray<FString> UItemRepository::GetAllWeaponKeys()
+{
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/WeaponStructs.json";
+	FString jsonString;
+	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
+	TSharedPtr<FJsonValue> jsonValues;
+	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
+	TArray<FString> weaponKeys;
+
+	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
+	{
+		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
+		for (int32 i = 0; i < jsonArray.Num(); i++)
+		{
+			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
+			weaponKeys.Add(jsonObject->GetStringField("key"));
+		}
+	}
+	return weaponKeys;
 }
 
 FOArmorStruct UItemRepository::GetArmorStruct(FString key)
@@ -130,6 +148,27 @@ FOArmorStruct UItemRepository::GetArmorStruct(FString key)
 		return FOArmorStruct();
 	}
 	return FOArmorStruct();
+}
+
+TArray<FString> UItemRepository::GetAllArmorKeys()
+{
+	const FString JsonFilePath = FPaths::ProjectContentDir() + "/JSON/ArmorStructs.json";
+	FString jsonString;
+	FFileHelper::LoadFileToString(jsonString, *JsonFilePath);
+	TSharedPtr<FJsonValue> jsonValues;
+	TSharedRef<TJsonReader<>> JsonReader = TJsonReaderFactory<>::Create(jsonString);
+	TArray<FString> armorKeys;
+
+	if (FJsonSerializer::Deserialize(JsonReader, jsonValues) && jsonValues.IsValid())
+	{
+		TArray<TSharedPtr<FJsonValue>> jsonArray = jsonValues->AsArray();
+		for (int32 i = 0; i < jsonArray.Num(); i++)
+		{
+			TSharedRef<FJsonObject> jsonObject = jsonArray[i]->AsObject().ToSharedRef();
+			armorKeys.Add(jsonObject->GetStringField("key"));
+		}
+	}
+	return armorKeys;
 }
 
 FOConsumableStruct UItemRepository::GetConsumableStruct(FString key)

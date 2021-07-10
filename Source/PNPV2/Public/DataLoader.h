@@ -24,6 +24,18 @@ public:
 		FString stanceName;
 	UPROPERTY(BlueprintReadWrite)
 		int32 level;
+
+	FStanceLevel()
+	{
+		stanceName = "";
+		level = 1;
+	};
+
+	FStanceLevel(FString aStanceName, int32 aLevel)
+	{
+		stanceName = aStanceName;
+		level = aLevel;
+	};
 };
 
 USTRUCT(BlueprintType)
@@ -34,7 +46,19 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString action;
 	UPROPERTY(BlueprintReadWrite)
-		int32 Cost;
+		int32 cost;
+
+	FActionCost()
+	{
+		action = "";
+		cost = 0;
+	};
+
+	FActionCost(FString anAction, int32 aCost)
+	{
+		action = anAction;
+		cost = aCost;
+	};
 };
 
 USTRUCT(BlueprintType)
@@ -49,38 +73,6 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FCombatStats
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		float accuracy;
-	UPROPERTY(BlueprintReadWrite)
-		float avoidance;
-	UPROPERTY(BlueprintReadWrite)
-		float bludgeon;
-	UPROPERTY(BlueprintReadWrite)
-		float contact;
-	UPROPERTY(BlueprintReadWrite)
-		float damage;
-	UPROPERTY(BlueprintReadWrite)
-		float guard;
-	UPROPERTY(BlueprintReadWrite)
-		float piercing;
-	FCombatStats() {
-		accuracy = 0;
-		avoidance = 0;
-		bludgeon = 0;
-		contact = 0;
-		damage = 0;
-		guard = 0;
-		piercing = 0;
-	}
-};
-
-USTRUCT(BlueprintType)
 struct FOStatBlockStruct
 {
 	GENERATED_BODY()
@@ -89,11 +81,11 @@ struct FOStatBlockStruct
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
-		float strength;
+		int32 power;
 	UPROPERTY(BlueprintReadWrite)
-		float dexterity;
+		int32 speed;
 	UPROPERTY(BlueprintReadWrite)
-		float constitution;
+		int32 guard;
 	UPROPERTY(BlueprintReadWrite)
 		float intelligence;
 	UPROPERTY(BlueprintReadWrite)
@@ -101,11 +93,9 @@ struct FOStatBlockStruct
 	UPROPERTY(BlueprintReadWrite)
 		float spirit;
 	UPROPERTY(BlueprintReadWrite)
-		float vitality;
+		int32 woundLimit;
 	UPROPERTY(BlueprintReadWrite)
-		float vitalityTotal;
-	UPROPERTY(BlueprintReadWrite)
-		float vitalityRegeneration;
+		float woundRegeneration;
 	UPROPERTY(BlueprintReadWrite)
 		float stamina;
 	UPROPERTY(BlueprintReadWrite)
@@ -118,24 +108,98 @@ struct FOStatBlockStruct
 		float manaTotal;
 	UPROPERTY(BlueprintReadWrite)
 		float manaRegeneration;
+	UPROPERTY(BlueprintReadWrite)
+		float opacity;
+	UPROPERTY(BlueprintReadWrite)
+		int32 reach;
+	UPROPERTY(BlueprintReadWrite)
+		int32 armorPenetrationBonus;
+	UPROPERTY(BlueprintReadWrite)
+		int32 woundingPotentialBonus;
+	UPROPERTY(BlueprintReadWrite)
+		int32 paddingBonus;
+	UPROPERTY(BlueprintReadWrite)
+		int32 excellentHitProtectionBonus;
 	FOStatBlockStruct()
 	{
-		strength = 0;
-		dexterity = 0;
-		constitution = 0;
+		power = 0;
+		speed = 0;
+		guard = 0;
 		intelligence = 0;
 		wisdom = 0;
 		spirit = 0;
-		vitality = 0;
-		vitalityTotal = 0;
-		vitalityRegeneration = 0;
+		woundLimit = 0;
+		woundRegeneration = 0;
 		stamina = 0;
 		staminaTotal = 0;
 		staminaRegeneration = 0;
 		mana = 0;
 		manaTotal = 0;
 		manaRegeneration = 0;
+		opacity = 0;
+		reach = 0;
+		armorPenetrationBonus = 0;
+		woundingPotentialBonus = 0;
+		paddingBonus = 0;
+		excellentHitProtectionBonus = 0;
 	}
+	FOStatBlockStruct(
+		int32 aWoundLimit, 
+		int32 aStamina, 
+		int32 aStaminaTotal,
+		int32 aStaminaRegeneration,
+		int32 aReach
+		)
+	{
+		woundLimit = aWoundLimit;
+		stamina = aStamina;
+		staminaTotal = aStaminaTotal;
+		staminaRegeneration = aStaminaRegeneration;
+		reach = aReach;
+		power = 0;
+		speed = 0;
+		guard = 0;
+		intelligence = 0;
+		wisdom = 0;
+		spirit = 0;
+		woundRegeneration = 0;
+		mana = 0;
+		manaTotal = 0;
+		manaRegeneration = 0;
+		opacity = 0;
+		armorPenetrationBonus = 0;
+		woundingPotentialBonus = 0;
+		paddingBonus = 0;
+		excellentHitProtectionBonus = 0;
+	}
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponStatBlock
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		int32 power;
+	UPROPERTY(BlueprintReadWrite)
+		int32 speed;
+	UPROPERTY(BlueprintReadWrite)
+		int32 woundingPotential;
+	UPROPERTY(BlueprintReadWrite)
+		int32 armorPenetration;
+	UPROPERTY(BlueprintReadWrite)
+		int32 guard;
+};
+
+USTRUCT(BlueprintType)
+struct FArmorStatBlock
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		int32 padding;
+	UPROPERTY(BlueprintReadWrite)
+		int32 woundProtection;
 };
 
 USTRUCT(BlueprintType)
@@ -152,27 +216,25 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 maxTargets;
 	UPROPERTY(BlueprintReadWrite)
-		int32 range;
+		int32 minRange;
+	UPROPERTY(BlueprintReadWrite)
+		int32 maxRange;
 	UPROPERTY(BlueprintReadWrite)
 		int32 initiativeCost;
 	UPROPERTY(BlueprintReadWrite)
 		float staminaCost;
 	UPROPERTY(BlueprintReadWrite)
-		float vitalityCost;
-	UPROPERTY(BlueprintReadWrite)
 		float manaCost;
 	UPROPERTY(BlueprintReadWrite)
-		bool selfTargettable;
+		TArray<int32> allowedCharacterTypesToTarget;
 	UPROPERTY(BlueprintReadWrite)
-		float accuracy;
+		int32 speed;
 	UPROPERTY(BlueprintReadWrite)
-		float piercing;
+		int32 armorPenetration;
 	UPROPERTY(BlueprintReadWrite)
-		float damage;
+		int32 woundingPotential;
 	UPROPERTY(BlueprintReadWrite)
-		float contact;
-	UPROPERTY(BlueprintReadWrite)
-		float bludgeon;
+		int32 power;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> mainHandRequirements;
 	UPROPERTY(BlueprintReadWrite)
@@ -205,22 +267,27 @@ public:
 		FString stanceChange;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> possibleTriggerConditions;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> woundsInflicted;
 	FOAttackStruct()
 	{
+		classKey = "Attack";
 		minTargets = 1;
 		maxTargets = 1;
-		range = 1;
-		accuracy = 1;
-		damage = 1;
-		contact = 1;
-		bludgeon = 1;
-		mainHandRequirements = { 0 };
-		offHandRequirements = { 0 };
+		minRange = 1;
+		maxRange = 1;
 		targetTypes = { 0 };
-		widgetKey = "null";
-		vitalityCost = 0;
 		staminaCost = 0;
 		manaCost = 0;
+		stanceChange = "";
+		initiativeCost = 0;
+		speed = 0;
+		armorPenetration = 0;
+		woundingPotential = 0;
+		power = 0;	
+		bothRequirementsNeeded = false;
+		attackHeight = 0;
+		wieldType = 0;
 	}
 };
 
@@ -244,7 +311,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> offHandWeaponTypes;
 	UPROPERTY(BlueprintReadWrite)
-		FCombatStats combatStats;
+		int32 power;
+	UPROPERTY(BlueprintReadWrite)
+		int32 speed;
+	UPROPERTY(BlueprintReadWrite)
+		int32 guard;
 	UPROPERTY(BlueprintReadWrite)
 		int32 guardHeight;
 	UPROPERTY(BlueprintReadWrite)
@@ -255,31 +326,6 @@ public:
 		TArray<FTransitionCost> transitions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> tags;
-};
-
-USTRUCT(BlueprintType)
-struct FOStatusStruct
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(BlueprintReadWrite)
-		FString key;
-	UPROPERTY(BlueprintReadWrite)
-		FString classKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString iconKey;
-	UPROPERTY(BlueprintReadWrite)
-		FOStatBlockStruct statChange;
-	UPROPERTY(BlueprintReadWrite)
-		FCombatStats combatStatChange;
-	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> attacks;
-	UPROPERTY(BlueprintReadWrite)
-		bool isTemporary;
-	UPROPERTY(BlueprintReadWrite)
-		int32 duration;
-	UPROPERTY(BlueprintReadWrite)
-		FString description;
 };
 
 USTRUCT(BlueprintType)
@@ -325,17 +371,9 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 	public:
 		UFUNCTION(BlueprintCallable)
-			static FString GetMessage();
-		UFUNCTION(BlueprintCallable)
-			static FCombatStats GetCombatStats(FString key);
-		UFUNCTION(BlueprintCallable)
-			static FOStatBlockStruct GetStatBlock(FString key);
-		UFUNCTION(BlueprintCallable)
 			static FOStanceStruct GetStanceStruct(FString key, int32 level);
 		UFUNCTION(BlueprintCallable)
 			static FOAttackStruct GetAttackStruct(FString key);
-		UFUNCTION(BlueprintCallable)
-			static FOStatusStruct GetStatusStruct(FString key);
 		UFUNCTION(BlueprintCallable)
 			static UTexture2D* MyLoadTextureFromPath(const FString& Path);
 		UFUNCTION(BlueprintCallable)
@@ -350,7 +388,3 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 		static std::unordered_map<FString, UPaperFlipbook*> flipBookCache;
 		const static int cacheSizeLimit = 20;
 };
-
-
-
-

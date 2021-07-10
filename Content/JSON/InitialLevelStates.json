@@ -2,20 +2,18 @@
 	"key": "Hub",
 	"backgroundSpritePath": "Backgrounds/Hub",
 	"initialItemStates": [],
-	"initialEnemyStates": [{
+	"initialNPCSpawns": [{
 			"coordinates": 
 			{
 				"XCoordinate": 1,
 				"YCoordinate": 1
 			},
-			"enemyStateKey": "Merchant",
-			"controllerKey": ""
+			"characterStatKey": "Merchant"
 		}]
 },
 {
 	"key": "Armory",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [],
 	"initialItemStates": [
 	{
 		"coordinates": {
@@ -23,7 +21,7 @@
 			"YCoordinate": 6
 		},
 		"itemState": {
-			"itemKey": "Default_Sword",
+			"itemKey": "LongSword",
 			"classKey": "Weapon",
 			"enchantmentKeys":["Arcane"]
 		}
@@ -180,6 +178,16 @@
 	},
 	{
 		"coordinates": {
+			"XCoordinate": 1,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "LongBow",
+			"classKey": "Weapon"
+		}
+	},
+	{
+		"coordinates": {
 			"XCoordinate": 2,
 			"YCoordinate": 4
 		},
@@ -187,21 +195,30 @@
 			"itemKey": "Inflict Poison Scroll",
 			"classKey": "Scroll"
 		}
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 3,
+			"YCoordinate": 4
+		},
+		"itemState": {
+			"itemKey": "CrossBow",
+			"classKey": "Weapon"
+		}
 	}
 	]
 },
 {
 	"key": "Combat Tutorial",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [
+	"initialEnemySpawns": [
 		{
 			"coordinates": 
 			{
 				"XCoordinate": 6,
 				"YCoordinate": 6
 			},
-			"enemyStateKey": "Rat",
-			"controllerKey": "Patroller"
+			"characterStatKey": "Rat"
 		},
 		{
 			"coordinates": 
@@ -209,8 +226,7 @@
 				"XCoordinate": 1,
 				"YCoordinate": 6
 			},
-			"enemyStateKey": "Rat",
-			"controllerKey": "Patroller"
+			"characterStatKey": "Rat"
 		}
 	],
 	"initialItemStates": [
@@ -220,7 +236,7 @@
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Default_Sword",
+				"itemKey": "LongSword",
 				"classKey": "Weapon"
 			}
 		},
@@ -239,7 +255,6 @@
 {
 	"key": "Tutorial",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [],
 	"initialItemStates": [
 		{
 			"coordinates": {
@@ -256,15 +271,6 @@
 {
 	"key": "LocalTest",
 	"backgroundSpritePath": "Default",
-	"initialEnemyStates": [{
-			"coordinates": 
-			{
-				"XCoordinate": 1,
-				"YCoordinate": 1
-			},
-			"enemyStateKey": "Merchant",
-			"controllerKey": ""
-		}],
 	"initialItemStates": [
 		{
 			"coordinates": {
@@ -278,12 +284,32 @@
 		},
 		{
 			"coordinates": {
-				"XCoordinate": 2,
+				"XCoordinate": 4,
+				"YCoordinate": 4
+			},
+			"itemState": {
+				"itemKey": "Spear",
+				"classKey": "Weapon"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 3,
 				"YCoordinate": 2
 			},
 			"itemState": {
-				"itemKey": "Full Helm",
-				"classKey": "Armor"
+				"itemKey": "LongSword",
+				"classKey": "Weapon"
+			}
+		},
+		{
+			"coordinates": {
+				"XCoordinate": 3,
+				"YCoordinate": 2
+			},
+			"itemState": {
+				"itemKey": "Dagger",
+				"classKey": "Weapon"
 			}
 		},
 		{
@@ -316,6 +342,22 @@
 				"classKey": "Scroll"
 			}
 		}
+	],
+	"initialEnemySpawns": [
+	{
+		"coordinates": {
+			"XCoordinate": 1,
+			"YCoordinate": 7
+		},
+		"characterStatKey": "rat"
+	},
+	{
+		"coordinates": {
+			"XCoordinate": 2,
+			"YCoordinate": 6
+		},
+		"characterStatKey": "rat"
+	}
 	]
 }
 ]
