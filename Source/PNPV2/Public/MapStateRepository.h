@@ -38,27 +38,23 @@ struct FSceneryState
 };
 
 USTRUCT(BlueprintType)
-struct FInitialEnemyState
+struct FInitialCharacterSpawnStruct
 {
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
-		FString enemyStateKey;
-	UPROPERTY(BlueprintReadWrite)
-		FString controllerKey;
+		FString characterStatKey;
 	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
 
 USTRUCT(BlueprintType)
-struct FEnemyState
+struct FCharacterSpawnStruct
 {
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
-		FOPageStatStruct enemyStats;
-	UPROPERTY(BlueprintReadWrite)
-		FString controllerKey;
+		FOPageStatStruct characterStats;
 	UPROPERTY(BlueprintReadWrite)
 		FCoordinates coordinates;
 };
@@ -96,7 +92,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FItemState> initialItemStates;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FInitialEnemyState> initialEnemyStates;
+		TArray<FInitialCharacterSpawnStruct> initialEnemySpawns;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FInitialCharacterSpawnStruct> initialNPCSpawns;
 };
 
 USTRUCT(BlueprintType)
@@ -111,7 +109,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FItemState> itemStates;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FEnemyState> enemyStates;
+		TArray<FCharacterSpawnStruct> enemyStates;
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FCharacterSpawnStruct> npcStates;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FSceneryState> sceneryStates;
 	UPROPERTY(BlueprintReadWrite)

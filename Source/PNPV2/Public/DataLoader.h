@@ -226,7 +226,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		float manaCost;
 	UPROPERTY(BlueprintReadWrite)
-		bool selfTargettable;
+		TArray<int32> allowedCharacterTypesToTarget;
 	UPROPERTY(BlueprintReadWrite)
 		int32 speed;
 	UPROPERTY(BlueprintReadWrite)
@@ -276,7 +276,6 @@ public:
 		maxTargets = 1;
 		minRange = 1;
 		maxRange = 1;
-		selfTargettable = false;
 		targetTypes = { 0 };
 		staminaCost = 0;
 		manaCost = 0;
