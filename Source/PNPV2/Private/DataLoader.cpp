@@ -106,106 +106,53 @@ UPaperSprite* UDataLoader::MyLoadSpriteFromPath(const FString& Path)
 
 UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 {
-	const TCHAR* Empty = TEXT("");
-	const TCHAR* Low = TEXT("Low");
-	const TCHAR* Mid = TEXT("Mid");
-	const TCHAR* High = TEXT("High");
-	const TCHAR* OneH = TEXT("OneH");
-	const TCHAR* TwoH = TEXT("TwoH");
-	const TCHAR* Idle = TEXT("Idle");
-	const TCHAR* Walk = TEXT("Walk");
-
 	if (Path.IsEmpty()) return NULL;
 
-	FString PathToLoad = "/Game/FlipBooks/" + Path;
+	const TCHAR* Empty = TEXT("");
 
-	//UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	
-	//if (flipBook) return flipBook;
-	
-	const FString LeftPath = PathToLoad.Left(PathToLoad.Find("|")); //Left half of the path is unique to the asset
-	//Ex: Helmet/Default_Helmet/Helmet
+	const TArray<FStringArray> keysToRemove = {
+		FStringArray({TEXT("Left"), TEXT("Right")}),
+		FStringArray({TEXT("Low"), TEXT("Mid"), TEXT("High")}),
+		FStringArray({TEXT("OneH"), TEXT("TwoH")}),
+		FStringArray({TEXT("Idle"), TEXT("Walk"), TEXT("Attack")})
+	};
 
-	FString RightPath = PathToLoad.RightChop(PathToLoad.Find("|")+1); //Right half of the path is the naming convention
-	//Ex: FrontLowOneHIdle
+	const TCHAR* LoadPreFix = TEXT("/Game/FlipBooks/");
 
 	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-
-	PathToLoad = LeftPath + RightPath; 
-	//FString filePath = FString("/Game/FlipBooks/Character/Page/PageSideWalk.uasset");
-	//FString filePath2 = FString("C:/User/Curtis/Documents/Hoi.txt");
-	/*if (PlatformFile.FileExists(*filePath2))
-	{
-		GLog->Log("Henlo my dude");
-	}
-	if (PlatformFile.FileExists(*filePath))
-	{
-		GLog->Log("Ya turkey");
-	}
-	if (FPaths::FileExists(*filePath2))
-	{
-		GLog->Log("Ya goober");
-	}*/
-		//flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	//if (PlatformFile.FileExists(*PathToLoad))
-	//{
-	UPaperFlipbook* flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	if (flipBook) return flipBook;
-	//}
-	//If the base path doesn't exist, try removing left and right from the right part of the path
-	RightPath = RightPath.Replace(TEXT("Right"), Empty, ESearchCase::IgnoreCase);
-	RightPath = RightPath.Replace(TEXT("Left"), Empty, ESearchCase::IgnoreCase);
-	PathToLoad = LeftPath + RightPath;
-	/*if (PlatformFile.FileExists(*PathToLoad))
-	{
-		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-		if (flipBook) return flipBook;
-	}*/
-	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-
-	if (flipBook) return flipBook;
-
-	//If that path doesn't exist, try removing Low, Mid and High From the right part of the path
-	RightPath = RightPath.Replace(Low, Empty, ESearchCase::IgnoreCase);
-	RightPath = RightPath.Replace(Mid, Empty, ESearchCase::IgnoreCase);
-	RightPath = RightPath.Replace(High, Empty, ESearchCase::IgnoreCase);
-	PathToLoad = LeftPath + RightPath;
-
-	/*if (PlatformFile.FileExists(*PathToLoad))
-	{
-		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-		if (flipBook) return flipBook;
-	}*/
-	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	if (flipBook) return flipBook;
-
-	//If that still doesn't work, try removing one handed and two handed part of the path
-	RightPath = RightPath.Replace(OneH, Empty, ESearchCase::IgnoreCase);
-	RightPath = RightPath.Replace(TwoH, Empty, ESearchCase::IgnoreCase);
-	PathToLoad = LeftPath + RightPath;
+	FString ContentDirectory = FPaths::ProjectContentDir();
+	FString TestPrefix = ContentDirectory + TEXT("FlipBooks/");
 	
-	/*if (PlatformFile.FileExists(*PathToLoad))
-	{
+	const FString LeftPath = Path.Left(Path.Find("|")); //Left half of the path is unique to the asset
+	//Ex: Helmet/Default_Helmet/Helmet
+
+	FString RightPath = Path.RightChop(Path.Find("|")+1); //Right half of the path is the naming convention
+	//Ex: FrontLowOneHIdle
+	
+	UPaperFlipbook* flipBook = NULL;
+	FString PathToLoad;
+	FString PathToTest = TestPrefix + LeftPath + RightPath + TEXT(".uasset");
+
+	if (PlatformFile.FileExists(*PathToTest)) {
+		PathToLoad = LoadPreFix + LeftPath + RightPath;
 		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
 		if (flipBook) return flipBook;
-	}*/
-	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	if (flipBook) return flipBook;
+	}
 
-	//Still? Okay, try removing Walk and Idle. This will be for assets that don't change when you move
-	RightPath = RightPath.Replace(Idle, Empty, ESearchCase::IgnoreCase);
-	RightPath = RightPath.Replace(Walk, Empty, ESearchCase::IgnoreCase);
-	PathToLoad = LeftPath + RightPath;
+	for (int i = 0; i < keysToRemove.Num(); i++) {
+		for (int j = 0; j < keysToRemove[i].array.Num(); j++) {
+			RightPath = RightPath.Replace(*keysToRemove[i].array[j], Empty, ESearchCase::IgnoreCase);
+		}
+		PathToTest = TestPrefix + LeftPath + RightPath + TEXT(".uasset");
 
-	/*if (PlatformFile.FileExists(*PathToLoad))
-	{
-		flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-		if (flipBook) return flipBook;
-	}*/
-	flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
-	//GLog->Log(PathToLoad+" is what you are finally laoding lmao");
-	return flipBook;
-	//Give up after this point and just return whatever shows up. 
+		if (PlatformFile.FileExists(*PathToTest)) {
+			PathToLoad = LoadPreFix + LeftPath + RightPath;
+			flipBook = Cast<UPaperFlipbook>(StaticLoadObject(UPaperFlipbook::StaticClass(), NULL, *(PathToLoad)));
+			if (flipBook) return flipBook;
+		}
+	}
+
+	return NULL;
 }
 
 void UDataLoader::LoadAssetsForCooking()

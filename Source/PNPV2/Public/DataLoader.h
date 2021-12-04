@@ -365,6 +365,25 @@ public:
 		int32 numberOfRounds;
 };
 
+USTRUCT(BlueprintType)
+struct FStringArray
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> array;
+
+	FStringArray()
+	{
+		array = {};
+	};
+
+	FStringArray(TArray<FString> anArray)
+	{
+		array = anArray;
+	};
+};
+
 UCLASS()
 class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 {
