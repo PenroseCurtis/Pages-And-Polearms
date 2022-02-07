@@ -169,7 +169,8 @@
 		"flipBookKey": "Page",
 		"name": "Foot Soldier",
 		"attacks": [
-			"Refresh"
+			"Refresh",
+			"Inflict Poison"
 		],
 		"stances": [
 			{
@@ -514,16 +515,37 @@
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "Spear",
+						"itemKey": "Wooden Spear",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
 				},
 				{
 					"itemStruct": {
-						"itemKey": "ChainMail",
+						"itemKey": "Med Helm",
 						"classKey": "Armor"
 					}
+				}
+			]
+		},
+		"statBlock": {
+			"woundLimit": 1
+		}
+	},
+	{
+		"key": "Goblin_Archer",
+		"flipBookKey": "Goblin_Warrior",
+		"name": "Goblin Archer",
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Makeshift Bow",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
 				},
 				{
 					"itemStruct": {

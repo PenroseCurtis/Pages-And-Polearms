@@ -304,16 +304,6 @@
 		},
 		{
 			"coordinates": {
-				"XCoordinate": 3,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "Dagger",
-				"classKey": "Weapon"
-			}
-		},
-		{
-			"coordinates": {
 				"XCoordinate": 4,
 				"YCoordinate": 2
 			},
@@ -344,20 +334,13 @@
 		}
 	],
 	"initialEnemySpawns": [
-	{
-		"coordinates": {
-			"XCoordinate": 1,
-			"YCoordinate": 7
-		},
-		"characterStatKey": "rat"
-	},
-	{
-		"coordinates": {
-			"XCoordinate": 2,
-			"YCoordinate": 6
-		},
-		"characterStatKey": "rat"
-	}
+		{
+			"coordinates": {
+				"XCoordinate": 1,
+				"YCoordinate": 1
+			},
+			"characterStatKey": "rat"
+		}
 	]
 },
 {
@@ -369,9 +352,9 @@
 			"coordinates": 
 			{
 				"XCoordinate": 6,
-				"YCoordinate": 6
+				"YCoordinate": 7
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin_Archer"
 		},
 		{
 			"coordinates": 

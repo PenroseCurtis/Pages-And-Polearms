@@ -240,5 +240,40 @@
  "IconPath": "Weapon/Dagger/Dagger_Icon",
  "weaponTypes":[0,6],
  "value": 12.0
-}
+},
+{
+ "Key":"Wooden Spear",
+ "flipBookKey":"Default_Sword",
+ "weaponStats": {
+	"power": 1,
+	"speed": 3,
+	"woundingPotential": 1,
+	"armorPenetration": 0,
+	"guard": 3
+ },
+ "Weight":1.0,
+ "Description": "A shoddy wooden spear",
+ "SpritePath": "Weapon/Spear/Spear",
+ "IconPath": "Weapon/Spear/Spear_Icon",
+ "weaponTypes":[0,8,9],
+ "value": 1.0
+},
+{
+ "Key":"Makeshift Bow",
+ "flipBookKey":"Default_Sword",
+ "weaponStats": {
+	"power": 2,
+	"speed": 3,
+	"woundingPotential": 1,
+	"armorPenetration": 0,
+	"guard": 0
+ },
+ "SpecialAttacks":["Fire"],
+ "Weight":1.0,
+ "Description": "A very poorly made bow",
+ "SpritePath": "Weapon/Dagger/Dagger",
+ "IconPath": "Weapon/Dagger/Dagger_Icon",
+ "weaponTypes":[1,11],
+ "value": 12.0
+},
 ]
