@@ -556,7 +556,8 @@
 			]
 		},
 		"statBlock": {
-			"woundLimit": 1
+			"woundLimit": 1,
+			"guard": -1
 		}
 	},
 	{
@@ -595,7 +596,8 @@
 			]
 		},
 		"statBlock": {
-			"woundLimit": 3
+			"woundLimit": 3,
+			"guard": -1
 		}
 	}
 ]

@@ -354,16 +354,29 @@
 				"XCoordinate": 6,
 				"YCoordinate": 7
 			},
-			"characterStatKey": "Goblin_Archer"
-		},
+			"characterStatKey": "Goblin_Warrior"
+		}
+	]
+},
+{
+	"key": "Stealth_Encounter",
+	"backgroundSpritePath": "",
+	"initialItemStates": [],
+	"initialEnemySpawns": [
 		{
 			"coordinates": 
 			{
-				"XCoordinate": 6,
-				"YCoordinate": 8
+				"XCoordinate": 1,
+				"YCoordinate": 4
 			},
 			"characterStatKey": "Goblin_King"
 		}
 	]
+},
+{
+	"key": "Bridge",
+	"backgroundSpritePath": "",
+	"initialItemStates": [],
+	"initialEnemySpawns": []
 }
 ]
