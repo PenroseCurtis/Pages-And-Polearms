@@ -20,7 +20,12 @@
 					"isEquippedToDominantHand": true
 				}
 			]
-		}
+		},
+		"statBlock": {
+			"vitalityTotal": 3,
+			"vitality": 3
+		},
+		"attacks": ["Inflict Poison"]
 	},
 	{
 		"key": "Rat",
@@ -34,6 +39,11 @@
 		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Claw"
+		},
+		"statBlock": {
+			"vitalityTotal": 2,
+			"vitality": 2,
+			"guard": -1
 		}
 	},
 	{
@@ -170,7 +180,8 @@
 		"name": "Foot Soldier",
 		"attacks": [
 			"Refresh",
-			"Inflict Poison"
+			"Inflict Poison",
+			"Heal"
 		],
 		"stances": [
 			{
@@ -529,7 +540,7 @@
 			]
 		},
 		"statBlock": {
-			"woundLimit": 1
+			"vitality": 1
 		}
 	},
 	{
@@ -596,7 +607,8 @@
 			]
 		},
 		"statBlock": {
-			"woundLimit": 3,
+			"vitalityTotal": 3,
+			"vitality": 3,
 			"guard": -1
 		}
 	}

@@ -2,7 +2,7 @@
 		"Key": "Default_Armor",
 		"armorStats": {
 			"padding": 0,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "Just an ordinary piece of Armor",
@@ -16,7 +16,7 @@
 		"Key": "Default_Cloak",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "A very nice cloak",
@@ -31,7 +31,7 @@
 		"Key":"Default_Helmet",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "Just an ordinary Helmet",
@@ -46,7 +46,7 @@
 		"Key":"Full Helm",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 3
+			"vitalHitProtection": 3
 			},
 		"Weight": 2.0,
 		"Description": "A helmet that covers your whole head",
@@ -61,7 +61,7 @@
 		"Key":"Med Helm",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"vitalHitProtection": 2
 			},
 		"Weight": 2.0,
 		"Description": "A helmet that covers your head but leaves your face exposed",
@@ -76,7 +76,7 @@
 		"Key":"Leather Cap",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 2.0,
 		"Description": "Better than nothing...",
@@ -91,7 +91,7 @@
 		"Key": "Mail Armor",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"vitalHitProtection": 2
 			},
 		"Weight": 5.0,
 		"Description": "A fine piece of armour made of interlinked metal rings",
@@ -106,7 +106,7 @@
 		"Key": "ChainMail",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 5.0,
 		"Description": "A fine piece of armour made of interlinked metal rings",
@@ -121,7 +121,7 @@
 		"Key": "Boiled Leather Armor",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 5.0,
 		"Description": "A chestpiece made out of specially treated leather",
@@ -136,7 +136,7 @@
 		"Key": "Mail Leggings",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 10.0,
 		"Description": "Mail Leg Armour",
@@ -151,7 +151,7 @@
 		"Key": "Leather Chaps",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 5.0,
 		"Description": "Leather Leg Armour",
@@ -166,7 +166,7 @@
 		"Key": "Leather Bracers",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 3.0,
 		"Description": "Leather arm protectors",
@@ -181,7 +181,7 @@
 		"Key": "Mail Bracers",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 3.0,
 		"Description": "Mail arm protectors",

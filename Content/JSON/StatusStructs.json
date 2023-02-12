@@ -15,15 +15,14 @@
   "iconKey":"Poisoned",
   "statChange":{
 	"staminaRegeneration":-2,
-	"guard": -1
+	"guard": -1,
+	"vitalityTotal": -1
 	},
   "combatStatChange":{},
   "attacks":[],
   "isTemporary":true,
   "duration": 5,
-  "description":"Deals damage every turn",
-  "isWound":true,
-  "woundValue": 1
+  "description":"Deals stamina damage every turn"
 },
 {
   "key":"Buffed",
@@ -49,61 +48,18 @@
 },
 {
   "key":"Bleeding",
-  "classKey":"Default",
+  "classKey":"Bleed",
   "iconKey":"Debuff",
   "statChange":{
-	"staminaRegeneration":-1,
 	"power": -1
 	},
   "combatStatChange":{},
   "attacks":[],
   "isTemporary":false,
-  "description":"A severe cut that will cause you to lose stamina every turn",
-  "isWound":true,
-  "woundValue": 1
+  "description":"A severe cut that will become more debilitating over time value over time"
 },
 {
-  "key":"Hemorrhage",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"staminaRegeneration":-3,
-	"staminaTotal": -2,
-	"power": -2
-	},
-  "combatStatChange":{},
-  "attacks":[],
-  "isTemporary":false,
-  "description":"Severe bleeding that can quickly kill if not treated",
-  "isWound":true,
-  "woundValue": 3
-},
-{
-  "key":"Cracked Rib",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"speed": -1
-	},
-  "isTemporary":false,
-  "description":"A solid blow has cracked one of your ribs, making it more difficult to move",
-  "isWound":true,
-  "woundValue": 1
-},
-{
-  "key":"Broken Rib",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"speed": -3
-	},
-  "isTemporary":false,
-  "description":"A solid blow has broken one of your ribs, making it very painful to move or breathe",
-  "isWound":true,
-  "woundValue": 1
-},
-{
-  "key":"Sprained Wrist",
+  "key":"Fracture",
   "classKey":"Default",
   "iconKey":"Debuff",
   "statChange":{
@@ -111,49 +67,7 @@
 	"guard": -1
 	},
   "isTemporary":false,
-  "description": "The ligaments in your hand have been damaged, making it more difficult to fight",
-  "isWound":true,
-  "woundValue": 1
-},
-{
-  "key":"Fractured Wrist",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"power": -2,
-	"guard": -2
-	},
-  "isTemporary":false,
-  "description": "The bones in your hand have been been cracked, making combat excruciating",
-  "isWound":true,
-  "woundValue": 2
-},
-{
-  "key":"Broken Arm",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"power": -5,
-	"guard": -5
-	},
-  "isTemporary":false,
-  "description": "The bones in your hand have been been cracked, making combat excruciating",
-  "isWound":true,
-  "woundValue": 2
-},
-{
-  "key":"Lacerated Arm",
-  "classKey":"Default",
-  "iconKey":"Debuff",
-  "statChange":{
-	"power": -4,
-	"guard": -4,
-	"staminaRegeneration": -2
-	},
-  "isTemporary":false,
-  "description": "A deep cut to the arm, making combat very painful and also causing you to lose blood.",
-  "isWound":true,
-  "woundValue": 2
+  "description": "Something in you has fractured, making battling more difficult"
 },
 {
   "key": "Infected",
@@ -166,9 +80,7 @@
 	"staminaTotal": -1
 	},
   "isTemporary":false,
-  "description": "A wound infected with bacteria",
-  "isWound":true,
-  "woundValue": 1
+  "description": "A wound infected with bacteria"
 },
 {
   "key":"Staggered",

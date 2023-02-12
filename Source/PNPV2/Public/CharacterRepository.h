@@ -71,7 +71,7 @@ public:
 			FActionCost("Examine", 0),
 			FActionCost("Move To", 1)
 		};
-		statBlock = FOStatBlockStruct(3, 10, 10, 1, 1);
+		statBlock = FOStatBlockStruct(3, 3, 10, 10, 1, 1);
 	}
 };
 UCLASS()

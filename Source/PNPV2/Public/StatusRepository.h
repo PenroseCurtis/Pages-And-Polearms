@@ -32,10 +32,6 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 duration;
 	UPROPERTY(BlueprintReadWrite)
-		bool isWound;
-	UPROPERTY(BlueprintReadWrite)
-		int32 woundValue;
-	UPROPERTY(BlueprintReadWrite)
 		FString description;
 };
 

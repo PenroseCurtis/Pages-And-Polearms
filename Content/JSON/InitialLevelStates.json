@@ -333,15 +333,13 @@
 			}
 		}
 	],
-	"initialEnemySpawns": [
-		{
+	"initialEnemySpawns": [{
 			"coordinates": {
 				"XCoordinate": 1,
 				"YCoordinate": 1
 			},
 			"characterStatKey": "rat"
-		}
-	]
+		}]
 },
 {
 	"key": "Forest_Trail",

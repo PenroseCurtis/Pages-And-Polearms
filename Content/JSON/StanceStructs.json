@@ -221,7 +221,7 @@
 	  "level":1,
 	  "attacks":["Strike","Parry","Rout","Repel","Far Thrust"],
 	  "mainHandWeaponTypes":[9],
-	  "offHandWeaponTypes":[4,5],	  
+	  "offHandWeaponTypes":[4],	  
 	  "guard": 1,
 	  "speed": 1,
 	  "guardHeight":1,
