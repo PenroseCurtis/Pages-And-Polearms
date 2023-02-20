@@ -1,5 +1,5 @@
 [{
-	"key":"Health Potion",
+	"key":"Vitality Potion",
 	"description": "A potion that heals you",
 	"Actions":[{"action":"buy", "cost":1},
 			   {"action":"sell", "cost":1},
@@ -12,7 +12,31 @@
 	"iconPath":"Potions/Health_Potion",
 	"weight": 2.0,
 	"value": 2.0,
-	"healthChange": 5.0,
+	"vitalityChange": 1,
+	"staminaChange": 0,
+	"statusKey":"",
+	"replacementItem": {
+		"itemKey": "Empty Bottle",
+		"classKey": "",
+		"enchantmentKeys": []
+	}
+},
+{
+	"key":"Stamina Potion",
+	"description": "A potion that refreshes your stamina",
+	"Actions":[{"action":"buy", "cost":1},
+			   {"action":"sell", "cost":1},
+			   {"action":"drop","cost":0},
+			   {"action":"examine","cost":0},
+			   {"action":"pickup","cost":1},
+			   {"action":"drink", "cost":1}
+	],
+	"spritePath": "Potions/Health_Potion_Sprite",
+	"iconPath":"Potions/Health_Potion",
+	"weight": 2.0,
+	"value": 2.0,
+	"vitalityChange": 0,
+	"staminaChange": 3,
 	"statusKey":"",
 	"replacementItem": {
 		"itemKey": "Empty Bottle",
@@ -34,7 +58,8 @@
 	"iconPath":"Potions/Buff_Potion",
 	"weight": 2.0,
 	"value": 2.0,
-	"healthChange": 0.0,
+	"vitalityChange": 0,
+	"staminaChange": 0,
 	"statusKey":"Buffed",
 	"replacementItem": {
 		"itemKey": "Empty Bottle",

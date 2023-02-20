@@ -6,7 +6,11 @@
 		"inventoryStruct": {
 			"items": [
 				{
-					"itemKey": "Health Potion",
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Stamina Potion",
 					"classKey": "Consumable"
 				}
 			],
@@ -23,7 +27,8 @@
 		},
 		"statBlock": {
 			"vitalityTotal": 3,
-			"vitality": 3
+			"vitality": 1,
+			"stamina": 3
 		},
 		"attacks": ["Inflict Poison"]
 	},

@@ -238,7 +238,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		float value;
 	UPROPERTY(BlueprintReadWrite)
-		float healthChange;
+		int32 vitalityChange;
+	UPROPERTY(BlueprintReadWrite)
+		int32 staminaChange;
 	UPROPERTY(BlueprintReadWrite)
 		FString statusKey;
 	UPROPERTY(BlueprintReadWrite)
