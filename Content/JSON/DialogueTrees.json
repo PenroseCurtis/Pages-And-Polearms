@@ -39,4 +39,405 @@
 		"nextNodeId": "",
 		"action": "Trade"
 	}]
+},
+{
+	"key": "Blacksmith",
+	"startLinkId":"LBA",
+	"nodes": [{
+		"ID": "NBA",
+		"linkIDs": ["LBB", "Trade"]
+	}],
+	"links": [{
+		"ID": "LBA",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"Greetings, how can I help you?"
+		}],
+		"nextNodeId": "NBA",
+		"action": ""
+	},
+	{
+		"ID": "LBB",
+		"label" : "Leave",
+		"script": [{
+			"speaker": "false",
+			"text":"Nothing today, thanks"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},{
+		"ID": "Trade",
+		"label" : "Let's see what you have for sale",
+		"script": [],
+		"nextNodeId": "",
+		"action": "Trade"
+	}]
+},
+{
+	"key": "Healer",
+	"startLinkId":"LPA",
+	"nodes": [{
+		"ID": "NPA",
+		"linkIDs": ["LPB", "Heal"]
+	}],
+	"links": [{
+		"ID": "LPA",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"Greetings, how can I help you?"
+		}],
+		"nextNodeId": "NPA",
+		"action": ""
+	},
+	{
+		"ID": "LPB",
+		"label" : "Leave",
+		"script": [{
+			"speaker": "false",
+			"text":"Nothing today, thanks"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},{
+		"ID": "Heal",
+		"label" : "I need some healing",
+		"script": [],
+		"nextNodeId": "",
+		"action": "Heal"
+	}]
+},
+{
+	"key": "Nurse",
+	"startLinkId":"LH1",
+	"nodes": [{
+		"ID": "NH1",
+		"linkIDs": ["LH2", "LH3"]
+	},
+	{
+		"ID": "NH2",
+		"linkIDs": ["LH2", "LH4"]
+	}],
+	"links": [{
+		"ID": "LH1",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"Oh you're awake!"
+		},
+		{
+			"speaker": "false",
+			"text":"Where am I?"
+		},
+		{
+			"speaker": "true",
+			"text":"You're in the town of [], you washed up on the beach last night unconcious. We were able to ressusitate you, but you passed out not long after"
+		},
+		{
+			"speaker": "false",
+			"text":"Everything feels so foggy, I can't remember anything"
+		},
+		{
+			"speaker": "true",
+			"text":"Amnesia? Strange, but not unheard of with something like this. Do you remember your name?"
+		},
+		{
+			"speaker": "false",
+			"text":"My name... {Player_Name} I think?"
+		},
+		{
+			"speaker": "true",
+			"text":"We did find this longsword on you, perhaps you're a warrior of some sort?"
+		},
+		{
+			"speaker": "false",
+			"text":"That does ring a bell, yes I think so. Can I hold it?"
+		},
+		{
+			"speaker": "false",
+			"text":"Yes this feels familiar, my sword..."
+		},
+		{
+			"speaker": "true",
+			"text":"That's progress. We've checked you out, and you seem well enough, perhaps swinging that thing around will help jog your memory"
+		},
+		{
+			"speaker": "false",
+			"text":"That seems a little dangerous in a hospital"
+		},
+		{
+			"speaker": "true",
+			"text":"Oh goodness no not here! There is an old adventurer who lives in a red house in the north west of the village, he has a small training area to keep up his skills."
+		},
+		{
+			"speaker": "true",
+			"text":"That or you could try your hand against some of the goblins north of town"
+		}],
+		"nextNodeId": "NH1",
+		"action": ""
+	},
+	{
+		"ID": "LH2",
+		"label" : "Talk to the adventurer",
+		"script": [{
+			"speaker": "false",
+			"text":"I think I'll go talk to that adventurer, thanks"
+		},
+		{
+			"speaker": "true",
+			"text": "Best of luck! Remember, if you need to rest up, you can always come back here and sleep in this bed"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},{
+		"ID": "LH3",
+		"label" : "Goblins?!",
+		"script": [{
+			"speaker": "false",
+			"text": "You want an amnesiac to go fight for you?"
+		},{
+			"speaker": "true",
+			"text": "Well, normally I would loathe to suggest it, but they did recently steal an important relic from us..."
+		},
+		{
+			"speaker": "true",
+			"text": "There's one who's been spying on us alone just north of town, he shouldn't be too much trouble. Maybe try your hand against him, and if that feels okay, they've holed up in a temple to the east"
+		}],
+		"nextNodeId": "NH2",
+		"action": ""
+	},
+	{
+		"ID": "LH4",
+		"label": "Maybe I'll look into the goblins",
+		"script": [{
+			"speaker": "false",
+			"text": "Hmm maybe I'll try my hand against the lone goblin"
+		},
+		{
+			"speaker": "true",
+			"text": "Best of luck! Remember, if you need to rest up, you can always come back here and sleep in this bed"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Innkeeper",
+	"startLinkId":"LIA",
+	"nodes": [{
+		"ID": "NIA",
+		"linkIDs": ["LIB", "Rest"]
+	}],
+	"links": [{
+		"ID": "LIA",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"Greetings, how can I help you?"
+		}],
+		"nextNodeId": "NIA",
+		"action": ""
+	},
+	{
+		"ID": "LIB",
+		"label" : "Leave",
+		"script": [{
+			"speaker": "false",
+			"text":"Nothing today, thanks"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},{
+		"ID": "Rest",
+		"label" : "I'd like a room for the night",
+		"script": [],
+		"nextNodeId": "",
+		"action": "Rest"
+	}]
+},
+{
+	"key": "Adventurer",
+	"startLinkId":"LAA",
+	"nodes": [{
+		"ID": "NAA",
+		"linkIDs": ["LAB", "LAC"]
+	},
+	{
+		"ID": "NAB",
+		"linkIDs": ["LAD", "LAZ"]
+	},
+	{
+		"ID": "NAC",
+		"linkIDs": ["LAE", "LAZ"]
+	},
+	{
+		"ID": "NAD",
+		"linkIDs": ["LAF", "LAZ"]
+	}],
+	"links": [{
+		"ID": "LAA",
+		"label" : "",
+		"script": [{
+			"speaker": "true",
+			"text":"What do you want?"
+		},
+		{
+			"speaker": "false",
+			"text":"I washed up on the beach last night, the local priests took me in and patched me up"
+		},
+		{
+			"speaker": "true",
+			"text":"What does that have to do with me?"
+		},
+		{
+			"speaker": "false",
+			"text": "When I woke up I couldn't remember anything. They found a longsword on me, thought I might be a fighter. Thought maybe talking to another fighter could job my memory"
+		},{
+			"speaker": "true",
+			"text": "Damn priests, think any dandy with a sword is a fighter. Well if you are a fighter, show me your stance"
+		}],
+		"nextNodeId": "NAA",
+		"action": ""
+	},
+	{
+		"ID": "LAB",
+		"label" : "Take up one handed fighting stance",
+		"script": [{
+			"speaker": "true",
+			"text": "Hmm your forms not bad, perhaps you have had some training. A one handed stance will make your swings quicker, but will make them a little less powerful."
+		},
+		{
+			"speaker": "true",
+			"text": "Speed helps you land blows on your opponent, and dodge your foes attacks, but power makes your blows harder to block and deal more damage."
+		}],
+		"nextNodeId": "NAB",
+		"action": ""
+	},
+	{
+		"ID": "LAC",
+		"label" : "Take up two handed fighting stance",
+		"script": [{
+			"speaker": "true",
+			"text": "Hmm your forms not bad, perhaps you have had some training. A two handed stance will grant your swings more power, but will make them a little slower"
+		},
+		{
+			"speaker": "true",
+			"text": "Power makes your blows more difficult to block, and increases the damage they do, but speed makes it easier to land blows in the first place, and easier to avoid your foes blows. "
+		},
+		{
+			"speaker": "true",
+			"text": "Any of this ringing a bell?"
+		}],
+		"nextNodeId": "NAB",
+		"action": ""
+	},
+	{
+		"ID": "LAD",
+		"label": "Sort of, can you tell me more?",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure. Now you may be wondering what the difference is between a blow being dodged or blocked. Either way I'm not killing my opponent, right?"
+		},
+		{
+			"speaker": "true",
+			"text": "Wrong! If a blow is dodged, it will have no impact on an opponent, but if a blow is blocked, it will still wear the opponent down, wittling down their stamina. "
+		},
+		{
+			"speaker": "true",
+			"text": "The more powerful the blow, the more it will wear them down."
+		},
+		{
+			"speaker": "true",
+			"text": "If you can wittle away an enemies stamina down to nothing, they will become staggered, making them much easier to actually hit, or to land a vital hit on."
+		},
+		{
+			"speaker": "true",
+			"text": "A solid hit will lower an opponents stamina by quite a bit, and has a chance of dealing vital damage."
+		},		
+		{
+			"speaker": "true",
+			"text": "A vital hit is one that's guaranteed to do vital damage, that's what's actually going to take down your foe."
+		},
+		{
+			"speaker": "true",
+			"text": "Sorry for rambling, is this helpful? Would you like to know more?"
+		}],
+		"nextNodeId": "NAC",
+		"action": ""
+	},
+	{
+		"ID": "LAE",
+		"label": "Yeah this is helpful, tell me more",
+		"script": [{
+			"speaker": "true",
+			"text": "Now if you want to avoid getting hit, you'll want to focus on improving your speed"
+		},
+		{
+			"speaker": "true",
+			"text": "If you want to be better at blocking hits, you'll want to increase your guard. Speed, helps with this, but your weapon can also help of hinder your guard"
+		},
+		{
+			"speaker": "true",
+			"text": "If you want to avoid vital hits, you'll need good armor that protects you against them. If you're well armored, your chances of being vitally hit are very slim."
+		},
+		{
+			"speaker": "true",
+			"text": "Unless of course, you're up against an opponent with an armor piercing weapon, those can score vital hits even on well armored foes, but are usually slower. "
+		},
+		{
+			"speaker": "true",
+			"text": "And of course if you find yourself up against an armored foe, you'll want to reach for an armor piercing weapon like a hammer, or else you'll have to wear your opponents stamina all the way down."
+		},
+		{
+			"speaker": "true",
+			"text": "Well while I'm rambling, want me to tell you about the flow of battle?"
+		}],
+		"nextNodeId": "NAD",
+		"action": ""
+	},
+	{
+		"ID": "LAF",
+		"label": "Yeah tell me all about it",
+		"script": [{
+			"speaker": "true",
+			"text": "Well, in combat every action you take, from moving, to attacking, to switching your fighting stance will cost initiative points"
+		},
+		{
+			"speaker": "true",
+			"text": "When it's your turn, you will only have so much initiative to use, and once it's used up, you'll have to give someone else a turn"
+		},
+		{
+			"speaker": "true",
+			"text": "The initial order of turns will be random, but over time it will reorder itself. This is known as upkeep. If you can use less initiative on your turn than your opponents, you will move up in the order"
+		},
+		{
+			"speaker": "true",
+			"text": "If you spend your initiative wisely, and time things right around upkeep, you could could the chance to take two turns in a row, turning the tide of battle"
+		},
+		{
+			"speaker": "true",
+			"text": "Well, that's about all I can teach you for right now. Best to go out and practice what you've learned before I teach you anything else. "
+		},
+		{
+			"speaker": "false",
+			"text": "Thanks for the help, all this sounds familiar, I'm sure once I'm in the thick of it, it will all come back."
+		},
+		{
+			"speaker": "true",
+			"text": "Alright well best of luck, don't go getting yourself killed out there."
+		}],
+		"nextNodeId": "",
+		"action": ""
+	},
+	{
+		"ID": "LAZ",
+		"label": "Yeah it's all coming back, thanks for the help (leave)",
+		"script": [{
+			"speaker": "true",
+			"text": "Glad I could help, don't get yourself killed out there."
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
 }]

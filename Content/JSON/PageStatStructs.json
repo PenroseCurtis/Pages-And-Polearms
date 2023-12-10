@@ -4,6 +4,31 @@
 		"flipBookKey": "Page",
 		"name": "Norman",
 		"inventoryStruct": {
+			"items": [],
+			"gold": 0,
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "LongSword",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				}
+			]
+		},
+		"statBlock": {
+			"vitalityTotal": 3,
+			"vitality": 3,
+			"stamina": 3,
+			"staminaTotal": 3
+		},
+		"attacks": []
+	},
+	{
+		"key": "Page Test",
+		"flipBookKey": "Page",
+		"name": "Norman",
+		"inventoryStruct": {
 			"items": [
 				{
 					"itemKey": "Vitality Potion",
@@ -26,14 +51,16 @@
 			]
 		},
 		"statBlock": {
-			"vitalityTotal": 3,
-			"vitality": 1,
-			"stamina": 3
+			"vitalityTotal": 100,
+			"vitality": 100,
+			"stamina": 100,
+			"staminaTotal": 100
 		},
-		"attacks": ["Inflict Poison"]
+		"attacks": []
 	},
 	{
 		"key": "Rat",
+		"classKey": "Enemy",
 		"flipBookKey": "Rat",
 		"name": "atat",
 		"stances": [
@@ -88,10 +115,297 @@
 		"inventoryStruct": {
 			"items": [
 				{
-					"itemKey": "Health Potion",
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Healing Staff",
+					"classKey": "Weapon"
+				}, 
+				{
+					"itemKey": "Stamina Potion",
 					"classKey": "Consumable"
 				}
 			],
+			"gold": 100
+		},
+		"statBlock": {
+			"woundLimit": 15
+		}
+	},
+	{
+		"key": "Blacksmith",
+		"flipBookKey": "Blacksmith",
+		"name": "Blacksmith",
+		"dialogKey": "Blacksmith",
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Trade",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Buy",
+			"Sell",
+			"Examine"
+		],
+		"inventoryStruct": {
+			"items": [
+				{
+					"itemKey": "LongSword",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Arming Sword",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Shield",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Spear",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "HandAxe",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Long Axe",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Light Mace",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Dagger",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Long Axe",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "CrossBow",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Full Helm",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Med Helm",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Leather Cap",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Mail Armor",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "ChainMail",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Boiled Leather Armor",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Mail Leggings",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Leather Chaps",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Leather Bracers",
+					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Mail Bracers",
+					"classKey": "Armor"
+				}
+			],
+			"gold": 100
+		},
+		"statBlock": {
+			"woundLimit": 15
+		}
+	},
+	{
+		"key": "Nurse",
+		"classKey": "Healer",
+		"flipBookKey": "Healer",
+		"name": "Nurse",
+		"dialogKey": "Nurse",
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Buy",
+			"Sell",
+			"Examine"
+		],
+		"inventoryStruct": {
+			"items": [],
+			"gold": 100
+		},
+		"statBlock": {
+			"woundLimit": 15
+		}
+	},
+	{
+		"key": "Healer",
+		"classKey": "Healer",
+		"flipBookKey": "Healer",
+		"name": "The Healer",
+		"dialogKey": "Healer",
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Heal",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Buy",
+			"Sell",
+			"Examine"
+		],
+		"inventoryStruct": {
+			"items": [],
+			"gold": 100
+		},
+		"statBlock": {
+			"woundLimit": 15
+		}
+	},
+	{
+		"key": "Innkeeper",
+		"classKey": "Innkeeper",
+		"flipBookKey": "Innkeeper",
+		"name": "The Innkeeper",
+		"dialogKey": "Innkeeper",
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Rest",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Buy",
+			"Sell",
+			"Examine"
+		],
+		"inventoryStruct": {
+			"items": [],
+			"gold": 100
+		},
+		"statBlock": {
+			"woundLimit": 15
+		}
+	},
+	{
+		"key": "Adventurer",
+		"classKey": "Default",
+		"flipBookKey": "Blacksmith",
+		"name": "Adventurer",
+		"dialogKey": "Adventurer",
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Buy",
+			"Sell",
+			"Examine"
+		],
+		"inventoryStruct": {
+			"items": [],
 			"gold": 100
 		},
 		"statBlock": {
@@ -542,6 +856,12 @@
 						"classKey": "Armor"
 					}
 				}
+			],
+			"items": [
+				{
+					"itemKey": "Goblin Trinket",
+					"classKey": ""
+				}
 			]
 		},
 		"statBlock": {
@@ -566,6 +886,106 @@
 				{
 					"itemStruct": {
 						"itemKey": "Med Helm",
+						"classKey": "Armor"
+					}
+				}
+			]
+		},
+		"statBlock": {
+			"guard": -1
+		}
+	},
+	{
+		"key": "Goblin_Soldier",
+		"flipBookKey": "Goblin_Warrior",
+		"name": "Goblin Soldier",
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Spear",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Shield",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": false
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Med Helm",
+						"classKey": "Armor"
+					}
+				}
+			]
+		},
+		"statBlock": {
+			"guard": -1
+		},
+		"stances": [
+			{
+				"stanceName": "Unarmed",
+				"level": 1
+			},
+			{
+				"stanceName": "Basic 2H",
+				"level": 1
+			},
+			{
+				"stanceName": "Basic 1H",
+				"level": 1
+			},
+			{
+				"stanceName": "Shield Wall",
+				"level": 1
+			},
+			{
+				"stanceName": "Repelling",
+				"level": 1
+			},
+			{
+				"stanceName": "Vulnerable",
+				"level": 1
+			}
+		]
+	},
+	{
+		"key": "Goblin_Knight",
+		"flipBookKey": "Goblin_Warrior",
+		"name": "Shield Goblin",
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Longsword",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Shield",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": false
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Full Helm",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Armor",
 						"classKey": "Armor"
 					}
 				}
