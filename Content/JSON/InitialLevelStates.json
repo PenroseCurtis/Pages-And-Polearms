@@ -351,7 +351,7 @@
 				"XCoordinate": 4,
 				"YCoordinate": 5
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		}
 	]
 },
@@ -381,7 +381,7 @@
 				"XCoordinate": 5,
 				"YCoordinate": 1
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -389,7 +389,7 @@
 				"XCoordinate": 5,
 				"YCoordinate": 7
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		}
 	]
 },
@@ -403,7 +403,7 @@
 				"XCoordinate": 5,
 				"YCoordinate": 3
 			},
-			"characterStatKey": "Goblin_Soldier"
+			"characterStatKey": "Goblin_Warrior"
 		}
 	]
 },
@@ -417,7 +417,7 @@
 				"XCoordinate": 2,
 				"YCoordinate": 2
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -425,7 +425,7 @@
 				"XCoordinate": 2,
 				"YCoordinate": 9
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -433,7 +433,7 @@
 				"XCoordinate": 5,
 				"YCoordinate": 3
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -441,7 +441,7 @@
 				"XCoordinate": 7,
 				"YCoordinate": 5
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -449,7 +449,7 @@
 				"XCoordinate": 8,
 				"YCoordinate": 1
 			},
-			"characterStatKey": "Goblin_Soldier"
+			"characterStatKey": "Goblin_Warrior"
 		}]
 },
 {
@@ -462,7 +462,7 @@
 				"XCoordinate": 3,
 				"YCoordinate": 3
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -470,7 +470,7 @@
 				"XCoordinate": 3,
 				"YCoordinate": 10
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		},
 		{
 			"coordinates": 
@@ -478,7 +478,7 @@
 				"XCoordinate": 10,
 				"YCoordinate": 10
 			},
-			"characterStatKey": "Goblin_Warrior"
+			"characterStatKey": "Goblin"
 		}]
 },
 {

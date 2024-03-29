@@ -3,39 +3,35 @@
 	"startLinkId":"LA",
 	"nodes": [{
 		"ID": "NA",
-		"linkIDs": ["LB", "Trade"]
+		"linkIDs": ["Trade", "LZ"]
 	}],
 	"links": [{
 		"ID": "LA",
 		"label" : "",
 		"script": [{
 			"speaker": "true",
-			"text":"Knights are uncool as heck"
-		},
-		{
-			"speaker": "false",
-			"text":"No u"
+			"text":"Greetings traveller, how can I help you"
 		}],
 		"nextNodeId": "NA",
 		"action": ""
 	},
 	{
-		"ID": "LB",
-		"label" : "Continue Thrashing him?",
+		"ID": "LZ",
+		"label" : "Leave",
 		"script": [{
 			"speaker": "false",
-			"text":"You are a butt"
-		},
-		{
-			"speaker": "true",
-			"text":"Noooooo"
+			"text":"Nothing today thanks"
 		}],
 		"nextNodeId": "",
 		"action": ""
-	},{
+	},
+	{
 		"ID": "Trade",
 		"label" : "Let's see what you have for sale",
-		"script": [],
+		"script": [{
+			"speaker": "false",
+			"text": "Let's see what you have for sale"
+		}],
 		"nextNodeId": "",
 		"action": "Trade"
 	}]
@@ -45,7 +41,7 @@
 	"startLinkId":"LBA",
 	"nodes": [{
 		"ID": "NBA",
-		"linkIDs": ["LBB", "Trade"]
+		"linkIDs": ["Trade", "LBZ"]
 	}],
 	"links": [{
 		"ID": "LBA",
@@ -58,7 +54,7 @@
 		"action": ""
 	},
 	{
-		"ID": "LBB",
+		"ID": "LBZ",
 		"label" : "Leave",
 		"script": [{
 			"speaker": "false",
@@ -66,47 +62,107 @@
 		}],
 		"nextNodeId": "",
 		"action": ""
-	},{
+	},
+	{
 		"ID": "Trade",
 		"label" : "Let's see what you have for sale",
-		"script": [],
+		"script": [{
+			"speaker": "false",
+			"text": "What have you got for sale?"
+		}],
 		"nextNodeId": "",
 		"action": "Trade"
 	}]
 },
 {
 	"key": "Healer",
-	"startLinkId":"LPA",
+	"startLinkId":"LHA",
 	"nodes": [{
-		"ID": "NPA",
-		"linkIDs": ["LPB", "Heal"]
+		"ID": "NHA",
+		"linkIDs": ["LHGive", "LHB", "LHHeal", "LHZ"]
+	},
+	{
+		"ID": "NHB",
+		"linkIDs": ["LHGive", "LHHeal", "LHZ"]
 	}],
 	"links": [{
-		"ID": "LPA",
+		"ID": "LHA",
 		"label" : "",
 		"script": [{
 			"speaker": "true",
-			"text":"Greetings, how can I help you?"
+			"text":"Greetings, any luck finding the amulet?"
 		}],
-		"nextNodeId": "NPA",
+		"nextNodeId": "NHA",
 		"action": ""
 	},
 	{
-		"ID": "LPB",
+		"ID": "LHGive",
+		"label": "I have the amulet",
+		"script": [{
+			"speaker": "false",
+			"text": "Let me pull it out of my inventory"
+		}],
+		"nextNodeId": "",
+		"action": "Give"
+	},
+	{
+		"ID": "LHB",
+		"label": "Which amulet was that again?",
+		"script": [{
+			"speaker": "false",
+			"text": "What amulet am I looking for again?"
+		},
+		{
+			"speaker": "true",
+			"text": "An amulet of Aard, it's very important to our church. The goblins to the north east of town have taken it, and hidden it away in their stronghold"
+		},
+		{
+			"speaker": "true",
+			"text": "An amulet of Aard, it's very important to our church. The goblins to the north east of town have taken it, and hidden it away in their stronghold"
+		},
+		{
+			"speaker": "true",
+			"text": "It looks a bit like a golden bird, and it's fitted with an emerald. Please if you can retrieve it we would be in your debt"
+		},
+		{
+			"speaker": "false",
+			"text": "I'll see what I can do"
+		},
+		{
+			"speaker": "true",
+			"text": "I suppose that's all I can ask. Now is there anything else?"
+		}],
+		"nextNodeId": "NHB"
+	},
+	{
+		"ID": "LHHeal",
+		"label" : "I need some healing",
+		"script": [{
+			"speaker": "false",
+			"text": "I'm in need of some healing actually"
+		},
+		{
+			"speaker": "true",
+			"text": "Okay, that will be 20 gold"
+		}],
+		"nextNodeId": "",
+		"action": "Heal"
+	},
+	{
+		"ID": "LHZ",
 		"label" : "Leave",
 		"script": [{
 			"speaker": "false",
-			"text":"Nothing today, thanks"
+			"text":"I've got to get going."
+		},
+		{
+			"speaker": "true",
+			"text": "May Aards light be with you"
 		}],
 		"nextNodeId": "",
 		"action": ""
-	},{
-		"ID": "Heal",
-		"label" : "I need some healing",
-		"script": [],
-		"nextNodeId": "",
-		"action": "Heal"
-	}]
+	}
+	]
 },
 {
 	"key": "Nurse",
@@ -132,7 +188,7 @@
 		},
 		{
 			"speaker": "true",
-			"text":"You're in the town of [], you washed up on the beach last night unconcious. We were able to ressusitate you, but you passed out not long after"
+			"text":"You're in the town of Nantwirth, you washed up on the beach last night unconcious. We were able to ressusitate you, but you passed out not long after"
 		},
 		{
 			"speaker": "false",

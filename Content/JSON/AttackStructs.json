@@ -636,6 +636,8 @@
 {
   "key":"Inflict Poison",
   "classKey":"Inflict Poison",
+  "minTargets":2,
+  "maxTargets":2,
   "minRange":1,
   "maxRange": 3,
   "initiativeCost":3,

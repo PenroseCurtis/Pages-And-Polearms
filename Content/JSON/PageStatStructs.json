@@ -9,12 +9,12 @@
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "LongSword",
+						"itemKey": "Longsword",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
 				}
-			]
+			]   
 		},
 		"statBlock": {
 			"vitalityTotal": 3,
@@ -37,13 +37,17 @@
 				{
 					"itemKey": "Stamina Potion",
 					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Amulet of Aard",
+					"classKey": "Armor"
 				}
 			],
 			"gold": 99,
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "LongSword",
+						"itemKey": "Longsword",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
@@ -119,15 +123,40 @@
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Healing Staff",
-					"classKey": "Weapon"
-				}, 
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
 				{
 					"itemKey": "Stamina Potion",
 					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Stamina Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Stamina Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Healing Staff",
+					"classKey": "Weapon"
 				}
 			],
-			"gold": 100
+			"gold": 1000,
+			"maxInventorySize": 30
 		},
 		"statBlock": {
 			"woundLimit": 15
@@ -170,7 +199,7 @@
 		"inventoryStruct": {
 			"items": [
 				{
-					"itemKey": "LongSword",
+					"itemKey": "Longsword",
 					"classKey": "Weapon"
 				},
 				{
@@ -186,7 +215,7 @@
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "HandAxe",
+					"itemKey": "Hand Axe",
 					"classKey": "Weapon"
 				},
 				{
@@ -226,7 +255,7 @@
 					"classKey": "Armor"
 				},
 				{
-					"itemKey": "ChainMail",
+					"itemKey": "Chainmail",
 					"classKey": "Armor"
 				},
 				{
@@ -250,7 +279,8 @@
 					"classKey": "Armor"
 				}
 			],
-			"gold": 100
+			"gold": 1000,
+			"maxInventorySize": 30
 		},
 		"statBlock": {
 			"woundLimit": 15
@@ -306,6 +336,10 @@
 		"actions": [
 			{
 				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Give",
 				"cost": 0
 			},
 			{
@@ -454,7 +488,7 @@
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "LongSword",
+						"itemKey": "Longsword",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
@@ -588,7 +622,7 @@
 			"maxInventorySize": 12,
 			"items": [
 				{
-					"itemKey": "HandAxe",
+					"itemKey": "Hand Axe",
 					"classKey": "Weapon"
 				}
 			],
@@ -790,7 +824,7 @@
 			"maxInventorySize": 12,
 			"items": [
 				{
-					"itemKey": "LongSword",
+					"itemKey": "Longsword",
 					"classKey": "Weapon"
 				}
 			],
@@ -830,9 +864,9 @@
 		}
 	},
 	{
-		"key": "Goblin_Warrior",
-		"flipBookKey": "Goblin_Warrior",
-		"name": "Goblin Warrior",
+		"key": "Goblin",
+		"flipBookKey": "Goblin",
+		"name": "Goblin",
 		"stances": [
 			{
 				"stanceName": "Basic 1H",
@@ -845,16 +879,10 @@
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "Wooden Spear",
+						"itemKey": "Goblin Spear",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
-				},
-				{
-					"itemStruct": {
-						"itemKey": "Med Helm",
-						"classKey": "Armor"
-					}
 				}
 			],
 			"items": [
@@ -878,7 +906,7 @@
 			"equippedItems": [
 				{
 					"itemStruct": {
-						"itemKey": "Makeshift Bow",
+						"itemKey": "Goblin Bow",
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
@@ -896,9 +924,9 @@
 		}
 	},
 	{
-		"key": "Goblin_Soldier",
+		"key": "Goblin_Warrior",
 		"flipBookKey": "Goblin_Warrior",
-		"name": "Goblin Soldier",
+		"name": "Goblin Warrior",
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,

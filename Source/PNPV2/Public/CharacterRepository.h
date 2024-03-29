@@ -67,7 +67,7 @@ public:
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
 								"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal" };
+								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal", "Give" };
 		actions = {
 			FActionCost("Target", 0),
 			FActionCost("Examine", 0),
