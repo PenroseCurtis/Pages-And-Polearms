@@ -93,9 +93,11 @@ struct FOStatBlockStruct
 	UPROPERTY(BlueprintReadWrite)
 		float spirit;
 	UPROPERTY(BlueprintReadWrite)
-		int32 woundLimit;
+		int32 vitality;
 	UPROPERTY(BlueprintReadWrite)
-		float woundRegeneration;
+		int32 vitalityTotal;
+	UPROPERTY(BlueprintReadWrite)
+		int32 vitalityRegeneration;
 	UPROPERTY(BlueprintReadWrite)
 		float stamina;
 	UPROPERTY(BlueprintReadWrite)
@@ -115,11 +117,11 @@ struct FOStatBlockStruct
 	UPROPERTY(BlueprintReadWrite)
 		int32 armorPenetrationBonus;
 	UPROPERTY(BlueprintReadWrite)
-		int32 woundingPotentialBonus;
+		int32 vitalityDamageBonus;
 	UPROPERTY(BlueprintReadWrite)
 		int32 paddingBonus;
 	UPROPERTY(BlueprintReadWrite)
-		int32 excellentHitProtectionBonus;
+		int32 vitalHitProtectionBonus;
 	FOStatBlockStruct()
 	{
 		power = 0;
@@ -128,8 +130,9 @@ struct FOStatBlockStruct
 		intelligence = 0;
 		wisdom = 0;
 		spirit = 0;
-		woundLimit = 0;
-		woundRegeneration = 0;
+		vitality = 0;
+		vitalityTotal = 0;
+		vitalityRegeneration = 0;
 		stamina = 0;
 		staminaTotal = 0;
 		staminaRegeneration = 0;
@@ -139,22 +142,33 @@ struct FOStatBlockStruct
 		opacity = 0;
 		reach = 0;
 		armorPenetrationBonus = 0;
-		woundingPotentialBonus = 0;
+		vitalityDamageBonus = 0;
 		paddingBonus = 0;
-		excellentHitProtectionBonus = 0;
+		vitalHitProtectionBonus = 0;
 	}
 	FOStatBlockStruct(
-		int32 aWoundLimit, 
+		int32 aVitality, 
+		int32 aVitalityTotal,
 		int32 aStamina, 
 		int32 aStaminaTotal,
 		int32 aStaminaRegeneration,
 		int32 aReach
 		)
 	{
-		woundLimit = aWoundLimit;
+		vitality = aVitality;
+		vitalityTotal = aVitalityTotal;
+		vitalityRegeneration = 0;
 		stamina = aStamina;
 		staminaTotal = aStaminaTotal;
 		staminaRegeneration = aStaminaRegeneration;
+		mana = 0;
+		manaTotal = 0;
+		manaRegeneration = 0;
+		opacity = 0;
+		armorPenetrationBonus = 0;
+		vitalityDamageBonus = 0;
+		paddingBonus = 0;
+		vitalHitProtectionBonus = 0;
 		reach = aReach;
 		power = 0;
 		speed = 0;
@@ -162,15 +176,6 @@ struct FOStatBlockStruct
 		intelligence = 0;
 		wisdom = 0;
 		spirit = 0;
-		woundRegeneration = 0;
-		mana = 0;
-		manaTotal = 0;
-		manaRegeneration = 0;
-		opacity = 0;
-		armorPenetrationBonus = 0;
-		woundingPotentialBonus = 0;
-		paddingBonus = 0;
-		excellentHitProtectionBonus = 0;
 	}
 };
 
@@ -184,7 +189,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 speed;
 	UPROPERTY(BlueprintReadWrite)
-		int32 woundingPotential;
+		int32 vitalityDamage;
 	UPROPERTY(BlueprintReadWrite)
 		int32 armorPenetration;
 	UPROPERTY(BlueprintReadWrite)
@@ -199,7 +204,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 padding;
 	UPROPERTY(BlueprintReadWrite)
-		int32 woundProtection;
+		int32 vitalHitProtection;
 };
 
 USTRUCT(BlueprintType)
@@ -232,7 +237,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 armorPenetration;
 	UPROPERTY(BlueprintReadWrite)
-		int32 woundingPotential;
+		int32 vitalityDamage;
 	UPROPERTY(BlueprintReadWrite)
 		int32 power;
 	UPROPERTY(BlueprintReadWrite)
@@ -268,7 +273,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> possibleTriggerConditions;
 	UPROPERTY(BlueprintReadWrite)
-		TArray<FString> woundsInflicted;
+		FString statusAppliedOnVitalHit;
 	FOAttackStruct()
 	{
 		classKey = "Attack";
@@ -283,7 +288,7 @@ public:
 		initiativeCost = 0;
 		speed = 0;
 		armorPenetration = 0;
-		woundingPotential = 0;
+		vitalityDamage = 0;
 		power = 0;	
 		bothRequirementsNeeded = false;
 		attackHeight = 0;
@@ -363,6 +368,25 @@ public:
 		FString ClassKey;
 	UPROPERTY(BlueprintReadWrite)
 		int32 numberOfRounds;
+};
+
+USTRUCT(BlueprintType)
+struct FStringArray
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		TArray<FString> array;
+
+	FStringArray()
+	{
+		array = {};
+	};
+
+	FStringArray(TArray<FString> anArray)
+	{
+		array = anArray;
+	};
 };
 
 UCLASS()

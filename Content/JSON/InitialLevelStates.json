@@ -304,16 +304,6 @@
 		},
 		{
 			"coordinates": {
-				"XCoordinate": 3,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "Dagger",
-				"classKey": "Weapon"
-			}
-		},
-		{
-			"coordinates": {
 				"XCoordinate": 4,
 				"YCoordinate": 2
 			},
@@ -343,21 +333,230 @@
 			}
 		}
 	],
+	"initialEnemySpawns": [{
+			"coordinates": {
+				"XCoordinate": 7,
+				"YCoordinate": 7
+			},
+			"characterStatKey": "rat"
+		}]
+},
+{
+	"key": "Forest_Trail",
+	"initialItemStates": [],
 	"initialEnemySpawns": [
-	{
-		"coordinates": {
-			"XCoordinate": 1,
-			"YCoordinate": 7
-		},
-		"characterStatKey": "rat"
-	},
-	{
-		"coordinates": {
-			"XCoordinate": 2,
-			"YCoordinate": 6
-		},
-		"characterStatKey": "rat"
-	}
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 4,
+				"YCoordinate": 5
+			},
+			"characterStatKey": "Goblin"
+		}
 	]
+},
+{
+	"key": "Stealth_Encounter",
+	"backgroundSpritePath": "",
+	"initialItemStates": [],
+	"initialEnemySpawns": [
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 4
+			},
+			"characterStatKey": "Goblin_King"
+		}
+	]
+},
+{
+	"key": "Bridge",
+	"backgroundSpritePath": "",
+	"initialItemStates": [],
+	"initialEnemySpawns": [
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 5,
+				"YCoordinate": 1
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 5,
+				"YCoordinate": 7
+			},
+			"characterStatKey": "Goblin"
+		}
+	]
+},
+{
+	"key": "DungeonExterior",
+	"initialItemStates": [],
+	"initialEnemySpawns": [
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 5,
+				"YCoordinate": 3
+			},
+			"characterStatKey": "Goblin_Warrior"
+		}
+	]
+},
+{
+	"key": "Dungeon",
+	"initialItemStates": [],
+	"initialNPCSpawns": [],
+	"initialEnemySpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 2,
+				"YCoordinate": 2
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 2,
+				"YCoordinate": 9
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 5,
+				"YCoordinate": 3
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 7,
+				"YCoordinate": 5
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 8,
+				"YCoordinate": 1
+			},
+			"characterStatKey": "Goblin_Warrior"
+		}]
+},
+{
+	"key": "DungeonF2",
+	"initialItemStates": [],
+	"initialNPCSpawns": [],
+	"initialEnemySpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 3,
+				"YCoordinate": 3
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 3,
+				"YCoordinate": 10
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 10,
+				"YCoordinate": 10
+			},
+			"characterStatKey": "Goblin"
+		}]
+},
+{
+	"key": "DungeonF3",
+	"initialItemStates": [],
+	"initialNPCSpawns": [],
+	"initialEnemySpawns": []
+},
+{
+	"key": "Blacksmith",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 0,
+				"YCoordinate": 2
+			},
+			"characterStatKey": "Blacksmith"
+		}]
+},
+{
+	"key": "Shop",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 4,
+				"YCoordinate": 4
+			},
+			"characterStatKey": "Merchant"
+		}]
+},
+{
+	"key": "Temple",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 3,
+				"YCoordinate": 9
+			},
+			"characterStatKey": "Healer"
+	}]
+},
+{
+	"key": "TempleBasement",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 1,
+				"YCoordinate": 8
+			},
+			"characterStatKey": "Nurse"
+	}]
+},
+{
+	"key": "Inn",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 0,
+				"YCoordinate": 4
+			},
+			"characterStatKey": "Innkeeper"
+	}]
+},
+{
+	"key": "AdventurersHouse",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+			"coordinates": 
+			{
+				"XCoordinate": 4,
+				"YCoordinate": 4
+			},
+			"characterStatKey": "Adventurer"
+	}]
 }
 ]

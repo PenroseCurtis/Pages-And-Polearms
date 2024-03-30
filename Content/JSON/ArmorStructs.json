@@ -1,8 +1,9 @@
-[{
+[
+	{
 		"Key": "Default_Armor",
 		"armorStats": {
 			"padding": 0,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "Just an ordinary piece of Armor",
@@ -16,7 +17,7 @@
 		"Key": "Default_Cloak",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "A very nice cloak",
@@ -31,7 +32,7 @@
 		"Key":"Default_Helmet",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 1.0,
 		"Description": "Just an ordinary Helmet",
@@ -46,12 +47,12 @@
 		"Key":"Full Helm",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 3
+			"vitalHitProtection": 3
 			},
 		"Weight": 2.0,
 		"Description": "A helmet that covers your whole head",
 		"SpritePath": "Helmet/Full_Helm/Full_Helm_Sprite",
-		"IconPath": "Helmet/Full_Helm/Full_Helm",
+		"IconPath": "Helmet/Full_Helm/Full_Helm_Icon",
 		"equipableType": 1,
 		"layer":0.5,
 		"wrapsAround": true,
@@ -61,12 +62,12 @@
 		"Key":"Med Helm",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"vitalHitProtection": 2
 			},
 		"Weight": 2.0,
 		"Description": "A helmet that covers your head but leaves your face exposed",
-		"SpritePath": "Helmet/Full_Helm/Full_Helm_Sprite",
-		"IconPath": "Helmet/Full_Helm/Full_Helm",
+		"SpritePath": "Helmet/Med_Helm/Med_Helm_Sprite",
+		"IconPath": "Helmet/Med_Helm/Med_Helm_Icon",
 		"equipableType": 1,
 		"layer":0.5,
 		"wrapsAround": true,
@@ -76,12 +77,12 @@
 		"Key":"Leather Cap",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 2.0,
 		"Description": "Better than nothing...",
-		"SpritePath": "Helmet/Default_Helmet/Helmet",
-		"IconPath": "Helmet/Default_Helmet/Helmet",
+		"SpritePath": "Helmet/Leather_Cap/Leather_Cap_Sprite",
+		"IconPath": "Helmet/Leather_Cap/Leather_Cap_Icon",
 		"equipableType": 1,
 		"layer":0.5,
 		"wrapsAround": true,
@@ -91,27 +92,27 @@
 		"Key": "Mail Armor",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 2
+			"vitalHitProtection": 2
 			},
 		"Weight": 5.0,
 		"Description": "A fine piece of armour made of interlinked metal rings",
-		"SpritePath": "Armor/Default_Armor/Default_Armor",
-		"IconPath": "Armor/Default_Armor/Default_Armor",
+		"SpritePath": "Armor/Mail_Armor/Mail_Armor_Sprite",
+		"IconPath": "Armor/Mail_Armor/Mail_Armor_Icon",
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true,
 		"value": 45.0
 	},
 	{
-		"Key": "ChainMail",
+		"Key": "Chainmail",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 5.0,
 		"Description": "A fine piece of armour made of interlinked metal rings",
-		"SpritePath": "Armor/ChainMail/ChainMail_Sprite",
-		"IconPath": "Armor/ChainMail/ChainMail",
+		"SpritePath": "Armor/Chainmail/Chainmail_Sprite",
+		"IconPath": "Armor/Chainmail/Chainmail_Icon",
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -121,12 +122,12 @@
 		"Key": "Boiled Leather Armor",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 5.0,
 		"Description": "A chestpiece made out of specially treated leather",
-		"SpritePath": "Armor/Default_Armor/Default_Armor",
-		"IconPath": "Armor/Default_Armor/Default_Armor",
+		"SpritePath": "Armor/Boiled_Leather/Boiled_Leather_Armor_Sprite",
+		"IconPath": "Armor/Boiled_Leather/Boiled_Leather_Armor_Icon",
 		"equipableType": 7,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -136,12 +137,12 @@
 		"Key": "Mail Leggings",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 1
+			"vitalHitProtection": 1
 			},
 		"Weight": 10.0,
 		"Description": "Mail Leg Armour",
 		"SpritePath": "Leggings/Mail_Leggings/Mail_Leggings_Sprite",
-		"IconPath": "Leggings/Mail_Leggings/Mail_Leggings",
+		"IconPath": "Leggings/Mail_Leggings/Mail_Leggings_Icon",
 		"equipableType": 6,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -151,12 +152,12 @@
 		"Key": "Leather Chaps",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 5.0,
 		"Description": "Leather Leg Armour",
 		"SpritePath": "Leggings/Leather_Leggings/Leather_Leggings_Sprite",
-		"IconPath": "Leggings/Leather_Leggings/Leather_Leggings",
+		"IconPath": "Leggings/Leather_Leggings/Leather_Leggings_Icon",
 		"equipableType": 6,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -166,12 +167,12 @@
 		"Key": "Leather Bracers",
 		"armorStats": {
 			"padding": 2,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 3.0,
 		"Description": "Leather arm protectors",
 		"SpritePath": "Bracers/Leather_Bracers/Leather_Bracers_Sprite",
-		"IconPath": "Bracers/Leather_Bracers/Leather_Bracers",
+		"IconPath": "Bracers/Leather_Bracers/Leather_Bracers_Icon",
 		"equipableType": 5,
 		"layer":0.25,
 		"wrapsAround": true,
@@ -181,15 +182,64 @@
 		"Key": "Mail Bracers",
 		"armorStats": {
 			"padding": 1,
-			"woundProtection": 0
+			"vitalHitProtection": 0
 			},
 		"Weight": 3.0,
 		"Description": "Mail arm protectors",
 		"SpritePath": "Bracers/Mail_Bracers/Mail_Bracers_Sprite",
-		"IconPath": "Bracers/Mail_Bracers/Mail_Bracers",
+		"IconPath": "Bracers/Mail_Bracers/Mail_Bracers_Icon",
 		"equipableType": 5,
 		"layer":0.25,
 		"wrapsAround": true,
 		"value": 15.0
+	},
+	{
+		"Key": "Amulet of Aard",
+		"armorStats": {
+			"padding": 0,
+			"vitalHitProtection": 0
+		},
+		"Weight": 0.0,
+		"Description": "An amulet precious to the church of Aard",
+		"SpritePath": "Amulets/Amulet_of_Aard_Sprite",
+		"IconPath": "Amulets/Amulet_of_Aard_Icon",
+		"equipableType": 3,
+		"layer": 0.5,
+		"wrapsAround": false,
+		"value": 50.0,
+		"actions": [
+			{
+				"action": "Drop", 
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"Cost": 0
+			},
+			{
+				"action": "Pickup",
+				"Cost": 1
+			},
+			{
+				"action": "Equip",
+				"Cost": 2
+			},
+			{
+				"action": "Unequip",
+				"Cost": 1
+			},
+			{
+				"action": "Buy",
+				"Cost": 1
+			},
+			{
+				"action": "Sell",
+				"Cost": 1
+			},
+			{
+				"action": "Give",
+				"Cost": 0
+			}
+		]
 	}
 ]

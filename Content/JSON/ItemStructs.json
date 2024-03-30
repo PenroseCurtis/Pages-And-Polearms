@@ -50,5 +50,15 @@
 			"SpritePath": "Potions/Empty_Bottle_Sprite",
 			"IconPath": "Potions/Empty_Bottle",
 			"value": 0
+		  },
+		  {
+			"Key": "Goblin Trinket",
+			"classKey":"Default",
+			"Weight": 0,
+			"Opacity": 0.0,
+			"Description": "A shoddy trinked made by a goblin",
+			"SpritePath": "Potions/Empty_Bottle_Sprite",
+			"IconPath": "Potions/Empty_Bottle",
+			"value": 5
 		  }
 		]

@@ -20,6 +20,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString key;
 	UPROPERTY(BlueprintReadWrite)
+		FString classKey;
+	UPROPERTY(BlueprintReadWrite)
 		FString flipBookKey;
 	UPROPERTY(BlueprintReadWrite)
 		FString movementCompKey;
@@ -65,13 +67,13 @@ public:
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
 								"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-								"Release", "Talk", "Trade", "Buy", "Sell" };
+								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal", "Give" };
 		actions = {
 			FActionCost("Target", 0),
 			FActionCost("Examine", 0),
 			FActionCost("Move To", 1)
 		};
-		statBlock = FOStatBlockStruct(3, 10, 10, 1, 1);
+		statBlock = FOStatBlockStruct(3, 3, 10, 10, 1, 1);
 	}
 };
 UCLASS()
