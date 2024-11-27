@@ -155,6 +155,13 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 	return NULL;
 }
 
+USoundBase* UDataLoader::LoadSoundFromPath(const FString& Path)
+{
+	if (Path.IsEmpty()) return NULL;
+	FString PathToLoad = "/Game/SoundEffects/" + Path;
+	return Cast<USoundBase>(StaticLoadObject(USoundBase::StaticClass(), NULL, *(PathToLoad)));
+}
+
 void UDataLoader::LoadAssetsForCooking()
 {
 	UClass* Ut2D = TSubclassOf<class UTexture2D>();

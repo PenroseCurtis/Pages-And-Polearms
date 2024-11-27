@@ -49,6 +49,8 @@ public:
 		FInventoryStruct inventoryStruct;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> actionsObjectCanTake;
+	UPROPERTY(BlueprintReadWrite)
+		int32 movementLogicControllerState;
 	FOPageStatStruct()
 	{
 		key = "Default";
@@ -67,13 +69,15 @@ public:
 								"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
 								"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal", "Give" };
+								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal", "Give", 
+								"Recruit", "Dismiss" };
 		actions = {
 			FActionCost("Target", 0),
 			FActionCost("Examine", 0),
 			FActionCost("Move To", 1)
 		};
 		statBlock = FOStatBlockStruct(3, 3, 10, 10, 1, 1);
+		movementLogicControllerState = 0;
 	}
 };
 UCLASS()

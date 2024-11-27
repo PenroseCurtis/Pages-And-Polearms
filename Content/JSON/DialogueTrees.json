@@ -1,4 +1,5 @@
-[{
+[
+{
 	"key": "Merchant",
 	"startLinkId":"LA",
 	"nodes": [{
@@ -243,6 +244,10 @@
 		{
 			"speaker": "true",
 			"text": "Best of luck! Remember, if you need to rest up, you can always come back here and sleep in this bed"
+		},
+		{
+			"speaker": "true",
+			"text": "Oh and one more thing! There are some adventurers at the tavern, you might be able to recruit one of them to help you."
 		}],
 		"nextNodeId": "",
 		"action": ""
@@ -273,6 +278,10 @@
 		{
 			"speaker": "true",
 			"text": "Best of luck! Remember, if you need to rest up, you can always come back here and sleep in this bed"
+		},
+		{
+			"speaker": "true",
+			"text": "Oh and one more thing! There are some adventurers at the tavern, you might be able to recruit one of them to help you."
 		}],
 		"nextNodeId": "",
 		"action": ""
@@ -492,6 +501,344 @@
 		"script": [{
 			"speaker": "true",
 			"text": "Glad I could help, don't get yourself killed out there."
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Bartender",
+	"startLinkId":"LBartenderA",
+	"nodes": [{
+		"ID": "NBartenderA",
+		"linkIDs": ["LBartenderB", "LBartenderC", "LBartenderZ"]
+	}],
+	"links": [
+		{
+			"ID": "LBartenderA",
+			"label": "",
+			"script": [{
+				"speaker": "true",
+				"text": "Welcome to my tavern, what can I get for ya?"
+			}],
+			"nextNodeId": "NBartenderA",
+			"action": ""
+		},
+		{
+			"ID": "LBartenderB",
+			"label": "There's some tough looking characters around here",
+			"script": [{
+				"speaker": "true",
+				"text": "Yeah lot's of adventurers like to relax here between quests. You might be able to recuit one of them if you talk to them"
+			}],
+			"nextNodeId": "NBartenderA",
+			"action": ""
+		},
+		{
+			"ID": "LBartenderC",
+			"label": "What's the news around town?",
+			"script": [{
+				"speaker": "true",
+				"text": "Well you're the big talk of the town right now, washing up on the shore, and then going and beating all those goblins!"
+			}],
+			"nextNodeId": "NBartenderA",
+			"action": ""
+		},
+		{
+			"ID": "LBartenderZ",
+			"label": "Leave",
+			"script": [{
+				"speaker": "false",
+				"text": "Nothing right now, thanks"
+			}],
+			"nextNodeId": "",
+			"action": ""
+		}
+	]
+},
+{
+	"key": "Clarence",
+	"startLinkId": "LClarenceA",
+	"nodes": [{
+		"ID": "NClarenceA",
+		"linkIDs": ["LClarenceB", "LClarenceR", "LClarenceZ"]
+	}],
+	"links": [{
+		"ID": "LClarenceA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "Hey there, how's it going?"
+		}],
+		"nextNodeId": "NClarenceA",
+		"action": ""
+	},
+	{
+		"ID": "LClarenceB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a cleric, I can't deal that much damage, but I can heal you up"
+		}],
+		"nextNodeId": "NClarenceA",
+		"action": ""
+	},
+	{
+		"ID": "LClarenceR",
+		"label": "Want to travel with me?",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure, you seem alright"
+		}],
+		"nextNodeId": "",
+		"action": "Recruit"
+	},
+	{
+		"ID": "LClarenceZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Clarence-Recruited",
+	"startLinkId": "LClarence-RecruitedA",
+	"nodes": [{
+		"ID": "NClarence-RecruitedA",
+		"linkIDs": ["LClarence-RecruitedB", "LClarence-RecruitedD", "LClarence-RecruitedZ"]
+	}],
+	"links": [{
+		"ID": "LClarence-RecruitedA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "Hey there, how's it going?"
+		}],
+		"nextNodeId": "NClarence-RecruitedA",
+		"action": ""
+	},
+	{
+		"ID": "LClarence-RecruitedB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a cleric, I can't deal that much damage, but I can heal you up"
+		}],
+		"nextNodeId": "NClarenceA",
+		"action": ""
+	},
+	{
+		"ID": "LClarence-RecruitedD",
+		"label": "I think it's time we part ways",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure, I'll just wait here"
+		}],
+		"nextNodeId": "",
+		"action": "Dismiss"
+	},
+	{
+		"ID": "LClarence-RecruitedZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Frank",
+	"startLinkId":"LFrankA",
+	"nodes": [{
+		"ID": "NFrankA",
+		"linkIDs": ["LFrankB", "LFrankR", "LFrankZ"]
+	}],
+	"links": [{
+		"ID": "LFrankA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "How goes it stranger"
+		}],
+		"nextNodeId": "NFrankA",
+		"action": ""
+	},
+	{
+		"ID": "LFrankB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a fighter, I like getting right up close to my enemies"
+		}],
+		"nextNodeId": "NFrankA",
+		"action": ""
+	},
+	{
+		"ID": "LFrankR",
+		"label": "Want to travel with me?",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure don't have anything better to do"
+		}],
+		"nextNodeId": "",
+		"action": "Recruit"
+	},
+	{
+		"ID": "LFrankZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Frank-Recruited",
+	"startLinkId":"LFrank-RecruitedA",
+	"nodes": [{
+		"ID": "NFrank-RecruitedA",
+		"linkIDs": ["LFrank-RecruitedB", "LFrank-RecruitedD", "LFrank-RecruitedZ"]
+	}],
+	"links": [{
+		"ID": "LFrank-RecruitedA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "How goes it stranger"
+		}],
+		"nextNodeId": "NFrank-RecruitedA",
+		"action": ""
+	},
+	{
+		"ID": "LFrank-RecruitedB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a fighter, I like getting right up close to my enemies"
+		}],
+		"nextNodeId": "NFrank-RecruitedA",
+		"action": ""
+	},
+	{
+		"ID": "LFrank-RecruitedD",
+		"label": "We should part ways",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure, I'll just wait here"
+		}],
+		"nextNodeId": "",
+		"action": "Dismiss"
+	},
+	{
+		"ID": "LFrank-RecruitedZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Rick",
+	"startLinkId": "LRickA",
+	"nodes": [{
+		"ID": "NRickA",
+		"linkIDs": ["LRickB", "LRickR", "LRickZ"]
+	}],
+	"links": [{
+		"ID": "LRickA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "Greetings traveller"
+		}],
+		"nextNodeId": "NRickA",
+		"action": ""
+	},
+	{
+		"ID": "LRickB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a ranger, I fight best at range"
+		}],
+		"nextNodeId": "NRickA",
+		"action": ""
+	},
+	{
+		"ID": "LRickR",
+		"label": "Want to travel with me?",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure why not"
+		}],
+		"nextNodeId": "",
+		"action": "Recruit"
+	},
+	{
+		"ID": "LRickZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
+		}],
+		"nextNodeId": "",
+		"action": ""
+	}]
+},
+{
+	"key": "Rick-Recruited",
+	"startLinkId": "LRick-RecruitedA",
+	"nodes": [{
+		"ID": "NRick-RecruitedA",
+		"linkIDs": ["LRick-RecruitedB", "LRick-RecruitedD", "LRick-RecruitedZ"]
+	}],
+	"links": [{
+		"ID": "LRick-RecruitedA",
+		"label": "",
+		"script": [{
+			"speaker": "true",
+			"text": "Greetings traveller"
+		}],
+		"nextNodeId": "NRick-RecruitedA",
+		"action": ""
+	},
+	{
+		"ID": "LRick-RecruitedB",
+		"label": "Tell me about yourself",
+		"script": [{
+			"speaker": "true",
+			"text": "I'm a ranger, I fight best at range"
+		}],
+		"nextNodeId": "NRick-RecruitedA",
+		"action": ""
+	},
+	{
+		"ID": "LRick-RecruitedD",
+		"label": "It's time we parted ways",
+		"script": [{
+			"speaker": "true",
+			"text": "Sure, I'll just wait here"
+		}],
+		"nextNodeId": "",
+		"action": "Dismiss"
+	},
+	{
+		"ID": "LRick-RecruitedZ",
+		"label": "Leave",
+		"script": [{
+			"speaker": "false",
+			"text": "I've got to get going"
 		}],
 		"nextNodeId": "",
 		"action": ""
