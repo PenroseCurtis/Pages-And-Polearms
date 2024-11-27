@@ -405,6 +405,8 @@ class PNPV2_API UDataLoader : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintCallable)
 			static UPaperFlipbook* LoadFlipbookFromPath(const FString& Path);
 		UFUNCTION(BlueprintCallable)
+			static USoundBase* LoadSoundFromPath(const FString& Path);
+		UFUNCTION(BlueprintCallable)
 			static void LoadAssetsForCooking();
 		UFUNCTION(BlueprintCallable)
 			static APlayerController* GetMainController(const UObject* WorldContextObject);

@@ -558,5 +558,41 @@
 			},
 			"characterStatKey": "Adventurer"
 	}]
+},
+{
+	"key": "Tavern",
+	"initialItemStates": [],
+	"initialNPCSpawns": [{
+		"coordinates":
+		{
+			"XCoordinate": 1,
+			"YCoordinate": 0
+		},
+		"characterStatKey": "Frank"
+	},
+	{
+		"coordinates":
+		{
+			"XCoordinate": 2,
+			"YCoordinate": 3
+		},
+		"characterStatKey": "Rick"
+	},
+	{
+		"coordinates":
+		{
+			"XCoordinate": 7,
+			"YCoordinate": 3
+		},
+		"characterStatKey": "Clarence"
+	},
+	{
+		"coordinates":
+		{
+			"XCoordinate": 9,
+			"YCoordinate": 2
+		},
+		"characterStatKey": "Bartender"
+	}]
 }
 ]

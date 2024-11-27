@@ -1064,5 +1064,286 @@
 			"vitality": 3,
 			"guard": -1
 		}
+	},
+	{
+		"key": "Bartender",
+		"flipBookKey": "Bartender",
+		"name": "Bill the Bartender",
+		"dialogKey": "Bartender",
+		"stances": [
+			{
+				"stanceName": "Basic 1H",
+				"level": 1
+			}
+		],
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"equippedItems": []
+		},
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		]
+	},
+	{
+		"key": "Rick",
+		"flipBookKey": "Ranger",
+		"name": "Rick the Ranger",
+		"dialogKey": "Rick",
+		"stances": [
+			{
+				"stanceName": "Basic 1H",
+				"level": 1
+			}
+		],
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"items": [
+				{
+					"itemKey": "Longsword",
+					"classKey": "Weapon"
+				}
+			],
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "CrossBow",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "ChainMail",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Med Helm",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Leggings",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Bracers",
+						"classKey": "Armor"
+					}
+				}
+			]
+		},
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Recruit",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
+			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
+			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
+			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+		]
+	},
+	{
+		"key": "Frank",
+		"flipBookKey": "Fighter",
+		"name": "Frank the Fighter",
+		"dialogKey": "Frank",
+		"stances": [
+			{
+				"stanceName": "Basic 1H",
+				"level": 1
+			}
+		],
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"items": [
+				{
+					"itemKey": "Hand Axe",
+					"classKey": "Weapon"
+				}
+			],
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Arming Sword",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Shield",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": false
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Armor",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Full Helm",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Leggings",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Bracers",
+						"classKey": "Armor"
+					}
+				}
+			]
+		},
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Recruit",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
+			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
+			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
+			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+		]
+	},
+	{
+		"key": "Clarence",
+		"flipBookKey": "Cleric",
+		"name": "Clarence the Cleric",
+		"dialogKey": "Clarence",
+		"stances": [
+			{
+				"stanceName": "Basic 1H",
+				"level": 1
+			}
+		],
+		"attacks": [
+			"Refresh"
+		],
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"items": [
+				{
+					"itemKey": "Healing Staff",
+					"classKey": "Weapon"
+				}
+			],
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Light Mace",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Armor",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Full Helm",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Leggings",
+						"classKey": "Armor"
+					}
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Mail Bracers",
+						"classKey": "Armor"
+					}
+				}
+			]
+		},
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Recruit",
+				"cost": 0
+			},
+			{
+				"action": "Examine",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [
+			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
+			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
+			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
+			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
+			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+		]
 	}
 ]
