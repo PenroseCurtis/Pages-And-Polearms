@@ -41,6 +41,42 @@
 				{
 					"itemKey": "Amulet of Aard",
 					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Vitality Potion",
+					"classKey": "Consumable"
 				}
 			],
 			"gold": 99,
