@@ -119,10 +119,6 @@
 		},
 		{
 			"speaker": "true",
-			"text": "An amulet of Aard, it's very important to our church. The goblins to the north east of town have taken it, and hidden it away in their stronghold"
-		},
-		{
-			"speaker": "true",
 			"text": "It looks a bit like a golden bird, and it's fitted with an emerald. Please if you can retrieve it we would be in your debt"
 		},
 		{
@@ -536,6 +532,33 @@
 		},
 		{
 			"ID": "LBartenderC",
+			"label": "What's the news around town?",
+			"script": [{
+				"speaker": "true",
+				"text": "Everyone has been really worried about the goblins to the north lately"
+			},
+			{
+				"speaker": "false",
+				"text": "It must be nerve wracking having them so close"
+			},
+			{
+				"speaker": "true",
+				"text": "Yes, when they just stayed in the forests they just felt like pests. Since taking the forest shrine they are much more threatening."
+			},
+			{
+				"speaker": "false",
+				"text": "How did they manage to take it over?"
+			},
+			{
+				"speaker": "true",
+				"text": "No one's really sure, some speculate that they have a new leader to embolden them"
+			}
+			],
+			"nextNodeId": "NBartenderA",
+			"action": ""
+		},
+		{
+			"ID": "LBartenderD",
 			"label": "What's the news around town?",
 			"script": [{
 				"speaker": "true",
