@@ -22,7 +22,10 @@
 			"stamina": 3,
 			"staminaTotal": 3
 		},
-		"attacks": []
+		"attacks": [],
+		"statuses": [],
+		"experience": 0,
+		"statIncreasesAvailable": 0
 	},
 	{
 		"key": "Page Test",
@@ -105,7 +108,7 @@
 		"name": "atat",
 		"stances": [
 			{
-				"stanceName": "Rat aggro",
+				"key": "Rat aggro",
 				"level": 1
 			}
 		],
@@ -125,7 +128,7 @@
 		"dialogKey": "Merchant",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -205,7 +208,7 @@
 		"dialogKey": "Blacksmith",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -330,7 +333,7 @@
 		"dialogKey": "Nurse",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -365,7 +368,7 @@
 		"dialogKey": "Healer",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -412,7 +415,7 @@
 		"dialogKey": "Innkeeper",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -455,7 +458,7 @@
 		"dialogKey": "Adventurer",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			}
 		],
@@ -488,27 +491,27 @@
 		"name": "Knight",
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 2H",
+				"key": "Basic 2H",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			},
 			{
-				"stanceName": "Sword and Board",
+				"key": "Sword and Board",
 				"level": 1
 			},
 			{
-				"stanceName": "Two Weapon Fighting",
+				"key": "Two Weapon Fighting",
 				"level": 1
 			},
 			{
-				"stanceName": "Vulnerable",
+				"key": "Vulnerable",
 				"level": 1
 			}
 		],
@@ -574,27 +577,27 @@
 		],
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 2H",
+				"key": "Basic 2H",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			},
 			{
-				"stanceName": "Repelling",
+				"key": "Repelling",
 				"level": 1
 			},
 			{
-				"stanceName": "Shield Wall",
+				"key": "Shield Wall",
 				"level": 1
 			},
 			{
-				"stanceName": "Vulnerable",
+				"key": "Vulnerable",
 				"level": 1
 			}
 		],
@@ -905,7 +908,7 @@
 		"name": "Goblin",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],
@@ -994,27 +997,27 @@
 		},
 		"stances": [
 			{
-				"stanceName": "Unarmed",
+				"key": "Unarmed",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 2H",
+				"key": "Basic 2H",
 				"level": 1
 			},
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			},
 			{
-				"stanceName": "Shield Wall",
+				"key": "Shield Wall",
 				"level": 1
 			},
 			{
-				"stanceName": "Repelling",
+				"key": "Repelling",
 				"level": 1
 			},
 			{
-				"stanceName": "Vulnerable",
+				"key": "Vulnerable",
 				"level": 1
 			}
 		]
@@ -1066,7 +1069,7 @@
 		"name": "Goblin King",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],
@@ -1108,7 +1111,7 @@
 		"dialogKey": "Bartender",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],
@@ -1139,7 +1142,7 @@
 		"dialogKey": "Rick",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],
@@ -1219,7 +1222,7 @@
 		"dialogKey": "Frank",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],
@@ -1306,7 +1309,7 @@
 		"dialogKey": "Clarence",
 		"stances": [
 			{
-				"stanceName": "Basic 1H",
+				"key": "Basic 1H",
 				"level": 1
 			}
 		],

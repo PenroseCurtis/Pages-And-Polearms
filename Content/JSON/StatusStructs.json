@@ -95,4 +95,19 @@
   "isTemporary":true,
   "duration": 1,
   "description":"You were hit when you had no stamina, you need a moment to catch your breath"
+},
+{
+  "key":"Cracked Rib",
+  "classKey":"Default",
+  "iconKey":"Debuff",
+  "statChange":{
+	"speed": -2,
+	"guard": -2,
+	"power": -2
+	},
+  "combatStatChange":{},
+  "attacks":[],
+  "isTemporary":false,
+  "duration": 1,
+  "description":"You have cracked a rib "
 }]

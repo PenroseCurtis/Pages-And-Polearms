@@ -21,20 +21,23 @@ struct FStanceLevel
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
-		FString stanceName;
+		FString key;
 	UPROPERTY(BlueprintReadWrite)
 		int32 level;
-
+	UPROPERTY(BlueprintReadWrite)
+		int32 experience;
 	FStanceLevel()
 	{
-		stanceName = "";
+		key = "";
 		level = 1;
+		experience = 0;
 	};
 
-	FStanceLevel(FString aStanceName, int32 aLevel)
+	FStanceLevel(FString aKey, int32 aLevel, int32 aExperience)
 	{
-		stanceName = aStanceName;
+		key = aKey;
 		level = aLevel;
+		experience = aExperience;
 	};
 };
 
@@ -67,7 +70,7 @@ struct FTransitionCost
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadWrite)
-		FString stanceName;
+		FString key;
 	UPROPERTY(BlueprintReadWrite)
 		int32 Cost;
 };
@@ -331,6 +334,8 @@ public:
 		TArray<FTransitionCost> transitions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<int32> tags;
+	UPROPERTY(BlueprintReadWrite)
+		bool canLevelUp;
 };
 
 USTRUCT(BlueprintType)

@@ -40,6 +40,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int experience;
 	UPROPERTY(BlueprintReadWrite)
+		int statIncreasesAvailable;
+	UPROPERTY(BlueprintReadWrite)
 		TArray<FActionCost> actions;
 	UPROPERTY(BlueprintReadWrite)
 		TArray<FString> spells;
@@ -57,11 +59,11 @@ public:
 		flipBookKey = "Page";
 		name = "Default_Page";
 		stances = {
-			FStanceLevel("Unarmed", 1),
-			FStanceLevel("Basic 1H", 1),
-			FStanceLevel("Basic 2H", 1),
-			FStanceLevel("Two Weapon Fighting", 1),
-			FStanceLevel("Vulnerable", 1)
+			FStanceLevel("Unarmed", 1, 0),
+			FStanceLevel("Basic 1H", 1, 0),
+			FStanceLevel("Basic 2H", 1, 0),
+			FStanceLevel("Two Weapon Fighting", 1, 0),
+			FStanceLevel("Vulnerable", 1, 0)
 		},
 		level = 1,
 		experience = 0,
