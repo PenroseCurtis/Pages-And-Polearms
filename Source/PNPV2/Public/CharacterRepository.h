@@ -72,11 +72,12 @@ public:
 								"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
 								"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
 								"Release", "Talk", "Trade", "Buy", "Sell", "Rest", "Heal", "Give", 
-								"Recruit", "Dismiss" };
+								"Recruit", "Dismiss", "Apply" };
 		actions = {
 			FActionCost("Target", 0),
 			FActionCost("Examine", 0),
-			FActionCost("Move To", 1)
+			FActionCost("Move To", 0),
+			FActionCost("Apply", 1)
 		};
 		statBlock = FOStatBlockStruct(3, 3, 10, 10, 1, 1);
 		movementLogicControllerState = 0;

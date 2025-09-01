@@ -29,7 +29,7 @@
   "wieldType":1,
   "description": "A smack with a curled fist",
   "advantageTags": [0,1],
-  "statusAppliedOnVitalHit": "Cracked Rib",
+  "statusAppliedOnVitalHit": "Sprain",
   "allowedCharacterTypesToTarget": [2]
 },
 {
@@ -53,7 +53,7 @@
   "heightDisadvantage":[0],
   "weaponTypeAdvantage":[0],
   "possibleTriggerConditions":[0],
-  "statusAppliedOnVitalHit": "Cracked Rib",
+  "statusAppliedOnVitalHit": "Sprain",
   "allowedCharacterTypesToTarget": [2]
 },
 {
@@ -77,7 +77,7 @@
   "heightDisadvantage":[0],
   "weaponTypeAdvantage":[0],
   "possibleTriggerConditions":[1],
-  "statusAppliedOnVitalHit": "Cracked Rib",
+  "statusAppliedOnVitalHit": "Sprain",
   "allowedCharacterTypesToTarget": [2]
 },
 {
@@ -525,7 +525,7 @@
   "attackHeight":1,
   "wieldType":1,
   "description": "Slam your target with a hafted weapon",
-  "statusAppliedOnVitalHit": "Fracture",
+  "statusAppliedOnVitalHit": "Sprain",
   "allowedCharacterTypesToTarget": [2]
 },
 {
@@ -564,7 +564,7 @@
 {
   "key":"Slice",
   "initiativeCost":2,
-  "speed": 1,
+  "speed": 0,
   "armorPenetration": 0,
   "vitalityDamage": 1,
   "power": 3,
@@ -574,7 +574,7 @@
   "targetTypes":[1],
   "attackHeight":1,
   "wieldType":1,
-  "description": "A quick cut",
+  "description": "A full sword swing",
   "statusAppliedOnVitalHit": "Bleeding",
   "allowedCharacterTypesToTarget": [2]
 },

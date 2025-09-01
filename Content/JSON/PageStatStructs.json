@@ -46,40 +46,28 @@
 					"classKey": "Armor"
 				},
 				{
-					"itemKey": "Vitality Potion",
+					"itemKey": "Splint",
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Vitality Potion",
+					"itemKey": "Bone Elixir",
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Vitality Potion",
+					"itemKey": "Poultice",
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Vitality Potion",
+					"itemKey": "Antidote",
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Vitality Potion",
+					"itemKey": "Bandages",
 					"classKey": "Consumable"
 				},
 				{
-					"itemKey": "Vitality Potion",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Vitality Potion",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Vitality Potion",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Vitality Potion",
-					"classKey": "Consumable"
+					"itemKey": "Full Helm",
+					"classKey": "Armor"
 				}
 			],
 			"gold": 99,
@@ -95,11 +83,20 @@
 		},
 		"statBlock": {
 			"vitalityTotal": 100,
-			"vitality": 100,
+			"vitality": 50,
 			"stamina": 100,
 			"staminaTotal": 100
 		},
-		"attacks": []
+		"attacks": [],
+		"statuses": [
+			"Bleeding",
+			"Fracture",	
+			"Poisoned",
+			"Infected",
+			"Sprain"
+		],
+		"experience": 0,
+		"statIncreasesAvailable": 0
 	},
 	{
 		"key": "Rat",
@@ -192,6 +189,26 @@
 				{
 					"itemKey": "Healing Staff",
 					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Antidote",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Bandages",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Bone Elixir",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Poultice",
+					"classKey": "Consumable"
+				},
+				{
+					"itemKey": "Splint",
+					"classKey": "Consumable"
 				}
 			],
 			"gold": 1000,

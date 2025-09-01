@@ -163,7 +163,7 @@
  },
  "SpecialAttacks":["Pummel","Offhand Pummel"],
  "Weight":1.0,
- "Descriptiosn": "Great for dealing with armored enemies, but not great on defence",
+ "Description": "Great for dealing with armored enemies, but not great on defence",
  "SpritePath": "Weapon/Mace/Light_Mace_Sprite",
  "IconPath": "Weapon/Mace/Light_Mace_Icon",
  "weaponTypes":[0,2,10],

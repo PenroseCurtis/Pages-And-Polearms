@@ -244,6 +244,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		FString statusKey;
 	UPROPERTY(BlueprintReadWrite)
+		FString statusCured;
+	UPROPERTY(BlueprintReadWrite)
 		FOGenericItemStruct replacementItem;
 };
 

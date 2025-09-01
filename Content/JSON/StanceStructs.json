@@ -1,375 +1,680 @@
-	[{
-	  "key":"Default Stance",
-	  "classKey":"Stance",
-	  "name": "Default Stance",
-	  "level":1,
-	  "attacks":["Default Attack"],
-	  "mainHandWeaponTypes":[],
-	  "offHandWeaponTypes":[],
-	  "guardHeight":0,
-	  "gripType":0,
-	  "description":"Default Stance",
-	  "transitions":[],
-	  "tags":[],
-	  "canLevelUp": false
+[
+	{
+		"key": "Default Stance",
+		"classKey": "Stance",
+		"name": "Default Stance",
+		"level": 1,
+		"attacks": [
+			"Default Attack"
+		],
+		"mainHandWeaponTypes": [],
+		"offHandWeaponTypes": [],
+		"guardHeight": 0,
+		"gripType": 0,
+		"description": "Default Stance",
+		"transitions": [],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Unarmed",
-	  "classKey":"Stance",
-	  "name":"Unarmed",
-	  "level":1,
-	  "attacks":["Punch","Left Jab","Ultimate Punch!"],
-	  "mainHandWeaponTypes":[4],
-	  "offHandWeaponTypes":[4], 
-	  "bothRequirementsNeeded":true,
-	  "speed": 1,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"Hand to hand stance",
-	  "transitions":[],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Unarmed",
+		"classKey": "Stance",
+		"name": "Unarmed",
+		"level": 1,
+		"attacks": [
+			"Punch",
+			"Left Jab",
+			"Ultimate Punch!"
+		],
+		"mainHandWeaponTypes": [
+			4
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"speed": 1,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "Hand to hand stance",
+		"transitions": [],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Basic 2H",
-	  "classKey":"Stance",
-	  "name":"Basic Two Handed",
-	  "level":1,
-	  "attacks":["Thrust","Chop","Slash","Crush","Strike"],
-	  "mainHandWeaponTypes":[],
-	  "offHandWeaponTypes":[4],	 
-      "bothRequirementsNeeded":true,	  
-	  "power": 1,
-	  "guardHeight":1,
-	  "gripType":1,
-	  "description":"Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
-	  "transitions":[
-		{"key":"Basic 1H","Cost":1},
-		{"key":"High Guard","Cost":2},
-		{"key":"Hafting","Cost":2},
-		{"key":"Berserker","Cost":2},
-		{"key":"Fools Guard","Cost":2},
-		{"key":"Repelling","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": true
+		"key": "Basic 2H",
+		"classKey": "Stance",
+		"name": "Basic Two Handed",
+		"level": 1,
+		"attacks": [
+			"Thrust",
+			"Chop",
+			"Slash",
+			"Crush",
+			"Strike"
+		],
+		"mainHandWeaponTypes": [],
+		"offHandWeaponTypes": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"power": 1,
+		"guardHeight": 1,
+		"gripType": 1,
+		"description": "Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
+		"transitions": [
+			{
+				"key": "Basic 1H",
+				"Cost": 1
+			},
+			{
+				"key": "High Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Hafting",
+				"Cost": 2
+			},
+			{
+				"key": "Berserker",
+				"Cost": 2
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Repelling",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": true
 	},
 	{
-	  "key":"Basic 2H",
-	  "classKey":"Stance",
-	  "name":"Two Handed",
-	  "level":2,
-	  "attacks":["Thrust","Chop","Slash","Crush","Strike"],
-	  "mainHandWeaponTypes":[],
-	  "offHandWeaponTypes":[4],	 
-      "bothRequirementsNeeded":true,	  
-	  "power": 2,
-	  "guardHeight":1,
-	  "gripType":1,
-	  "description":"Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
-	  "transitions":[
-		{"key":"Basic 1H","Cost":1},
-		{"key":"High Guard","Cost":2},
-		{"key":"Hafting","Cost":2},
-		{"key":"Berserker","Cost":2},
-		{"key":"Fools Guard","Cost":2},
-		{"key":"Repelling","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Basic 2H",
+		"classKey": "Stance",
+		"name": "Two Handed",
+		"level": 2,
+		"attacks": [
+			"Thrust",
+			"Chop",
+			"Slash",
+			"Crush",
+			"Strike"
+		],
+		"mainHandWeaponTypes": [],
+		"offHandWeaponTypes": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"power": 2,
+		"guardHeight": 1,
+		"gripType": 1,
+		"description": "Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
+		"transitions": [
+			{
+				"key": "Basic 1H",
+				"Cost": 1
+			},
+			{
+				"key": "High Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Hafting",
+				"Cost": 2
+			},
+			{
+				"key": "Berserker",
+				"Cost": 2
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Repelling",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Basic 1H",
-	  "classKey":"Stance",
-	  "name":"Basic One Handed",
-	  "level":1,
-	  "attacks":["Stab","Chop","Slice"],
-	  "mainHandWeaponTypes":[0],
-	  "offHandWeaponTypes":[4],	
-	  "bothRequirementsNeeded":true,
-	  "speed": 1,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
-	  "transitions":[
-		{"key":"High Guard","Cost":2},
-		{"key":"Basic 2H","Cost":1},
-		{"key":"Dueling","Cost":1},
-		{"key":"Fools Guard","Cost":1}
-	  ],
-	  "tags":[],
-	  "canLevelUp": true
+		"key": "Basic 1H",
+		"classKey": "Stance",
+		"name": "Basic One Handed",
+		"level": 1,
+		"attacks": [
+			"Stab",
+			"Chop",
+			"Slice"
+		],
+		"mainHandWeaponTypes": [
+			0
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"speed": 1,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
+		"transitions": [
+			{
+				"key": "High Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Basic 2H",
+				"Cost": 1
+			},
+			{
+				"key": "Dueling",
+				"Cost": 1
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 1
+			}
+		],
+		"tags": [],
+		"canLevelUp": true
 	},
 	{
-	  "key":"Basic 1H",
-	  "classKey":"Stance",
-	  "name":"One Handed",
-	  "level":2,
-	  "attacks":["Stab","Chop","Slice"],
-	  "mainHandWeaponTypes":[0],
-	  "offHandWeaponTypes":[4],	
-	  "bothRequirementsNeeded":true,
-	  "speed": 2,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
-	  "transitions":[
-		{"key":"High Guard","Cost":2},
-		{"key":"Basic 2H","Cost":1},
-		{"key":"Dueling","Cost":1},
-		{"key":"Fools Guard","Cost":1}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Basic 1H",
+		"classKey": "Stance",
+		"name": "One Handed",
+		"level": 2,
+		"attacks": [
+			"Stab",
+			"Chop",
+			"Slice"
+		],
+		"mainHandWeaponTypes": [
+			0
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"speed": 2,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
+		"transitions": [
+			{
+				"key": "High Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Basic 2H",
+				"Cost": 1
+			},
+			{
+				"key": "Dueling",
+				"Cost": 1
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 1
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Two Weapon Fighting",
-	  "classKey":"Stance",
-	  "name":"Two Weapon Fighting",
-	  "level":1,
-	  "attacks":[
-		"Twin Strike",
-		"Chop",
-		"Offhand Chop",
-		"Stab",
-		"Offhand Stab",
-		"Slice",
-		"Offhand Slice",
-		"Bash"],
-	  "mainHandWeaponTypes":[0],
-	  "offHandWeaponTypes":[2],	  
-	  "guard": 1,
-	  "guardHeight":0,
-	  "gripType":0,
-	  "description":"Fighting with a weapon in each hand",
-	  "transitions":[
-		{"key":"Shield Wall","Cost":2},
-		{"key":"Dual Blade","Cost":2},
-		{"key":"Sword and Board","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Two Weapon Fighting",
+		"classKey": "Stance",
+		"name": "Two Weapon Fighting",
+		"level": 1,
+		"attacks": [
+			"Twin Strike",
+			"Chop",
+			"Offhand Chop",
+			"Stab",
+			"Offhand Stab",
+			"Slice",
+			"Offhand Slice",
+			"Bash"
+		],
+		"mainHandWeaponTypes": [
+			0
+		],
+		"offHandWeaponTypes": [
+			2
+		],
+		"guard": 1,
+		"guardHeight": 0,
+		"gripType": 0,
+		"description": "Fighting with a weapon in each hand",
+		"transitions": [
+			{
+				"key": "Shield Wall",
+				"Cost": 2
+			},
+			{
+				"key": "Dual Blade",
+				"Cost": 2
+			},
+			{
+				"key": "Sword and Board",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Sword and Board",
-	  "classKey":"Stance",
-	  "name": "Sword and Board",
-	  "level":1,
-	  "attacks":["Stab","Bash","Slice","Parry"],
-	  "mainHandWeaponTypes":[3],
-	  "offHandWeaponTypes":[5],	
-	  "bothRequirementsNeeded":true,
-	  "guard": 2,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"High guard with a sword and shield.",
-	  "transitions":[
-		{"key":"Two Weapon Fighting","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Sword and Board",
+		"classKey": "Stance",
+		"name": "Sword and Board",
+		"level": 1,
+		"attacks": [
+			"Stab",
+			"Bash",
+			"Slice",
+			"Parry"
+		],
+		"mainHandWeaponTypes": [
+			3
+		],
+		"offHandWeaponTypes": [
+			5
+		],
+		"bothRequirementsNeeded": true,
+		"guard": 2,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "High guard with a sword and shield.",
+		"transitions": [
+			{
+				"key": "Two Weapon Fighting",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"High Guard",
-	  "classKey":"Stance",
-	  "name":"High Guard",
-	  "level": 1,
-	  "attacks":["Chop","Slash","Strike","Crush","Power Attack"],
-	  "mainHandWeaponTypes":[0],
-	  "offHandWeaponTypes":[4],  
-	  "power": 1,
-	  "guard": -1,
-	  "guardHeight":0,
-	  "gripType":1,
-	  "description":"Weapon held high with both hands.",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":2},
-		{"key":"Basic 1H","Cost":2},
-		{"key":"Dueling","Cost":2},
-		{"key":"Hafting","Cost":2},
-		{"key":"Repelling","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "High Guard",
+		"classKey": "Stance",
+		"name": "High Guard",
+		"level": 1,
+		"attacks": [
+			"Chop",
+			"Slash",
+			"Strike",
+			"Crush",
+			"Power Attack"
+		],
+		"mainHandWeaponTypes": [
+			0
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"power": 1,
+		"guard": -1,
+		"guardHeight": 0,
+		"gripType": 1,
+		"description": "Weapon held high with both hands.",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 2
+			},
+			{
+				"key": "Basic 1H",
+				"Cost": 2
+			},
+			{
+				"key": "Dueling",
+				"Cost": 2
+			},
+			{
+				"key": "Hafting",
+				"Cost": 2
+			},
+			{
+				"key": "Repelling",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Berserker",
-	  "classKey":"Stance",
-	  "name":"Berserker",
-	  "level": 1,
-	  "attacks":["Slash","Thrust","Cleave","Power Attack"],
-	  "mainHandWeaponTypes":[0,3],
-	  "offHandWeaponTypes":[4],  
-	  "power": 2,
-	  "guard": -2,
-	  "guardHeight":0,
-	  "gripType":1,
-	  "description":"A ferocious stance using a sword in both hands",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":2},
-		{"key":"Basic 1H","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Berserker",
+		"classKey": "Stance",
+		"name": "Berserker",
+		"level": 1,
+		"attacks": [
+			"Slash",
+			"Thrust",
+			"Cleave",
+			"Power Attack"
+		],
+		"mainHandWeaponTypes": [
+			0,
+			3
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"power": 2,
+		"guard": -2,
+		"guardHeight": 0,
+		"gripType": 1,
+		"description": "A ferocious stance using a sword in both hands",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 2
+			},
+			{
+				"key": "Basic 1H",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Vulnerable",
-	  "classKey":"Stance",
-	  "name":"Vulnerable",
-	  "level":1,
-	  "attacks":[],
-	  "mainHandWeaponTypes":[],
-	  "offHandWeaponTypes":[],	  
-	  "guard": -2,
-	  "guardHeight":0,
-	  "gripType":0,
-	  "description":"A vulnerable stance you don't want to stick in",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":2},
-		{"key":"Basic 1H","Cost":2},
-		{"key":"Two Weapon Fighting","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Vulnerable",
+		"classKey": "Stance",
+		"name": "Vulnerable",
+		"level": 1,
+		"attacks": [],
+		"mainHandWeaponTypes": [],
+		"offHandWeaponTypes": [],
+		"guard": -2,
+		"guardHeight": 0,
+		"gripType": 0,
+		"description": "A vulnerable stance you don't want to stick in",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 2
+			},
+			{
+				"key": "Basic 1H",
+				"Cost": 2
+			},
+			{
+				"key": "Two Weapon Fighting",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Dual Blade",
-	  "classKey":"Stance",
-	  "name":"Dual Blade",
-	  "level":1,
-	  "attacks":["Slice","Double Slice", "Stab","Offhand Stab", "Offhand Slice"],
-	  "mainHandWeaponTypes":[0,3],
-	  "offHandWeaponTypes":[2,3],	  
-	  "guard": 1,
-	  "speed": 1,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"Fight with a bladed weapon in each hand",
-	  "transitions":[
-		{"key":"Two Weapon Fighting","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Dual Blade",
+		"classKey": "Stance",
+		"name": "Dual Blade",
+		"level": 1,
+		"attacks": [
+			"Slice",
+			"Double Slice",
+			"Stab",
+			"Offhand Stab",
+			"Offhand Slice"
+		],
+		"mainHandWeaponTypes": [
+			0,
+			3
+		],
+		"offHandWeaponTypes": [
+			2,
+			3
+		],
+		"guard": 1,
+		"speed": 1,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "Fight with a bladed weapon in each hand",
+		"transitions": [
+			{
+				"key": "Two Weapon Fighting",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Shield Wall",
-	  "classKey":"Stance",
-	  "name":"Shield Wall",
-	  "level":1,
-	  "attacks":["Stab", "Bash", "Repel","Rout","Strike", "Far Thrust"],
-	  "mainHandWeaponTypes":[0,8],
-	  "offHandWeaponTypes":[5],	  
-	  "guard": 3,
-	  "guardHeight":1,
-	  "gripType":0,
-	  "description":"Guard yourself with a shield and weapon pointed forward",
-	  "transitions":[
-		{"key":"Two Weapon Fighting","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Shield Wall",
+		"classKey": "Stance",
+		"name": "Shield Wall",
+		"level": 1,
+		"attacks": [
+			"Stab",
+			"Bash",
+			"Repel",
+			"Rout",
+			"Strike",
+			"Far Thrust"
+		],
+		"mainHandWeaponTypes": [
+			0,
+			8
+		],
+		"offHandWeaponTypes": [
+			5
+		],
+		"guard": 3,
+		"guardHeight": 1,
+		"gripType": 0,
+		"description": "Guard yourself with a shield and weapon pointed forward",
+		"transitions": [
+			{
+				"key": "Two Weapon Fighting",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Hafting",
-	  "classKey":"Stance",
-	  "name":"Hafting",
-	  "level":1,
-	  "attacks":["Quick Strike","Parry"],
-	  "mainHandWeaponTypes":[9],
-	  "offHandWeaponTypes":[4],	  
-	  "guard": 2,
-	  "guardHeight":1,
-	  "gripType":1,
-	  "description":"Fight with a hafted weapon in both hands",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":2},
-		{"key":"Fools Guard","Cost":2},
-		{"key":"Repelling","Cost":2},
-		{"key":"High Guard","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Hafting",
+		"classKey": "Stance",
+		"name": "Hafting",
+		"level": 1,
+		"attacks": [
+			"Quick Strike",
+			"Parry"
+		],
+		"mainHandWeaponTypes": [
+			9
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"guard": 2,
+		"guardHeight": 1,
+		"gripType": 1,
+		"description": "Fight with a hafted weapon in both hands",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 2
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Repelling",
+				"Cost": 2
+			},
+			{
+				"key": "High Guard",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Repelling",
-	  "classKey":"Stance",
-	  "name":"Repelling",
-	  "level":1,
-	  "attacks":["Strike","Parry","Rout","Repel","Far Thrust"],
-	  "mainHandWeaponTypes":[9],
-	  "offHandWeaponTypes":[4],	  
-	  "guard": 1,
-	  "speed": 1,
-	  "guardHeight":1,
-	  "gripType":1,
-	  "description":"Fight defensively with a hafted weapon in both hands",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":2},
-		{"key":"Fools Guard","Cost":2},
-		{"key":"Hafting", "Cost":2},
-		{"key":"High Guard","Cost":2}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Repelling",
+		"classKey": "Stance",
+		"name": "Repelling",
+		"level": 1,
+		"attacks": [
+			"Strike",
+			"Parry",
+			"Rout",
+			"Repel",
+			"Far Thrust"
+		],
+		"mainHandWeaponTypes": [
+			9
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"guard": 1,
+		"speed": 1,
+		"guardHeight": 1,
+		"gripType": 1,
+		"description": "Fight defensively with a hafted weapon in both hands",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 2
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 2
+			},
+			{
+				"key": "Hafting",
+				"Cost": 2
+			},
+			{
+				"key": "High Guard",
+				"Cost": 2
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Dueling",
-	  "classKey":"Stance",
-	  "name":"Dueling",
-	  "level":1,
-	  "attacks":["Parry","Thrust","Slash"],
-	  "mainHandWeaponTypes":[0,3],
-	  "offHandWeaponTypes":[4],	  
-	  "speed": 2,
-	  "guardHeight":1,
-	  "gripType":1,
-	  "description":"A sword stance that allows a variety of quick changes",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":1},
-		{"key":"Basic 1H","Cost":1},
-		{"key":"Fools Guard","Cost":1},
-		{"key":"Basic 2H","Cost":1},
-		{"key":"High Guard","Cost":1}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Dueling",
+		"classKey": "Stance",
+		"name": "Dueling",
+		"level": 1,
+		"attacks": [
+			"Parry",
+			"Thrust",
+			"Slash"
+		],
+		"mainHandWeaponTypes": [
+			0,
+			3
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"speed": 2,
+		"guardHeight": 1,
+		"gripType": 1,
+		"description": "A sword stance that allows a variety of quick changes",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 1
+			},
+			{
+				"key": "Basic 1H",
+				"Cost": 1
+			},
+			{
+				"key": "Fools Guard",
+				"Cost": 1
+			},
+			{
+				"key": "Basic 2H",
+				"Cost": 1
+			},
+			{
+				"key": "High Guard",
+				"Cost": 1
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Fools Guard",
-	  "classKey":"Stance",
-	  "name":"Fools Guard",
-	  "level":1,
-	  "attacks":["Strike","Parry","Upswing","Slice","Chop"],
-	  "mainHandWeaponTypes":[],
-	  "offHandWeaponTypes":[4],	  
-	  "speed": 3,
-	  "guard": -1,
-	  "power": -1,
-	  "guardHeight":2,
-	  "gripType":1,
-	  "description":"Keep your weapon low to appear open to an attack.",
-	  "transitions":[
-		{"key":"Basic 2H","Cost":1},
-		{"key":"Dueling","Cost":1},
-		{"key":"Repelling","Cost":1},
-		{"key":"Basic 1H","Cost":1},
-		{"key":"Hafting","Cost":1}
-	  ],
-	  "tags":[],
-	  "canLevelUp": false
+		"key": "Fools Guard",
+		"classKey": "Stance",
+		"name": "Fools Guard",
+		"level": 1,
+		"attacks": [
+			"Strike",
+			"Parry",
+			"Upswing",
+			"Slice",
+			"Chop"
+		],
+		"mainHandWeaponTypes": [],
+		"offHandWeaponTypes": [
+			4
+		],
+		"speed": 3,
+		"guard": -1,
+		"power": -1,
+		"guardHeight": 2,
+		"gripType": 1,
+		"description": "Keep your weapon low to appear open to an attack.",
+		"transitions": [
+			{
+				"key": "Basic 2H",
+				"Cost": 1
+			},
+			{
+				"key": "Dueling",
+				"Cost": 1
+			},
+			{
+				"key": "Repelling",
+				"Cost": 1
+			},
+			{
+				"key": "Basic 1H",
+				"Cost": 1
+			},
+			{
+				"key": "Hafting",
+				"Cost": 1
+			}
+		],
+		"tags": [],
+		"canLevelUp": false
 	},
 	{
-	  "key":"Rat Aggro",
-	  "classKey":"Stance",
-	  "name":"Rat Aggro",
-	  "level":1,
-	  "attacks":["Scratch"],
-	  "mainHandWeaponTypes":[4],
-	  "offHandWeaponTypes":[4],	  
-	  "guardHeight":0,
-	  "gripType":0,
-	  "description":"Ready to pounce!",
-	  "tags":[6],
-	  "canLevelUp": false
+		"key": "Rat Aggro",
+		"classKey": "Stance",
+		"name": "Rat Aggro",
+		"level": 1,
+		"attacks": [
+			"Scratch"
+		],
+		"mainHandWeaponTypes": [
+			4
+		],
+		"offHandWeaponTypes": [
+			4
+		],
+		"guardHeight": 0,
+		"gripType": 0,
+		"description": "Ready to pounce!",
+		"tags": [
+			6
+		],
+		"canLevelUp": false
 	}
-	]
+]
