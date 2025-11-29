@@ -414,30 +414,6 @@
 	"initialEnemySpawns": [{
 			"coordinates": 
 			{
-				"XCoordinate": 2,
-				"YCoordinate": 2
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 2,
-				"YCoordinate": 9
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 5,
-				"YCoordinate": 3
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
 				"XCoordinate": 7,
 				"YCoordinate": 5
 			},
@@ -446,7 +422,23 @@
 		{
 			"coordinates": 
 			{
-				"XCoordinate": 8,
+				"XCoordinate": 9,
+				"YCoordinate": 8
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 9,
+				"YCoordinate": 1
+			},
+			"characterStatKey": "Goblin"
+		},
+		{
+			"coordinates": 
+			{
+				"XCoordinate": 5,
 				"YCoordinate": 1
 			},
 			"characterStatKey": "Goblin_Warrior"

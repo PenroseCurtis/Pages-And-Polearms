@@ -60,9 +60,10 @@ public:
 		name = "Default_Page";
 		stances = {
 			FStanceLevel("Unarmed", 1, 0),
-			FStanceLevel("Basic 1H", 1, 0),
-			FStanceLevel("Basic 2H", 1, 0),
+			FStanceLevel("1H", 1, 0),
+			FStanceLevel("2H", 1, 0),
 			FStanceLevel("Two Weapon Fighting", 1, 0),
+			FStanceLevel("Arm and Shield", 1, 0),
 			FStanceLevel("Vulnerable", 1, 0)
 		},
 		level = 1,

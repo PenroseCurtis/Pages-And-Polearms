@@ -166,7 +166,7 @@
 	{
 		"Key": "Leather Bracers",
 		"armorStats": {
-			"padding": 2,
+			"padding": 1,
 			"vitalHitProtection": 0
 			},
 		"Weight": 3.0,
@@ -181,8 +181,8 @@
 	{
 		"Key": "Mail Bracers",
 		"armorStats": {
-			"padding": 1,
-			"vitalHitProtection": 0
+			"padding": 0,
+			"vitalHitProtection": 1
 			},
 		"Weight": 3.0,
 		"Description": "Mail arm protectors",

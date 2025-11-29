@@ -1,680 +1,2532 @@
 [
+    {
+        "key": "Default Stance",
+        "classKey": "Stance",
+        "name": "Default Stance",
+        "level": 1,
+        "attacks": [
+            "Default Attack"
+        ],
+        "mainHandWeaponTypes": [],
+        "offHandWeaponTypes": [],
+        "description": "Default Stance",
+        "canLevelUp": false
+    },
+    {
+        "key": "Unarmed",
+        "classKey": "Stance",
+        "name": "Unarmed",
+        "level": 1,
+        "attacks": [
+            "Punch",
+            "Offhand Punch",
+			"Shove"
+        ],
+        "mainHandWeaponTypes": [
+            4
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "description": "Hand to hand stance",
+        "canLevelUp": false
+    },
+    {
+        "key": "Rat Aggro",
+        "classKey": "Stance",
+        "name": "Rat Aggro",
+        "level": 1,
+        "attacks": [
+            "Scratch"
+        ],
+        "mainHandWeaponTypes": [
+            4
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": false,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Ready to pounce!",
+        "tags": [
+            6
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Vulnerable",
+        "classKey": "Stance",
+        "name": "Vulnerable",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [],
+        "offHandWeaponTypes": [],
+        "bothRequirementsNeeded": false,
+        "guard": -2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A vulnerable stance you don't want to stick in",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "1H",
+                "Cost": 2
+            },
+            {
+                "key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "key": "Unarmed",
+                "Cost": 2
+            },
+            {
+                "key": "Arm and Shield",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Defensive",
+        "classKey": "Stance",
+        "name": "Defensive",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [],
+        "offHandWeaponTypes": [],
+        "bothRequirementsNeeded": false,
+        "speed": 0,
+        "power": 0,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A defensive fighting stance",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "Key": "2H",
+                "Cost": 2
+            },
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Power",
+        "classKey": "Stance",
+        "name": "Power",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack",
+            "Power Attack"
+        ],
+        "mainHandWeaponTypes": [],
+        "offHandWeaponTypes": [],
+        "bothRequirementsNeeded": false,
+        "speed": 0,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A powerful fighting stance",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "Key": "2H",
+                "Cost": 2
+            },
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "2H",
+        "classKey": "Stance",
+        "name": "Basic Two Handed",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Chop",
+            "Slash",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [1],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "power": 1,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Basic fighting stance with both hands wielding one weapon. Powerful, but slow",
+        "transitions": [
+            {
+                "key": "1H",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "2H",
+        "classKey": "Stance",
+        "name": "Two Handed",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [1],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "power": 2,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Fighting stance with both hands wielding one weapon. Powerful, but slow",
+        "transitions": [
+            {
+                "key": "1H",
+                "Cost": 1
+            },
+            {
+                "key": "Quarterstaffing",
+                "Cost": 2
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 2
+            },
+            {
+                "key": "Hammerman",
+                "Cost": 2
+            },
+            {
+                "key": "Greatswordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Great axeman",
+                "Cost": 2
+            },
+            {
+                "key": "Pikeman",
+                "Cost": 2
+            },
+            {
+                "key": "Power",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "2H",
+        "classKey": "Stance",
+        "name": "Advanced Two Handed",
+        "level": 3,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [1],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "power": 2,
+        "guard": 1,
+        "guardHeight": 1,
+        "gripType": 1,
+        "description": "Fighting stance with both hands wielding one weapon. Powerful, but slow",
+        "transitions": [
+            {
+                "key": "1H",
+                "Cost": 1
+            },
+            {
+                "key": "Quarterstaffing",
+                "Cost": 2
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 2
+            },
+            {
+                "key": "Hammerman",
+                "Cost": 2
+            },
+            {
+                "key": "Greatswordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Great Axeman",
+                "Cost": 2
+            },
+            {
+                "key": "Pikeman",
+                "Cost": 2
+            },
+            {
+                "key": "Power",
+                "Cost": 1
+            },
+            {
+                "key": "Berserker",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "1H",
+        "classKey": "Stance",
+        "name": "Basic One Handed",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "1H",
+        "classKey": "Stance",
+        "name": "One Handed",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 1
+            },
+            {
+                "key": "Duelist",
+                "Cost": 1
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Axeman",
+                "Cost": 1
+            },
+            {
+                "key": "Swordsman",
+                "Cost": 1
+            },
+            {
+                "key": "Spearman",
+                "Cost": 1
+            },
+            {
+                "key": "Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Macer",
+                "Cost": 1
+            },
+            {
+                "key": "Defensive",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "1H",
+        "classKey": "Stance",
+        "name": "Advanced One Handed",
+        "level": 3,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "guard": 1,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 1
+            },
+            {
+                "key": "Duelist",
+                "Cost": 1
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Axeman",
+                "Cost": 1
+            },
+            {
+                "key": "Swordsman",
+                "Cost": 1
+            },
+            {
+                "key": "Spearman",
+                "Cost": 1
+            },
+            {
+                "key": "Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Macer",
+                "Cost": 1
+            },
+            {
+                "key": "Defensive",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Two Weapon Fighting",
+        "classKey": "Stance",
+        "name": "Basic Two Weapon Fighting",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Offhand Stab",
+            "Slash",
+            "Offhand Slash",
+            "Chop",
+            "Offhand Chop",
+            "Smack",
+            "Offhand Smack",
+			"Throw",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fighting with a weapon in each hand",
+        "transitions": [],
+        "canLevelUp": true
+    },
+    {
+        "key": "Two Weapon Fighting",
+        "classKey": "Stance",
+        "name": "Two Weapon Fighting",
+        "level": 2,
+        "attacks": [
+			"Twin Attack",
+            "Stab",
+            "Offhand Stab",
+            "Slash",
+            "Offhand Slash",
+            "Chop",
+            "Offhand Chop",
+            "Smack",
+            "Offhand Smack",
+			"Throw",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "guard": 1,
+        "Speed": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fighting with a weapon in each hand",
+        "transitions": [
+            {
+                "key": "Rogue",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            },
+            {
+                "key": "Swashbuckler",
+                "Cost": 2
+            },
+            {
+                "key": "Gladiator",
+                "Cost": 2
+            },
+            {
+                "key": "Raider",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Two Weapon Fighting",
+        "classKey": "Stance",
+        "name": "Advanced Two Weapon Fighting",
+        "level": 3,
+        "attacks": [
+			"Twin Attack",
+            "Stab",
+            "Offhand Stab",
+            "Slash",
+            "Offhand Slash",
+            "Chop",
+            "Offhand Chop",
+            "Smack",
+            "Offhand Smack",
+			"Throw",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "guard": 2,
+        "speed": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fighting with a weapon in each hand",
+        "transitions": [
+            {
+                "key": "Rogue",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            },
+            {
+                "key": "Gladiator",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Arm and Shield",
+        "classKey": "Stance",
+        "name": "Basic Arm and Shield",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slice",
+            "Chop",
+            "Smack",
+            "Bash"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "guard": 1,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon and shield",
+        "canLevelUp": false
+    },
+    {
+        "key": "Arm and Shield",
+        "classKey": "Stance",
+        "name": "Arm and Shield",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slice",
+            "Chop",
+            "Smack",
+            "Bash"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "guard": 2,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon and shield",
+        "transitions": [
+            {
+                "key": "Knight",
+                "cost": 2
+            },
+            {
+                "key": "Soldier",
+                "cost": 2
+            },
+            {
+                "key": "Warrior",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Arm and Shield",
+        "classKey": "Stance",
+        "name": "Advanced Arm and Shield",
+        "level": 3,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack",
+            "Bash"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "guard": 3,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "Fight with a weapon and shield",
+        "transitions": [
+            {
+                "key": "Knight",
+                "cost": 2
+            },
+            {
+                "key": "Soldier",
+                "cost": 2
+            },
+            {
+                "key": "Warrior",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Quarterstaffing",
+        "classKey": "Stance",
+        "name": "Quarterstaffing",
+        "level": 1,
+        "attacks": [
+            "Strike",
+            "Parry",
+			"Shove"
+        ],
+        "mainHandWeaponTypes": [
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "guard": 2,
+        "guardHeight": 1,
+        "gripType": 1,
+        "description": "Fight with a poled weapon by holding the shaft in both hands",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "1H",
+                "Cost": 2
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
 	{
-		"key": "Default Stance",
-		"classKey": "Stance",
-		"name": "Default Stance",
-		"level": 1,
-		"attacks": [
-			"Default Attack"
-		],
-		"mainHandWeaponTypes": [],
-		"offHandWeaponTypes": [],
-		"guardHeight": 0,
-		"gripType": 0,
-		"description": "Default Stance",
-		"transitions": [],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Unarmed",
-		"classKey": "Stance",
-		"name": "Unarmed",
-		"level": 1,
-		"attacks": [
-			"Punch",
-			"Left Jab",
-			"Ultimate Punch!"
-		],
-		"mainHandWeaponTypes": [
-			4
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"bothRequirementsNeeded": true,
-		"speed": 1,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "Hand to hand stance",
-		"transitions": [],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Basic 2H",
-		"classKey": "Stance",
-		"name": "Basic Two Handed",
-		"level": 1,
-		"attacks": [
-			"Thrust",
-			"Chop",
-			"Slash",
-			"Crush",
-			"Strike"
-		],
-		"mainHandWeaponTypes": [],
-		"offHandWeaponTypes": [
-			4
-		],
-		"bothRequirementsNeeded": true,
-		"power": 1,
-		"guardHeight": 1,
-		"gripType": 1,
-		"description": "Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
-		"transitions": [
-			{
-				"key": "Basic 1H",
-				"Cost": 1
-			},
-			{
-				"key": "High Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Hafting",
-				"Cost": 2
-			},
-			{
-				"key": "Berserker",
-				"Cost": 2
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Repelling",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": true
-	},
-	{
-		"key": "Basic 2H",
-		"classKey": "Stance",
-		"name": "Two Handed",
-		"level": 2,
-		"attacks": [
-			"Thrust",
-			"Chop",
-			"Slash",
-			"Crush",
-			"Strike"
-		],
-		"mainHandWeaponTypes": [],
-		"offHandWeaponTypes": [
-			4
-		],
-		"bothRequirementsNeeded": true,
-		"power": 2,
-		"guardHeight": 1,
-		"gripType": 1,
-		"description": "Basic Fighting Stance With Both Hands Wielding One Weapon. Powerful, but slow",
-		"transitions": [
-			{
-				"key": "Basic 1H",
-				"Cost": 1
-			},
-			{
-				"key": "High Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Hafting",
-				"Cost": 2
-			},
-			{
-				"key": "Berserker",
-				"Cost": 2
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Repelling",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Basic 1H",
-		"classKey": "Stance",
-		"name": "Basic One Handed",
-		"level": 1,
-		"attacks": [
-			"Stab",
-			"Chop",
-			"Slice"
-		],
-		"mainHandWeaponTypes": [
-			0
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"bothRequirementsNeeded": true,
-		"speed": 1,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
-		"transitions": [
-			{
-				"key": "High Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Basic 2H",
-				"Cost": 1
-			},
-			{
-				"key": "Dueling",
-				"Cost": 1
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 1
-			}
-		],
-		"tags": [],
-		"canLevelUp": true
-	},
-	{
-		"key": "Basic 1H",
-		"classKey": "Stance",
-		"name": "One Handed",
-		"level": 2,
-		"attacks": [
-			"Stab",
-			"Chop",
-			"Slice"
-		],
-		"mainHandWeaponTypes": [
-			0
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"bothRequirementsNeeded": true,
-		"speed": 2,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "Fight with a weapon in your dominant hand. Less powerful strikes, but fast.",
-		"transitions": [
-			{
-				"key": "High Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Basic 2H",
-				"Cost": 1
-			},
-			{
-				"key": "Dueling",
-				"Cost": 1
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 1
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Two Weapon Fighting",
-		"classKey": "Stance",
-		"name": "Two Weapon Fighting",
-		"level": 1,
-		"attacks": [
-			"Twin Strike",
-			"Chop",
-			"Offhand Chop",
-			"Stab",
-			"Offhand Stab",
-			"Slice",
-			"Offhand Slice",
-			"Bash"
-		],
-		"mainHandWeaponTypes": [
-			0
-		],
-		"offHandWeaponTypes": [
-			2
-		],
-		"guard": 1,
-		"guardHeight": 0,
-		"gripType": 0,
-		"description": "Fighting with a weapon in each hand",
-		"transitions": [
-			{
-				"key": "Shield Wall",
-				"Cost": 2
-			},
-			{
-				"key": "Dual Blade",
-				"Cost": 2
-			},
-			{
-				"key": "Sword and Board",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Sword and Board",
-		"classKey": "Stance",
-		"name": "Sword and Board",
-		"level": 1,
-		"attacks": [
-			"Stab",
-			"Bash",
-			"Slice",
-			"Parry"
-		],
-		"mainHandWeaponTypes": [
-			3
-		],
-		"offHandWeaponTypes": [
-			5
-		],
-		"bothRequirementsNeeded": true,
-		"guard": 2,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "High guard with a sword and shield.",
-		"transitions": [
-			{
-				"key": "Two Weapon Fighting",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "High Guard",
-		"classKey": "Stance",
-		"name": "High Guard",
-		"level": 1,
-		"attacks": [
-			"Chop",
-			"Slash",
-			"Strike",
-			"Crush",
-			"Power Attack"
-		],
-		"mainHandWeaponTypes": [
-			0
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"power": 1,
-		"guard": -1,
-		"guardHeight": 0,
-		"gripType": 1,
-		"description": "Weapon held high with both hands.",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 2
-			},
-			{
-				"key": "Basic 1H",
-				"Cost": 2
-			},
-			{
-				"key": "Dueling",
-				"Cost": 2
-			},
-			{
-				"key": "Hafting",
-				"Cost": 2
-			},
-			{
-				"key": "Repelling",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Berserker",
-		"classKey": "Stance",
-		"name": "Berserker",
-		"level": 1,
-		"attacks": [
-			"Slash",
-			"Thrust",
-			"Cleave",
-			"Power Attack"
-		],
-		"mainHandWeaponTypes": [
-			0,
-			3
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"power": 2,
-		"guard": -2,
-		"guardHeight": 0,
-		"gripType": 1,
-		"description": "A ferocious stance using a sword in both hands",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 2
-			},
-			{
-				"key": "Basic 1H",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Vulnerable",
-		"classKey": "Stance",
-		"name": "Vulnerable",
-		"level": 1,
-		"attacks": [],
-		"mainHandWeaponTypes": [],
-		"offHandWeaponTypes": [],
-		"guard": -2,
-		"guardHeight": 0,
-		"gripType": 0,
-		"description": "A vulnerable stance you don't want to stick in",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 2
-			},
-			{
-				"key": "Basic 1H",
-				"Cost": 2
-			},
-			{
-				"key": "Two Weapon Fighting",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Dual Blade",
-		"classKey": "Stance",
-		"name": "Dual Blade",
-		"level": 1,
-		"attacks": [
-			"Slice",
-			"Double Slice",
-			"Stab",
-			"Offhand Stab",
-			"Offhand Slice"
-		],
-		"mainHandWeaponTypes": [
-			0,
-			3
-		],
-		"offHandWeaponTypes": [
-			2,
-			3
-		],
-		"guard": 1,
-		"speed": 1,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "Fight with a bladed weapon in each hand",
-		"transitions": [
-			{
-				"key": "Two Weapon Fighting",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Shield Wall",
-		"classKey": "Stance",
-		"name": "Shield Wall",
-		"level": 1,
-		"attacks": [
-			"Stab",
-			"Bash",
-			"Repel",
-			"Rout",
-			"Strike",
-			"Far Thrust"
-		],
-		"mainHandWeaponTypes": [
-			0,
-			8
-		],
-		"offHandWeaponTypes": [
-			5
-		],
-		"guard": 3,
-		"guardHeight": 1,
-		"gripType": 0,
-		"description": "Guard yourself with a shield and weapon pointed forward",
-		"transitions": [
-			{
-				"key": "Two Weapon Fighting",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Hafting",
-		"classKey": "Stance",
-		"name": "Hafting",
-		"level": 1,
-		"attacks": [
-			"Quick Strike",
-			"Parry"
-		],
-		"mainHandWeaponTypes": [
-			9
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"guard": 2,
-		"guardHeight": 1,
-		"gripType": 1,
-		"description": "Fight with a hafted weapon in both hands",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 2
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Repelling",
-				"Cost": 2
-			},
-			{
-				"key": "High Guard",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Repelling",
-		"classKey": "Stance",
-		"name": "Repelling",
-		"level": 1,
-		"attacks": [
-			"Strike",
+        "key": "Quarterstaffing",
+        "classKey": "Stance",
+        "name": "Quarterstaff Master",
+        "level": 2,
+        "attacks": [
+            "Strike",
+            "Parry",
+			"Shove"
+        ],
+        "mainHandWeaponTypes": [
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "guard": 3,
+        "guardHeight": 1,
+        "gripType": 1,
+        "description": "Fight with a poled weapon by holding the shaft in both hands",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "1H",
+                "Cost": 2
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Duelist",
+        "classKey": "Stance",
+        "name": "Duelist",
+        "level": 1,
+        "attacks": [
+            "Parry",
+            "Stab",
+            "Slash",
+			"Lunge"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 1,
+        "guard": 1,
+        "guardHeight": 1,
+        "gripType": 0,
+        "description": "A sword stance that allows a variety of quick changes",
+        "transitions": [
+            {
+                "key": "1H",
+                "Cost": 1
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Swordsman",
+                "cost": 1
+            },
+            {
+                "Key": "Gladiator",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Fencer",
+        "classKey": "Stance",
+        "name": "Duelist",
+        "level": 2,
+        "attacks": [
+            "Parry",
+            "Stab",
+            "Slash",
+			"Lunge"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 1,
+        "guard": 1,
+        "guardHeight": 1,
+        "gripType": 1,
+        "description": "An advanced sword stance that allows a variety of quick changes",
+        "transitions": [
+            {
+                "key": "1H",
+                "Cost": 1
+            },
+            {
+                "key": "Fools Guard",
+                "Cost": 1
+            },
+            {
+                "key": "Swordsman",
+                "cost": 1
+            },
+            {
+                "Key": "Gladiator",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Fools Guard",
+        "classKey": "Stance",
+        "name": "Fools Guard",
+        "level": 1,
+        "attacks": [
+            "Upswing",
 			"Parry",
-			"Rout",
-			"Repel",
-			"Far Thrust"
-		],
-		"mainHandWeaponTypes": [
-			9
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"guard": 1,
-		"speed": 1,
-		"guardHeight": 1,
-		"gripType": 1,
-		"description": "Fight defensively with a hafted weapon in both hands",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 2
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 2
-			},
-			{
-				"key": "Hafting",
-				"Cost": 2
-			},
-			{
-				"key": "High Guard",
-				"Cost": 2
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Dueling",
-		"classKey": "Stance",
-		"name": "Dueling",
-		"level": 1,
-		"attacks": [
-			"Parry",
-			"Thrust",
-			"Slash"
-		],
-		"mainHandWeaponTypes": [
-			0,
-			3
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"speed": 2,
-		"guardHeight": 1,
-		"gripType": 1,
-		"description": "A sword stance that allows a variety of quick changes",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 1
-			},
-			{
-				"key": "Basic 1H",
-				"Cost": 1
-			},
-			{
-				"key": "Fools Guard",
-				"Cost": 1
-			},
-			{
-				"key": "Basic 2H",
-				"Cost": 1
-			},
-			{
-				"key": "High Guard",
-				"Cost": 1
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Fools Guard",
-		"classKey": "Stance",
-		"name": "Fools Guard",
-		"level": 1,
-		"attacks": [
-			"Strike",
-			"Parry",
-			"Upswing",
-			"Slice",
-			"Chop"
-		],
-		"mainHandWeaponTypes": [],
-		"offHandWeaponTypes": [
-			4
-		],
-		"speed": 3,
-		"guard": -1,
-		"power": -1,
-		"guardHeight": 2,
-		"gripType": 1,
-		"description": "Keep your weapon low to appear open to an attack.",
-		"transitions": [
-			{
-				"key": "Basic 2H",
-				"Cost": 1
-			},
-			{
-				"key": "Dueling",
-				"Cost": 1
-			},
-			{
-				"key": "Repelling",
-				"Cost": 1
-			},
-			{
-				"key": "Basic 1H",
-				"Cost": 1
-			},
-			{
-				"key": "Hafting",
-				"Cost": 1
-			}
-		],
-		"tags": [],
-		"canLevelUp": false
-	},
-	{
-		"key": "Rat Aggro",
-		"classKey": "Stance",
-		"name": "Rat Aggro",
-		"level": 1,
-		"attacks": [
-			"Scratch"
-		],
-		"mainHandWeaponTypes": [
-			4
-		],
-		"offHandWeaponTypes": [
-			4
-		],
-		"guardHeight": 0,
-		"gripType": 0,
-		"description": "Ready to pounce!",
-		"tags": [
-			6
-		],
-		"canLevelUp": false
-	}
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 4,
+        "guard": -1,
+        "power": -1,
+        "guardHeight": 2,
+        "gripType": 1,
+        "description": "Keep your weapon low to appear open to an attack.",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 1
+            },
+            {
+                "key": "1H",
+                "Cost": 1
+            },
+            {
+                "key": "Duelist",
+                "Cost": 1
+            },
+            {
+                "key": "Defensive",
+                "Cost": 1
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Archery",
+        "classKey": "Stance",
+        "name": "Basic Archery",
+        "level": 0,
+        "attacks": [
+            "Shoot"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "guard": -1,
+        "power": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Basic stance for fighting with a bow",
+        "transitions": [],
+        "canLevelUp": true
+    },
+    {
+        "key": "Archery",
+        "classKey": "Stance",
+        "name": "Archery",
+        "level": 1,
+        "attacks": [
+            "Shoot",
+            "Power Shot"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Intermediate stance for fighting with a bow",
+        "transitions": [
+            {
+                "key": "Scout",
+                "Cost": 1
+            },
+            {
+                "key": "Marksman",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Archery",
+        "classKey": "Stance",
+        "name": "Advanced Archery",
+        "level": 2,
+        "attacks": [
+            "Shoot",
+            "Power Shot"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "guard": 2,
+        "power": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a bow",
+        "transitions": [
+            {
+                "key": "Scout",
+                "Cost": 1
+            },
+            {
+                "key": "Marksman",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Scout",
+        "classKey": "Stance",
+        "name": "Scout",
+        "level": 1,
+        "attacks": [
+            "Quick Shot",
+            "Arrow Jab"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": -1,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fast and mobile stance for fighting with a bow ",
+        "transitions": [
+            {
+                "key": "Archery",
+                "Cost": 1
+            },
+            {
+                "key": "Marksman",
+                "cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Scout",
+        "classKey": "Stance",
+        "name": "Ranger",
+        "level": 2,
+        "attacks": [
+            "Quick Shot",
+            "Arrow Jab"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": -1,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fast and mobile stance for fighting with a bow ",
+        "transitions": [
+            {
+                "key": "Archery",
+                "Cost": 1
+            },
+            {
+                "key": "Marksman",
+                "cost": 1
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Marksman",
+        "classKey": "Stance",
+        "name": "Marksman",
+        "level": 1,
+        "attacks": [
+            "Far Shot",
+            "Power Shot"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 0,
+        "power": 3,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Slow and steady stance for fighting with a bow",
+        "transitions": [
+            {
+                "key": "Archery",
+                "Cost": 1
+            },
+            {
+                "key": "Scout",
+                "cost": 1
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Marksman",
+        "classKey": "Stance",
+        "name": "Sniper",
+        "level": 2,
+        "attacks": [
+            "Far Shot",
+            "Power Jab"
+        ],
+        "mainHandWeaponTypes": [
+            11
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 0,
+        "power": 4,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Slow and steady stance for fighting with a bow",
+        "transitions": [
+            {
+                "key": "Archery",
+                "Cost": 1
+            },
+            {
+                "key": "Scout",
+                "cost": 1
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Knight",
+        "classKey": "Stance",
+        "name": "Knight",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Smack",
+            "Bash"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": -1,
+        "power": 1,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fighting stance with a sword or mace and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Warrior",
+                "Cost": 2
+            },
+            {
+                "Key": "Soldier",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Knight",
+        "classKey": "Stance",
+        "name": "Paladin",
+        "level": 2,
+        "attacks": [
+            "Smite",
+            "Stab",
+            "Slash",
+            "Smack",
+            "Bash"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": -1,
+        "power": 2,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a sword or mace and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Warrior",
+                "Cost": 2
+            },
+            {
+                "Key": "Soldier",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Soldier",
+        "classKey": "Stance",
+        "name": "Soldier",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Bash",
+			"Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 0,
+        "power": 1,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Fight with a spear or sword and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Warrior",
+                "Cost": 2
+            },
+            {
+                "Key": "Knight",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Soldier",
+        "classKey": "Stance",
+        "name": "Spartan",
+        "level": 2,
+        "attacks": [
+            "Shield Bash",
+            "Stab",
+            "Slash",
+            "Bash",
+			"Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": -1,
+        "power": 1,
+        "guard": 3,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a spear or sword and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Warrior",
+                "Cost": 2
+            },
+            {
+                "Key": "Knight",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Warrior",
+        "classKey": "Stance",
+        "name": "Warrior",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Bash",
+            "Shield Grab"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            7
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Wild stance for fighting with an axe or sword and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Soldier",
+                "Cost": 2
+            },
+            {
+                "Key": "Knight",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Warrior",
+        "classKey": "Stance",
+        "name": "Viking",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Bash",
+            "Shield Grab"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            7
+        ],
+        "offHandWeaponTypes": [
+            5
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 3,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced Stance for fighting with an axe and shield",
+        "transitions": [
+            {
+                "Key": "Arm and Shield",
+                "Cost": 2
+            },
+            {
+                "Key": "Soldier",
+                "Cost": 2
+            },
+            {
+                "Key": "Knight",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Rogue",
+        "classKey": "Stance",
+        "name": "Rogue",
+        "level": 1,
+        "attacks": [
+            "Backstab",
+            "Stab",
+            "Slash",
+            "Shiv",
+            "Chop",
+            "Smack",
+			"Throw",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Shiv",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            2,
+            3
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": -1,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A stance for fighting with a dagger and another weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "Gladiator",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Rogue",
+        "classKey": "Stance",
+        "name": "Assassin",
+        "level": 2,
+        "attacks": [
+            "Backstab",
+            "Stab",
+            "Slash",
+            "Shiv",
+            "Chop",
+            "Smack",
+			"Throw",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Shiv",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0
+        ],
+        "offHandWeaponTypes": [
+            2,
+            3
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": 0,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "An advanced stance for fighting with a dagger and another weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "Gladiator",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Corsair",
+        "classKey": "Stance",
+        "name": "Corsair",
+        "level": 1,
+        "attacks": [
+            "Shield Grab",
+            "Chop",
+			"Throw",
+            "Offhand Chop",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Smack",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            7
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A stance for fighting with an axe and another light weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "Rogue",
+                "Cost": 2
+            },
+            {
+                "key": "Axeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Corsair",
+        "classKey": "Stance",
+        "name": "Pirate",
+        "level": 2,
+        "attacks": [
+            "Shield Grab",
+            "Chop",
+			"Throw",
+            "Offhand Chop",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Smack",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            7
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "An advanced stance for fighting with an axe and a light weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "Rogue",
+                "Cost": 2
+            },
+            {
+                "key": "Axeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Gladiator",
+        "classKey": "Stance",
+        "name": "Gladiator",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Shiv",
+            "Offhand Chop",
+            "Offhand Smack",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": 2,
+        "guard": -2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A stance for fighting with a sword and another light weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "Key": "Swordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Rogue",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Gladiator",
+        "classKey": "Stance",
+        "name": "Champion",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Offhand Stab",
+            "Offhand Slash",
+            "Offhand Chop",
+            "Offhand Smack",
+            "Offhand Shiv",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            2
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 2,
+        "power": 3,
+        "guard": -2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "An advanced stance for fighting with a sword and a light weapon",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "Key": "Swordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Rogue",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Raider",
+        "classKey": "Stance",
+        "name": "Raider",
+        "level": 1,
+        "attacks": [
+            "Shield Grab",
+            "Chop",
+			"Throw",
+            "Offhand Chop",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            2,
+            3
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "A stance for fighting with two axes",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Raider",
+        "classKey": "Stance",
+        "name": "Apache",
+        "level": 2,
+        "attacks": [
+            "Shield Grab",
+            "Chop",
+			"Throw",
+            "Offhand Chop",
+			"Offhand Throw"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            3
+        ],
+        "offHandWeaponTypes": [
+            2,
+            3
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "An advanced stance for fighting with two axes",
+        "transitions": [
+            {
+                "Key": "Two Weapon Fighting",
+                "Cost": 2
+            },
+            {
+                "key": "Corsair",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Axeman",
+        "classKey": "Stance",
+        "name": "Axeman",
+        "level": 1,
+        "attacks": [
+            "Shield Grab",
+            "Chop"
+        ],
+        "mainHandWeaponTypes": [
+            7
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Stance for fighting with one axe",
+        "transitions": [
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Two weapon fighting",
+                "cost": 2
+            },
+            {
+                "key": "Corsair",
+                "cost": 2
+            },
+            {
+                "key": "Great axeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Axeman",
+        "classKey": "Stance",
+        "name": "Axe master",
+        "level": 1,
+        "attacks": [
+            "Shield Grab",
+            "Chop"
+        ],
+        "mainHandWeaponTypes": [
+            7
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "An advanced stance for fighting with one axe",
+        "transitions": [
+            {
+                "Key": "1H",
+                "Cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Two weapon fighting",
+                "cost": 2
+            },
+            {
+                "key": "Corsair",
+                "cost": 2
+            },
+            {
+                "key": "Great axeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Swordsman",
+        "classKey": "Stance",
+        "name": "Swordsman",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash"
+        ],
+        "mainHandWeaponTypes": [
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": -1,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Stance for fighting with a sword",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Two Weapon Fighting",
+                "cost": 2
+            },
+            {
+                "key": "Duelist",
+                "cost": 2
+            },
+            {
+                "key": "Gladiator",
+                "cost": 2
+            },
+            {
+                "key": "Greatswordsman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Swordsman",
+        "classKey": "Stance",
+        "name": "Myrmidon",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash"
+        ],
+        "mainHandWeaponTypes": [
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 0,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a sword",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Two Weapon Fighting",
+                "cost": 2
+            },
+            {
+                "key": "Duelist",
+                "cost": 2
+            },
+            {
+                "key": "Gladiator",
+                "cost": 2
+            },
+            {
+                "key": "Greatswordsman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Spearman",
+        "classKey": "Stance",
+        "name": "Spearman",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Rout"
+        ],
+        "mainHandWeaponTypes": [
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 0,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Stance for fighting with a spear",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Guard",
+                "cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "cost": 2
+            },
+            {
+                "key": "Pikeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Spearman",
+        "classKey": "Stance",
+        "name": "Spearmaster",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Rout"
+        ],
+        "mainHandWeaponTypes": [
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 1,
+        "power": 1,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a spear",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Guard",
+                "cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "cost": 2
+            },
+            {
+                "key": "Pikeman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Guard",
+        "classKey": "Stance",
+        "name": "Guard",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Repel"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 0,
+        "power": 0,
+        "guard": 2,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Defensive spear stance",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "Spearman",
+                "cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Guard",
+        "classKey": "Stance",
+        "name": "Sentry",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Repel"
+        ],
+        "mainHandWeaponTypes": [
+            0,
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": 0,
+        "power": 0,
+        "guard": 3,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced defensive spear stance",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "Spearman",
+                "cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Macer",
+        "classKey": "Stance",
+        "name": "Macer",
+        "level": 1,
+        "attacks": [
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            10
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": -1,
+        "power": 2,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Stance for fighting with a mace",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Macer",
+        "classKey": "Stance",
+        "name": "Mace bearer",
+        "level": 2,
+        "attacks": [
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            10
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "bothRequirementsNeeded": true,
+        "speed": -1,
+        "power": 3,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 0,
+        "description": "Advanced stance for fighting with a mace",
+        "transitions": [
+            {
+                "key": "1H",
+                "cost": 2
+            },
+            {
+                "key": "2H",
+                "cost": 2
+            },
+            {
+                "key": "Hammerman",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Berserker",
+        "classKey": "Stance",
+        "name": "Berserker",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Chop",
+            "Smack",
+            "Cleave",
+            "Power Attack"
+        ],
+        "mainHandWeaponTypes": [
+            1
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "power": 4,
+        "guard": -2,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "A ferocious stance for fighting with a two handed weapon",
+        "transitions": [
+            {
+                "key": "Greatswordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Great axeman",
+                "Cost": 2
+            },
+            {
+                "key": "Pikeman",
+                "Cost": 2
+            },
+            {
+                "key": "Hammerman",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Hammerman",
+        "classKey": "Stance",
+        "name": "Hammerman",
+        "level": 1,
+        "attacks": [
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            10
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 0,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Stance for fighting with a heavy mace",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Macer",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Hammerman",
+        "classKey": "Stance",
+        "name": "Hammer Master",
+        "level": 2,
+        "attacks": [
+            "Smack"
+        ],
+        "mainHandWeaponTypes": [
+            10
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 0,
+        "power": 3,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "An advanced stance for fighting with a heavy mace",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Macer",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Greatswordsman",
+        "classKey": "Stance",
+        "name": "Greatswordsman",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash"
+        ],
+        "mainHandWeaponTypes": [
+            1,
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 1,
+        "power": 0,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Stance for fighting with a heavy sword",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Swordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Berserker",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Greatswordsman",
+        "classKey": "Stance",
+        "name": "Landsknetch",
+        "level": 2,
+        "attacks": [
+            "Stab",
+            "Slash"
+        ],
+        "mainHandWeaponTypes": [
+            1,
+            3
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 1,
+        "power": 1,
+        "guard": 1,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "An advanced stance for fighting with a heavy sword",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Swordsman",
+                "Cost": 2
+            },
+            {
+                "key": "Berserker",
+                "cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Great Axeman",
+        "classKey": "Stance",
+        "name": "Great Axeman",
+        "level": 1,
+        "attacks": [
+            "Chop"
+        ],
+        "mainHandWeaponTypes": [
+            1,
+            7
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 1,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Stance for fighting with a heavy mace",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Axeman",
+                "Cost": 2
+            },
+            {
+                "key": "Berserker",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Great Axeman",
+        "classKey": "Stance",
+        "name": "Great Axe Master",
+        "level": 2,
+        "attacks": [
+            "Chop"
+        ],
+        "mainHandWeaponTypes": [
+            1,
+            7
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 2,
+        "power": 2,
+        "guard": -1,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Advanced stance for fighting with a heavy axe",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Axeman",
+                "Cost": 2
+            },
+            {
+                "key": "Berserker",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    },
+    {
+        "key": "Pikeman",
+        "classKey": "Stance",
+        "name": "Pikeman",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Thrust"
+        ],
+        "mainHandWeaponTypes": [
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 0,
+        "power": 3,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Stance for fighting with a heavy mace",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Spearman",
+                "Cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": true
+    },
+    {
+        "key": "Pikeman",
+        "classKey": "Stance",
+        "name": "Pike Master",
+        "level": 1,
+        "attacks": [
+            "Stab",
+            "Slash",
+            "Thrust"
+        ],
+        "mainHandWeaponTypes": [
+            8,
+            9
+        ],
+        "offHandWeaponTypes": [
+            4
+        ],
+        "speed": 0,
+        "power": 2,
+        "guard": 0,
+        "guardHeight": 0,
+        "gripType": 1,
+        "description": "Stance for fighting with a heavy mace",
+        "transitions": [
+            {
+                "key": "2H",
+                "Cost": 2
+            },
+            {
+                "key": "Spearman",
+                "Cost": 2
+            },
+            {
+                "key": "Quarterstaffing",
+                "Cost": 2
+            }
+        ],
+        "canLevelUp": false
+    }
 ]

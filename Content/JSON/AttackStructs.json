@@ -1,677 +1,1148 @@
-[{
-  "key":"Default Attack",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "speed": 0,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 0,
-  "bothRequirementsNeeded":false,
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "Default Attack",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Punch",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "maxRange": 1,
-  "speed": 5,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 1,
-  "mainHandRequirements":[4],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A smack with a curled fist",
-  "advantageTags": [0,1],
-  "statusAppliedOnVitalHit": "Sprain",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Left Jab",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "maxRange":1,
-  "speed": 5,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 1,
-  "mainHandRequirements":[],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":2,
-  "description": "A quick smack with ol' lefty",
-  "advantageTags": [0,1],
-  "heightAdvantage": [0],
-  "heightDisadvantage":[0],
-  "weaponTypeAdvantage":[0],
-  "possibleTriggerConditions":[0],
-  "statusAppliedOnVitalHit": "Sprain",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Ultimate Punch!",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "maxRange":1,
-  "speed": 4,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 2,
-  "mainHandRequirements":[4],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "Punch with both fists and one foot",
-  "advantageTags": [0,1],
-  "heightAdvantage": [0],
-  "heightDisadvantage":[0],
-  "weaponTypeAdvantage":[0],
-  "possibleTriggerConditions":[1],
-  "statusAppliedOnVitalHit": "Sprain",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Stab",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "maxRange":1,
-  "speed": 4,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 2,
-  "mainHandRequirements":[8],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A quick forward attack to test defences and wear down an opponent",
-  "disadvantageTags": [6],
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Offhand Stab",
-  "classKey":"Attack",
-  "initiativeCost":2,
-  "speed": 3,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 1,
-  "mainHandRequirements":[],
-  "offHandRequirements":[8],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A quick forward attack to test defences and wear down an opponent",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Thrust",
-  "initiativeCost":3,
-  "speed": 3,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 4,
-  "mainHandRequirements":[8],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "A mighty thrust using both hands",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Far Thrust",
-  "minRange":2,
-  "maxRange":2,
-  "initiativeCost": 3,
-  "speed": 3,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 3,
-  "mainHandRequirements":[9],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "A powerful thrust with a hafted weapon. Cannot be used in close quarters",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Scratch",
-  "initiativeCost":2,
-  "speed": 10,
-  "armorPenetration": 0,
-  "vitalityDamage": 1,
-  "power": 0,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A weak attack with a claw",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{"key":"Arcane Blast",
-  "maxRange":3,
-  "initiativeCost":2,
-  "manaCost":1.0,
-  "speed": 5,
-  "armorPenetration": 5,
-  "vitalityDamage": 0,
-  "power": 4,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A weak burst of arcane energy",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Heal",
-  "classKey":"Heal",
-  "initiativeCost":2,
-  "manaCost":2.0,
-  "speed": 0,
-  "armorPenetration": 0,
-  "vitalityDamage": -1,
-  "power": 0,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "Channel a small amount of positive energy to heal wounds",
-  "allowedCharacterTypesToTarget": [0, 1]
-},
-{
-  "key":"Refresh",
-  "classKey":"Heal",
-  "initiativeCost":2,
-  "manaCost":1.0,
-  "speed": 0,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 5,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "Channel a small amount of positive energy to refresh stamina",
-  "allowedCharacterTypesToTarget": [0, 1]
-},
-{
-  "key":"Quick Attack",
-  "initiativeCost":1,
-  "speed": 5,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 1,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A quick but weaker attack",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Power Attack",
-  "initiativeCost":3,
-  "speed": 1,
-  "armorPenetration": 2,
-  "vitalityDamage": 2,
-  "power": 5,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A slow but powerful attack",
-  "stanceChange":"Vulnerable",
-  "statusAppliedOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Bash",
-  "initiativeCost":3,
-  "speed": 1,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 4,
-  "mainHandRequirements":[],
-  "offHandRequirements":[5],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":2,
-  "description": "A smack with a heavy shield",
-  "advantageTags": [6],
-  "statusAppliedOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Chop",
-  "initiativeCost":2,
-  "speed": 1,
-  "armorPenetration": 3,
-  "vitalityDamage": 1,
-  "power": 3,
-  "mainHandRequirements":[7],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "A powerful downward chop",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Offhand Chop",
-  "initiativeCost":2,
-  "speed": 1,
-  "armorPenetration": 2,
-  "vitalityDamage": 1,
-  "power": 2,
-  "mainHandRequirements":[],
-  "offHandRequirements":[7],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":0,
-  "wieldType":2,
-  "description": "A quick chop using your off hand",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Shield Grab",
-  "classKey":"Shield Grab",
-  "initiativeCost":2,
-  "speed": 3,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 0,
-  "mainHandRequirements":[7],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded": false,
-  "targetTypes":[0,1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Use your axe to pull away a targets shield",
-  "weaponTypeAdvantage":[5],
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Shiv",
-  "initiativeCost":2,
-  "speed": 5,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 1,
-  "mainHandRequirements":[2,8],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "A quick stab that tries to find chinks in armor",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Offhand Shiv",
-  "initiativeCost":2,
-  "speed": 5,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 0,
-  "mainHandRequirements":[],
-  "offHandRequirements":[2,8],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":2,
-  "description": "A quick stab that tries to find chinks in armor",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Twin Strike",
-  "minTargets":2,
-  "maxTargets":2,
-  "initiativeCost":3,
-  "speed": 2,
-  "armorPenetration": 2,
-  "vitalityDamage": 1,
-  "power": 4,
-  "mainHandRequirements":[0],
-  "offHandRequirements":[2],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Strike with both your weapons!",
-  "statusOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Double Slice",
-  "minTargets":2,
-  "maxTargets":2,
-  "initiativeCost":3,
-  "speed": 3,
-  "armorPenetration": 0,
-  "vitalityDamage": 2,
-  "power": 4,
-  "mainHandRequirements":[3],
-  "offHandRequirements":[3],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Strike with both your bladed weapons!",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Repel",
-  "maxRange":2,
-  "minRange":2,
-  "initiativeCost":2,
-  "speed": 3,
-  "armorPenetration": 1,
-  "vitalityDamage": 0,
-  "power": 1,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Use your weapon to keep a foe at bay",
-  "possibleTriggerConditions":[0],
-  "allowedCharacterTypesToTarget": [2]
-  
-},
-{
-  "key":"Parry",
-  "initiativeCost":2,
-  "speed": 4,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 2,
-  "mainHandRequirements":[3,9],
-  "offHandRequirements":[3,9],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Attack an enemy who is attacking you",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Rout",
-  "minRange":2,
-  "maxRange":2,
-  "initiativeCost":2,
-  "speed": 3,
-  "armorPenetration": 2,
-  "vitalityDamage": 0,
-  "power": 2,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Attack a retreating enemy",
-  "possibleTriggerConditions":[2],
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Pummel",
-  "initiativeCost":2,
-  "speed": 2,
-  "armorPenetration": 4,
-  "vitalityDamage": 0,
-  "power": 4,
-  "mainHandRequirements":[10],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Smack your target with a blunt weapon",
-  "statusAppliedOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Offhand Pummel",
-  "initiativeCost":2,
-  "speed": 2,
-  "armorPenetration": 4,
-  "vitalityDamage": 0,
-  "power": 3,
-  "mainHandRequirements":[],
-  "offHandRequirements":[10],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "widgetKey":"",
-  "attackHeight":0,
-  "wieldType":1,
-  "description": "Smack your target with a blunt weapon",
-  "statusAppliedOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Slash",
-  "initiativeCost":3,
-  "speed": 2,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 5,
-  "mainHandRequirements":[3],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "widgetKey":"",
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A slower but more powerful attack with a bladed weapon used to finish an enemy off",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Strike",
-  "maxRange": 2,
-  "minRange": 1,
-  "initiativeCost":2,
-  "speed": 3,
-  "armorPenetration": 1,
-  "vitalityDamage": 0,
-  "power": 3,
-  "mainHandRequirements":[9],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "Slam your target with a hafted weapon",
-  "statusAppliedOnVitalHit": "Sprain",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Quick Strike",
-  "initiativeCost":1,
-  "speed": 5,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 3,
-  "mainHandRequirements":[9],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A quick strike with either end of a hafted weapon",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Crush",
-  "initiativeCost":2,
-  "speed": 0,
-  "armorPenetration": 5,
-  "vitalityDamage": 1,
-  "power": 6,
-  "mainHandRequirements":[10],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A powerful attack with a blunt weapon",
-  "statusAppliedOnVitalHit": "Fracture",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Slice",
-  "initiativeCost":2,
-  "speed": 0,
-  "armorPenetration": 0,
-  "vitalityDamage": 1,
-  "power": 3,
-  "mainHandRequirements":[3],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A full sword swing",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Offhand Slice",
-  "initiativeCost":2,
-  "speed": 4,
-  "armorPenetration": 0,
-  "vitalityDamage": 1,
-  "power": 1,
-  "mainHandRequirements":[],
-  "offHandRequirements":[3],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":1,
-  "description": "A quick cut with your offhand",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Cleave",
-  "classKey":"Cleave",
-  "minTargets":1,
-  "maxTargets":2,
-  "initiativeCost":3,
-  "speed": 3,
-  "armorPenetration": 0,
-  "vitalityDamage": 1,
-  "power": 4,
-  "mainHandRequirements":[0,3],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "A mighty Slash that can target multiple enemies",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Upswing",
-  "initiativeCost":2,
-  "speed": 4,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 2,
-  "mainHandRequirements":[],
-  "offHandRequirements":[4],
-  "bothRequirementsNeeded":true,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "Swing upwards to change your fighting stance",
-  "stanceChange":"Basic 1H",
-  "possibleTriggerConditions":[1],
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Inflict Poison",
-  "classKey":"Inflict Poison",
-  "minTargets":2,
-  "maxTargets":2,
-  "minRange":1,
-  "maxRange": 3,
-  "initiativeCost":3,
-  "manaCost":3.0,
-  "speed": 5,
-  "armorPenetration": 0,
-  "vitalityDamage": 0,
-  "power": 0,
-  "mainHandRequirements":[],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "Give a target the poisoned status",
-  "allowedCharacterTypesToTarget": [2]
-},
-{
-  "key":"Fire",
-  "minRange":1,
-  "maxRange": 6,
-  "initiativeCost":3,
-  "speed": 5,
-  "armorPenetration": 1,
-  "vitalityDamage": 1,
-  "power": 5,
-  "mainHandRequirements":[12],
-  "offHandRequirements":[],
-  "bothRequirementsNeeded":false,
-  "targetTypes":[0,1],
-  "attackHeight":1,
-  "wieldType":0,
-  "description": "Launch a projectile at your opponent",
-  "statusAppliedOnVitalHit": "Bleeding",
-  "allowedCharacterTypesToTarget": [2]
-}
+[
+	{
+		"key": "Default Attack",
+		"classKey": "Attack",
+		"initiativeCost": 2,
+		"speed": 0,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 0,
+		"bothRequirementsNeeded": false,
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Default Attack",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Punch",
+		"classKey": "Attack",
+		"initiativeCost": 2,
+		"maxRange": 1,
+		"speed": 5,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 1,
+		"mainHandRequirements": [
+			4
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Hit your foe with a curled fist",
+		"advantageTags": [
+			0,
+			1
+		],
+		"statusAppliedOnVitalHit": "Sprain",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand punch",
+		"classKey": "Attack",
+		"initiativeCost": 1,
+		"maxRange": 1,
+		"speed": 5,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "Hit your foe with your off hand",
+		"advantageTags": [
+			0,
+			1
+		],
+		"heightAdvantage": [
+			0
+		],
+		"heightDisadvantage": [
+			0
+		],
+		"weaponTypeAdvantage": [
+			0
+		],
+		"possibleTriggerConditions": [
+			0
+		],
+		"statusAppliedOnVitalHit": "Sprain",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Ultimate Punch",
+		"classKey": "Attack",
+		"initiativeCost": 3,
+		"maxRange": 1,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 2,
+		"mainHandRequirements": [
+			4
+		],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Punch with both fists and one foot",
+		"advantageTags": [
+			0,
+			1
+		],
+		"heightAdvantage": [
+			0
+		],
+		"heightDisadvantage": [
+			0
+		],
+		"weaponTypeAdvantage": [
+			0
+		],
+		"possibleTriggerConditions": [
+			1
+		],
+		"statusAppliedOnVitalHit": "Sprain",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Stab",
+		"classKey": "Attack",
+		"initiativeCost": 2,
+		"maxRange": 1,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 2,
+		"mainHandRequirements": [
+			8
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "A quick forward attack to test defences and wear down an opponent",
+		"disadvantageTags": [
+			6
+		],
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Stab",
+		"classKey": "Attack",
+		"initiativeCost": 1,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 1,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			8
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "A quick forward attack to test defences and wear down an opponent using your offhand weapon",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Thrust",
+		"initiativeCost": 3,
+		"speed": 2,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 4,
+		"mainHandRequirements": [
+			8
+		],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "A mighty thrust using both hands",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Far Stab",
+		"minRange": 2,
+		"maxRange": 2,
+		"initiativeCost": 2,
+		"speed": 3,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			9
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "A quick attack with a hafted weapon. Cannot be used in close quarters",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Scratch",
+		"initiativeCost": 2,
+		"speed": 5,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "A weak attack with a claw",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Arcane Blast",
+		"maxRange": 3,
+		"initiativeCost": 2,
+		"manaCost": 1.0,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 4,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "A weak burst of arcane energy",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Heal",
+		"classKey": "Heal",
+		"initiativeCost": 2,
+		"manaCost": 2.0,
+		"speed": 0,
+		"armorPenetration": 0,
+		"vitalityDamage": -1,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Channel a small amount of positive energy to heal wounds",
+		"allowedCharacterTypesToTarget": [
+			0,
+			1
+		]
+	},
+	{
+		"key": "Refresh",
+		"classKey": "Heal",
+		"initiativeCost": 2,
+		"manaCost": 1.0,
+		"speed": 0,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 5,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Channel a small amount of positive energy to refresh stamina",
+		"allowedCharacterTypesToTarget": [
+			0,
+			1
+		]
+	},
+	{
+		"key": "Power Attack",
+		"initiativeCost": 3,
+		"speed": 1,
+		"armorPenetration": 2,
+		"vitalityDamage": 2,
+		"power": 4,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "A slow but powerful attack",
+		"stanceChange": "Vulnerable",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Bash",
+		"initiativeCost": 3,
+		"speed": 1,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 4,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			5
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "A smack with a heavy shield",
+		"advantageTags": [
+			6
+		],
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Chop",
+		"initiativeCost": 2,
+		"speed": 1,
+		"armorPenetration": 2,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			7
+		],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "A powerful downward chop",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Chop",
+		"initiativeCost": 1,
+		"speed": 1,
+		"armorPenetration": 2,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			7
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 2,
+		"description": "A quick chop using your off hand",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Shield Grab",
+		"classKey": "Shield Grab",
+		"initiativeCost": 2,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 1,
+		"mainHandRequirements": [
+			7
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Use your axe to pull away a targets shield",
+		"weaponTypeAdvantage": [
+			5
+		],
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Shiv",
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 0,
+		"mainHandRequirements": [
+			2,
+			8
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "A quick stab that tries to find chinks in armor",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Shiv",
+		"initiativeCost": 1,
+		"speed": 4,
+		"armorPenetration": 1,
+		"vitalityDamage": 0,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			2,
+			8
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 2,
+		"description": "A quick stab that tries to find chinks in armor",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Twin Attack",
+		"minTargets": 2,
+		"maxTargets": 2,
+		"initiativeCost": 3,
+		"speed": 3,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [
+			0
+		],
+		"offHandRequirements": [
+			2
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Attack with both your weapons!",
+		"statusOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Double Slash",
+		"minTargets": 2,
+		"maxTargets": 2,
+		"initiativeCost": 3,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 2,
+		"power": 1,
+		"mainHandRequirements": [
+			3
+		],
+		"offHandRequirements": [
+			3
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Strike with both your bladed weapons!",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Repel",
+		"maxRange": 2,
+		"minRange": 2,
+		"initiativeCost": 1,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Use your weapon to keep a foe at bay",
+		"possibleTriggerConditions": [
+			0
+		],
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Parry",
+		"initiativeCost": 1,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 1,
+		"mainHandRequirements": [
+			3,
+			9
+		],
+		"offHandRequirements": [
+			3,
+			9
+		],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Attack an enemy who is attacking you",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Rout",
+		"minRange": 2,
+		"maxRange": 2,
+		"initiativeCost": 1,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Attack a retreating enemy",
+		"possibleTriggerConditions": [
+			2
+		],
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Smack",
+		"initiativeCost": 2,
+		"speed": 1,
+		"armorPenetration": 3,
+		"vitalityDamage": 0,
+		"power": 4,
+		"mainHandRequirements": [
+			10
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 0,
+		"wieldType": 1,
+		"description": "Smack your target with a blunt weapon",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Smack",
+		"initiativeCost": 1,
+		"speed": 1,
+		"armorPenetration": 3,
+		"vitalityDamage": 0,
+		"power": 3,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			10
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"widgetKey": "",
+		"attackHeight": 0,
+		"wieldType": 2,
+		"description": "Smack your target with a blunt weapon",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Strike",
+		"maxRange": 2,
+		"minRange": 1,
+		"initiativeCost": 2,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 3,
+		"mainHandRequirements": [
+			9
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Slam your target with a hafted weapon",
+		"statusAppliedOnVitalHit": "Sprain",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Slash",
+		"initiativeCost": 2,
+		"speed": 2,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			3
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "A full sword swing",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Slash",
+		"initiativeCost": 1,
+		"speed": 2,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			3
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "A quick cut with your offhand",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Cleave",
+		"classKey": "Cleave",
+		"minTargets": 1,
+		"maxTargets": 2,
+		"initiativeCost": 3,
+		"speed": 2,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 3,
+		"mainHandRequirements": [
+			0,
+			3
+		],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "A mighty Slash that can target multiple enemies",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Upswing",
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 2,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			4
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Swing upwards to change your fighting stance",
+		"stanceChange": "Defensive",
+		"possibleTriggerConditions": [
+			1
+		],
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Inflict Poison",
+		"classKey": "Inflict Poison",
+		"minTargets": 1,
+		"maxTargets": 1,
+		"minRange": 1,
+		"maxRange": 3,
+		"initiativeCost": 3,
+		"manaCost": 3.0,
+		"speed": 5,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Give a target the poisoned status",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Shoot",
+		"minRange": 2,
+		"maxRange": 6,
+		"initiativeCost": 3,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Launch a projectile at your opponent",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Quick Shot",
+		"minRange": 1,
+		"maxRange": 3,
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Quick but less powerful bow shot",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Far Shot",
+		"minRange": 3,
+		"maxRange": 10,
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Launch a projectile at your opponent at range",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Power Shot",
+		"minRange": 2,
+		"maxRange": 6,
+		"initiativeCost": 3,
+		"speed": 3,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 3,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": false,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Launch a projectile at your opponent",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Arrow Jab",
+		"minRange": 1,
+		"maxRange": 1,
+		"initiativeCost": 3,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 0,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Stab a foe with an arrow",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Backstab",
+		"classKey": "Backstab",
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 1,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [
+			8
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Stab at your opponent, does extra damage if you are behind them",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Lunge",
+		"classKey": "Lunge",
+		"minRange": 2,
+		"maxRange": 2,
+		"initiativeCost": 2,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 2,
+		"mainHandRequirements": [
+			8
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Step forward one space and attack your opponent",
+		"statusAppliedOnVitalHit": "Bleeding",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Smite",
+		"initiativeCost": 3,
+		"speed": 1,
+		"armorPenetration": 2,
+		"vitalityDamage": 1,
+		"power": 4,
+		"mainHandRequirements": [
+			10
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "A huge blow with a blunt weapon",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Shield Slam",
+		"initiativeCost": 3,
+		"speed": 1,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 7,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			5
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "Slam into your foe with a shield",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Throw",
+		"classKey": "Throw",
+		"minRange": 2,
+		"maxRange": 4,
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [
+			12
+		],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 1,
+		"description": "Throw your main weapon at a foe",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Offhand Throw",
+		"classKey": "Throw",
+		"minRange": 2,
+		"maxRange": 4,
+		"initiativeCost": 2,
+		"speed": 4,
+		"armorPenetration": 0,
+		"vitalityDamage": 1,
+		"power": 1,
+		"mainHandRequirements": [],
+		"offHandRequirements": [
+			12
+		],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 2,
+		"description": "Throw your offhand weapon at your foe",
+		"statusAppliedOnVitalHit": "Fracture",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	},
+	{
+		"key": "Shove",
+		"classKey": "Shove",
+		"initiativeCost": 3,
+		"speed": 3,
+		"armorPenetration": 0,
+		"vitalityDamage": 0,
+		"power": 0,
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
+		"bothRequirementsNeeded": true,
+		"targetTypes": [
+			0,
+			1
+		],
+		"attackHeight": 1,
+		"wieldType": 0,
+		"description": "Push an enemy backwards",
+		"allowedCharacterTypesToTarget": [
+			2
+		]
+	}
 ]

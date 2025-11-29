@@ -1,18 +1,930 @@
-[{
-	"key":"Inflict Poison Scroll",
-	"description": "A scroll that contains the spell inflict poison",
-	"Actions":[{"action":"drop","cost":0},
-			   {"action":"examine","cost":0},
-			   {"action":"pickup","cost":1},
-			   {"action":"read", "cost":3},
-			   {"action":"cast", "cost":5},
-			   {"action":"buy", "cost":1},
-			   {"action":"sell", "cost":1}
-	],
-	"spritePath": "Scrolls/Inflict_Poison_Scroll_Sprite",
-	"iconPath":"Scrolls/Scroll_Icon",
-	"weight": 2.0,
-	"value": 20,
-	"type": 2,
-	"lessonKey": "Inflict Poison"
-}]
+[
+	{
+		"key": "Inflict Poison Scroll",
+		"description": "A scroll that contains the spell inflict poison",
+		"Actions": [
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "cast",
+				"cost": 5
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Inflict_Poison_Scroll_Sprite",
+		"iconPath": "Scrolls/Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Inflict Poison"
+	},
+	{
+		"key": "Defensive Scroll",
+		"description": "A scroll that teaches you a defensive stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Defensive",
+		"type": 1
+	},
+	{
+		"key": "Power Scroll",
+		"description": "A scroll that teaches you a power stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Power",
+		"type": 1
+	},
+	{
+		"key": "Quarterstaffing Scroll",
+		"description": "A scroll that teaches you quarterstaffing",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Defensive",
+		"type": 1
+	},
+	{
+		"key": "Duelist Scroll",
+		"description": "A scroll that teaches you the duelist stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Duelist",
+		"type": 1
+	},
+	{
+		"key": "Fools Guard Scroll",
+		"description": "A scroll that teaches you to use the fools guard stance",
+		"Actions": [	
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Fools Guard",
+		"type": 1
+	},
+	{
+		"key": "Scout Scroll",
+		"description": "A scroll that teaches you use the scout stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Scout",
+		"type": 1
+	},
+	{
+		"key": "Marksman Scroll",
+		"description": "A scroll that teaches you the marksman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Marksman",
+		"type": 1
+	},
+	{
+		"key": "Knight scroll",
+		"description": "A scroll that teaches you the knight stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Knight",
+		"type": 1
+	},
+	{
+		"key": "Soldier scroll",
+		"description": "A scroll that teaches you soldier stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Soldier",
+		"type": 1
+	},
+	{
+		"key": "Warrior Scroll",
+		"description": "A scroll that teaches you the warrior stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Warrior",
+		"type": 1
+	},
+	{
+		"key": "Rogue Scroll",
+		"description": "A scroll that teaches you rogue stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Rogue",
+		"type": 1
+	},
+	{
+		"key": "Corsair Scroll",
+		"description": "A scroll that teaches you the corsair stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Corsair",
+		"type": 1
+	},
+	{
+		"key": "Gladiator scroll",
+		"description": "A scroll that teaches you the gladiator stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Gladiator",
+		"type": 1
+	},
+	{
+		"key": "Raider scroll",
+		"description": "A scroll that teaches you raider stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Raider",
+		"type": 1
+	},
+	{
+		"key": "Axeman scroll",
+		"description": "A scroll that teaches you the axeman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Axeman",
+		"type": 1
+	},
+	{
+		"key": "Swordsman Scroll",
+		"description": "A scroll that teaches you the swordsman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Swordsman",
+		"type": 1
+	},
+	{
+		"key": "Spearman Scroll",
+		"description": "A scroll that teaches you the spearman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Spearman",
+		"type": 1
+	},
+	{
+		"key": "Guard Scroll",
+		"description": "A scroll that teaches you the guard stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Guard",
+		"type": 1
+	},
+	{
+		"key": "Macer Scroll",
+		"description": "A scroll that teaches you the macer stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Macer",
+		"type": 1
+	},
+	{
+		"key": "Berserker Scroll",
+		"description": "A scroll that teaches you berserker stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Berserker",
+		"type": 1
+	},
+	{
+		"key": "Hammerman Scroll",
+		"description": "A scroll that teaches you the hammerman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Hammerman",
+		"type": 1
+	},
+	{
+		"key": "Greatswordsman Scroll",
+		"description": "A scroll that teaches you the greatswordsman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Greatswordsman",
+		"type": 1
+	},
+	{
+		"key": "Great Axeman Scroll",
+		"description": "A scroll that teaches you the great axeman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Great axeman",
+		"type": 1
+	},
+	{
+		"key": "Pikeman Scroll",
+		"description": "A scroll that teaches you the pikeman stance",
+		"Actions": [
+			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
+				"action": "drop",
+				"cost": 0
+			},
+			{
+				"action": "examine",
+				"cost": 0
+			},
+			{
+				"action": "read",
+				"cost": 3
+			},
+			{
+				"action": "buy",
+				"cost": 1
+			},
+			{
+				"action": "sell",
+				"cost": 1
+			}
+		],
+		"spritePath": "Scrolls/Stance_Scroll_Sprite",
+		"iconPath": "Scrolls/Stance_Scroll_Icon",
+		"weight": 2.0,
+		"value": 20,
+		"type": 2,
+		"lessonKey": "Pikeman",
+		"type": 1
+	}
+]

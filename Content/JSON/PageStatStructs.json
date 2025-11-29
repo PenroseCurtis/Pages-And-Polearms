@@ -14,7 +14,7 @@
 					},
 					"isEquippedToDominantHand": true
 				}
-			]   
+			]
 		},
 		"statBlock": {
 			"vitalityTotal": 3,
@@ -46,28 +46,16 @@
 					"classKey": "Armor"
 				},
 				{
-					"itemKey": "Splint",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Bone Elixir",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Poultice",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Antidote",
-					"classKey": "Consumable"
-				},
-				{
-					"itemKey": "Bandages",
-					"classKey": "Consumable"
-				},
-				{
 					"itemKey": "Full Helm",
 					"classKey": "Armor"
+				},
+				{
+					"itemKey": "Shield",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Dagger",
+					"classKey": "Weapon"
 				}
 			],
 			"gold": 99,
@@ -87,14 +75,50 @@
 			"stamina": 100,
 			"staminaTotal": 100
 		},
-		"attacks": [],
-		"statuses": [
-			"Bleeding",
-			"Fracture",	
-			"Poisoned",
-			"Infected",
-			"Sprain"
+		"stances": [
+			{
+				"key": "1H",
+				"level": 3,
+				"experience": 50
+			},
+			{
+				"key": "2H",
+				"level": 3,
+				"experience": 50
+			},
+			{
+				"key": "Two Weapon Fighting",
+				"level": 3,
+				"experience": 50
+			},
+			{
+				"key": "Arm and Shield",
+				"level": 3,
+				"experience": 50
+			},
+			{
+				"key": "Rogue",
+				"level": 1,
+				"experience": 50
+			},
+			{
+				"key": "Vulnerable",
+				"level": 1,
+				"experience": 0
+			},
+			{
+				"key": "Duelist",
+				"level": 1,
+				"experience": 0
+			},
+			{
+				"key": "Unarmed",
+				"level": 1,
+				"experience": 0
+			}
 		],
+		"attacks": [],
+		"statuses": [],
 		"experience": 0,
 		"statIncreasesAvailable": 0
 	},
@@ -255,7 +279,7 @@
 		"inventoryStruct": {
 			"items": [
 				{
-					"itemKey": "Longsword",
+					"itemKey": "Dagger",
 					"classKey": "Weapon"
 				},
 				{
@@ -263,7 +287,11 @@
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "Shield",
+					"itemKey": "Longsword",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Greatsword",
 					"classKey": "Weapon"
 				},
 				{
@@ -271,11 +299,23 @@
 					"classKey": "Weapon"
 				},
 				{
+					"itemKey": "Heavy Spear",
+					"classKey": "Weapon"
+				},
+				{
 					"itemKey": "Hand Axe",
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "Long Axe",
+					"itemKey": "Battleaxe",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Greataxe",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Pole Axe",
 					"classKey": "Weapon"
 				},
 				{
@@ -283,15 +323,35 @@
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "Dagger",
+					"itemKey": "Mace",
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "Long Axe",
+					"itemKey": "Heavy Mace",
 					"classKey": "Weapon"
 				},
 				{
-					"itemKey": "CrossBow",
+					"itemKey": "Shortbow",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Longbow",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Crossbow",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Shield",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Buckler",
+					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Javelin",
 					"classKey": "Weapon"
 				},
 				{
@@ -485,6 +545,10 @@
 				"cost": 0
 			},
 			{
+				"action": "Trade",
+				"cost": 0
+			},
+			{
 				"action": "Move To",
 				"cost": 0
 			}
@@ -495,8 +559,106 @@
 			"Examine"
 		],
 		"inventoryStruct": {
-			"items": [],
-			"gold": 100
+			"items": [
+				{
+					"itemKey": "Defensive Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Power Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Quarterstaffing Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Duelist Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Fools Guard Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Scout Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Marksman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Knight scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Soldier scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Warrior Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Rogue Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Corsair Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Gladiator Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Raider Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Axeman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Swordsman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Spearman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Guard Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Macer Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Berserker Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Hammerman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Greatswordsman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Great Axeman Scroll",
+					"classKey": "Scroll"
+				},
+				{
+					"itemKey": "Pikeman Scroll",
+					"classKey": "Scroll"
+				},
+			],
+			"gold": 100,
+			"maxInventorySize": 30
 		},
 		"statBlock": {
 			"woundLimit": 15
@@ -506,32 +668,6 @@
 		"key": "Knight",
 		"flipBookKey": "Page",
 		"name": "Knight",
-		"stances": [
-			{
-				"key": "Unarmed",
-				"level": 1
-			},
-			{
-				"key": "Basic 2H",
-				"level": 1
-			},
-			{
-				"key": "Basic 1H",
-				"level": 1
-			},
-			{
-				"key": "Sword and Board",
-				"level": 1
-			},
-			{
-				"key": "Two Weapon Fighting",
-				"level": 1
-			},
-			{
-				"key": "Vulnerable",
-				"level": 1
-			}
-		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -587,37 +723,6 @@
 		"key": "Foot Soldier",
 		"flipBookKey": "Page",
 		"name": "Foot Soldier",
-		"attacks": [
-			"Refresh",
-			"Inflict Poison",
-			"Heal"
-		],
-		"stances": [
-			{
-				"key": "Unarmed",
-				"level": 1
-			},
-			{
-				"key": "Basic 2H",
-				"level": 1
-			},
-			{
-				"key": "Basic 1H",
-				"level": 1
-			},
-			{
-				"key": "Repelling",
-				"level": 1
-			},
-			{
-				"key": "Shield Wall",
-				"level": 1
-			},
-			{
-				"key": "Vulnerable",
-				"level": 1
-			}
-		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -779,6 +884,12 @@
 		"key": "Archer",
 		"flipBookKey": "Page",
 		"name": "Archer",
+		"stances": [
+			{
+				"key": "Archery",
+				"level": 1
+			}
+		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -827,6 +938,20 @@
 		"key": "Hunter",
 		"flipBookKey": "Page",
 		"name": "Hunter",
+		"stances": [
+			{
+				"key": "Archery",
+				"level": 1
+			},
+			{
+				"key": "2H",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
+				"level": 1
+			}
+		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -875,6 +1000,20 @@
 		"key": "CrossBowMan",
 		"flipBookKey": "Page",
 		"name": "Crossbowman",
+		"stances": [
+			{
+				"key": "Archery",
+				"level": 1
+			},
+			{
+				"key": "2H",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
+				"level": 1
+			}
+		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -923,12 +1062,6 @@
 		"key": "Goblin",
 		"flipBookKey": "Goblin",
 		"name": "Goblin",
-		"stances": [
-			{
-				"key": "Basic 1H",
-				"level": 1
-			}
-		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -956,6 +1089,16 @@
 		"key": "Goblin_Archer",
 		"flipBookKey": "Goblin_Warrior",
 		"name": "Goblin Archer",
+		"stances": [
+			{
+				"key": "Archery",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
+				"level": 1
+			}
+		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -1011,33 +1154,7 @@
 		},
 		"statBlock": {
 			"guard": -1
-		},
-		"stances": [
-			{
-				"key": "Unarmed",
-				"level": 1
-			},
-			{
-				"key": "Basic 2H",
-				"level": 1
-			},
-			{
-				"key": "Basic 1H",
-				"level": 1
-			},
-			{
-				"key": "Shield Wall",
-				"level": 1
-			},
-			{
-				"key": "Repelling",
-				"level": 1
-			},
-			{
-				"key": "Vulnerable",
-				"level": 1
-			}
-		]
+		}
 	},
 	{
 		"key": "Goblin_Knight",
@@ -1084,12 +1201,6 @@
 		"key": "Goblin_King",
 		"flipBookKey": "Goblin_King",
 		"name": "Goblin King",
-		"stances": [
-			{
-				"key": "Basic 1H",
-				"level": 1
-			}
-		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -1126,12 +1237,6 @@
 		"flipBookKey": "Bartender",
 		"name": "Bill the Bartender",
 		"dialogKey": "Bartender",
-		"stances": [
-			{
-				"key": "Basic 1H",
-				"level": 1
-			}
-		],
 		"inventoryStruct": {
 			"defaultWeaponKey": "Fist",
 			"maxInventorySize": 12,
@@ -1159,7 +1264,11 @@
 		"dialogKey": "Rick",
 		"stances": [
 			{
-				"key": "Basic 1H",
+				"key": "Archery",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
 				"level": 1
 			}
 		],
@@ -1225,11 +1334,35 @@
 			}
 		],
 		"actionsObjectCanTake": [
-			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
-			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
-			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+			"Target",
+			"Attack",
+			"Change Stance",
+			"View Inventory",
+			"Ready Attack",
+			"Unready Attack",
+			"Examine",
+			"Pass Turn",
+			"Move To",
+			"Pickup",
+			"Drop",
+			"Equip",
+			"Unequip",
+			"Equip To Dominant",
+			"Equip To Off",
+			"Use",
+			"Unlock",
+			"Open",
+			"Close",
+			"Read",
+			"Drink",
+			"Cast",
+			"Grab",
+			"Release",
+			"Buy",
+			"Sell",
+			"Rest",
+			"Heal",
+			"Give"
 		]
 	},
 	{
@@ -1239,7 +1372,15 @@
 		"dialogKey": "Frank",
 		"stances": [
 			{
-				"key": "Basic 1H",
+				"key": "1H",
+				"level": 1
+			},
+			{
+				"key": "Arm and Shield",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
 				"level": 1
 			}
 		],
@@ -1312,11 +1453,35 @@
 			}
 		],
 		"actionsObjectCanTake": [
-			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
-			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
-			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+			"Target",
+			"Attack",
+			"Change Stance",
+			"View Inventory",
+			"Ready Attack",
+			"Unready Attack",
+			"Examine",
+			"Pass Turn",
+			"Move To",
+			"Pickup",
+			"Drop",
+			"Equip",
+			"Unequip",
+			"Equip To Dominant",
+			"Equip To Off",
+			"Use",
+			"Unlock",
+			"Open",
+			"Close",
+			"Read",
+			"Drink",
+			"Cast",
+			"Grab",
+			"Release",
+			"Buy",
+			"Sell",
+			"Rest",
+			"Heal",
+			"Give"
 		]
 	},
 	{
@@ -1326,7 +1491,11 @@
 		"dialogKey": "Clarence",
 		"stances": [
 			{
-				"key": "Basic 1H",
+				"key": "1H",
+				"level": 1
+			},
+			{
+				"key": "Vulnerable",
 				"level": 1
 			}
 		],
@@ -1395,11 +1564,35 @@
 			}
 		],
 		"actionsObjectCanTake": [
-			"Target", "Attack", "Change Stance", "View Inventory", "Ready Attack",
-			"Unready Attack", "Examine", "Pass Turn", "Move To", "Pickup",
-			"Drop", "Equip", "Unequip", "Equip To Dominant", "Equip To Off",
-			"Use", "Unlock", "Open", "Close", "Read", "Drink", "Cast", "Grab",
-			"Release", "Buy", "Sell", "Rest", "Heal", "Give"
+			"Target",
+			"Attack",
+			"Change Stance",
+			"View Inventory",
+			"Ready Attack",
+			"Unready Attack",
+			"Examine",
+			"Pass Turn",
+			"Move To",
+			"Pickup",
+			"Drop",
+			"Equip",
+			"Unequip",
+			"Equip To Dominant",
+			"Equip To Off",
+			"Use",
+			"Unlock",
+			"Open",
+			"Close",
+			"Read",
+			"Drink",
+			"Cast",
+			"Grab",
+			"Release",
+			"Buy",
+			"Sell",
+			"Rest",
+			"Heal",
+			"Give"
 		]
 	}
 ]

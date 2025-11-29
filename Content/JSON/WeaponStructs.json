@@ -1,279 +1,526 @@
 [
-{
- "Key":"Default_Weapon",
- "flipBookKey":"Default_Weapon",
- "weaponStats": {
-	"power": 0,
-	"speed": 0,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 0
- },
- "Weight":1.0,
- "Description": "Just an ordinary Weapon",
- "SpritePath": "Default",
- "IconPath": "Default",
- "weaponTypes":[4]
-},
-{
- "Key":"Longsword",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 3,
-	"vitalityDamage": 1,
-	"armorPenetration": 0,
-	"guard": 3
- },
- "Weight":1.0,
- "Description": "Useful for defence, and taking down unarmored enemies",
- "SpritePath": "Weapon/Longsword/Longsword_Sprite",
- "IconPath": "Weapon/Longsword/Longsword_Icon",
- "weaponTypes":[0,3,8],
- "value": 25.0
-},
-{
- "Key":"Arming Sword",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 4,
-	"vitalityDamage": 1,
-	"armorPenetration": 0,
-	"guard": 2
- },
- "Weight":1.0,
- "Description": "A lighter sword, great on defence",
- "SpritePath": "Weapon/Arming_Sword/Arming_Sword_Sprite",
- "IconPath": "Weapon/Arming_Sword/Arming_Sword_Icon",
- "weaponTypes":[0,3,8],
- "value": 25.0
-},
-{
- "Key":"Shield",
- "flipBookKey":"Shield",
- "weaponStats": {
-	"power": 1,
-	"speed": 0,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 5
- },
- "Weight":1.0,
- "Description": "Just an ordinary Shield",
- "SpritePath": "Weapon/Shield/Shield_Sprite",
- "IconPath": "Weapon/Shield/Shield_Icon",
- "weaponTypes":[2,5],
- "layer":1.0,
- "value": 15.0
-},
-{
- "Key":"Fist",
- "flipBookKey":"Fist",
- "weaponStats": {
-	"power": 1,
-	"speed": 4,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 0
- },
- "Weight":1.0,
- "Description": "Great for punching, and supposedly other things",
- "SpritePath": "Default",
- "IconPath": "Fist",
- "weaponTypes":[4]
-},
-{
- "Key":"Claw",
- "flipBookKey":"Fist",
- "weaponStats": {
-	"power": 1,
-	"speed": 3,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 1
- },
- "Weight":1.0,
- "Description": "Grimy claws of a filthy beast",
- "SpritePath": "Default",
- "IconPath": "Claw",
- "weaponTypes":[4]
-},
-{
- "Key":"Spear",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 3,
-	"vitalityDamage": 1,
-	"armorPenetration": 1,
-	"guard": 4
- },
- "Weight":1.0,
- "Description": "Great for keeping enemies at bay",
- "SpritePath": "Weapon/Spear/Spear_Sprite",
- "IconPath": "Weapon/Spear/Spear_Icon",
- "weaponTypes":[0,8,9],
- "value": 8.0
-},
-{
- "Key":"Hand Axe",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 2,
-	"speed": 1,
-	"vitalityDamage": 0,
-	"armorPenetration": 2,
-	"guard": 1
-},
- "SpecialAttacks":["Shield Grab"],
- "Weight":3.0,
- "Description": "Useful for disarming enemy shields",
- "SpritePath": "Weapon/Hand_Axe/Hand_Axe_Sprite",
- "IconPath": "Weapon/Hand_Axe/Hand_Axe_Icon",
- "weaponTypes":[0,2,7],
- "value": 10.0
-},
-{
- "Key":"Long Axe",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 3,
-	"speed": 2,
-	"vitalityDamage": 1,
-	"armorPenetration": 2,
-	"guard": 3
-},
- "Weight":1.0,
- "Description": "An axe at the end of a wooden shaft",
- "SpritePath": "Weapon/Long_Axe/Long_Axe_Sprite",
- "IconPath": "Weapon/Long_Axe/Long_Axe_Icon",
- "weaponTypes":[1,7,9],
- "value": 8.0
-},
-{
- "Key":"Light Mace",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 4,
-	"speed": 1,
-	"vitalityDamage": 0,
-	"armorPenetration": 6,
-	"guard": 1
- },
- "SpecialAttacks":["Pummel","Offhand Pummel"],
- "Weight":1.0,
- "Description": "Great for dealing with armored enemies, but not great on defence",
- "SpritePath": "Weapon/Mace/Light_Mace_Sprite",
- "IconPath": "Weapon/Mace/Light_Mace_Icon",
- "weaponTypes":[0,2,10],
- "value": 15.0
-},
-{
- "Key":"Dagger",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 5,
-	"vitalityDamage": 1,
-	"armorPenetration": 0,
-	"guard": 1
- },
- "SpecialAttacks":["Shiv","Offhand Shiv"],
- "Weight":1.0,
- "Description": "A light blade",
- "SpritePath": "Weapon/Dagger/Dagger_Sprite",
- "IconPath": "Weapon/Dagger/Dagger_Icon",
- "weaponTypes":[0,2,3,8],
- "value": 12.0
-},
-{
- "Key":"LongBow",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 5,
-	"speed": 5,
-	"vitalityDamage": 1,
-	"armorPenetration": 1,
-	"guard": 0
- },
- "SpecialAttacks":["Fire"],
- "Weight":1.0,
- "Description": "A weapon capable of launching arrows with devastating speed and power",
- "SpritePath": "Weapon/Longbow/Longbow_Sprite",
- "IconPath": "Weapon/Longbow/Longbow_Icon",
- "weaponTypes":[1,11],
- "value": 12.0
-},
-{
- "Key":"CrossBow",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 6,
-	"speed": 2,
-	"vitalityDamage": 1,
-	"armorPenetration": 2,
-	"guard": 0
- },
- "SpecialAttacks":["Fire"],
- "Weight":1.0,
- "Description": "A weapon capable of launching bolts with devastating speed and power",
- "SpritePath": "Weapon/Crossbow/Crossbow_Sprite",
- "IconPath": "Weapon/Crossbow/Crossbow_Icon",
- "weaponTypes":[1,11],
- "value": 12.0
-},
-{
- "Key":"Healing Staff",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 4,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 1
- },
- "SpecialAttacks":["Heal"],
- "Weight":1.0,
- "Description": "A staff that can heal wounds",
- "SpritePath": "Weapon/Healing_Staff/Healing_Staff_Sprite",
- "IconPath": "Weapon/Healing_Staff/Healing_Staff_Icon",
- "weaponTypes":[0,6],
- "value": 12.0
-},
-{
- "Key":"Goblin Spear",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 1,
-	"speed": 3,
-	"vitalityDamage": 0,
-	"armorPenetration": 0,
-	"guard": 3
- },
- "Weight":1.0,
- "Description": "A shoddy wooden spear",
- "SpritePath": "Weapon/Goblin_Spear/Goblin_Spear_Sprite",
- "IconPath": "Weapon/Goblin_Spear/Goblin_Spear_Icon",
- "weaponTypes":[0,8,9],
- "value": 1.0
-},
-{
- "Key":"Goblin Bow",
- "flipBookKey":"Default_Sword",
- "weaponStats": {
-	"power": 2,
-	"speed": 3,
-	"vitalityDamage": 1,
-	"armorPenetration": 0,
-	"guard": 0
- },
- "SpecialAttacks":["Fire"],
- "Weight":1.0,
- "Description": "A very poorly made bow",
- "SpritePath": "Weapon/Goblin_Bow/Goblin_Bow_Sprite",
- "IconPath": "Weapon/Goblin_Bow/Goblin_Bow_Icon",
- "weaponTypes":[1,11],
- "value": 12.0
-}
+	{
+		"Key": "Default_Weapon",
+		"flipBookKey": "Default_Weapon",
+		"weaponStats": {
+			"power": 0,
+			"speed": 0,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 0
+		},
+		"Weight": 1.0,
+		"Description": "Just an ordinary Weapon",
+		"SpritePath": "Default",
+		"IconPath": "Default",
+		"weaponTypes": [
+			4
+		]
+	},
+	{
+		"Key": "Longsword",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 3,
+			"vitalityDamage": 2,
+			"armorPenetration": 0,
+			"guard": 2
+		},
+		"Weight": 1.0,
+		"Description": "Useful for defence, and taking down unarmored enemies",
+		"SpritePath": "Weapon/Longsword/Longsword_Sprite",
+		"IconPath": "Weapon/Longsword/Longsword_Icon",
+		"weaponTypes": [
+			0,
+			3,
+			8
+		],
+		"value": 25.0
+	},
+	{
+		"Key": "Arming Sword",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 4,
+			"vitalityDamage": 1,
+			"armorPenetration": 0,
+			"guard": 2
+		},
+		"Weight": 1.0,
+		"Description": "A lighter sword, great on defence",
+		"SpritePath": "Weapon/Arming_Sword/Arming_Sword_Sprite",
+		"IconPath": "Weapon/Arming_Sword/Arming_Sword_Icon",
+		"weaponTypes": [
+			0,
+			3,
+			8
+		],
+		"value": 25.0
+	},
+	{
+		"Key": "GreatSword",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 2,
+			"speed": 2,
+			"vitalityDamage": 3,
+			"armorPenetration": 1,
+			"guard": 2
+		},
+		"Weight": 1.0,
+		"Description": "A heavy sword that is slow but can deal massive damage",
+		"SpritePath": "Weapon/Arming_Sword/Arming_Sword_Sprite",
+		"IconPath": "Weapon/Arming_Sword/Arming_Sword_Icon",
+		"weaponTypes": [
+			0,
+			3,
+			8
+		],
+		"value": 25.0
+	},
+	{
+		"Key": "Shield",
+		"flipBookKey": "Shield",
+		"weaponStats": {
+			"power": 1,
+			"speed": 1,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 4
+		},
+		"Weight": 1.0,
+		"Description": "Just an ordinary Shield",
+		"SpritePath": "Weapon/Shield/Shield_Sprite",
+		"IconPath": "Weapon/Shield/Shield_Icon",
+		"weaponTypes": [
+			5
+		],
+		"layer": 1.0,
+		"value": 15.0
+	},
+	{
+		"Key": "Buckler",
+		"flipBookKey": "Shield",
+		"weaponStats": {
+			"power": 0,
+			"speed": 2,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 4
+		},
+		"Weight": 1.0,
+		"Description": "A smaller shield",
+		"SpritePath": "Weapon/Shield/Shield_Sprite",
+		"IconPath": "Weapon/Shield/Shield_Icon",
+		"weaponTypes": [
+			2,
+			5
+		],
+		"layer": 1.0,
+		"value": 15.0
+	},
+	{
+		"Key": "Fist",
+		"flipBookKey": "Fist",
+		"weaponStats": {
+			"power": 1,
+			"speed": 4,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 0
+		},
+		"Weight": 1.0,
+		"Description": "Great for punching, and supposedly other things",
+		"SpritePath": "Default",
+		"IconPath": "Fist",
+		"weaponTypes": [
+			2,
+			4
+		]
+	},
+	{
+		"Key": "Claw",
+		"flipBookKey": "Fist",
+		"weaponStats": {
+			"power": 1,
+			"speed": 3,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 1
+		},
+		"Weight": 1.0,
+		"Description": "Grimy claws of a filthy beast",
+		"SpritePath": "Default",
+		"IconPath": "Claw",
+		"weaponTypes": [
+			4
+		]
+	},
+	{
+		"Key": "Spear",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 3,
+			"vitalityDamage": 1,
+			"armorPenetration": 0,
+			"guard": 3
+		},
+		"Weight": 1.0,
+		"Description": "Great for keeping enemies at bay",
+		"SpritePath": "Weapon/Spear/Spear_Sprite",
+		"IconPath": "Weapon/Spear/Spear_Icon",
+		"weaponTypes": [
+			0,
+			8,
+			9
+		],
+		"value": 8.0
+	},
+	{
+		"Key": "Heavy Spear",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 2,
+			"speed": 3,
+			"vitalityDamage": 1,
+			"armorPenetration": 1,
+			"guard": 3
+		},
+		"Weight": 1.0,
+		"Description": "A reinforced spear that can deal deadly strikes from afar",
+		"SpritePath": "Weapon/Spear/Spear_Sprite",
+		"IconPath": "Weapon/Spear/Spear_Icon",
+		"weaponTypes": [
+			1,
+			8,
+			9
+		],
+		"value": 8.0
+	},
+	{
+		"Key": "Hand Axe",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 2,
+			"speed": 2,
+			"vitalityDamage": 1,
+			"armorPenetration": 1,
+			"guard": 0
+		},
+		"SpecialAttacks": [],
+		"Weight": 3.0,
+		"Description": "Small axe useful for disarming enemy shields",
+		"SpritePath": "Weapon/Hand_Axe/Hand_Axe_Sprite",
+		"IconPath": "Weapon/Hand_Axe/Hand_Axe_Icon",
+		"weaponTypes": [
+			0,
+			2,
+			7,
+			12
+		],
+		"value": 10.0
+	},
+	{
+		"Key": "Battleaxe",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 3,
+			"speed": 1,
+			"vitalityDamage": 1,
+			"armorPenetration": 2,
+			"guard": 1
+		},
+		"SpecialAttacks": [],
+		"Weight": 3.0,
+		"Description": "An axe that can be wielded in one hand",
+		"SpritePath": "Weapon/Hand_Axe/Hand_Axe_Sprite",
+		"IconPath": "Weapon/Hand_Axe/Hand_Axe_Icon",
+		"weaponTypes": [
+			0,
+			7
+		],
+		"value": 10.0
+	},
+	{
+		"Key": "Greataxe",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 4,
+			"speed": 1,
+			"vitalityDamage": 2,
+			"armorPenetration": 2,
+			"guard": 1
+		},
+		"SpecialAttacks": [],
+		"Weight": 3.0,
+		"Description": "A huge axe requiring both hands to wield",
+		"SpritePath": "Weapon/Hand_Axe/Hand_Axe_Sprite",
+		"IconPath": "Weapon/Hand_Axe/Hand_Axe_Icon",
+		"weaponTypes": [
+			1,
+			7
+		],
+		"value": 10.0
+	},
+	{
+		"Key": "Pole Axe",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 3,
+			"speed": 1,
+			"vitalityDamage": 2,
+			"armorPenetration": 2,
+			"guard": 2
+		},
+		"Weight": 1.0,
+		"Description": "An axe at the end of a wooden shaft",
+		"SpritePath": "Weapon/Long_Axe/Long_Axe_Sprite",
+		"IconPath": "Weapon/Long_Axe/Long_Axe_Icon",
+		"weaponTypes": [
+			1,
+			7,
+			9
+		],
+		"value": 8.0
+	},
+	{
+		"Key": "Light Mace",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 3,
+			"speed": 0,
+			"vitalityDamage": 1,
+			"armorPenetration": 2,
+			"guard": 0
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "Small mace you can wield in your offhand. Useful for dealing with armored opponents, but not great on defence",
+		"SpritePath": "Weapon/Mace/Light_Mace_Sprite",
+		"IconPath": "Weapon/Mace/Light_Mace_Icon",
+		"weaponTypes": [
+			0,
+			2,
+			10
+		],
+		"value": 15.0
+	},
+	{
+		"Key": "Mace",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 4,
+			"speed": 0,
+			"vitalityDamage": 1,
+			"armorPenetration": 3,
+			"guard": 0
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "Useful for dealing with armored foes, but not great on defence",
+		"SpritePath": "Weapon/Mace/Light_Mace_Sprite",
+		"IconPath": "Weapon/Mace/Light_Mace_Icon",
+		"weaponTypes": [
+			0,
+			10
+		],
+		"value": 15.0
+	},
+	{
+		"Key": "Heavy Mace",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 5,
+			"speed": 0,
+			"vitalityDamage": 2,
+			"armorPenetration": 3,
+			"guard": 0
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "A large mace that requires both hands to use",
+		"SpritePath": "Weapon/Mace/Light_Mace_Sprite",
+		"IconPath": "Weapon/Mace/Light_Mace_Icon",
+		"weaponTypes": [
+			1,
+			10
+		],
+		"value": 15.0
+	},
+	{
+		"Key": "Dagger",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 0,
+			"speed": 4,
+			"vitalityDamage": 1,
+			"armorPenetration": 0,
+			"guard": 1
+		},
+		"Weight": 1.0,
+		"Description": "A light blade",
+		"SpritePath": "Weapon/Dagger/Dagger_Sprite",
+		"IconPath": "Weapon/Dagger/Dagger_Icon",
+		"weaponTypes": [
+			0,
+			2,
+			3,
+			8,
+			12
+		],
+		"value": 12.0
+	},
+	{
+		"Key": "ShortBow",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 3,
+			"speed": 4,
+			"vitalityDamage": 1,
+			"armorPenetration": 0,
+			"armorPenetration": 0,
+			"guard": -1
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "A smaller bow that is a little better in tight quarters",
+		"SpritePath": "Weapon/Longbow/Longbow_Sprite",
+		"IconPath": "Weapon/Longbow/Longbow_Icon",
+		"weaponTypes": [
+			1,
+			11
+		],
+		"value": 12.0
+	},
+	{
+		"Key": "LongBow",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 4,
+			"speed": 4,
+			"vitalityDamage": 1,
+			"armorPenetration": 1,
+			"guard": -1
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "A weapon capable of launching arrows with devastating speed and power",
+		"SpritePath": "Weapon/Longbow/Longbow_Sprite",
+		"IconPath": "Weapon/Longbow/Longbow_Icon",
+		"weaponTypes": [
+			1,
+			11
+		],
+		"value": 12.0
+	},
+	{
+		"Key": "CrossBow",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 4,
+			"speed": 3,
+			"vitalityDamage": 1,
+			"armorPenetration": 1,
+			"guard": 0
+		},
+		"SpecialAttacks": [],
+		"Weight": 1.0,
+		"Description": "A weapon capable of launching bolts with devastating speed and power",
+		"SpritePath": "Weapon/Crossbow/Crossbow_Sprite",
+		"IconPath": "Weapon/Crossbow/Crossbow_Icon",
+		"weaponTypes": [
+			1,
+			11
+		],
+		"value": 12.0
+	},
+	{
+		"Key": "Javelin",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 3,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 3
+		},
+		"Weight": 1.0,
+		"Description": "A spear that can be thrown from afar",
+		"SpritePath": "Weapon/Spear/Spear_Sprite",
+		"IconPath": "Weapon/Spear/Spear_Icon",
+		"weaponTypes": [
+			0,
+			8,
+			9,
+			12
+		],
+		"value": 5.0
+	},
+	{
+		"Key": "Healing Staff",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 4,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 1
+		},
+		"SpecialAttacks": [
+			"Heal"
+		],
+		"Weight": 1.0,
+		"Description": "A staff that can heal wounds",
+		"SpritePath": "Weapon/Healing_Staff/Healing_Staff_Sprite",
+		"IconPath": "Weapon/Healing_Staff/Healing_Staff_Icon",
+		"weaponTypes": [
+			0,
+			6
+		],
+		"value": 12.0
+	},
+	{
+		"Key": "Goblin Spear",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 3,
+			"vitalityDamage": 0,
+			"armorPenetration": 0,
+			"guard": 3
+		},
+		"Weight": 1.0,
+		"Description": "A shoddy wooden spear",
+		"SpritePath": "Weapon/Goblin_Spear/Goblin_Spear_Sprite",
+		"IconPath": "Weapon/Goblin_Spear/Goblin_Spear_Icon",
+		"weaponTypes": [
+			0,
+			8,
+			9
+		],
+		"value": 1.0
+	},
+	{
+		"Key": "Goblin Bow",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 2,
+			"speed": 3,
+			"vitalityDamage": 1,
+			"armorPenetration": 0,
+			"guard": 0
+		},
+		"Weight": 1.0,
+		"Description": "A very poorly made bow",
+		"SpritePath": "Weapon/Goblin_Bow/Goblin_Bow_Sprite",
+		"IconPath": "Weapon/Goblin_Bow/Goblin_Bow_Icon",
+		"weaponTypes": [
+			1,
+			11
+		],
+		"value": 12.0
+	}
 ]
