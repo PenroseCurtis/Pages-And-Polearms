@@ -112,7 +112,6 @@ UPaperFlipbook* UDataLoader::LoadFlipbookFromPath(const FString& Path)
 
 	const TArray<FStringArray> keysToRemove = {
 		FStringArray({TEXT("Left"), TEXT("Right")}),
-		FStringArray({TEXT("Low"), TEXT("Mid"), TEXT("High")}),
 		FStringArray({TEXT("OneH"), TEXT("TwoH")}),
 		FStringArray({TEXT("Idle"), TEXT("Walk"), TEXT("Attack")})
 	};

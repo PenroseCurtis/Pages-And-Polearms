@@ -29,7 +29,7 @@
 	},
 	{
 		"key": "Page Test",
-		"flipBookKey": "Page",
+		"flipBookKey": "Goblin",
 		"name": "Norman",
 		"inventoryStruct": {
 			"items": [
@@ -56,6 +56,10 @@
 				{
 					"itemKey": "Dagger",
 					"classKey": "Weapon"
+				},
+				{
+					"itemKey": "Greatsword",
+					"classKey": "Weapon"
 				}
 			],
 			"gold": 99,
@@ -66,6 +70,13 @@
 						"classKey": "Weapon"
 					},
 					"isEquippedToDominantHand": true
+				},
+				{
+					"itemStruct": {
+						"itemKey": "Dagger",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": false
 				}
 			]
 		},
@@ -137,8 +148,8 @@
 			"defaultWeaponKey": "Claw"
 		},
 		"statBlock": {
-			"vitalityTotal": 2,
-			"vitality": 2,
+			"vitalityTotal": 100,
+			"vitality": 100,
 			"guard": -1
 		}
 	},

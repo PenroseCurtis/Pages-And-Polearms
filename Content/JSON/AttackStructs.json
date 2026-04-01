@@ -9,7 +9,7 @@
 		"power": 0,
 		"bothRequirementsNeeded": false,
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Default Attack",
 		"allowedCharacterTypesToTarget": [
 			2
@@ -34,7 +34,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Hit your foe with a curled fist",
 		"advantageTags": [
 			0,
@@ -64,7 +64,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "Hit your foe with your off hand",
 		"advantageTags": [
 			0,
@@ -108,7 +108,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Punch with both fists and one foot",
 		"advantageTags": [
 			0,
@@ -150,7 +150,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "A quick forward attack to test defences and wear down an opponent",
 		"disadvantageTags": [
 			6
@@ -178,7 +178,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "A quick forward attack to test defences and wear down an opponent using your offhand weapon",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -204,7 +204,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "A mighty thrust using both hands",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -230,7 +230,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "A quick attack with a hafted weapon. Cannot be used in close quarters",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -252,7 +252,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "A weak attack with a claw",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -276,7 +276,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "A weak burst of arcane energy",
 		"allowedCharacterTypesToTarget": [
 			2
@@ -298,7 +298,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Channel a small amount of positive energy to heal wounds",
 		"allowedCharacterTypesToTarget": [
 			0,
@@ -321,7 +321,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Channel a small amount of positive energy to refresh stamina",
 		"allowedCharacterTypesToTarget": [
 			0,
@@ -343,7 +343,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "A slow but powerful attack",
 		"stanceChange": "Vulnerable",
 		"statusAppliedOnVitalHit": "Fracture",
@@ -368,7 +368,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "A smack with a heavy shield",
 		"advantageTags": [
 			6
@@ -397,7 +397,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "A powerful downward chop",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -421,7 +421,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "A quick chop using your off hand",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -446,7 +446,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Use your axe to pull away a targets shield",
 		"weaponTypeAdvantage": [
 			5
@@ -474,7 +474,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "A quick stab that tries to find chinks in armor",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -498,7 +498,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "A quick stab that tries to find chinks in armor",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -525,7 +525,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Attack with both your weapons!",
 		"statusOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -552,7 +552,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Strike with both your bladed weapons!",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -575,7 +575,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Use your weapon to keep a foe at bay",
 		"possibleTriggerConditions": [
 			0
@@ -604,7 +604,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Attack an enemy who is attacking you",
 		"allowedCharacterTypesToTarget": [
 			2
@@ -626,7 +626,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Attack a retreating enemy",
 		"possibleTriggerConditions": [
 			2
@@ -651,7 +651,7 @@
 			1
 		],
 		"attackHeight": 0,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Smack your target with a blunt weapon",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -675,7 +675,7 @@
 		],
 		"widgetKey": "",
 		"attackHeight": 0,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "Smack your target with a blunt weapon",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -701,7 +701,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Slam your target with a hafted weapon",
 		"statusAppliedOnVitalHit": "Sprain",
 		"allowedCharacterTypesToTarget": [
@@ -724,7 +724,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "A full sword swing",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -748,7 +748,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "A quick cut with your offhand",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -778,7 +778,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "A mighty Slash that can target multiple enemies",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -802,7 +802,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Swing upwards to change your fighting stance",
 		"stanceChange": "Defensive",
 		"possibleTriggerConditions": [
@@ -833,7 +833,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Give a target the poisoned status",
 		"allowedCharacterTypesToTarget": [
 			2
@@ -858,7 +858,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Launch a projectile at your opponent",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -884,7 +884,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Quick but less powerful bow shot",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -910,7 +910,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Launch a projectile at your opponent at range",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -936,7 +936,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Launch a projectile at your opponent",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -962,7 +962,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Stab a foe with an arrow",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -987,7 +987,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Stab at your opponent, does extra damage if you are behind them",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -1014,7 +1014,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 3,
 		"description": "Step forward one space and attack your opponent",
 		"statusAppliedOnVitalHit": "Bleeding",
 		"allowedCharacterTypesToTarget": [
@@ -1038,7 +1038,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "A huge blow with a blunt weapon",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -1062,7 +1062,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "Slam into your foe with a shield",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -1089,7 +1089,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 1,
+		"handUsedForAttack": 1,
 		"description": "Throw your main weapon at a foe",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -1116,7 +1116,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 2,
+		"handUsedForAttack": 2,
 		"description": "Throw your offhand weapon at your foe",
 		"statusAppliedOnVitalHit": "Fracture",
 		"allowedCharacterTypesToTarget": [
@@ -1139,7 +1139,7 @@
 			1
 		],
 		"attackHeight": 1,
-		"wieldType": 0,
+		"handUsedForAttack": 0,
 		"description": "Push an enemy backwards",
 		"allowedCharacterTypesToTarget": [
 			2

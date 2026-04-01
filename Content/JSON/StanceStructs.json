@@ -272,9 +272,10 @@
             "Stab",
             "Slash",
             "Chop",
-            "Smack"
+            "Smack",
+			"Power Attack"
         ],
-        "mainHandWeaponTypes": [1],
+        "mainHandWeaponTypes": [],
         "offHandWeaponTypes": [
             4
         ],

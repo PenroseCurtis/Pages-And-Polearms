@@ -256,7 +256,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		int32 attackHeight;
 	UPROPERTY(BlueprintReadWrite)
-		int32 wieldType;
+		int32 handUsedForAttack;
 	UPROPERTY(BlueprintReadWrite)
 		FString description;
 	UPROPERTY(BlueprintReadWrite)
@@ -295,7 +295,7 @@ public:
 		power = 0;	
 		bothRequirementsNeeded = false;
 		attackHeight = 0;
-		wieldType = 0;
+		handUsedForAttack = 0;
 	}
 };
 
