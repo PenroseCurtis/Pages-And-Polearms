@@ -19,8 +19,10 @@
 		"statBlock": {
 			"vitalityTotal": 3,
 			"vitality": 3,
-			"stamina": 3,
-			"staminaTotal": 3
+			"stamina": 10,
+			"staminaTotal": 10,
+			"guard": 4,
+			"vitalHitProtectionBonus": 6
 		},
 		"attacks": [],
 		"statuses": [],
@@ -148,8 +150,8 @@
 			"defaultWeaponKey": "Claw"
 		},
 		"statBlock": {
-			"vitalityTotal": 100,
-			"vitality": 100,
+			"vitalityTotal": 1,
+			"vitality": 1,
 			"guard": -1
 		}
 	},
@@ -250,7 +252,7 @@
 			"maxInventorySize": 30
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -407,10 +409,10 @@
 				}
 			],
 			"gold": 1000,
-			"maxInventorySize": 30
+			"maxInventorySize": 45
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -445,7 +447,7 @@
 			"gold": 100
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -480,6 +482,10 @@
 			{
 				"action": "Move To",
 				"cost": 0
+			},
+			{
+				"action": "Accept Quest",
+				"cost": "0"
 			}
 		],
 		"actionsObjectCanTake": [
@@ -492,7 +498,7 @@
 			"gold": 100
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -535,7 +541,7 @@
 			"gold": 100
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -672,7 +678,7 @@
 			"maxInventorySize": 30
 		},
 		"statBlock": {
-			"woundLimit": 15
+			"vitalityTotal": 15
 		}
 	},
 	{
@@ -1097,8 +1103,35 @@
 		}
 	},
 	{
+		"key": "Goblin Fighter",
+		"flipBookKey": "Goblin",
+		"name": "Goblin",
+		"inventoryStruct": {
+			"defaultWeaponKey": "Fist",
+			"maxInventorySize": 12,
+			"equippedItems": [
+				{
+					"itemStruct": {
+						"itemKey": "Hand Axe",
+						"classKey": "Weapon"
+					},
+					"isEquippedToDominantHand": true
+				}
+			],
+			"items": [
+				{
+					"itemKey": "Goblin Trinket",
+					"classKey": ""
+				}
+			]
+		},
+		"statBlock": {
+			"vitality": 1
+		}
+	},
+	{
 		"key": "Goblin_Archer",
-		"flipBookKey": "Goblin_Warrior",
+		"flipBookKey": "Ranger",
 		"name": "Goblin Archer",
 		"stances": [
 			{
@@ -1130,7 +1163,9 @@
 			]
 		},
 		"statBlock": {
-			"guard": -1
+			"guard": -1,
+			"vitality": 1,
+			"vitalityTotal": 1
 		}
 	},
 	{
@@ -1204,7 +1239,7 @@
 			]
 		},
 		"statBlock": {
-			"woundLimit": 1,
+			"vitalityTotal": 1,
 			"guard": -1
 		}
 	},
@@ -1605,5 +1640,36 @@
 			"Heal",
 			"Give"
 		]
-	}
+	},
+	{
+		"key": "Vince",
+		"flipBookKey": "Merchant",
+		"name": "Vince",
+		"dialogKey": "Vince",
+		"stances": [
+			{
+				"key": "Unarmed",
+				"level": 1
+			}
+		],
+		"actions": [
+			{
+				"action": "Talk",
+				"cost": 0
+			},
+			{
+				"action": "Move To",
+				"cost": 0
+			}
+		],
+		"actionsObjectCanTake": [],
+		"inventoryStruct": {
+			"items": [],
+			"gold": 0,
+			"maxInventorySize": 30
+		},
+		"statBlock": {
+			"vitalityTotal": 15
+		}
+	},
 ]

@@ -25,7 +25,7 @@
 			"speed": 3,
 			"vitalityDamage": 2,
 			"armorPenetration": 0,
-			"guard": 2
+			"guard": 3
 		},
 		"Weight": 1.0,
 		"Description": "Useful for defence, and taking down unarmored enemies",
@@ -37,6 +37,27 @@
 			8
 		],
 		"value": 25.0
+	},
+	{
+		"Key": "Noboran Longsword",
+		"flipBookKey": "Default_Sword",
+		"weaponStats": {
+			"power": 1,
+			"speed": 4,
+			"vitalityDamage": 2,
+			"armorPenetration": 0,
+			"guard": 2
+		},
+		"Weight": 1.0,
+		"Description": "A sword forged by the elves of Noboru",
+		"SpritePath": "Weapon/Longsword/Longsword_Sprite",
+		"IconPath": "Weapon/Longsword/Longsword_Icon",
+		"weaponTypes": [
+			0,
+			3,
+			8
+		],
+		"value": 50.0
 	},
 	{
 		"Key": "Arming Sword",
@@ -486,11 +507,11 @@
 		"Key": "Goblin Spear",
 		"flipBookKey": "Default_Sword",
 		"weaponStats": {
-			"power": 1,
-			"speed": 3,
-			"vitalityDamage": 0,
+			"power": 0,
+			"speed": 1,
+			"vitalityDamage": 1,
 			"armorPenetration": 0,
-			"guard": 3
+			"guard": 5
 		},
 		"Weight": 1.0,
 		"Description": "A shoddy wooden spear",

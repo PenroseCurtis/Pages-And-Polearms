@@ -53,9 +53,9 @@ public:
 		iconPath = "Default";
 		equipableType = 0;
 		actions = {
+			FActionCost("Pickup", 1),
 			FActionCost("Drop", 0),
 			FActionCost("Examine", 0),
-			FActionCost("Pickup", 1),
 			FActionCost("Use", 1),
 			FActionCost("Buy", 1),
 			FActionCost("Sell", 1)
@@ -152,12 +152,12 @@ public:
 		layer = 0.6;
 		value = 0.0;
 		actions = {
+			FActionCost("Pickup", 1),
 			FActionCost("Drop", 0),
 			FActionCost("Examine", 0),
 			FActionCost("Equip to dominant", 2),
 			FActionCost("Equip to off", 2),
 			FActionCost("Unequip", 1),
-			FActionCost("Pickup", 1),
 			FActionCost("Use", 1),
 			FActionCost("Buy", 1),
 			FActionCost("Sell", 1)
@@ -203,11 +203,11 @@ public:
 		iconPath = "Default";
 		equipableType = 0;
 		actions = {
+			FActionCost("Pickup", 1),
 			FActionCost("Drop", 0),
 			FActionCost("Examine", 0),
 			FActionCost("Equip", 2),
 			FActionCost("Unequip", 1),
-			FActionCost("Pickup", 1),
 			FActionCost("Use", 1),
 			FActionCost("Buy", 1),
 			FActionCost("Sell", 1)

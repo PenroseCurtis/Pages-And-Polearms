@@ -4,16 +4,16 @@
 		"description": "A scroll that contains the spell inflict poison",
 		"Actions": [
 			{
+				"action": "pickup",
+				"cost": 1
+			},
+			{
 				"action": "drop",
 				"cost": 0
 			},
 			{
 				"action": "examine",
 				"cost": 0
-			},
-			{
-				"action": "pickup",
-				"cost": 1
 			},
 			{
 				"action": "read",
@@ -41,7 +41,7 @@
 	},
 	{
 		"key": "Defensive Scroll",
-		"description": "A scroll that teaches you a defensive stance",
+		"description": "A scroll that teaches you a defensive fighting stance",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -78,7 +78,7 @@
 	},
 	{
 		"key": "Power Scroll",
-		"description": "A scroll that teaches you a power stance",
+		"description": "A scroll that teaches you a powerful fighting stance"",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -115,7 +115,7 @@
 	},
 	{
 		"key": "Quarterstaffing Scroll",
-		"description": "A scroll that teaches you quarterstaffing",
+		"description": "A scroll that teaches you how to fight with a poled weapon by holding the shaft in both hands",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -147,12 +147,12 @@
 		"weight": 2.0,
 		"value": 20,
 		"type": 2,
-		"lessonKey": "Defensive",
+		"lessonKey": "Quarterstaffing",
 		"type": 1
 	},
 	{
 		"key": "Duelist Scroll",
-		"description": "A scroll that teaches you the duelist stance",
+		"description": "A scroll that teaches you a sword stance that allows a variety of quick changes",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -189,7 +189,7 @@
 	},
 	{
 		"key": "Fools Guard Scroll",
-		"description": "A scroll that teaches you to use the fools guard stance",
+		"description": "A scroll that teaches you a tricky method of fighting where you appear open to an attack."",
 		"Actions": [	
 			{
 				"action": "pickup",
@@ -226,7 +226,7 @@
 	},
 	{
 		"key": "Scout Scroll",
-		"description": "A scroll that teaches you use the scout stance",
+		"description": "A scroll that teaches you a fast and mobile stance for fighting with a bow",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -263,7 +263,7 @@
 	},
 	{
 		"key": "Marksman Scroll",
-		"description": "A scroll that teaches you the marksman stance",
+		"description": "A scroll that teaches you a slow and steady stance for fighting with a bow",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -300,7 +300,7 @@
 	},
 	{
 		"key": "Knight scroll",
-		"description": "A scroll that teaches you the knight stance",
+		"description": "A scroll that teaches you a fighting stance using a sword or mace and shield",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -337,7 +337,7 @@
 	},
 	{
 		"key": "Soldier scroll",
-		"description": "A scroll that teaches you soldier stance",
+		"description": "A scroll that teaches you to fight with a spear or sword and shield",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -374,7 +374,7 @@
 	},
 	{
 		"key": "Warrior Scroll",
-		"description": "A scroll that teaches you the warrior stance",
+		"description": "A scroll that teaches you a wild stance for fighting with an axe or sword and shield",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -411,7 +411,7 @@
 	},
 	{
 		"key": "Rogue Scroll",
-		"description": "A scroll that teaches you rogue stance",
+		"description": "A scroll that teaches you a stance for fighting with a dagger",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -448,7 +448,7 @@
 	},
 	{
 		"key": "Corsair Scroll",
-		"description": "A scroll that teaches you the corsair stance",
+		"description": "A scroll that teaches you a fighting stance using an axe and another light weapon",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -485,7 +485,7 @@
 	},
 	{
 		"key": "Gladiator scroll",
-		"description": "A scroll that teaches you the gladiator stance",
+		"description": "A scroll that teaches you a stance for fighting with a sword and another light weapon",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -522,7 +522,7 @@
 	},
 	{
 		"key": "Raider scroll",
-		"description": "A scroll that teaches you raider stance",
+		"description": "A scroll that teaches you a stance for fighting with two axes",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -559,7 +559,7 @@
 	},
 	{
 		"key": "Axeman scroll",
-		"description": "A scroll that teaches you the axeman stance",
+		"description": "A scroll that teaches you a stance for fighting with one axe",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -596,7 +596,7 @@
 	},
 	{
 		"key": "Swordsman Scroll",
-		"description": "A scroll that teaches you the swordsman stance",
+		"description": "A scroll that teaches you a stance for fighting with a sword",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -633,7 +633,7 @@
 	},
 	{
 		"key": "Spearman Scroll",
-		"description": "A scroll that teaches you the spearman stance",
+		"description": "A scroll that teaches a stance for fighting with a spear",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -670,7 +670,7 @@
 	},
 	{
 		"key": "Guard Scroll",
-		"description": "A scroll that teaches you the guard stance",
+		"description": "A scroll that teaches you a defensive spear stance",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -707,7 +707,7 @@
 	},
 	{
 		"key": "Macer Scroll",
-		"description": "A scroll that teaches you the macer stance",
+		"description": "A scroll that teaches you a mace fighting stance",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -744,7 +744,7 @@
 	},
 	{
 		"key": "Berserker Scroll",
-		"description": "A scroll that teaches you berserker stance",
+		"description": "A scroll that teaches you a ferocious stance for fighting with a two handed weapon",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -781,7 +781,7 @@
 	},
 	{
 		"key": "Hammerman Scroll",
-		"description": "A scroll that teaches you the hammerman stance",
+		"description": "A scroll that teaches you a stance for fighting with a heavy mace",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -818,7 +818,7 @@
 	},
 	{
 		"key": "Greatswordsman Scroll",
-		"description": "A scroll that teaches you the greatswordsman stance",
+		"description": "A scroll that teaches you a stance for fighting with a two handed sword",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -855,7 +855,7 @@
 	},
 	{
 		"key": "Great Axeman Scroll",
-		"description": "A scroll that teaches you the great axeman stance",
+		"description": "A scroll that teaches you to fight with a two handed axe",
 		"Actions": [
 			{
 				"action": "pickup",
@@ -892,7 +892,7 @@
 	},
 	{
 		"key": "Pikeman Scroll",
-		"description": "A scroll that teaches you the pikeman stance",
+		"description": "A scroll that teaches you to fight with a two handed spear",
 		"Actions": [
 			{
 				"action": "pickup",

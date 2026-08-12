@@ -1,590 +1,629 @@
-[{
-	"key": "Hub",
-	"backgroundSpritePath": "Backgrounds/Hub",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
+[
+	{
+		"key": "Hub",
+		"backgroundSpritePath": "Backgrounds/Hub",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
 			{
-				"XCoordinate": 1,
-				"YCoordinate": 1
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 1
+				},
+				"characterStatKey": "Merchant"
+			}
+		]
+	},
+	{
+		"key": "Armory",
+		"backgroundSpritePath": "Default",
+		"initialItemStates": [
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "LongSword",
+					"classKey": "Weapon",
+					"enchantmentKeys": [
+						"Arcane"
+					]
+				}
 			},
-			"characterStatKey": "Merchant"
-		}]
-},
-{
-	"key": "Armory",
-	"backgroundSpritePath": "Default",
-	"initialItemStates": [
-	{
-		"coordinates": {
-			"XCoordinate": 0,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "LongSword",
-			"classKey": "Weapon",
-			"enchantmentKeys":["Arcane"]
-		}
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Shield",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 2,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Spear",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Dagger",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Handaxe",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Light Mace",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Default_Helmet",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Default_Cloak",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 2,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Full Helm",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "ChainMail",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Leather Chaps",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Mail Leggings",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 6,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Mail Bracers",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 6,
+					"YCoordinate": 5
+				},
+				"itemState": {
+					"itemKey": "Leather Bracers",
+					"classKey": "Armor"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 6,
+					"YCoordinate": 6
+				},
+				"itemState": {
+					"itemKey": "Health Potion",
+					"classKey": "Consumable"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 4
+				},
+				"itemState": {
+					"itemKey": "Buff Potion",
+					"classKey": "Consumable"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 4
+				},
+				"itemState": {
+					"itemKey": "LongBow",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 2,
+					"YCoordinate": 4
+				},
+				"itemState": {
+					"itemKey": "Inflict Poison Scroll",
+					"classKey": "Scroll"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 4
+				},
+				"itemState": {
+					"itemKey": "CrossBow",
+					"classKey": "Weapon"
+				}
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 1,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Shield",
-			"classKey": "Weapon"
-		}
+		"key": "Combat Tutorial",
+		"backgroundSpritePath": "Default",
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 6,
+					"YCoordinate": 6
+				},
+				"characterStatKey": "Rat"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 6
+				},
+				"characterStatKey": "Rat"
+			}
+		],
+		"initialItemStates": [
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 2
+				},
+				"itemState": {
+					"itemKey": "LongSword",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 2,
+					"YCoordinate": 2
+				},
+				"itemState": {
+					"itemKey": "Full Helm",
+					"classKey": "Armor"
+				}
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 2,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Spear",
-			"classKey": "Weapon"
-		}
+		"key": "Tutorial",
+		"backgroundSpritePath": "Default",
+		"initialItemStates": [
+			{
+				"coordinates": {
+					"XCoordinate": 9,
+					"YCoordinate": 9
+				},
+				"itemState": {
+					"itemKey": "Weight",
+					"classKey": "Item"
+				}
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 3,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Dagger",
-			"classKey": "Weapon"
-		}
+		"key": "LocalTest",
+		"backgroundSpritePath": "Default",
+		"initialItemStates": [
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 2
+				},
+				"itemState": {
+					"itemKey": "Weight",
+					"classKey": "Item"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 4
+				},
+				"itemState": {
+					"itemKey": "Battleaxe",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 2
+				},
+				"itemState": {
+					"itemKey": "LongSword",
+					"classKey": "Weapon"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 2
+				},
+				"itemState": {
+					"itemKey": "Key",
+					"classKey": "Item"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 3
+				},
+				"itemState": {
+					"itemKey": "Buff Potion",
+					"classKey": "Consumable"
+				}
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 3
+				},
+				"itemState": {
+					"itemKey": "Inflict Poison Scroll",
+					"classKey": "Scroll"
+				}
+			}
+		],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 3
+				},
+				"characterStatKey": "Goblin_Warrior"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 4,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Handaxe",
-			"classKey": "Weapon"
-		}
+		"key": "Village",
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 13,
+					"YCoordinate": 5
+				},
+				"characterStatKey": "Vince"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 5,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Light Mace",
-			"classKey": "Weapon"
-		}
+		"key": "Forest_Trail",
+		"initialItemStates": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 5
+				},
+				"characterStatKey": "Goblin"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 0,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Default_Helmet",
-			"classKey": "Armor"
-		}
+		"key": "Stealth_Encounter",
+		"backgroundSpritePath": "",
+		"initialItemStates": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 4
+				},
+				"characterStatKey": "Goblin_King"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 1,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Default_Cloak",
-			"classKey": "Armor"
-		}
+		"key": "Bridge",
+		"backgroundSpritePath": "",
+		"initialItemStates": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 1
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 7
+				},
+				"characterStatKey": "Goblin"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 2,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Full Helm",
-			"classKey": "Armor"
-		}
+		"key": "DungeonExterior",
+		"initialItemStates": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 3
+				},
+				"characterStatKey": "Goblin_Warrior"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 3,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "ChainMail",
-			"classKey": "Armor"
-		}
+		"key": "Dungeon",
+		"initialItemStates": [],
+		"initialNPCSpawns": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 7,
+					"YCoordinate": 6
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 9,
+					"YCoordinate": 9
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 9,
+					"YCoordinate": 1
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 5,
+					"YCoordinate": 1
+				},
+				"characterStatKey": "Goblin_Warrior"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 4,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Leather Chaps",
-			"classKey": "Armor"
-		}
+		"key": "DungeonF2",
+		"initialItemStates": [],
+		"initialNPCSpawns": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 13
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 12,
+					"YCoordinate": 13
+				},
+				"characterStatKey": "Goblin"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 9,
+					"YCoordinate": 14
+				},
+				"characterStatKey": "Goblin"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 5,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Mail Leggings",
-			"classKey": "Armor"
-		}
+		"key": "DungeonF3",
+		"initialItemStates": [],
+		"initialNPCSpawns": [],
+		"initialEnemySpawns": []
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 6,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Mail Bracers",
-			"classKey": "Armor"
-		}
+		"key": "Blacksmith",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 2
+				},
+				"characterStatKey": "Blacksmith"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 6,
-			"YCoordinate": 5
-		},
-		"itemState": {
-			"itemKey": "Leather Bracers",
-			"classKey": "Armor"
-		}
+		"key": "Shop",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 4
+				},
+				"characterStatKey": "Merchant"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 6,
-			"YCoordinate": 6
-		},
-		"itemState": {
-			"itemKey": "Health Potion",
-			"classKey": "Consumable"
-		}
+		"key": "Temple",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 3,
+					"YCoordinate": 10
+				},
+				"characterStatKey": "Healer"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 0,
-			"YCoordinate": 4
-		},
-		"itemState": {
-			"itemKey": "Buff Potion",
-			"classKey": "Consumable"
-		}
+		"key": "TempleBasement",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 8
+				},
+				"characterStatKey": "Nurse"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 1,
-			"YCoordinate": 4
-		},
-		"itemState": {
-			"itemKey": "LongBow",
-			"classKey": "Weapon"
-		}
+		"key": "Inn",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 0,
+					"YCoordinate": 4
+				},
+				"characterStatKey": "Innkeeper"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 2,
-			"YCoordinate": 4
-		},
-		"itemState": {
-			"itemKey": "Inflict Poison Scroll",
-			"classKey": "Scroll"
-		}
+		"key": "AdventurersHouse",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 4,
+					"YCoordinate": 4
+				},
+				"characterStatKey": "Adventurer"
+			}
+		]
 	},
 	{
-		"coordinates": {
-			"XCoordinate": 3,
-			"YCoordinate": 4
-		},
-		"itemState": {
-			"itemKey": "CrossBow",
-			"classKey": "Weapon"
-		}
+		"key": "Tavern",
+		"initialItemStates": [],
+		"initialNPCSpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 1,
+					"YCoordinate": 0
+				},
+				"characterStatKey": "Frank"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 2,
+					"YCoordinate": 3
+				},
+				"characterStatKey": "Rick"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 7,
+					"YCoordinate": 3
+				},
+				"characterStatKey": "Clarence"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 9,
+					"YCoordinate": 2
+				},
+				"characterStatKey": "Bartender"
+			}
+		]
+	},
+	{
+		"key": "MountainTrail",
+		"initialItemStates": [],
+		"initialNPCSpawns": [],
+		"initialEnemySpawns": [
+			{
+				"coordinates": {
+					"XCoordinate": 15,
+					"YCoordinate": 11
+				},
+				"characterStatKey": "Goblin_Archer"
+			},
+			{
+				"coordinates": {
+					"XCoordinate": 16,
+					"YCoordinate": 11
+				},
+				"characterStatKey": "Goblin_Archer"
+			}
+		]
+	},
+	{
+		"key": "CaveExterior",
+		"initialItemStates": [],
+		"initialNPCSpawns": [],
+		"initialEnemySpawns": []
 	}
-	]
-},
-{
-	"key": "Combat Tutorial",
-	"backgroundSpritePath": "Default",
-	"initialEnemySpawns": [
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 6,
-				"YCoordinate": 6
-			},
-			"characterStatKey": "Rat"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 1,
-				"YCoordinate": 6
-			},
-			"characterStatKey": "Rat"
-		}
-	],
-	"initialItemStates": [
-		{
-			"coordinates": {
-				"XCoordinate": 1,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "LongSword",
-				"classKey": "Weapon"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 2,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "Full Helm",
-				"classKey": "Armor"
-			}
-		}
-	]
-},
-{
-	"key": "Tutorial",
-	"backgroundSpritePath": "Default",
-	"initialItemStates": [
-		{
-			"coordinates": {
-				"XCoordinate": 9,
-				"YCoordinate": 9
-			},
-			"itemState": {
-				"itemKey": "Weight",
-				"classKey": "Item"
-			}
-		}
-	]
-},
-{
-	"key": "LocalTest",
-	"backgroundSpritePath": "Default",
-	"initialItemStates": [
-		{
-			"coordinates": {
-				"XCoordinate": 3,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "Weight",
-				"classKey": "Item"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 4,
-				"YCoordinate": 4
-			},
-			"itemState": {
-				"itemKey": "Spear",
-				"classKey": "Weapon"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 3,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "LongSword",
-				"classKey": "Weapon"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 4,
-				"YCoordinate": 2
-			},
-			"itemState": {
-				"itemKey": "Key",
-				"classKey": "Item"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 0,
-				"YCoordinate": 3
-			},
-			"itemState": {
-				"itemKey": "Buff Potion",
-				"classKey": "Consumable"
-			}
-		},
-		{
-			"coordinates": {
-				"XCoordinate": 1,
-				"YCoordinate": 3
-			},
-			"itemState": {
-				"itemKey": "Inflict Poison Scroll",
-				"classKey": "Scroll"
-			}
-		}
-	],
-	"initialEnemySpawns": [{
-			"coordinates": {
-				"XCoordinate": 7,
-				"YCoordinate": 7
-			},
-			"characterStatKey": "rat"
-		}]
-},
-{
-	"key": "Forest_Trail",
-	"initialItemStates": [],
-	"initialEnemySpawns": [
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 4,
-				"YCoordinate": 5
-			},
-			"characterStatKey": "Goblin"
-		}
-	]
-},
-{
-	"key": "Stealth_Encounter",
-	"backgroundSpritePath": "",
-	"initialItemStates": [],
-	"initialEnemySpawns": [
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 1,
-				"YCoordinate": 4
-			},
-			"characterStatKey": "Goblin_King"
-		}
-	]
-},
-{
-	"key": "Bridge",
-	"backgroundSpritePath": "",
-	"initialItemStates": [],
-	"initialEnemySpawns": [
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 5,
-				"YCoordinate": 1
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 5,
-				"YCoordinate": 7
-			},
-			"characterStatKey": "Goblin"
-		}
-	]
-},
-{
-	"key": "DungeonExterior",
-	"initialItemStates": [],
-	"initialEnemySpawns": [
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 5,
-				"YCoordinate": 3
-			},
-			"characterStatKey": "Goblin_Warrior"
-		}
-	]
-},
-{
-	"key": "Dungeon",
-	"initialItemStates": [],
-	"initialNPCSpawns": [],
-	"initialEnemySpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 7,
-				"YCoordinate": 5
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 9,
-				"YCoordinate": 8
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 9,
-				"YCoordinate": 1
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 5,
-				"YCoordinate": 1
-			},
-			"characterStatKey": "Goblin_Warrior"
-		}]
-},
-{
-	"key": "DungeonF2",
-	"initialItemStates": [],
-	"initialNPCSpawns": [],
-	"initialEnemySpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 4,
-				"YCoordinate": 13
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 12,
-				"YCoordinate": 13
-			},
-			"characterStatKey": "Goblin"
-		},
-		{
-			"coordinates": 
-			{
-				"XCoordinate": 9,
-				"YCoordinate": 14
-			},
-			"characterStatKey": "Goblin"
-		}]
-},
-{
-	"key": "DungeonF3",
-	"initialItemStates": [],
-	"initialNPCSpawns": [],
-	"initialEnemySpawns": []
-},
-{
-	"key": "Blacksmith",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 0,
-				"YCoordinate": 2
-			},
-			"characterStatKey": "Blacksmith"
-		}]
-},
-{
-	"key": "Shop",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 4,
-				"YCoordinate": 4
-			},
-			"characterStatKey": "Merchant"
-		}]
-},
-{
-	"key": "Temple",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 3,
-				"YCoordinate": 10
-			},
-			"characterStatKey": "Healer"
-	}]
-},
-{
-	"key": "TempleBasement",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 1,
-				"YCoordinate": 8
-			},
-			"characterStatKey": "Nurse"
-	}]
-},
-{
-	"key": "Inn",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 0,
-				"YCoordinate": 4
-			},
-			"characterStatKey": "Innkeeper"
-	}]
-},
-{
-	"key": "AdventurersHouse",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-			"coordinates": 
-			{
-				"XCoordinate": 4,
-				"YCoordinate": 4
-			},
-			"characterStatKey": "Adventurer"
-	}]
-},
-{
-	"key": "Tavern",
-	"initialItemStates": [],
-	"initialNPCSpawns": [{
-		"coordinates":
-		{
-			"XCoordinate": 1,
-			"YCoordinate": 0
-		},
-		"characterStatKey": "Frank"
-	},
-	{
-		"coordinates":
-		{
-			"XCoordinate": 2,
-			"YCoordinate": 3
-		},
-		"characterStatKey": "Rick"
-	},
-	{
-		"coordinates":
-		{
-			"XCoordinate": 7,
-			"YCoordinate": 3
-		},
-		"characterStatKey": "Clarence"
-	},
-	{
-		"coordinates":
-		{
-			"XCoordinate": 9,
-			"YCoordinate": 2
-		},
-		"characterStatKey": "Bartender"
-	}]
-}
 ]

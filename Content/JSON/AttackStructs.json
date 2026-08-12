@@ -20,7 +20,7 @@
 		"classKey": "Attack",
 		"initiativeCost": 2,
 		"maxRange": 1,
-		"speed": 5,
+		"speed": 3,
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
 		"power": 1,
@@ -50,7 +50,7 @@
 		"classKey": "Attack",
 		"initiativeCost": 1,
 		"maxRange": 1,
-		"speed": 5,
+		"speed": 3,
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
 		"power": 0,
@@ -136,10 +136,10 @@
 		"classKey": "Attack",
 		"initiativeCost": 2,
 		"maxRange": 1,
-		"speed": 4,
+		"speed": 3,
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
-		"power": 2,
+		"power": 1,
 		"mainHandRequirements": [
 			8
 		],
@@ -357,7 +357,7 @@
 		"speed": 1,
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
-		"power": 4,
+		"power": 3,
 		"mainHandRequirements": [],
 		"offHandRequirements": [
 			5
@@ -383,13 +383,10 @@
 		"initiativeCost": 2,
 		"speed": 1,
 		"armorPenetration": 2,
-		"vitalityDamage": 1,
+		"vitalityDamage": 0,
 		"power": 2,
 		"mainHandRequirements": [
 			7
-		],
-		"offHandRequirements": [
-			4
 		],
 		"bothRequirementsNeeded": true,
 		"targetTypes": [
@@ -400,6 +397,7 @@
 		"handUsedForAttack": 3,
 		"description": "A powerful downward chop",
 		"statusAppliedOnVitalHit": "Bleeding",
+		"weaponTypeAdvantage": [5],
 		"allowedCharacterTypesToTarget": [
 			2
 		]
@@ -409,7 +407,7 @@
 		"initiativeCost": 1,
 		"speed": 1,
 		"armorPenetration": 2,
-		"vitalityDamage": 1,
+		"vitalityDamage": 0,
 		"power": 1,
 		"mainHandRequirements": [],
 		"offHandRequirements": [
@@ -424,6 +422,7 @@
 		"handUsedForAttack": 2,
 		"description": "A quick chop using your off hand",
 		"statusAppliedOnVitalHit": "Bleeding",
+		"weaponTypeAdvantage": [5],
 		"allowedCharacterTypesToTarget": [
 			2
 		]
@@ -591,14 +590,8 @@
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
 		"power": 1,
-		"mainHandRequirements": [
-			3,
-			9
-		],
-		"offHandRequirements": [
-			3,
-			9
-		],
+		"mainHandRequirements": [],
+		"offHandRequirements": [],
 		"bothRequirementsNeeded": false,
 		"targetTypes": [
 			1
@@ -606,6 +599,9 @@
 		"attackHeight": 0,
 		"handUsedForAttack": 3,
 		"description": "Attack an enemy who is attacking you",
+		"possibleTriggerConditions": [
+			1
+		],
 		"allowedCharacterTypesToTarget": [
 			2
 		]
@@ -638,7 +634,7 @@
 	{
 		"key": "Smack",
 		"initiativeCost": 2,
-		"speed": 1,
+		"speed": 0,
 		"armorPenetration": 3,
 		"vitalityDamage": 0,
 		"power": 4,
@@ -661,7 +657,7 @@
 	{
 		"key": "Offhand Smack",
 		"initiativeCost": 1,
-		"speed": 1,
+		"speed": 0,
 		"armorPenetration": 3,
 		"vitalityDamage": 0,
 		"power": 3,
@@ -687,10 +683,10 @@
 		"maxRange": 2,
 		"minRange": 1,
 		"initiativeCost": 2,
-		"speed": 3,
+		"speed": 2,
 		"armorPenetration": 0,
 		"vitalityDamage": 0,
-		"power": 3,
+		"power": 2,
 		"mainHandRequirements": [
 			9
 		],
@@ -711,10 +707,10 @@
 	{
 		"key": "Slash",
 		"initiativeCost": 2,
-		"speed": 2,
-		"armorPenetration": 1,
+		"speed": 1,
+		"armorPenetration": 0,
 		"vitalityDamage": 1,
-		"power": 2,
+		"power": 1,
 		"mainHandRequirements": [
 			3
 		],
@@ -734,10 +730,10 @@
 	{
 		"key": "Offhand Slash",
 		"initiativeCost": 1,
-		"speed": 2,
+		"speed": 1,
 		"armorPenetration": 0,
 		"vitalityDamage": 1,
-		"power": 2,
+		"power": 0,
 		"mainHandRequirements": [],
 		"offHandRequirements": [
 			3
@@ -842,7 +838,7 @@
 	{
 		"key": "Shoot",
 		"minRange": 2,
-		"maxRange": 6,
+		"maxRange": 8,
 		"initiativeCost": 3,
 		"speed": 4,
 		"armorPenetration": 0,

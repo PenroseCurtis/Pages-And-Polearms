@@ -51,9 +51,7 @@
         "guardHeight": 0,
         "gripType": 0,
         "description": "Ready to pounce!",
-        "tags": [
-            6
-        ],
+        "tags": [],
         "canLevelUp": false
     },
     {
@@ -615,7 +613,7 @@
         "level": 1,
         "attacks": [
             "Stab",
-            "Slice",
+            "Slash",
             "Chop",
             "Smack",
             "Bash"
@@ -631,7 +629,7 @@
         "guardHeight": 1,
         "gripType": 0,
         "description": "Fight with a weapon and shield",
-        "canLevelUp": false
+        "canLevelUp": true
     },
     {
         "key": "Arm and Shield",
@@ -640,7 +638,7 @@
         "level": 1,
         "attacks": [
             "Stab",
-            "Slice",
+            "Slash",
             "Chop",
             "Smack",
             "Bash"
@@ -670,7 +668,7 @@
                 "cost": 2
             }
         ],
-        "canLevelUp": false
+        "canLevelUp": true
     },
     {
         "key": "Arm and Shield",
@@ -879,6 +877,7 @@
 			"Parry",
             "Stab",
             "Slash",
+            "Slash",
             "Chop",
             "Smack"
         ],
@@ -1025,7 +1024,7 @@
         "guard": 1,
         "guardHeight": 0,
         "gripType": 0,
-        "description": "Fast and mobile stance for fighting with a bow ",
+        "description": "Fast and mobile stance for fighting with a bow",
         "transitions": [
             {
                 "key": "Archery",

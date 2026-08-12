@@ -125,6 +125,192 @@
 			{
 				"ID": "NHA",
 				"linkIDs": [
+					"LHHeal",
+					"LHB",
+					"LHC",
+					"LHD",
+					"LHStartQuest",
+					"LHZ"
+				]
+			},
+			{
+				"ID": "NHB",
+				"linkIDs": [
+					"LHAcceptQuest",
+					"LHDeclineQuest"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LHA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Greetings"
+					}
+				],
+				"nextNodeId": "NHA",
+				"action": ""
+			},
+			{
+				"ID": "LHB",
+				"label": "Ask if they need help ",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I heard you needed some help"
+					},
+					{
+						"speaker": "true",
+						"text": "Yes, we recently had a precious amulet stolen by some goblins to the northeast"
+					},
+					{
+						"speaker": "false",
+						"text": "What does it look like?"
+					},
+					{
+						"speaker": "true",
+						"text": "It looks a bit like a golden bird, and it's fitted with an emerald. Please if you can retrieve it we would be in your debt"
+					}
+				],
+				"nextNodeId": "NHB",
+				"action": ""
+			},
+			{
+				"ID": "LHC",
+				"label": "How much is healing?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "How much does it cost for you to heal me?"
+					},
+					{
+						"speaker": "true",
+						"text": "20 gold"
+					},
+					{
+						"speaker": "false",
+						"text": "Why wouldn't I just go to the inn to rest, it's cheaper"
+					},
+					{
+						"speaker": "true",
+						"text": "You are more than welcome to, but by the time you finish resting there the goblins will have brought in reinforcements, so any you have felled will be replaced"
+					},
+					{
+						"speaker": "false",
+						"text": "Fair enough"
+					}
+				],
+				"nextNodeId": "NHA",
+				"action": ""
+			},
+			{
+				"ID": "LHD",
+				"label": "Can you explain how wounds work",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Well when you're fighting, if you take a vital hit, you have a chance of gaining a status effect"
+					},
+					{
+						"speaker": "true",
+						"text": "Many status effects will go away on their own, but wounds generally will linger until they are healed"
+					},
+					{
+						"speaker": "true",
+						"text": "I can heal you and remove your wounds for a cost"
+					},
+					{
+						"speaker": "true",
+						"text": "You can also rest at the inn. That will get rid of your wounds, but it will take some time. Any enemies you defeated would probably be replaced by reinforcements by then"
+					},
+					{
+						"speaker": "true",
+						"text": "Also buy healing items from the merchant next door to patch up a specific wound if you'd like"
+					},
+					{
+						"speaker": "true",
+						"text": "Now can I help you with anything else?"
+					}
+				],
+				"nextNodeId": "NHA",
+				"action": ""
+			},
+			{
+				"ID": "LHHeal",
+				"label": "I need some healing",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I'm in need of some healing actually"
+					},
+					{
+						"speaker": "true",
+						"text": "Okay, that will be 20 gold"
+					}
+				],
+				"nextNodeId": "",
+				"action": "Heal"
+			},
+			{
+				"ID": "LHAcceptQuest",
+				"label": "I'll find your amulet",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I'll find your amulet"
+					},
+					{
+						"speaker": "true",
+						"text": "Thank you very much, may Aard bless you"
+					}
+				],
+				"nextNodeId": "",
+				"action": "Accept Quest"
+			},
+			{
+				"ID": "LHDeclineQuest",
+				"label": "Decline",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Sorry I can't right now"
+					},
+					{
+						"speaker": "true",
+						"text": "Very well, if you change your mind I'll be here. Now anything else I can help you with?"
+					}
+				],
+				"nextNodeId": "NHA",
+				"action": ""
+			},
+			{
+				"ID": "LHZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going."
+					},
+					{
+						"speaker": "true",
+						"text": "May Aards light be with you"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Healer_Mid_Amulet_of_Aard",
+		"startLinkId": "LHA",
+		"nodes": [
+			{
+				"ID": "NHA",
+				"linkIDs": [
 					"LHGive",
 					"LHHeal",
 					"LHB",
@@ -210,11 +396,11 @@
 					},
 					{
 						"speaker": "false",
-						"text": "Why wouldn't I just go rest up downstairs"
+						"text": "Why wouldn't I just go rest up at the inn, it's cheaper there"
 					},
 					{
 						"speaker": "true",
-						"text": "You are more than welcome to, but by the time your wounds heal naturally the goblins will have brought in reinforcements, so any you have felled will be replaced"
+						"text": "You are more than welcome to, but by the time your wounds heal naturally there the goblins will have brought in reinforcements, so any you have felled will be replaced"
 					},
 					{
 						"speaker": "false",
@@ -242,11 +428,11 @@
 					},
 					{
 						"speaker": "true",
-						"text": "You can also rest downstairs, that will get rid of your wounds, but it will take some time. Any enemies you defeated would probably be replaced by reinforcements by then"
+						"text": "You can also rest at the inn, that will get rid of your wounds, but it will take some time. Any enemies you defeated would probably be replaced by reinforcements by then"
 					},
 					{
 						"speaker": "true",
-						"text": "You can also buy healing items from the merchant next door to patch up a specific wound if you'd like"
+						"text": "Also buy healing items from the merchant next door to patch up a specific wound if you'd like"
 					},
 					{
 						"speaker": "true",
@@ -354,11 +540,11 @@
 					},
 					{
 						"speaker": "true",
-						"text": "You can also rest downstairs, that will get rid of your wounds, but it will take some time. Any enemies you defeated would probably be replaced by reinforcements by then"
+						"text": "You can also rest at the inn, that will get rid of your wounds, but it will take some time. Any enemies you defeated would probably be replaced by reinforcements by then"
 					},
 					{
 						"speaker": "true",
-						"text": "You can also buy healing items from the merchant next door to patch up a specific wound if you'd like"
+						"text": "Also you could buy healing items from the merchant next door to patch up a specific wound if you'd like"
 					},
 					{
 						"speaker": "true",
@@ -388,6 +574,89 @@
 	},
 	{
 		"key": "Nurse",
+		"startLinkId": "H1",
+		"nodes": [
+			{
+				"ID": "H1",
+				"linkIDs": [
+					"H2",
+					"H0"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "H1",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Hello traveller"
+					},
+					{
+						"speaker": "false",
+						"text": "Hello there"
+					}
+				],
+				"nextNodeId": "H1",
+				"action": ""
+			},
+			{
+				"ID": "H2",
+				"label": "Ask about temple",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "What can you tell me about this temple?"
+					},
+					{
+						"speaker": "true",
+						"text": "It's dedicated to the god Aard, a god of life and healing"
+					},
+					{
+						"speaker": "true",
+						"text": "We worship Aard by healing those who are sick or have been injured"
+					},
+					{
+						"speaker": "false",
+						"text": "Why do you have to charge then?"
+					},
+					{
+						"speaker": "true",
+						"text": "Well we have our expenses of course. Healing requires supplies, and we need to eat as well."
+					},
+					{
+						"speaker": "false",
+						"text": "Fair enough. Well have a good day"
+					},
+					{
+						"speaker": "true",
+						"text": "May Aards light be with you"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			},
+			{
+				"ID": "H0",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					},
+					{
+						"speaker": "true",
+						"text": "May Aards light be with you"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Nurse_Old",
 		"startLinkId": "LH1",
 		"nodes": [
 			{
@@ -420,7 +689,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "You're in the town of Nantwirth, you washed up on the beach last night unconcious. We were able to ressusitate you, but you passed out not long after"
+						"text": "You're in the town of , you washed up on the beach last night unconcious. We were able to ressusitate you, but you passed out not long after"
 					},
 					{
 						"speaker": "false",
@@ -639,19 +908,19 @@
 				"script": [
 					{
 						"speaker": "false",
-						"text": "I washed up on the beach last night, the local priests took me in and patched me up"
+						"text": "I heard you know a thing or two about fighting"
 					},
 					{
 						"speaker": "true",
-						"text": "What does that have to do with me?"
+						"text": "Heh you could certainly say that. Why do you ask"
 					},
 					{
 						"speaker": "false",
-						"text": "When I woke up I couldn't remember anything. They found a longsword on me, thought I might be a fighter. Thought maybe talking to another fighter could job my memory"
+						"text": "Well, I'm something of a fighter myself, I was wondering if you could give me some tips"
 					},
 					{
 						"speaker": "true",
-						"text": "Damn priests, think any dandy with a sword is a fighter. Well if you are a fighter, show me your stance"
+						"text": "Very well, if you are a fighter, show me your stance"
 					},
 					{
 						"speaker": "false",
@@ -667,7 +936,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Once you've gained some of your skill back, I can sell you scrolls to teach you more advanced fighting stances."
+						"text": "Once you've improved your skills, I can sell you scrolls to teach you more advanced fighting stances."
 					},
 					{
 						"speaker": "true",
@@ -688,6 +957,10 @@
 					{
 						"speaker": "true",
 						"text": "Speed helps you land blows on your opponent, and dodge your foes attacks, but power makes your blows harder to block and deal more damage."
+					},
+					{
+						"speaker": "true",
+						"text": "Any of this making sense?"
 					}
 				],
 				"nextNodeId": "NAB",
@@ -707,7 +980,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Any of this ringing a bell?"
+						"text": "Any of this making sense?"
 					}
 				],
 				"nextNodeId": "NAB",
@@ -863,8 +1136,12 @@
 			},
 			{
 				"ID": "LAZ",
-				"label": "Yeah it's all coming back, thanks for the help (leave)",
+				"label": "Leave",
 				"script": [
+					{
+						"speaker": "false",
+						"text": "Thanks for your help, I've got to get going"
+					},
 					{
 						"speaker": "true",
 						"text": "Glad I could help, don't get yourself killed out there."
@@ -911,11 +1188,23 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Yeah lot's of adventurers like to relax here between quests. You might be able to recuit one of them if you talk to them"
+						"text": "Yeah lot's of adventurers like to relax here between quests. If you do something to help out the village one of them might join up with you"
+					},
+					{
+						"speaker": "false",
+						"text": "Any suggestions on something I could do?"
 					},
 					{
 						"speaker": "true",
-						"text": "Anyways, anything else I can help you with?"
+						"text": "Well I believe the priests at the temple in town needed help retrieving an amulet the goblins stole, you could start there"
+					},
+					{
+						"speaker": "false",
+						"text": "Okay I'll check in with them, thanks"
+					},
+					{
+						"speaker": "true",
+						"text": "No trouble at all. Now anything else I can help you with?"
 					}
 				],
 				"nextNodeId": "NBartenderA",
@@ -939,7 +1228,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Yes, when they just stayed in the forests they just felt like pests. Since taking the forest shrine they are much more threatening."
+						"text": "Yes, when they just stayed in the forests they just felt like pests. Since taking the forest shrine they've become a lot more threatening."
 					},
 					{
 						"speaker": "false",
@@ -952,6 +1241,94 @@
 					{
 						"speaker": "true",
 						"text": "Anyways, anything else I can help you with?"
+					}
+				],
+				"nextNodeId": "NBartenderA",
+				"action": ""
+			},
+			{
+				"ID": "LBartenderZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Nothing right now, thanks"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Bartender_Mid_Amulet_of_Aard",
+		"startLinkId": "LBartenderA",
+		"nodes": [
+			{
+				"ID": "NBartenderA",
+				"linkIDs": [
+					"LBartenderB",
+					"LBartenderC",
+					"LBartenderZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LBartenderA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Welcome to my tavern, what can I get for ya?"
+					}
+				],
+				"nextNodeId": "NBartenderA",
+				"action": ""
+			},
+			{
+				"ID": "LBartenderB",
+				"label": "Ask about adventurers",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "There are some tough looking characters around here"
+					},
+					{
+						"speaker": "true",
+						"text": "Yeah lot's of adventurers like to relax here between quests. I hear you've taken up a quest of your own"
+					},
+					{
+						"speaker": "false",
+						"text": "Yeah that's right"
+					},
+					{
+						"speaker": "true",
+						"text": "Good on you, glad to see you helping the village out. Anyways, anything else I can help you with?"
+					}
+				],
+				"nextNodeId": "NBartenderA",
+				"action": ""
+			},
+			{
+				"ID": "LBartenderC",
+				"label": "What's the news around town?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "What's the news around town?"
+					},
+					{
+						"speaker": "true",
+						"text": "Well everyone is real happy to hear you've agreed to help out the priests for one"
+					},
+					{
+						"speaker": "false",
+						"text": "Words spread already huh?"
+					},
+					{
+						"speaker": "true",
+						"text": "Yeah news travels quickly in a place this small. Anyways, anything else I can help you with?"
 					}
 				],
 				"nextNodeId": "NBartenderA",
@@ -1007,7 +1384,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Yeah lot's of adventurers like to relax here between quests. You might be able to recuit one of them if you talk to them"
+						"text": "Yeah lot's of adventurers like to relax here between quests. After what you've done for the temple, I'd bet any of them would be willing to join up with you"
 					},
 					{
 						"speaker": "true",
@@ -1027,7 +1404,7 @@
 					},
 					{
 						"speaker": "true",
-						"text": "Well you're the big talk of the town right now, washing up on the shore, and then going and beating all those goblins!"
+						"text": "Well you're the big talk of the town right now, showing up out of nowhere, and then going and beating all those goblins!"
 					},
 					{
 						"speaker": "true",
@@ -1080,6 +1457,154 @@
 			{
 				"ID": "LClarenceB",
 				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a cleric, I can't deal that much damage, but I can heal you up"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
+						"text": "No I'm afraid I don't know you well enough for that, sorry"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Clarence_Mid_Amulet_of_Aard",
+		"startLinkId": "LClarenceA",
+		"nodes": [
+			{
+				"ID": "NClarenceA",
+				"linkIDs": [
+					"LClarenceB",
+					"LClarenceR",
+					"LClarenceZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LClarenceA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Hey there, how's it going?"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceB",
+				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a cleric, I can't deal that much damage, but I can heal you up"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
+						"text": "No I'm afraid I don't know you well enough for that, sorry"
+					},
+					{
+						"speaker": "false",
+						"text": "Fair enough"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Clarence_Post_Amulet_of_Aard",
+		"startLinkId": "LClarenceA",
+		"nodes": [
+			{
+				"ID": "NClarenceA",
+				"linkIDs": [
+					"LClarenceB",
+					"LClarenceR",
+					"LClarenceZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LClarenceA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Hey there, how's it going?"
+					}
+				],
+				"nextNodeId": "NClarenceA",
+				"action": ""
+			},
+			{
+				"ID": "LClarenceB",
+				"label": "Ask about him",
 				"script": [
 					{
 						"speaker": "false",
@@ -1197,6 +1722,150 @@
 	},
 	{
 		"key": "Frank",
+		"startLinkId": "LFrankA",
+		"nodes": [
+			{
+				"ID": "NFrankA",
+				"linkIDs": [
+					"LFrankB",
+					"LFrankR",
+					"LFrankZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LFrankA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "How goes it stranger"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankB",
+				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a fighter, I like getting right up close to my enemies"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
+						"text": "Nah, I only travel with adventurers who have proven themselves"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Frank_Mid_Amulet_of_Aard",
+		"startLinkId": "LFrankA",
+		"nodes": [
+			{
+				"ID": "NFrankA",
+				"linkIDs": [
+					"LFrankB",
+					"LFrankR",
+					"LFrankZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LFrankA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "How goes it stranger"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankB",
+				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a fighter, I like getting right up close to my enemies"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
+						"text": "Nah, I only travel with adventurers who have proven themselves"
+					}
+				],
+				"nextNodeId": "NFrankA",
+				"action": ""
+			},
+			{
+				"ID": "LFrankZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Frank_Post_Amulet_of_Aard",
 		"startLinkId": "LFrankA",
 		"nodes": [
 			{
@@ -1391,6 +2060,150 @@
 					},
 					{
 						"speaker": "true",
+						"text": "Hmm no thank you"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Rick_Mid_Amulet_of_Aard",
+		"startLinkId": "LRickA",
+		"nodes": [
+			{
+				"ID": "NRickA",
+				"linkIDs": [
+					"LRickB",
+					"LRickR",
+					"LRickZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LRickA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Greetings stranger"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickB",
+				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a ranger, I fight best at range"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
+						"text": "Hmm no thank you"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickZ",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Rick_Post_Amulet_of_Aard",
+		"startLinkId": "LRickA",
+		"nodes": [
+			{
+				"ID": "NRickA",
+				"linkIDs": [
+					"LRickB",
+					"LRickR",
+					"LRickZ"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "LRickA",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Greetings stranger"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickB",
+				"label": "Tell me about yourself",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Tell me about yourself"
+					},
+					{
+						"speaker": "true",
+						"text": "I'm a ranger, I fight best at range"
+					}
+				],
+				"nextNodeId": "NRickA",
+				"action": ""
+			},
+			{
+				"ID": "LRickR",
+				"label": "Want to travel with me?",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Want to travel with me?"
+					},
+					{
+						"speaker": "true",
 						"text": "Sure why not"
 					}
 				],
@@ -1476,6 +2289,128 @@
 					{
 						"speaker": "false",
 						"text": "Let's get going"
+					}
+				],
+				"nextNodeId": "",
+				"action": ""
+			}
+		]
+	},
+	{
+		"key": "Vince",
+		"startLinkId": "Start",
+		"nodes": [
+			{
+				"ID": "Start",
+				"linkIDs": [
+					"Mount Koln",
+					"Village",
+					"End"
+				]
+			},
+			{
+				"ID": "Asked about Mount Koln",
+				"linkIDs": [
+					"Village",
+					"End"
+				]
+			},
+			{
+				"ID": "Asked about Village",
+				"linkIDs": [
+					"Mount Koln",
+					"End"
+				]
+			}
+		],
+		"links": [
+			{
+				"ID": "Start",
+				"label": "",
+				"script": [
+					{
+						"speaker": "true",
+						"text": "Greetings, not often we see new faces aroung here."
+					}
+				],
+				"nextNodeId": "Start",
+				"action": ""
+			},
+			{
+				"ID": "Mount Koln",
+				"label": "Ask about Mount Koln",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Which way to Mount Koln?"
+					},
+					{
+						"speaker": "true",
+						"text": "You would head north, and then take the left at the fork in the road. But I should warn you, the path is dangerous, goblins patrol it day and night"
+					},
+					{
+						"speaker": "true",
+						"text": "If I were you, I would try to find aid at the local tavern before heading up that way"
+					},
+					{
+						"speaker": "false",
+						"text": "Thanks for the advice"
+					},
+					{
+						"speaker": "true",
+						"text": "Not a problem at all. Anything else I can help with?"
+					}
+				],
+				"nextNodeId": "Asked about Mount Koln",
+				"action": ""
+			},
+			{
+				"ID": "Village",
+				"label": "Ask about this village",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "Can you tell me about this village?"
+					},
+					{
+						"speaker": "true",
+						"text": "Well there is a nice shop to the right of the path north out of town, they sell some healing items"
+					},
+					{
+						"speaker": "true",
+						"text": "There's a nice inn on the left side of the path. The tavern in its basement is a great place to meet other adventurers"
+					},
+					{
+						"speaker": "true",
+						"text": "There's a blacksmith by the west gate who sells weapons and armor"
+					},
+					{
+						"speaker": "true",
+						"text": "There is an old hero who lives in the north west of the village who can teach you about fighting"
+					},
+					{
+						"speaker": "true",
+						"text": "Lastly, there's a temple just north east of us where you can pay for healing. I've also heard they needed help with something"
+					},
+					{
+						"speaker": "false",
+						"text": "Wow thanks for all that"
+					},
+					{
+						"speaker": "true",
+						"text": "Not a problem at all. Anything else I can help with?"
+					}
+				],
+				"nextNodeId": "Asked about Village",
+				"action": ""
+			},
+			{
+				"ID": "End",
+				"label": "Leave",
+				"script": [
+					{
+						"speaker": "false",
+						"text": "I've got to get going"
 					}
 				],
 				"nextNodeId": "",
